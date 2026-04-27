@@ -27,7 +27,12 @@
 			</div>
 			<div class="author-info">
 				<h3 class="author-name h5 mb-2">About <?php the_author(); ?></h3>
-				<p class="author-bio mb-0 small"><?php the_author_meta( 'description' ); ?></p>
+				<p class="author-bio mb-3 small text-muted"><?php the_author_meta( 'description' ); ?></p>
+				<div class="author-socials d-flex gap-2">
+					<?php if(get_the_author_meta('facebook')) : ?><a href="<?php echo esc_url(get_the_author_meta('facebook')); ?>" class="text-navy small"><i class="fab fa-facebook-f"></i></a><?php endif; ?>
+					<?php if(get_the_author_meta('twitter')) : ?><a href="<?php echo esc_url(get_the_author_meta('twitter')); ?>" class="text-navy small"><i class="fab fa-twitter"></i></a><?php endif; ?>
+					<?php if(get_the_author_meta('linkedin')) : ?><a href="<?php echo esc_url(get_the_author_meta('linkedin')); ?>" class="text-navy small"><i class="fab fa-linkedin-in"></i></a><?php endif; ?>
+				</div>
 			</div>
 		</div>
 		<?php endif; ?>

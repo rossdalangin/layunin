@@ -28,6 +28,53 @@ function layunin_schema_markup() {
 		);
 		echo '<script type="application/ld+json">' . json_encode( $schema ) . '</script>';
 	}
+
+	// Breadcrumb Schema
+	if ( ! is_front_page() ) {
+		$breadcrumb_schema = array(
+			'@context' => 'https://schema.org',
+			'@type'    => 'BreadcrumbList',
+			'itemListElement' => array(
+				array(
+					'@type' => 'ListItem',
+					'position' => 1,
+					'name' => 'Home',
+					'item' => home_url()
+				)
+			)
+		);
+		if ( is_page() || is_single() ) {
+			$breadcrumb_schema['itemListElement'][] = array(
+				'@type' => 'ListItem',
+				'position' => 2,
+				'name' => get_the_title(),
+				'item' => get_permalink()
+			);
+		}
+		echo '<script type="application/ld+json">' . json_encode( $breadcrumb_schema ) . '</script>';
+	}
+
+	// Testimonial Schema (Review)
+	if ( is_front_page() && get_theme_mod( 'show_home_testimonials', true ) ) {
+		$testimonial_schema = array(
+			'@context' => 'https://schema.org',
+			'@type'    => 'Review',
+			'itemReviewed' => array(
+				'@type' => 'Organization',
+				'name'  => get_bloginfo('name')
+			),
+			'reviewRating' => array(
+				'@type' => 'Rating',
+				'ratingValue' => '5'
+			),
+			'author' => array(
+				'@type' => 'Person',
+				'name'  => get_theme_mod('testimonial_author', 'Maria Santos')
+			),
+			'reviewBody' => get_theme_mod('testimonial_quote')
+		);
+		echo '<script type="application/ld+json">' . json_encode( $testimonial_schema ) . '</script>';
+	}
 }
 add_action( 'wp_head', 'layunin_schema_markup' );
 

@@ -36,9 +36,9 @@ function layunin_customize_register( $wp_customize ) {
 
 	// Hero
 	$wp_customize->add_section( 'layunin_home_hero', array( 'title' => 'Hero Section', 'panel' => 'layunin_homepage_panel' ) );
-	$wp_customize->add_setting( 'hero_headline', array( 'default' => 'Your Goals Deserve More Than Just Dreams', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_setting( 'hero_headline', array( 'default' => 'Your Goals Deserve More Than Just Dreams', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'hero_headline', array( 'label' => 'Hero Title', 'section' => 'layunin_home_hero' ) );
-	$wp_customize->add_setting( 'hero_subheadline', array( 'default' => 'Layunin helps you turn your goals into clear action, real income, and a meaningful life.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_setting( 'hero_subheadline', array( 'default' => 'Layunin helps you turn your goals into clear action, real income, and a meaningful life.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'hero_subheadline', array( 'label' => 'Hero Subtitle', 'section' => 'layunin_home_hero', 'type' => 'textarea' ) );
 	$wp_customize->add_setting( 'hero_cta_1_text', array( 'default' => 'Download Free Guide', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'hero_cta_1_text', array( 'label' => 'CTA 1 Text', 'section' => 'layunin_home_hero' ) );
@@ -253,6 +253,14 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'recreate_pages_trigger', array( 'label' => 'Recreate Missing Recommended Pages', 'section' => 'layunin_automation', 'type' => 'checkbox' ) );
 }
 add_action( 'customize_register', 'layunin_customize_register' );
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function layunin_customize_preview_js() {
+	wp_enqueue_script( 'layunin-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '1.0.0', true );
+}
+add_action( 'customize_preview_init', 'layunin_customize_preview_js' );
 
 function layunin_sanitize_checkbox( $checked ) {
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );

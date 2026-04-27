@@ -104,6 +104,43 @@ function layunin_generate_toc( $content ) {
 }
 add_filter( 'the_content', 'layunin_generate_toc' );
 
+/**
+ * Dashboard Welcome Widget
+ */
+function layunin_dashboard_widget() {
+	wp_add_dashboard_widget(
+		'layunin_welcome_widget',
+		'Welcome to Layunin Premium',
+		'layunin_dashboard_widget_content'
+	);
+}
+add_action( 'wp_dashboard_setup', 'layunin_dashboard_widget' );
+
+function layunin_dashboard_widget_content() {
+	?>
+	<div class="layunin-widget">
+		<p>Thank you for choosing the <strong>Layunin Premium Theme</strong>. Here's how to get started:</p>
+		<ul>
+			<li><a href="<?php echo admin_url( 'customize.php' ); ?>">🎨 Open Customizer</a> - Stylize your brand.</li>
+			<li><a href="<?php echo esc_url( get_template_directory_uri() . '/DOCUMENTATION.md' ); ?>" target="_blank">📄 Read Documentation</a> - Setup guide.</li>
+			<li><a href="<?php echo admin_url( 'edit.php?post_type=page' ); ?>">📃 Manage Pages</a> - Customize your 17+ templates.</li>
+		</ul>
+		<p class="small">Need help? Contact Jules at hello@layunin.com</p>
+	</div>
+	<?php
+}
+
+/**
+ * Custom User Profile Fields
+ */
+function layunin_add_user_social_fields( $contactmethods ) {
+	$contactmethods['facebook'] = 'Facebook URL';
+	$contactmethods['twitter']  = 'Twitter URL';
+	$contactmethods['linkedin'] = 'LinkedIn URL';
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'layunin_add_user_social_fields' );
+
 // Require additional files
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/cpt.php';

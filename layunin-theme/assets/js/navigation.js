@@ -77,16 +77,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if (darkModeBtn) {
-        darkModeBtn.addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('layunin_dark_mode', isDark);
-        });
+    const darkModeBtnMobile = document.getElementById('dark-mode-toggle-mobile');
+    const toggleDarkMode = function() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('layunin_dark_mode', isDark);
+    };
 
-        if (localStorage.getItem('layunin_dark_mode') === 'true') {
-            document.body.classList.add('dark-mode');
-        }
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener('click', toggleDarkMode);
+    }
+    if (darkModeBtnMobile) {
+        darkModeBtnMobile.addEventListener('click', toggleDarkMode);
+    }
+
+    if (localStorage.getItem('layunin_dark_mode') === 'true') {
+        document.body.classList.add('dark-mode');
     }
 
     // Intersection Observer for Scroll Animations

@@ -104,6 +104,7 @@
 				</div>
 				<div class="header-actions-mobile d-lg-none d-flex align-items-center gap-3">
 					<button id="search-open-mobile" class="btn p-0 text-primary fs-5"><i class="fas fa-search"></i></button>
+					<button id="dark-mode-toggle-mobile" class="btn p-0 text-primary fs-5">🌓</button>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 						<span></span>
 						<span></span>

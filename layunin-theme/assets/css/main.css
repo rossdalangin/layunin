@@ -257,16 +257,18 @@ body.dark-mode .form-control {
 
 /* Premium Form Styling */
 .form-control {
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px;
-    border: 2px solid #eee;
-    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #f0f0f0;
+    font-size: 1rem;
     transition: var(--transition);
+    background: #fafafa;
 }
 
 .form-control:focus {
+    background: var(--white);
     border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
     outline: none;
 }
 

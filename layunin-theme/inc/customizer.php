@@ -35,6 +35,15 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'problem_title', array( 'default' => 'Feeling Stuck and Without Direction?', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'problem_title', array( 'label' => 'Problem Section Title', 'section' => 'layunin_home_problem' ) );
 
+	for($i = 1; $i <= 4; $i++) {
+		$wp_customize->add_setting( "problem_item_{$i}_title", array( 'default' => 'Problem Item ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "problem_item_{$i}_title", array( 'label' => "Item {$i} Title", 'section' => 'layunin_home_problem' ) );
+		$wp_customize->add_setting( "problem_item_{$i}_desc", array( 'default' => 'Description for problem item ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "problem_item_{$i}_desc", array( 'label' => "Item {$i} Description", 'section' => 'layunin_home_problem' ) );
+		$wp_customize->add_setting( "problem_item_{$i}_icon", array( 'default' => 'fas fa-exclamation-circle', 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "problem_item_{$i}_icon", array( 'label' => "Item {$i} Icon (FontAwesome class)", 'section' => 'layunin_home_problem' ) );
+	}
+
 	// Solution Section
 	$wp_customize->add_section( 'layunin_home_solution', array( 'title' => 'Solution Section', 'panel' => 'layunin_homepage_panel' ) );
 	$wp_customize->add_setting( 'solution_title', array( 'default' => 'How Layunin Transforms Your Life', 'sanitize_callback' => 'sanitize_text_field' ) );
@@ -45,6 +54,13 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'categories_title', array( 'default' => 'Explore Our Focus Areas', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'categories_title', array( 'label' => 'Categories Title', 'section' => 'layunin_home_categories' ) );
 
+	for($i = 1; $i <= 6; $i++) {
+		$wp_customize->add_setting( "category_item_{$i}_title", array( 'default' => 'Category ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "category_item_{$i}_title", array( 'label' => "Category {$i} Title", 'section' => 'layunin_home_categories' ) );
+		$wp_customize->add_setting( "category_item_{$i}_icon", array( 'default' => 'fas fa-star', 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "category_item_{$i}_icon", array( 'label' => "Category {$i} Icon", 'section' => 'layunin_home_categories' ) );
+	}
+
 	// Products Section
 	$wp_customize->add_section( 'layunin_home_products', array( 'title' => 'Products Section', 'panel' => 'layunin_homepage_panel' ) );
 	$wp_customize->add_setting( 'products_title', array( 'default' => 'Premium Resources to Accelerate Your Success', 'sanitize_callback' => 'sanitize_text_field' ) );
@@ -54,6 +70,15 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'layunin_home_services', array( 'title' => 'Services Section', 'panel' => 'layunin_homepage_panel' ) );
 	$wp_customize->add_setting( 'services_home_title', array( 'default' => 'Work With Us', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'services_home_title', array( 'label' => 'Services Title', 'section' => 'layunin_home_services' ) );
+
+	for($i = 1; $i <= 3; $i++) {
+		$wp_customize->add_setting( "service_item_{$i}_title", array( 'default' => 'Service ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "service_item_{$i}_title", array( 'label' => "Service {$i} Title", 'section' => 'layunin_home_services' ) );
+		$wp_customize->add_setting( "service_item_{$i}_desc", array( 'default' => 'Description for service ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "service_item_{$i}_desc", array( 'label' => "Service {$i} Description", 'section' => 'layunin_home_services' ) );
+		$wp_customize->add_setting( "service_item_{$i}_icon", array( 'default' => 'fas fa-cog', 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "service_item_{$i}_icon", array( 'label' => "Service {$i} Icon", 'section' => 'layunin_home_services' ) );
+	}
 
 	// 4. Page Content Control Panel
 	$wp_customize->add_panel( 'layunin_pages_panel', array( 'title' => 'Page Content Management', 'priority' => 40 ) );

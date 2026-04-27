@@ -8,14 +8,14 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<meta property="og:title" content="<?php wp_title(); ?>">
+	<meta property="og:title" content="<?php echo wp_get_document_title(); ?>">
 	<meta property="og:description" content="<?php echo esc_attr( get_theme_mod( 'meta_description' ) ); ?>">
 	<meta property="og:image" content="<?php echo esc_url( get_theme_mod( 'hero_bg_image' ) ); ?>">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<meta property="twitter:title" content="<?php wp_title(); ?>">
+	<meta property="twitter:title" content="<?php echo wp_get_document_title(); ?>">
 	<meta property="twitter:description" content="<?php echo esc_attr( get_theme_mod( 'meta_description' ) ); ?>">
 	<meta property="twitter:image" content="<?php echo esc_url( get_theme_mod( 'hero_bg_image' ) ); ?>">
 
@@ -60,15 +60,19 @@
 				?>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation d-flex align-items-center">
-				<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary me-3">🌓</button>
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+			<nav id="site-navigation" class="main-navigation d-flex align-items-center gap-4">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'container'      => false,
 				) );
 				?>
+				<div class="header-actions d-none d-lg-flex align-items-center gap-3">
+					<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 40px; height: 40px; padding: 0;">🌓</button>
+					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-gold btn-sm px-4">Work With Us</a>
+				</div>
+				<button class="menu-toggle d-lg-none" aria-controls="primary-menu" aria-expanded="false">☰</button>
 			</nav>
 		</div>
 	</header>

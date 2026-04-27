@@ -1,5 +1,5 @@
-<div class="sticky-social-share d-flex flex-column gap-2 position-fixed start-0 top-50 translate-middle-y ms-3 d-none d-lg-flex">
-	<a href="#" class="btn btn-sm btn-primary rounded-circle" aria-label="Share on Facebook">F</a>
-	<a href="#" class="btn btn-sm btn-info text-white rounded-circle" aria-label="Share on Twitter">T</a>
-	<a href="#" class="btn btn-sm btn-danger rounded-circle" aria-label="Share on LinkedIn">L</a>
+<div class="sticky-social-share d-flex flex-column gap-2 position-fixed start-0 top-50 translate-middle-y ms-3 d-none d-lg-flex" style="z-index: 100;">
+	<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="btn btn-sm btn-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+	<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" class="btn btn-sm btn-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+	<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_permalink()); ?>" class="btn btn-sm btn-danger rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
 </div>

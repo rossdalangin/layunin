@@ -9,11 +9,17 @@
 					<p class="text-white-50">Empowering Filipinos to turn their goals into action, income, and success. Your journey to a meaningful life starts here.</p>
 					<div class="social-links d-flex gap-3 mt-4">
 						<?php
-						$socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
-						foreach ( $socials as $social ) :
-							$link = get_theme_mod( "social_{$social}" );
+						$socials = array(
+							'facebook'  => 'fab fa-facebook-f',
+							'twitter'   => 'fab fa-twitter',
+							'instagram' => 'fab fa-instagram',
+							'linkedin'  => 'fab fa-linkedin-in',
+							'youtube'   => 'fab fa-youtube'
+						);
+						foreach ( $socials as $id => $icon_class ) :
+							$link = get_theme_mod( "social_{$id}" );
 							if ( $link ) : ?>
-								<a href="<?php echo esc_url( $link ); ?>" class="text-white fs-5" aria-label="<?php echo ucfirst($social); ?>"><i class="icon-<?php echo $social; ?>"></i></a>
+								<a href="<?php echo esc_url( $link ); ?>" class="text-white fs-5" aria-label="<?php echo ucfirst($id); ?>"><i class="<?php echo esc_attr($icon_class); ?>"></i></a>
 							<?php endif;
 						endforeach; ?>
 					</div>

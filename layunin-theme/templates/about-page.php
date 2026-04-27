@@ -15,12 +15,17 @@ get_header(); ?>
 				<h2>What "Layunin" Means to Us</h2>
 				<p>In Tagalog, "Layunin" means goal, purpose, or objective. We believe that living with a clear "Layunin" is the first step toward a fulfilling and successful life.</p>
 				<h3>Our Core Values</h3>
-				<ul>
-					<li><strong>Integrity:</strong> We provide honest and practical guidance.</li>
-					<li><strong>Innovation:</strong> We leverage modern tools like AI to accelerate growth.</li>
-					<li><strong>Community:</strong> We grow together as a community of achievers.</li>
-					<li><strong>Action:</strong> We value results over just dreams.</li>
-				</ul>
+				<div class="row mt-4">
+					<?php
+					$values = explode("\n", get_theme_mod('about_values', "Integrity\nInnovation\nCommunity\nAction"));
+					foreach($values as $val) : if(trim($val)) : ?>
+					<div class="col-md-6 mb-3">
+						<div class="card p-4 shadow-sm border-0 bg-light">
+							<h4 class="h6 mb-0 text-accent"><i class="fas fa-check-circle me-2"></i> <?php echo esc_html($val); ?></h4>
+						</div>
+					</div>
+					<?php endif; endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</div>

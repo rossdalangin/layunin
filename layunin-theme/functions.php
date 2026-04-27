@@ -79,16 +79,18 @@ function layunin_reading_time() {
 function layunin_generate_toc( $content ) {
     if ( ! is_single() ) return $content;
 
-    preg_match_all( '/<h[2-3].*?>(.*?)<\/h[2-3]>/', $content, $matches );
+    // More robust regex to handle attributes in tags
+    preg_match_all( '/<(h[2-3]).*?>(.*?)<\/\1>/i', $content, $matches );
 
     if ( empty( $matches[0] ) ) return $content;
 
     $toc = '<div class="table-of-contents p-4 bg-light border rounded mb-4">';
     $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3">Table of Contents</h4><ul>';
 
-    foreach ( $matches[1] as $i => $title ) {
-        $slug = sanitize_title( $title );
-        $content = str_replace( $matches[0][$i], sprintf( '<h%d id="%s">%s</h%d>', (strpos($matches[0][$i], 'h2') !== false ? 2 : 3), $slug, $title, (strpos($matches[0][$i], 'h2') !== false ? 2 : 3) ), $content );
+    foreach ( $matches[2] as $i => $title ) {
+        $tag = $matches[1][$i];
+        $slug = sanitize_title( $title ) . '-' . $i; // Ensure unique ID
+        $content = str_replace( $matches[0][$i], sprintf( '<%s id="%s">%s</%s>', $tag, $slug, $title, $tag ), $content );
         $toc .= sprintf( '<li><a href="#%s">%s</a></li>', $slug, $title );
     }
 

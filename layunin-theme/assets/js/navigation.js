@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNavigation = document.getElementById('site-navigation');
 
+    // Header Scroll State
+    const siteHeader = document.querySelector('.site-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            siteHeader.classList.add('scrolled');
+        } else {
+            siteHeader.classList.remove('scrolled');
+        }
+    });
+
     if (menuToggle && siteNavigation) {
         menuToggle.onclick = function() {
             if (siteNavigation.classList.contains('toggled')) {

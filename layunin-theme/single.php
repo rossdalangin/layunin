@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div class="reading-progress-bar"></div>
 <?php get_template_part( 'template-parts/social-share' ); ?>
+<?php layunin_breadcrumbs(); ?>
 <main id="primary" class="site-main container py-5">
 	<div class="row">
 		<div class="col-lg-8 offset-lg-2">

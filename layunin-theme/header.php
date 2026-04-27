@@ -5,6 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<style>
+		:root {
+			--primary: <?php echo get_theme_mod( 'primary_color', '#001f3f' ); ?>;
+			--accent: <?php echo get_theme_mod( 'accent_color', '#D4AF37' ); ?>;
+		}
+		body { font-family: '<?php echo get_theme_mod( "body_font", "Inter" ); ?>', sans-serif; }
+		<?php if ( get_theme_mod( 'hero_bg_image' ) ) : ?>
+			.hero-section { background-image: url('<?php echo esc_url( get_theme_mod( "hero_bg_image" ) ); ?>'); background-size: cover; background-position: center; }
+		<?php endif; ?>
+	</style>
 </head>
 
 <body <?php body_class(); ?>>

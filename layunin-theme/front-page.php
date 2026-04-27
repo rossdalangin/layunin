@@ -8,6 +8,9 @@ get_header();
 // Hero Section (Always visible)
 get_template_part( 'template-parts/home-hero' );
 
+// Featured Posts
+get_template_part( 'template-parts/featured-posts' );
+
 // Section 2: Problem
 if ( get_theme_mod( 'show_home_problem', true ) ) {
 	get_template_part( 'template-parts/home-problem' );

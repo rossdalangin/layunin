@@ -20,6 +20,7 @@
 	</div>
 
 	<footer class="entry-footer mt-5 pt-5 border-top">
+		<?php if ( get_theme_mod( 'show_author_box', true ) ) : ?>
 		<div class="author-box d-flex align-items-center p-4 bg-light rounded mb-5">
 			<div class="author-avatar me-4">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 90, '', '', array( 'class' => 'rounded-circle' ) ); ?>
@@ -29,6 +30,7 @@
 				<p class="author-bio mb-0 small"><?php the_author_meta( 'description' ); ?></p>
 			</div>
 		</div>
+		<?php endif; ?>
 
 		<div class="related-posts">
 			<h3 class="mb-4">You Might Also Like</h3>

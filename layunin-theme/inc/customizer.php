@@ -30,6 +30,9 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'accent_color', array( 'default' => '#D4AF37', 'sanitize_callback' => 'sanitize_hex_color' ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array( 'label' => __( 'Accent Color (Warm Gold)', 'layunin' ), 'section' => 'colors' ) ) );
 
+	$wp_customize->add_setting( 'cat_goal_color', array( 'default' => '#001f3f', 'sanitize_callback' => 'sanitize_hex_color' ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cat_goal_color', array( 'label' => __( 'Goal Setting Color', 'layunin' ), 'section' => 'colors' ) ) );
+
 	// Announcement Bar
 	$wp_customize->add_section( 'layunin_announcement', array( 'title' => __( 'Announcement Bar', 'layunin' ), 'priority' => 35 ) );
 	$wp_customize->add_setting( 'show_announcement', array( 'default' => false, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
@@ -69,6 +72,18 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'layunin_monetization', array( 'title' => __( 'Monetization & Ads', 'layunin' ), 'priority' => 60 ) );
 	$wp_customize->add_setting( 'affiliate_banner_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'affiliate_banner_url', array( 'label' => __( 'Sidebar Affiliate Banner', 'layunin' ), 'section' => 'layunin_monetization' ) ) );
+
+	// Blog Options
+	$wp_customize->add_section( 'layunin_blog_options', array( 'title' => __( 'Blog Options', 'layunin' ), 'priority' => 70 ) );
+	$wp_customize->add_setting( 'show_author_box', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_author_box', array( 'label' => __( 'Show Author Box', 'layunin' ), 'section' => 'layunin_blog_options', 'type' => 'checkbox' ) );
+
+	// Popup Options
+	$wp_customize->add_section( 'layunin_popup_options', array( 'title' => __( 'Popup Options', 'layunin' ), 'priority' => 80 ) );
+	$wp_customize->add_setting( 'show_popup', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_popup', array( 'label' => __( 'Enable Popup', 'layunin' ), 'section' => 'layunin_popup_options', 'type' => 'checkbox' ) );
+	$wp_customize->add_setting( 'popup_title', array( 'default' => "Wait! Don't Miss Out", 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'popup_title', array( 'label' => __( 'Popup Title', 'layunin' ), 'section' => 'layunin_popup_options', 'type' => 'text' ) );
 
 	// Footer Options
 	$wp_customize->add_setting( 'footer_text', array( 'default' => 'Your Goals Deserve More Than Just Dreams.', 'sanitize_callback' => 'sanitize_text_field' ) );

@@ -251,7 +251,16 @@ section { padding: 120px 0; }
     100% { transform: translateY(0px); }
 }
 
-.animate-up { animation: fadeIn 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+.animate-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .animate-float { animation: float 6s ease-in-out infinite; }
 
 /* Custom Reading Progress */

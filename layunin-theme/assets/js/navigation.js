@@ -53,6 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Intersection Observer for Scroll Animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-up').forEach(el => {
+        observer.observe(el);
+    });
+
     // Lead Popup Trigger
     const popupEl = document.getElementById('layunin-popup');
     if (popupEl) {

@@ -60,6 +60,12 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'layunin_home_solution', array( 'title' => 'Solution Section', 'panel' => 'layunin_homepage_panel' ) );
 	$wp_customize->add_setting( 'solution_title', array( 'default' => 'How Layunin Transforms Your Life', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'solution_title', array( 'label' => 'Solution Section Title', 'section' => 'layunin_home_solution' ) );
+	$wp_customize->add_setting( 'solution_desc', array( 'default' => 'We provide the roadmap and the tools you need to bridge the gap between where you are and where you want to be.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_control( 'solution_desc', array( 'label' => 'Description', 'section' => 'layunin_home_solution', 'type' => 'textarea' ) );
+	$wp_customize->add_setting( 'solution_bullets', array( 'default' => "Clarity: We help you define your 'Layunin' with precision.\nSystems: Proven frameworks for productivity.\nTools: Digital resources and AI assets.\nAccountability: Guidance to keep you moving.", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_control( 'solution_bullets', array( 'label' => 'Bullet Points (one per line)', 'section' => 'layunin_home_solution', 'type' => 'textarea' ) );
+	$wp_customize->add_setting( 'solution_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'solution_image', array( 'label' => 'Section Image', 'section' => 'layunin_home_solution' ) ) );
 
 	// Categories Section
 	$wp_customize->add_section( 'layunin_home_categories', array( 'title' => 'Categories Section', 'panel' => 'layunin_homepage_panel' ) );
@@ -128,7 +134,14 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( "{$id}_content", array( 'label' => 'Main Content', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
 	}
 
-	// 5. Footer Options
+	// 5. Trust Badges
+	$wp_customize->add_section( 'layunin_trust_badges', array( 'title' => 'Trust Badges', 'panel' => 'layunin_homepage_panel' ) );
+	$wp_customize->add_setting( 'show_trust_badges', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_trust_badges', array( 'label' => 'Show Trust Badges', 'section' => 'layunin_trust_badges', 'type' => 'checkbox' ) );
+	$wp_customize->add_setting( 'trust_badges_title', array( 'default' => 'Trusted By Forward-Thinking Filipinos', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'trust_badges_title', array( 'label' => 'Section Title', 'section' => 'layunin_trust_badges' ) );
+
+	// 6. Footer Options
 	$wp_customize->add_section( 'layunin_footer_options', array( 'title' => 'Footer Settings', 'priority' => 42 ) );
 	$wp_customize->add_setting( 'footer_branding_text', array( 'default' => 'Empowering Filipinos to turn their goals into action, income, and success. Your journey to a meaningful life starts here.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_branding_text', array( 'label' => 'Footer Branding Text', 'section' => 'layunin_footer_options', 'type' => 'textarea' ) );
@@ -159,7 +172,25 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'popup_title', array( 'default' => "Wait! Don't Miss Out", 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'popup_title', array( 'label' => 'Popup Title', 'section' => 'layunin_popup_options' ) );
 
-	// 7. Site Automation
+	// 7. Final CTA Section
+	$wp_customize->add_section( 'layunin_home_final_cta', array( 'title' => 'Final CTA Section', 'panel' => 'layunin_homepage_panel' ) );
+	$wp_customize->add_setting( 'final_cta_title', array( 'default' => 'Your future starts with one decision.', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'final_cta_title', array( 'label' => 'Headline', 'section' => 'layunin_home_final_cta' ) );
+	$wp_customize->add_setting( 'final_cta_desc', array( 'default' => 'Stop dreaming about your goals and start building them. We are here to guide you every step of the way.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_control( 'final_cta_desc', array( 'label' => 'Description', 'section' => 'layunin_home_final_cta', 'type' => 'textarea' ) );
+
+	// 8. Testimonials Section
+	$wp_customize->add_section( 'layunin_home_testimonials', array( 'title' => 'Testimonials Section', 'panel' => 'layunin_homepage_panel' ) );
+	$wp_customize->add_setting( 'testimonial_quote', array( 'default' => "Layunin changed how I approach my career. I finally have the clarity I've been seeking for years. The systems are practical and the mindset shift is real.", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_control( 'testimonial_quote', array( 'label' => 'Quote', 'section' => 'layunin_home_testimonials', 'type' => 'textarea' ) );
+	$wp_customize->add_setting( 'testimonial_author', array( 'default' => 'Maria Santos', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'testimonial_author', array( 'label' => 'Author Name', 'section' => 'layunin_home_testimonials' ) );
+	$wp_customize->add_setting( 'testimonial_role', array( 'default' => 'Digital Freelancer', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'testimonial_role', array( 'label' => 'Author Role', 'section' => 'layunin_home_testimonials' ) );
+	$wp_customize->add_setting( 'testimonial_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'testimonial_image', array( 'label' => 'Author Image', 'section' => 'layunin_home_testimonials' ) ) );
+
+	// 8. Site Automation
 	$wp_customize->add_section( 'layunin_automation', array( 'title' => 'Site Automation', 'priority' => 100 ) );
 	$wp_customize->add_setting( 'recreate_pages_trigger', array( 'default' => false, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
 	$wp_customize->add_control( 'recreate_pages_trigger', array( 'label' => 'Recreate Missing Recommended Pages', 'section' => 'layunin_automation', 'type' => 'checkbox' ) );

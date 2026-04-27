@@ -52,4 +52,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('dark-mode');
         }
     }
+
+    // Lead Popup Trigger
+    const popupEl = document.getElementById('layunin-popup');
+    if (popupEl) {
+        // Show after 5 seconds
+        setTimeout(() => {
+            if (!localStorage.getItem('layunin_popup_shown')) {
+                const myModal = new bootstrap.Modal(popupEl);
+                myModal.show();
+                localStorage.setItem('layunin_popup_shown', 'true');
+            }
+        }, 5000);
+    }
 });

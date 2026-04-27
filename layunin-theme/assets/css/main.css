@@ -119,6 +119,13 @@ h1, h2, h3, h4, h5, h6 {
 section { padding: 120px 0; }
 .bg-light { background-color: var(--light); background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.02) 1px, transparent 0); background-size: 40px 40px; }
 
+/* Grids */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
 /* Hero Refinement */
 .hero-section {
     padding: 180px 0;

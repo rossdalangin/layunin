@@ -6,7 +6,7 @@
 						<?php the_custom_logo(); ?>
 						<h2 class="h4 text-white"><?php bloginfo( 'name' ); ?></h2>
 					</div>
-					<p class="text-white-50">Empowering Filipinos to turn their goals into action, income, and success. Your journey to a meaningful life starts here.</p>
+					<p class="text-white-50"><?php echo esc_html( get_theme_mod( 'footer_branding_text', 'Empowering Filipinos to turn their goals into action, income, and success. Your journey to a meaningful life starts here.' ) ); ?></p>
 					<div class="social-links d-flex gap-3 mt-4">
 						<?php
 						$socials = array(
@@ -46,8 +46,8 @@
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 mb-4">
-					<h3 class="footer-title">Newsletter</h3>
-					<p class="text-white-50 small mb-4">Join 10,000+ subscribers for weekly growth tips.</p>
+					<h3 class="footer-title"><?php echo esc_html( get_theme_mod( 'footer_newsletter_title', 'Newsletter' ) ); ?></h3>
+					<p class="text-white-50 small mb-4"><?php echo esc_html( get_theme_mod( 'footer_newsletter_desc', 'Join 10,000+ subscribers for weekly growth tips.' ) ); ?></p>
 					<form class="footer-newsletter">
 						<div class="input-group">
 							<input type="email" class="form-control border-0" placeholder="Your Email" required>

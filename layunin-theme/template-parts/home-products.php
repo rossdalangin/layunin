@@ -2,25 +2,23 @@
 	<div class="container text-center">
 		<h2><?php echo esc_html( get_theme_mod( 'products_title', 'Premium Resources to Accelerate Your Success' ) ); ?></h2>
 		<p class="section-desc">Tools designed for the modern Filipino achiever.</p>
-		<div class="product-grid">
-			<div class="product-card">
-				<img src="https://images.unsplash.com/photo-1506784919141-93584869786a?auto=format&fit=crop&q=80&w=400" alt="Goal Planner" class="img-fluid mb-3 rounded">
-				<h3>The Ultimate Goal Planner</h3>
-				<p class="price fw-bold">₱999</p>
-				<a href="#" class="btn btn-outline-primary">Buy Now</a>
+		<div class="product-grid grid-layout mt-5">
+			<?php for($i = 1; $i <= 3; $i++) :
+				$title = get_theme_mod("product_item_{$i}_title");
+				$price = get_theme_mod("product_item_{$i}_price");
+				$image = get_theme_mod("product_item_{$i}_image", 'https://images.unsplash.com/photo-1506784919141-93584869786a?auto=format&fit=crop&q=80&w=400');
+				$link  = get_theme_mod("product_item_{$i}_link");
+				if($title) :
+			?>
+			<div class="product-card card animate-up" style="animation-delay: <?php echo ($i-1)*0.1; ?>s;">
+				<div class="product-image mb-4">
+					<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($title); ?>" class="img-fluid rounded shadow-sm">
+				</div>
+				<h3><?php echo esc_html($title); ?></h3>
+				<p class="price fw-bold text-accent fs-4"><?php echo esc_html($price); ?></p>
+				<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-primary btn-sm mt-3">Buy Now</a>
 			</div>
-			<div class="product-card">
-				<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400" alt="AI Prompt Pack" class="img-fluid mb-3 rounded">
-				<h3>AI Prompt Master Pack</h3>
-				<p class="price fw-bold">₱499</p>
-				<a href="#" class="btn btn-outline-primary">Buy Now</a>
-			</div>
-			<div class="product-card">
-				<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="Side Hustle Blueprint" class="img-fluid mb-3 rounded">
-				<h3>Side Hustle Blueprint</h3>
-				<p class="price fw-bold">₱1,499</p>
-				<a href="#" class="btn btn-outline-primary">Buy Now</a>
-			</div>
+			<?php endif; endfor; ?>
 		</div>
 	</div>
 </section>

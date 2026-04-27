@@ -1,10 +1,10 @@
 <section class="solution-section bg-light">
 	<div class="container">
 		<div class="row align-items-center">
-			<div class="col-md-6">
+			<div class="col-md-6 animate-up">
 				<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800" alt="Layunin Solution" class="img-fluid rounded shadow">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 animate-up" style="animation-delay: 0.2s;">
 				<h2>How Layunin Transforms Your Life</h2>
 				<p>We provide the roadmap and the tools you need to bridge the gap between where you are and where you want to be.</p>
 				<ul class="solution-list">

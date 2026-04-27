@@ -44,9 +44,9 @@
 				?>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary me-2">🌓</button>
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'layunin' ); ?></button>
+			<nav id="site-navigation" class="main-navigation d-flex align-items-center">
+				<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary me-3">🌓</button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',

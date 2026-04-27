@@ -61,6 +61,7 @@
 			</div>
 		</div>
 	</footer>
+	<button id="back-to-top" class="btn btn-gold rounded-circle shadow-lg" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
 	<?php get_template_part( 'template-parts/popup-form' ); ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>

@@ -10,6 +10,13 @@
 				the_post();
 				get_template_part( 'template-parts/content-single', get_post_type() );
 
+				// Post Navigation
+				the_post_navigation( array(
+					'prev_text' => '<span class="text-muted small">Previous Post</span><br><span class="h6 fw-bold">%title</span>',
+					'next_text' => '<span class="text-muted small">Next Post</span><br><span class="h6 fw-bold">%title</span>',
+					'class'     => 'post-navigation my-5 d-flex justify-content-between p-4 bg-light rounded-4'
+				) );
+
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;

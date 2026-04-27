@@ -15,8 +15,10 @@
 					<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($title); ?>" class="img-fluid rounded shadow-sm">
 				</div>
 				<h3><?php echo esc_html($title); ?></h3>
-				<p class="price fw-bold text-accent fs-4"><?php echo esc_html($price); ?></p>
-				<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-primary btn-sm mt-3">Buy Now</a>
+				<div class="product-meta d-flex justify-content-between align-items-center mt-3">
+					<span class="price fw-bold text-accent fs-4"><?php echo esc_html($price); ?></span>
+					<a href="<?php echo esc_url($link); ?>" class="btn btn-gold btn-sm px-4">Get Started</a>
+				</div>
 			</div>
 			<?php endif; endfor; ?>
 		</div>

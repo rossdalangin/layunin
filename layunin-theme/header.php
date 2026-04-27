@@ -47,6 +47,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+	<div id="preloader">
+		<div class="loader-circle"></div>
+	</div>
+
 	<div id="search-overlay" class="search-overlay">
 		<span id="search-close" class="search-close">&times;</span>
 		<div class="search-overlay-content container">
@@ -98,11 +102,14 @@
 					<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 40px; height: 40px; padding: 0;">🌓</button>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-gold btn-sm px-4">Work With Us</a>
 				</div>
-				<button class="menu-toggle d-lg-none" aria-controls="primary-menu" aria-expanded="false">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+				<div class="header-actions-mobile d-lg-none d-flex align-items-center gap-3">
+					<button id="search-open-mobile" class="btn p-0 text-primary fs-5"><i class="fas fa-search"></i></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
 			</nav>
 		</div>
 	</header>

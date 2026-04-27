@@ -1,14 +1,22 @@
 /**
  * Layunin Navigation and Frontend logic
  */
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('fade-out');
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNavigation = document.getElementById('site-navigation');
 
-    // Header Scroll State
+    // Scroll events
     const siteHeader = document.querySelector('.site-header');
     const heroSection = document.querySelector('.hero-section');
+    const backToTop = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', function() {
         const scrolled = window.scrollY;
@@ -19,11 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
             siteHeader.classList.remove('scrolled');
         }
 
+        // Back to top visibility
+        if (scrolled > 300) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+
         // Parallax Effect for Hero
         if (heroSection && scrolled < 600) {
             heroSection.style.backgroundPositionY = (scrolled * 0.5) + 'px';
         }
     });
+
+    if (backToTop) {
+        backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     if (menuToggle && siteNavigation) {
         menuToggle.onclick = function() {
@@ -93,8 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchClose = document.getElementById('search-close');
     const searchOverlay = document.getElementById('search-overlay');
 
+    const searchOpenMobile = document.getElementById('search-open-mobile');
     if (searchOpen && searchOverlay) {
         searchOpen.onclick = () => searchOverlay.style.display = 'block';
+    }
+    if (searchOpenMobile && searchOverlay) {
+        searchOpenMobile.onclick = () => searchOverlay.style.display = 'block';
     }
     if (searchClose && searchOverlay) {
         searchClose.onclick = () => searchOverlay.style.display = 'none';

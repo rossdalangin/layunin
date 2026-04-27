@@ -8,6 +8,8 @@
     --primary-dark: #00152b;
     --accent: #D4AF37;
     --accent-hover: #b8860b;
+    --bs-primary: #001f3f;
+    --bs-primary-rgb: 0, 31, 63;
     --text-main: #2d3436;
     --text-muted: #636e72;
     --white: #ffffff;
@@ -281,6 +283,13 @@ section { padding: 120px 0; }
 }
 .animate-float { animation: float 6s ease-in-out infinite; }
 
+/* Utility Classes for Brand Colors */
+.text-navy { color: var(--primary) !important; }
+.bg-navy { background-color: var(--primary) !important; }
+.text-accent { color: var(--accent) !important; }
+.bg-accent { background-color: var(--accent) !important; }
+.border-accent { border-color: var(--accent) !important; }
+
 /* Process Section Styling */
 .process-step-number {
     font-size: 8rem;
@@ -303,6 +312,37 @@ html {
     background: linear-gradient(to right, var(--accent), #ffea00);
     z-index: 3000;
     width: 0;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--light);
+    border-top: 3px solid var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Search Overlay */
@@ -385,6 +425,28 @@ html {
     text-decoration: none;
 }
 
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px !important;
+    background: #fdfdfd !important;
+    border: 1px solid #eee;
+}
+
+.post-navigation .nav-previous, .post-navigation .nav-next {
+    max-width: 45%;
+}
+
+.post-navigation a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.post-navigation a:hover .h6 {
+    color: var(--accent);
+}
+
 /* Reading Mode */
 body.reading-mode .site-header,
 body.reading-mode .site-footer,
@@ -397,6 +459,18 @@ body.reading-mode .breadcrumbs {
 
 body.reading-mode .site-main {
     margin-top: 50px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 /* Dark Mode Refinement */

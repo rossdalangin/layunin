@@ -1,5 +1,6 @@
 <section class="hero-section d-flex align-items-center min-vh-100 py-0">
 	<div class="hero-bg-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,31,63,0.95) 0%, rgba(0,21,43,0.8) 100%); z-index: 1;"></div>
+	<div class="hero-pattern position-absolute top-0 start-0 w-100 h-100" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23d4af37\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); z-index: 1;"></div>
 	<div class="container position-relative" style="z-index: 2;">
 		<div class="row align-items-center">
 			<div class="col-lg-7 animate-up">

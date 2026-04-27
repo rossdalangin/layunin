@@ -45,3 +45,14 @@ Layunin is a premium WordPress theme designed for high conversion, authority bui
 - WordPress 6.0+
 - FontAwesome 6 (Enqueued automatically)
 - Bootstrap 5 (Enqueued automatically)
+
+## 6. Shortcodes
+- `[pricing_table]` / `[pricing_item title='...' price='...' features='feat1 | feat2']`: Create premium pricing tiers.
+- `[faq_page]` / `[faq_item question='...']`: Create SEO-optimized FAQ sections.
+
+## 7. Content Preparation Checklist
+- [ ] **High-Res Hero Image:** 1600x900px JPG/WebP.
+- [ ] **Logo:** Transparent PNG/SVG (250px width).
+- [ ] **Author Bio:** 1-2 sentences for the sidebar.
+- [ ] **Core Values:** 4 key pillars for the About page.
+- [ ] **Product Links:** Checkout URLs for your digital assets.

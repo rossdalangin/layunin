@@ -1,4 +1,7 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-lg-4 col-md-6 mb-4 animate-up' ); ?>>
+<?php $layout = get_theme_mod( 'blog_layout', 'grid' );
+$col_class = ($layout == 'list') ? 'col-12 mb-5' : 'col-lg-4 col-md-6 mb-4';
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $col_class . ' animate-up' ); ?>>
 	<div class="card h-100 shadow-sm border-0 overflow-hidden p-0">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="post-thumbnail overflow-hidden">
@@ -7,7 +10,11 @@
 				</a>
 			</div>
 		<?php endif; ?>
-		<div class="card-body p-4">
+		<div class="card-body p-4 <?php echo ($layout == 'list') ? 'd-md-flex align-items-center gap-4' : ''; ?>">
+			<?php if($layout == 'list' && has_post_thumbnail()) : ?>
+				<!-- Thumb already shown above in card-based but for list let's adjust if needed -->
+			<?php endif; ?>
+			<div class="content-inner w-100">
 			<div class="entry-meta small text-accent text-uppercase fw-bold mb-2">
 				<?php the_category(', '); ?>
 			</div>
@@ -23,6 +30,7 @@
 					<span><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> min</span>
 				</div>
 				<a href="<?php the_permalink(); ?>" class="text-navy fw-bold small text-decoration-none">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+			</div>
 			</div>
 		</div>
 	</div>

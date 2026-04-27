@@ -129,16 +129,26 @@ document.addEventListener('DOMContentLoaded', function() {
         searchClose.onclick = () => searchOverlay.style.display = 'none';
     }
 
-    // Lead Popup Trigger
+    // Lead Popup Trigger (Exit Intent + Timed)
     const popupEl = document.getElementById('layunin-popup');
     if (popupEl) {
-        // Show after 5 seconds
-        setTimeout(() => {
+        const myModal = new bootstrap.Modal(popupEl);
+
+        const showPopup = () => {
             if (!localStorage.getItem('layunin_popup_shown')) {
-                const myModal = new bootstrap.Modal(popupEl);
                 myModal.show();
                 localStorage.setItem('layunin_popup_shown', 'true');
             }
-        }, 5000);
+        };
+
+        // Timed trigger (15 seconds)
+        setTimeout(showPopup, 15000);
+
+        // Exit intent trigger
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0) {
+                showPopup();
+            }
+        });
     }
 });

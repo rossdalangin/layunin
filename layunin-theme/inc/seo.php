@@ -200,19 +200,36 @@ add_shortcode( 'testimonial_item', 'layunin_testimonial_item_shortcode' );
 
 // FAQ Schema Shortcode
 function layunin_faq_schema_shortcode( $atts, $content = null ) {
-    return '<div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">' . do_shortcode($content) . '</div>';
+    global $layunin_faq_parent_id;
+    static $faq_counter = 0;
+    $faq_counter++;
+    $layunin_faq_parent_id = 'faq-accordion-' . $faq_counter;
+
+    return '<div class="faq-section accordion" id="' . esc_attr($layunin_faq_parent_id) . '" itemscope itemtype="https://schema.org/FAQPage">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'faq_page', 'layunin_faq_schema_shortcode' );
 
 function layunin_faq_item_shortcode( $atts, $content = null ) {
+    global $layunin_faq_parent_id;
+    static $item_counter = 0;
+    $item_counter++;
     $a = shortcode_atts( array(
         'question' => '',
     ), $atts );
+    $id = 'faq-collapse-' . $item_counter;
+    $parent_attr = $layunin_faq_parent_id ? ' data-bs-parent="#' . esc_attr($layunin_faq_parent_id) . '"' : '';
+
     return '
-    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-        <h3 itemprop="name">' . esc_html($a['question']) . '</h3>
-        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <div itemprop="text">' . do_shortcode($content) . '</div>
+    <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <h2 class="accordion-header" itemprop="name">
+            <button class="accordion-button collapsed fw-bold text-navy py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#' . $id . '" aria-expanded="false" aria-controls="' . $id . '">
+                ' . esc_html($a['question']) . '
+            </button>
+        </h2>
+        <div id="' . $id . '" class="accordion-collapse collapse"' . $parent_attr . ' itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <div class="accordion-body px-4 pb-4 text-muted" itemprop="text">
+                ' . do_shortcode($content) . '
+            </div>
         </div>
     </div>';
 }

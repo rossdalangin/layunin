@@ -9,7 +9,8 @@
 			the_archive_description( '<div class="archive-description text-muted mx-auto" style="max-width: 600px;">', '</div>' );
 			?>
 		</header>
-		<div class="blog-grid row">
+		<?php $layout = get_theme_mod( 'blog_layout', 'grid' ); ?>
+		<div class="blog-archive-wrapper <?php echo esc_attr( $layout ); ?>-layout row">
 			<?php
 			while ( have_posts() ) :
 				the_post();

@@ -176,6 +176,18 @@ function layunin_customize_register( $wp_customize ) {
 				$wp_customize->add_control( "page_service_{$i}_desc", array( 'label' => "Service {$i} Description", 'section' => "layunin_page_{$id}" ) );
 			}
 		}
+		if ( $id == 'about' ) {
+			$wp_customize->add_setting( 'about_values', array( 'default' => "Integrity\nInnovation\nCommunity\nAction", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+			$wp_customize->add_control( 'about_values', array( 'label' => 'Core Values (one per line)', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+			for($i = 1; $i <= 3; $i++) {
+				$wp_customize->add_setting( "team_member_{$i}_name", array( 'default' => 'Team Member ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "team_member_{$i}_name", array( 'label' => "Team Member {$i} Name", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "team_member_{$i}_role", array( 'default' => 'Founder / Guide', 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "team_member_{$i}_role", array( 'label' => "Team Member {$i} Role", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "team_member_{$i}_image", array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+				$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "team_member_{$i}_image", array( 'label' => "Team Member {$i} Photo", 'section' => "layunin_page_{$id}" ) ) );
+			}
+		}
 	}
 
 	// 5. Trust Badges
@@ -212,6 +224,13 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( $social, array( 'label' => str_replace('_', ' ', ucfirst($social)) . ' URL', 'section' => 'layunin_sidebar_options' ) );
 	}
 
+	// 5. Content Monetization
+	$wp_customize->add_section( 'layunin_content_monetization', array( 'title' => 'Content Ads', 'priority' => 48 ) );
+	$wp_customize->add_setting( 'banner_above_content', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_above_content', array( 'label' => 'Banner Above Content', 'section' => 'layunin_content_monetization' ) ) );
+	$wp_customize->add_setting( 'banner_below_content', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_below_content', array( 'label' => 'Banner Below Content', 'section' => 'layunin_content_monetization' ) ) );
+
 	// 6. SEO & Social
 	$wp_customize->add_section( 'layunin_seo_social', array( 'title' => 'SEO & Social Media', 'priority' => 50 ) );
 	$wp_customize->add_setting( 'meta_description', array( 'default' => 'Layunin - Empowering Filipinos to transform goals into action.', 'sanitize_callback' => 'sanitize_text_field' ) );
@@ -222,7 +241,19 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( "social_{$social}", array( 'label' => ucfirst( $social ) . ' URL', 'section' => 'layunin_seo_social' ) );
 	}
 
-	// 6. Popup Options
+	// 6. Blog Options
+	$wp_customize->add_section( 'layunin_blog_options', array( 'title' => 'Blog Settings', 'priority' => 55 ) );
+	$wp_customize->add_setting( 'blog_layout', array( 'default' => 'grid', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'blog_layout', array(
+		'label'   => 'Archive Layout',
+		'section' => 'layunin_blog_options',
+		'type'    => 'select',
+		'choices' => array('grid' => 'Grid (3 Columns)', 'list' => 'List View')
+	) );
+	$wp_customize->add_setting( 'show_author_box', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_author_box', array( 'label' => 'Show Author Box', 'section' => 'layunin_blog_options', 'type' => 'checkbox' ) );
+
+	// 7. Popup Options
 	$wp_customize->add_section( 'layunin_popup_options', array( 'title' => 'Lead Popup', 'priority' => 60 ) );
 	$wp_customize->add_setting( 'show_popup', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
 	$wp_customize->add_control( 'show_popup', array( 'label' => 'Enable Popup', 'section' => 'layunin_popup_options', 'type' => 'checkbox' ) );

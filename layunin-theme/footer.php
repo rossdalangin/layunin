@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-4 mb-4">
-					<h3 class="h6 text-uppercase fw-bold text-accent mb-4">Explore</h3>
+					<h3 class="footer-title">Navigation</h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'footer',
@@ -29,7 +29,7 @@
 					?>
 				</div>
 				<div class="col-lg-3 col-md-4 mb-4">
-					<h3 class="h6 text-uppercase fw-bold text-accent mb-4">Recent Insights</h3>
+					<h3 class="footer-title">Recent Insights</h3>
 					<ul class="list-unstyled text-white-50 small">
 						<?php
 						$recent_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
@@ -40,7 +40,7 @@
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 mb-4">
-					<h3 class="h6 text-uppercase fw-bold text-accent mb-4">Newsletter</h3>
+					<h3 class="footer-title">Newsletter</h3>
 					<p class="text-white-50 small mb-4">Join 10,000+ subscribers for weekly growth tips.</p>
 					<form class="footer-newsletter">
 						<div class="input-group">

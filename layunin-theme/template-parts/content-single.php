@@ -1,6 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header mb-4">
-		<?php the_title( '<h1 class="entry-title display-4">', '</h1>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('animate-up'); ?>>
+	<header class="entry-header mb-5 text-center">
+		<?php the_title( '<h1 class="entry-title display-1 mb-4">', '</h1>' ); ?>
 		<div class="entry-meta text-muted mb-3">
 			<span class="posted-on"><?php the_date(); ?></span> |
 			<span class="reading-time"><?php echo layunin_reading_time(); ?> min read</span>

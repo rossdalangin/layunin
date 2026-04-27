@@ -20,9 +20,9 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<?php if ( get_theme_mod( 'show_announcement', false ) ) : ?>
-	<div class="announcement-bar bg-accent text-white text-center py-2 small fw-bold">
-		<?php echo esc_html( get_theme_mod( 'announcement_text', 'Check out our new Goal Planner!' ) ); ?>
+<?php if ( get_theme_mod( 'show_announcement', true ) ) : ?>
+	<div class="announcement-bar bg-gold text-white text-center py-3 small fw-bold text-uppercase letter-spacing-1">
+		<?php echo esc_html( get_theme_mod( 'announcement_text', 'Exclusive: Get the 7-Day Goal Reset Guide Free Today!' ) ); ?>
 	</div>
 <?php endif; ?>
 

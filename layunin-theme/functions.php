@@ -31,11 +31,36 @@ if ( ! function_exists( 'layunin_setup' ) ) :
 		) );
 	}
 endif;
+
+function layunin_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'layunin' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'layunin' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s mb-5">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title h5 text-uppercase fw-bold mb-4">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'layunin_widgets_init' );
 add_action( 'after_setup_theme', 'layunin_setup' );
 
 function layunin_scripts() {
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', array(), '5.3.0' );
-	wp_enqueue_style( 'layunin-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap', array(), null );
+	wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0' );
+
+	$body_font = get_theme_mod( 'body_font', 'Inter' );
+	$fonts_url = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap';
+	if ( $body_font === 'Roboto' ) {
+		$fonts_url .= '&family=Roboto:wght@400;700';
+	} elseif ( $body_font === 'Open Sans' ) {
+		$fonts_url .= '&family=Open+Sans:wght@400;700';
+	} else {
+		$fonts_url .= '&family=Inter:wght@400;600;700;800;900';
+	}
+
+	wp_enqueue_style( 'layunin-fonts', $fonts_url, array(), null );
 	wp_enqueue_style( 'layunin-style', get_stylesheet_uri(), array(), '1.0.0' );
 	wp_enqueue_style( 'layunin-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0' );
 

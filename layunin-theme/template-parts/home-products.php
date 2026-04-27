@@ -1,6 +1,6 @@
 <section class="products-section">
 	<div class="container text-center">
-		<h2>Premium Resources to Accelerate Your Success</h2>
+		<h2><?php echo esc_html( get_theme_mod( 'products_title', 'Premium Resources to Accelerate Your Success' ) ); ?></h2>
 		<p class="section-desc">Tools designed for the modern Filipino achiever.</p>
 		<div class="product-grid">
 			<div class="product-card">

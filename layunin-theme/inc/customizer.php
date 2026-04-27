@@ -40,14 +40,36 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'announcement_text', array( 'default' => 'Check out our new Goal Planner!', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'announcement_text', array( 'label' => __( 'Announcement Text', 'layunin' ), 'section' => 'layunin_announcement', 'type' => 'text' ) );
 
-	// Homepage Hero
-	$wp_customize->add_section( 'layunin_hero_section', array( 'title' => __( 'Homepage Hero', 'layunin' ), 'priority' => 40 ) );
+	// Homepage Content
+	$wp_customize->add_section( 'layunin_homepage_content', array( 'title' => __( 'Homepage Content', 'layunin' ), 'priority' => 40 ) );
+
+	// Hero
 	$wp_customize->add_setting( 'hero_headline', array( 'default' => 'Your Goals Deserve More Than Just Dreams', 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'hero_headline', array( 'label' => __( 'Hero Headline', 'layunin' ), 'section' => 'layunin_hero_section', 'type' => 'text' ) );
+	$wp_customize->add_control( 'hero_headline', array( 'label' => __( 'Hero Headline', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
 	$wp_customize->add_setting( 'hero_subheadline', array( 'default' => 'Layunin helps you turn your goals into clear action, real income, and a meaningful life.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
-	$wp_customize->add_control( 'hero_subheadline', array( 'label' => __( 'Hero Subheadline', 'layunin' ), 'section' => 'layunin_hero_section', 'type' => 'textarea' ) );
+	$wp_customize->add_control( 'hero_subheadline', array( 'label' => __( 'Hero Subheadline', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'textarea' ) );
     $wp_customize->add_setting( 'hero_bg_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hero_bg_image', array( 'label' => __( 'Hero Background Image', 'layunin' ), 'section' => 'layunin_hero_section' ) ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hero_bg_image', array( 'label' => __( 'Hero Background Image', 'layunin' ), 'section' => 'layunin_homepage_content' ) ) );
+
+	// Problem Section
+	$wp_customize->add_setting( 'problem_title', array( 'default' => 'Feeling Stuck and Without Direction?', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'problem_title', array( 'label' => __( 'Problem Section Title', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
+
+	// Solution Section
+	$wp_customize->add_setting( 'solution_title', array( 'default' => 'How Layunin Transforms Your Life', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'solution_title', array( 'label' => __( 'Solution Section Title', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
+
+	// Categories Section
+	$wp_customize->add_setting( 'categories_title', array( 'default' => 'Explore Our Focus Areas', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'categories_title', array( 'label' => __( 'Categories Section Title', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
+
+	// Products Section
+	$wp_customize->add_setting( 'products_title', array( 'default' => 'Premium Resources to Accelerate Your Success', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'products_title', array( 'label' => __( 'Products Section Title', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
+
+	// Services Section
+	$wp_customize->add_setting( 'services_home_title', array( 'default' => 'Work With Us', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'services_home_title', array( 'label' => __( 'Services Section Title', 'layunin' ), 'section' => 'layunin_homepage_content', 'type' => 'text' ) );
 
 	// Social Links
 	$wp_customize->add_section( 'layunin_social_links', array( 'title' => __( 'Social Links', 'layunin' ), 'priority' => 50 ) );

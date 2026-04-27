@@ -1,64 +1,70 @@
 <?php
 /**
- * Automated Page Creation for Layunin Theme
+ * Automated Page Creation for Layunin Theme - High Quality Content
  */
 
 function layunin_create_recommended_pages() {
+    // Only run if triggered or on theme switch (if trigger is default false)
+    $trigger = get_theme_mod( 'recreate_pages_trigger', false );
+    if ( ! $trigger && did_action( 'customize_save_after' ) ) {
+        return;
+    }
+
     $pages = array(
         'about' => array(
-            'title'    => 'About Us',
+            'title'    => 'Our Story',
             'template' => 'templates/about-page.php',
-            'content'  => 'Welcome to Layunin. Our goal is to help you transform your dreams into action.'
+            'content'  => 'Layunin (Tagalog for Goal/Purpose) was born from a desire to see every Filipino thrive. We believe that with the right mindset, digital tools, and actionable guidance, anyone can bridge the gap between their current reality and their ultimate goals. Our mission is to provide the systems and strategies that turn dreams into measurable success.'
         ),
         'services' => array(
-            'title'    => 'Our Services',
+            'title'    => 'Our Solutions',
             'template' => 'templates/services-page.php',
-            'content'  => 'Discover our premium coaching and digital services.'
+            'content'  => 'We offer a range of premium services tailored for the modern Filipino achiever. From custom high-performance web development that establishes your digital authority, to 1-on-1 coaching that provides the clarity you need to move forward, our solutions are designed for results.'
         ),
         'contact' => array(
-            'title'    => 'Contact Us',
+            'title'    => 'Get In Touch',
             'template' => 'templates/contact-page.php',
-            'content'  => 'Get in touch with us for inquiries and support.'
+            'content'  => 'Have questions about our resources, services, or your own growth journey? We are here to help. Reach out to the Layunin team today and let us start a conversation about your goals.'
         ),
         'free-resources' => array(
-            'title'    => 'Free Resources',
+            'title'    => 'Success Library',
             'template' => 'templates/free-resources-page.php',
-            'content'  => 'Access our library of free guides and templates.'
+            'content'  => 'Knowledge is only power when applied. Our Success Library contains free guides, planners, and templates designed to give you a head start in your personal and professional development.'
         ),
         'shop' => array(
-            'title'    => 'Digital Shop',
+            'title'    => 'Premium Tools',
             'template' => 'templates/shop-page.php',
-            'content'  => 'Premium tools and planners for your success.'
+            'content'  => 'Invest in your growth. Browse our curated collection of digital products, including the Ultimate Goal Planner and AI-powered productivity packs, built specifically to accelerate your progress.'
         ),
         'testimonials' => array(
-            'title'    => 'Testimonials',
+            'title'    => 'Success Stories',
             'template' => 'templates/testimonials-page.php',
-            'content'  => 'Read success stories from our community.'
+            'content'  => 'See how members of the Layunin community have transformed their lives. Our wall of love showcases the real-world impact of our systems and strategies on Filipinos across the globe.'
         ),
         'lead-magnet' => array(
-            'title'    => '7-Day Goal Reset',
+            'title'    => 'Free 7-Day Goal Reset',
             'template' => 'templates/lead-magnet-landing.php',
-            'content'  => 'Start your journey with our free 7-day guide.'
+            'content'  => 'Feeling stuck? Our most popular resource, the 7-Day Goal Reset, provides a day-by-day framework to audit your life, clear the overwhelm, and reclaim your momentum.'
         ),
         'thank-you' => array(
-            'title'    => 'Thank You',
+            'title'    => 'Welcome To The Community',
             'template' => 'templates/thank-you.php',
-            'content'  => 'Thank you for your interest in Layunin.'
+            'content'  => 'Thank you for trusting Layunin. Your journey to a more purposeful and productive life is officially underway. Check your email for your resources.'
         ),
         'privacy-policy' => array(
             'title'    => 'Privacy Policy',
             'template' => 'templates/privacy-policy.php',
-            'content'  => 'Your privacy is important to us.'
+            'content'  => 'At Layunin, we value your trust. This policy outlines how we handle and protect your data with the highest standards of integrity.'
         ),
         'terms-and-conditions' => array(
-            'title'    => 'Terms and Conditions',
+            'title'    => 'Terms of Service',
             'template' => 'templates/terms.php',
-            'content'  => 'Please read our terms and conditions.'
+            'content'  => 'By engaging with Layunin, you agree to our terms of service designed to ensure a fair and productive environment for all community members.'
         ),
         'affiliate-disclosure' => array(
-            'title'    => 'Affiliate Disclosure',
+            'title'    => 'Transparency Disclosure',
             'template' => 'templates/affiliate-disclosure.php',
-            'content'  => 'We value transparency in all our recommendations.'
+            'content'  => 'To support our mission, some links on this site are affiliate links. We only recommend tools and services we truly believe in.'
         ),
     );
 

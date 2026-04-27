@@ -32,6 +32,7 @@ if ( ! function_exists( 'layunin_setup' ) ) :
 
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'assets/css/editor-style.css' );
+		add_theme_support( 'woocommerce' );
 	}
 endif;
 

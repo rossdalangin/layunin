@@ -1,6 +1,6 @@
-<section class="hero-section d-flex align-items-center min-vh-100">
-	<div class="hero-bg-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,31,63,0.95) 0%, rgba(0,21,43,0.8) 100%);"></div>
-	<div class="container position-relative">
+<section class="hero-section d-flex align-items-center min-vh-100 py-0">
+	<div class="hero-bg-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,31,63,0.95) 0%, rgba(0,21,43,0.8) 100%); z-index: 1;"></div>
+	<div class="container position-relative" style="z-index: 2;">
 		<div class="row align-items-center">
 			<div class="col-lg-7 animate-up">
 				<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Philippines' #1 Purpose Platform</span>

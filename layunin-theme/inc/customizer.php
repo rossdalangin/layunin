@@ -57,7 +57,19 @@ function layunin_customize_register( $wp_customize ) {
 
 	// 4. Page Content Control Panel
 	$wp_customize->add_panel( 'layunin_pages_panel', array( 'title' => 'Page Content Management', 'priority' => 40 ) );
-	$pages = array('about' => 'About Page', 'services' => 'Services Page', 'contact' => 'Contact Page', 'free_resources' => 'Free Resources Page', 'shop' => 'Shop Page', 'testimonials' => 'Testimonials Page', 'lead_magnet' => 'Lead Magnet Page', 'thank_you' => 'Thank You Page');
+	$pages = array(
+		'about' => 'About Page',
+		'services' => 'Services Page',
+		'contact' => 'Contact Page',
+		'free_resources' => 'Free Resources Page',
+		'shop' => 'Shop Page',
+		'testimonials' => 'Testimonials Page',
+		'lead_magnet' => 'Lead Magnet Page',
+		'thank_you' => 'Thank You Page',
+		'privacy' => 'Privacy Policy',
+		'terms' => 'Terms of Service',
+		'affiliate' => 'Affiliate Disclosure'
+	);
 	foreach ( $pages as $id => $label ) {
 		$wp_customize->add_section( "layunin_page_{$id}", array( 'title' => $label, 'panel' => 'layunin_pages_panel' ) );
 		$wp_customize->add_setting( "{$id}_title", array( 'default' => $label, 'sanitize_callback' => 'sanitize_text_field' ) );

@@ -255,6 +255,28 @@ body.dark-mode .form-control {
     color: var(--white);
 }
 
+/* Premium Form Styling */
+.form-control {
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    outline: none;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
 /* Mobile Polish */
 @media (max-width: 991px) {
     .main-navigation ul {

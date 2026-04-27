@@ -19,7 +19,7 @@ function layunin_create_recommended_pages() {
         'services' => array(
             'title'    => 'Our Solutions',
             'template' => 'templates/services-page.php',
-            'content'  => 'We offer a range of premium services tailored for the modern Filipino achiever. From custom high-performance web development that establishes your digital authority, to 1-on-1 coaching that provides the clarity you need to move forward, our solutions are designed for results.'
+            'content'  => "We offer a range of premium services tailored for the modern Filipino achiever. From custom high-performance web development that establishes your digital authority, to 1-on-1 coaching that provides the clarity you need to move forward, our solutions are designed for results.\n\n[faq_page]\n[faq_item question='What services do you offer?']We offer web development, coaching, and business strategy consultation.[/faq_item]\n[faq_item question='How can I get started?']Simply book a session or request a quote through our contact page.[/faq_item]\n[/faq_page]"
         ),
         'contact' => array(
             'title'    => 'Get In Touch',

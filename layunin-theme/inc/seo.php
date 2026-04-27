@@ -84,6 +84,73 @@ function layunin_pricing_item_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'pricing_item', 'layunin_pricing_item_shortcode' );
 
+// CTA Box Shortcode
+function layunin_cta_shortcode( $atts ) {
+    $a = shortcode_atts( array(
+        'title' => 'Ready to take action?',
+        'button_text' => 'Get the Free Guide',
+        'button_url' => '#'
+    ), $atts );
+
+    return '
+    <div class="content-cta p-5 my-5 bg-navy text-white text-center rounded-4 shadow-lg animate-up">
+        <h3 class="text-white mb-4">' . esc_html($a['title']) . '</h3>
+        <a href="' . esc_url($a['button_url']) . '" class="btn btn-gold btn-lg px-5">' . esc_html($a['button_text']) . '</a>
+    </div>';
+}
+add_shortcode( 'cta_box', 'layunin_cta_shortcode' );
+
+// Benefit List Shortcode
+function layunin_benefit_list_shortcode( $atts, $content = null ) {
+    return '<ul class="benefit-list list-unstyled row my-5">' . do_shortcode($content) . '</ul>';
+}
+add_shortcode( 'benefit_list', 'layunin_benefit_list_shortcode' );
+
+function layunin_benefit_item_shortcode( $atts, $content = null ) {
+    $a = shortcode_atts( array(
+        'title' => '',
+        'icon' => 'fas fa-check'
+    ), $atts );
+    return '
+    <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start">
+            <div class="benefit-icon me-3 text-accent fs-4"><i class="' . esc_attr($a['icon']) . '"></i></div>
+            <div>
+                <h4 class="h6 fw-bold mb-1">' . esc_html($a['title']) . '</h4>
+                <div class="small text-muted">' . do_shortcode($content) . '</div>
+            </div>
+        </div>
+    </div>';
+}
+add_shortcode( 'benefit_item', 'layunin_benefit_item_shortcode' );
+
+// Testimonial Grid Shortcode
+function layunin_testimonial_grid_shortcode( $atts, $content = null ) {
+    return '<div class="testimonial-grid row my-5">' . do_shortcode($content) . '</div>';
+}
+add_shortcode( 'testimonial_grid', 'layunin_testimonial_grid_shortcode' );
+
+function layunin_testimonial_item_shortcode( $atts, $content = null ) {
+    $a = shortcode_atts( array(
+        'name' => 'John Doe',
+        'role' => 'Achiever',
+        'image' => ''
+    ), $atts );
+
+    $img_html = $a['image'] ? '<img src="' . esc_url($a['image']) . '" class="rounded-circle mb-3" style="width:60px; height:60px; object-fit:cover;">' : '';
+
+    return '
+    <div class="col-md-4 mb-4">
+        <div class="testimonial-card card p-4 shadow-sm border-0 animate-up text-center">
+            ' . $img_html . '
+            <blockquote class="small font-italic mb-3">"' . do_shortcode($content) . '"</blockquote>
+            <div class="fw-bold text-navy">' . esc_html($a['name']) . '</div>
+            <div class="small text-muted">' . esc_html($a['role']) . '</div>
+        </div>
+    </div>';
+}
+add_shortcode( 'testimonial_item', 'layunin_testimonial_item_shortcode' );
+
 // FAQ Schema Shortcode
 function layunin_faq_schema_shortcode( $atts, $content = null ) {
     return '<div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">' . do_shortcode($content) . '</div>';

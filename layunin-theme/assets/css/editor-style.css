@@ -1,0 +1,31 @@
+/*
+ * Layunin Gutenberg Editor Styles
+ */
+
+/* Main Typography */
+.editor-styles-wrapper {
+    font-family: 'Inter', sans-serif;
+    color: #2d3436;
+    line-height: 1.8;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: 'Playfair Display', serif;
+    color: #001f3f;
+    font-weight: 800;
+}
+
+/* Colors */
+.editor-styles-wrapper a {
+    color: #D4AF37;
+}
+
+/* Width Control */
+.wp-block {
+    max-width: 800px;
+}

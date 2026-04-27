@@ -30,11 +30,33 @@
 		<?php if ( get_theme_mod( 'hero_bg_image' ) ) : ?>
 			.hero-section { background-image: url('<?php echo esc_url( get_theme_mod( "hero_bg_image" ) ); ?>'); background-size: cover; background-position: center; }
 		<?php endif; ?>
+
+		/* Custom Section Colors */
+		.problem-section { background-color: <?php echo get_theme_mod('bg_color_problem', '#ffffff'); ?>; }
+		.solution-section { background-color: <?php echo get_theme_mod('bg_color_solution', '#f9f9f9'); ?>; }
+		.categories-section { background-color: <?php echo get_theme_mod('bg_color_categories', '#ffffff'); ?>; }
+		.products-section { background-color: <?php echo get_theme_mod('bg_color_products', '#ffffff'); ?>; }
+		.services-section { background-color: <?php echo get_theme_mod('bg_color_services', '#f9f9f9'); ?>; }
+		.testimonials-section { background-color: <?php echo get_theme_mod('bg_color_testimonials', '#f9f9f9'); ?>; }
+
+		/* Design Controls */
+		.card, .btn, .form-control { border-radius: <?php echo get_theme_mod('border_radius', '24'); ?>px !important; }
 	</style>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+	<div id="search-overlay" class="search-overlay">
+		<span id="search-close" class="search-close">&times;</span>
+		<div class="search-overlay-content container">
+			<form role="search" method="get" class="search-form-overlay text-center" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<input type="search" class="search-field-overlay" placeholder="What are you looking for?" value="<?php echo get_search_query(); ?>" name="s" />
+				<br>
+				<button type="submit" class="search-submit-overlay btn btn-gold btn-lg mt-5">Search My Goals</button>
+			</form>
+		</div>
+	</div>
 
 <?php if ( get_theme_mod( 'show_announcement', true ) ) : ?>
 	<div class="announcement-bar bg-gold text-white text-center py-3 small fw-bold text-uppercase letter-spacing-1">
@@ -69,10 +91,18 @@
 				) );
 				?>
 				<div class="header-actions d-none d-lg-flex align-items-center gap-3">
+					<button id="search-open" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 40px; height: 40px; padding: 0;"><i class="fas fa-search"></i></button>
+					<?php if(is_single()) : ?>
+						<button id="reading-mode-toggle" class="btn btn-sm btn-outline-primary rounded-circle" title="Reading Mode" style="width: 40px; height: 40px; padding: 0;"><i class="fas fa-book-open"></i></button>
+					<?php endif; ?>
 					<button id="dark-mode-toggle" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 40px; height: 40px; padding: 0;">🌓</button>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-gold btn-sm px-4">Work With Us</a>
 				</div>
-				<button class="menu-toggle d-lg-none" aria-controls="primary-menu" aria-expanded="false">☰</button>
+				<button class="menu-toggle d-lg-none" aria-controls="primary-menu" aria-expanded="false">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</nav>
 		</div>
 	</header>

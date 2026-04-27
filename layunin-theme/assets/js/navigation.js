@@ -8,11 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header Scroll State
     const siteHeader = document.querySelector('.site-header');
+    const heroSection = document.querySelector('.hero-section');
+
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+        const scrolled = window.scrollY;
+
+        if (scrolled > 50) {
             siteHeader.classList.add('scrolled');
         } else {
             siteHeader.classList.remove('scrolled');
+        }
+
+        // Parallax Effect for Hero
+        if (heroSection && scrolled < 600) {
+            heroSection.style.backgroundPositionY = (scrolled * 0.5) + 'px';
         }
     });
 
@@ -41,6 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dark Mode Toggle
     const darkModeBtn = document.getElementById('dark-mode-toggle');
+    // Reading Mode Toggle
+    const readingModeBtn = document.getElementById('reading-mode-toggle');
+    if (readingModeBtn) {
+        readingModeBtn.addEventListener('click', function() {
+            document.body.classList.toggle('reading-mode');
+        });
+    }
+
     if (darkModeBtn) {
         darkModeBtn.addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
@@ -70,6 +87,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.animate-up').forEach(el => {
         observer.observe(el);
     });
+
+    // Search Overlay logic
+    const searchOpen = document.getElementById('search-open');
+    const searchClose = document.getElementById('search-close');
+    const searchOverlay = document.getElementById('search-overlay');
+
+    if (searchOpen && searchOverlay) {
+        searchOpen.onclick = () => searchOverlay.style.display = 'block';
+    }
+    if (searchClose && searchOverlay) {
+        searchClose.onclick = () => searchOverlay.style.display = 'none';
+    }
 
     // Lead Popup Trigger
     const popupEl = document.getElementById('layunin-popup');

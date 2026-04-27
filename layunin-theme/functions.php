@@ -29,6 +29,9 @@ if ( ! function_exists( 'layunin_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'layunin' ),
 			'footer' => esc_html__( 'Footer', 'layunin' ),
 		) );
+
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-style.css' );
 	}
 endif;
 

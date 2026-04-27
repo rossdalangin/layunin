@@ -18,7 +18,10 @@
 				<?php echo wp_trim_words( get_the_excerpt(), 20 ); ?>
 			</div>
 			<div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
-				<span class="small text-muted"><i class="far fa-calendar-alt me-1"></i> <?php echo get_the_date(); ?></span>
+				<div class="small text-muted">
+					<span class="me-2"><i class="far fa-calendar-alt me-1"></i> <?php echo get_the_date(); ?></span>
+					<span><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> min</span>
+				</div>
 				<a href="<?php the_permalink(); ?>" class="text-navy fw-bold small text-decoration-none">Read More <i class="fas fa-arrow-right ms-1"></i></a>
 			</div>
 		</div>

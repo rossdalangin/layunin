@@ -14,6 +14,12 @@ get_template_part( 'template-parts/featured-posts' );
 // Trust Badges
 get_template_part( 'template-parts/home-trust-badges' );
 
+// Process Section
+get_template_part( 'template-parts/home-process' );
+
+// Features Section
+get_template_part( 'template-parts/home-features' );
+
 // Section 2: Problem
 if ( get_theme_mod( 'show_home_problem', true ) ) {
 	get_template_part( 'template-parts/home-problem' );

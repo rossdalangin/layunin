@@ -1,7 +1,7 @@
 <section class="categories-section">
 	<div class="container text-center">
 		<h2><?php echo esc_html( get_theme_mod( 'categories_title', 'Explore Our Focus Areas' ) ); ?></h2>
-		<p class="section-desc">Practical guidance for every step of your journey.</p>
+		<p class="section-desc"><?php echo esc_html( get_theme_mod( 'categories_desc', 'Practical guidance for every step of your journey.' ) ); ?></p>
 		<div class="category-grid grid-layout mt-5">
 			<?php for($i = 1; $i <= 6; $i++) :
 				$title = get_theme_mod("category_item_{$i}_title");

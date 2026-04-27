@@ -7,8 +7,8 @@ get_header(); ?>
 	<div class="row">
 		<div class="col-lg-8 offset-lg-2">
 			<header class="entry-header text-center mb-5">
-				<h1 class="entry-title">Our Story and Mission</h1>
-				<p class="lead text-muted">Helping Filipinos transform their goals into action, income, and success.</p>
+				<h1 class="entry-title"><?php echo esc_html( get_theme_mod( 'about_title', 'Our Story and Mission' ) ); ?></h1>
+				<p class="lead text-muted"><?php echo esc_html( get_theme_mod( 'about_description', 'Helping Filipinos transform their goals into action, income, and success.' ) ); ?></p>
 			</header>
 			<div class="entry-content">
 				<p>Layunin was founded on a simple yet powerful idea: that every Filipino has the potential to achieve greatness if given the right tools, guidance, and mindset.</p>

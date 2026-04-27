@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
 	<header class="page-header text-center mb-5">
-		<h1 class="page-title">Digital Shop</h1>
-		<p class="lead">Premium tools to help you succeed.</p>
+		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'shop_title', 'Digital Shop' ) ); ?></h1>
+		<p class="lead"><?php echo esc_html( get_theme_mod( 'shop_description', 'Premium tools to help you succeed.' ) ); ?></p>
 	</header>
 	<div class="row">
 		<!-- Integration with WooCommerce or custom product loop would go here -->

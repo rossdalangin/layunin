@@ -77,3 +77,4 @@ add_filter( 'the_content', 'layunin_generate_toc' );
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/cpt.php';
 require get_template_directory() . '/inc/seo.php';
+require get_template_directory() . '/inc/page-creator.php';

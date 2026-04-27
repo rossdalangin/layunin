@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
 	<header class="page-header text-center mb-5">
-		<h1 class="page-title">Community Success Stories</h1>
-		<p class="lead">See how Layunin has helped others achieve their goals.</p>
+		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Community Success Stories' ) ); ?></h1>
+		<p class="lead"><?php echo esc_html( get_theme_mod( 'testimonials_description', 'See how Layunin has helped others achieve their goals.' ) ); ?></p>
 	</header>
 	<div class="row">
 		<?php

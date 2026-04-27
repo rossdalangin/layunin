@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
 	<header class="page-header text-center mb-5">
-		<h1 class="page-title">Free Resources</h1>
-		<p class="lead">Download our premium guides, templates, and tools at no cost.</p>
+		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Free Resources' ) ); ?></h1>
+		<p class="lead"><?php echo esc_html( get_theme_mod( 'free_resources_description', 'Download our premium guides, templates, and tools at no cost.' ) ); ?></p>
 	</header>
 	<div class="resources-grid row">
 		<?php

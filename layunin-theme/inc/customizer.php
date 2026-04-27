@@ -88,6 +88,36 @@ function layunin_customize_register( $wp_customize ) {
 	// Footer Options
 	$wp_customize->add_setting( 'footer_text', array( 'default' => 'Your Goals Deserve More Than Just Dreams.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_text', array( 'label' => __( 'Footer Text', 'layunin' ), 'section' => 'layunin_theme_options', 'type' => 'text' ) );
+
+	// Page Content Management
+	$pages_to_manage = array(
+		'about' => 'About Page',
+		'services' => 'Services Page',
+		'contact' => 'Contact Page',
+		'free_resources' => 'Free Resources Page',
+		'shop' => 'Shop Page',
+		'testimonials' => 'Testimonials Page',
+	);
+
+	// Recreate Pages Setting
+	$wp_customize->add_section( 'layunin_page_setup', array( 'title' => __( 'Page Setup', 'layunin' ), 'priority' => 95 ) );
+	$wp_customize->add_setting( 'recreate_pages_trigger', array( 'default' => false, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'recreate_pages_trigger', array(
+		'label' => __( 'Recreate Missing Recommended Pages', 'layunin' ),
+		'description' => __( 'Check this and save to ensure all 17 recommended pages exist.', 'layunin' ),
+		'section' => 'layunin_page_setup',
+		'type' => 'checkbox'
+	) );
+
+	foreach ($pages_to_manage as $id => $label) {
+		$wp_customize->add_section( "layunin_{$id}_content", array( 'title' => $label, 'priority' => 100 ) );
+
+		$wp_customize->add_setting( "{$id}_title", array( 'default' => $label, 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_control( "{$id}_title", array( 'label' => 'Title', 'section' => "layunin_{$id}_content", 'type' => 'text' ) );
+
+		$wp_customize->add_setting( "{$id}_description", array( 'default' => 'Content for ' . $label, 'sanitize_callback' => 'sanitize_textarea_field' ) );
+		$wp_customize->add_control( "{$id}_description", array( 'label' => 'Description', 'section' => "layunin_{$id}_content", 'type' => 'textarea' ) );
+	}
 }
 add_action( 'customize_register', 'layunin_customize_register' );
 

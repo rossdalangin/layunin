@@ -6,8 +6,8 @@ get_header(); ?>
 <main id="primary" class="site-main container py-5">
 	<div class="row">
 		<div class="col-md-6">
-			<h1>Get in Touch</h1>
-			<p>Have questions about our resources or services? We're here to help.</p>
+			<h1><?php echo esc_html( get_theme_mod( 'contact_title', 'Get in Touch' ) ); ?></h1>
+			<p><?php echo esc_html( get_theme_mod( 'contact_description', "Have questions about our resources or services? We're here to help." ) ); ?></p>
 			<ul class="contact-info list-unstyled mt-4">
 				<li><strong>Email:</strong> hello@layunin.com</li>
 				<li><strong>Hours:</strong> Mon-Fri, 9am - 6pm PHT</li>

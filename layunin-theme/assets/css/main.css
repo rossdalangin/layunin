@@ -258,6 +258,32 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode .site-ti
     .main-navigation ul li a { color: var(--white); font-size: 1.25rem; }
 }
 
+/* Footer */
+.site-footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    background-image: radial-gradient(circle at 10% 90%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+}
+
+.site-footer .text-accent {
+    color: var(--accent) !important;
+}
+
+.border-white-10 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-newsletter .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    border-radius: 50px 0 0 50px;
+    padding-left: 1.5rem;
+}
+
+.footer-newsletter .btn {
+    border-radius: 0 50px 50px 0;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .hero-section { padding: 100px 0; }

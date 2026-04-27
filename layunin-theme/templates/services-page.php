@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
 	<header class="page-header text-center mb-5">
-		<h1 class="page-title">Our Premium Services</h1>
-		<p class="lead">Tailored solutions for your personal and professional growth.</p>
+		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'services_title', 'Our Premium Services' ) ); ?></h1>
+		<p class="lead"><?php echo esc_html( get_theme_mod( 'services_description', 'Tailored solutions for your personal and professional growth.' ) ); ?></p>
 	</header>
 	<div class="services-grid row">
 		<div class="col-md-4 mb-4">

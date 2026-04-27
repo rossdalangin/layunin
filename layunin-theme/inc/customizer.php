@@ -103,7 +103,12 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( "{$id}_content", array( 'label' => 'Main Content', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
 	}
 
-	// 5. SEO & Social
+	// 5. Sidebar Options
+	$wp_customize->add_section( 'layunin_sidebar_options', array( 'title' => 'Sidebar & Widgets', 'priority' => 45 ) );
+	$wp_customize->add_setting( 'sidebar_bio_text', array( 'default' => 'Dedicated to helping Filipinos achieve their greatest Layunin.', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'sidebar_bio_text', array( 'label' => 'Sidebar Bio Text', 'section' => 'layunin_sidebar_options', 'type' => 'textarea' ) );
+
+	// 6. SEO & Social
 	$wp_customize->add_section( 'layunin_seo_social', array( 'title' => 'SEO & Social Media', 'priority' => 50 ) );
 	$wp_customize->add_setting( 'meta_description', array( 'default' => 'Layunin - Empowering Filipinos to transform goals into action.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'meta_description', array( 'label' => 'Meta Description', 'section' => 'layunin_seo_social', 'type' => 'textarea' ) );

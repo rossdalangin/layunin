@@ -1,0 +1,224 @@
+/*
+ * Layunin Premium Design System
+ * Colors: Deep Navy (#001f3f), Warm Gold (#D4AF37), White (#FFFFFF), Soft Gray (#F8F9FA)
+ */
+
+:root {
+    --primary: #001f3f;
+    --accent: #D4AF37;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --navy-dark: #00152b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .site-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light);
+}
+
+.site-branding .site-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: var(--accent);
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.bg-navy {
+    background-color: var(--navy-dark);
+    color: var(--white);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-accent, .btn-gold {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Grid Layouts */
+.problem-grid, .category-grid, .product-grid, .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.site-info {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section, .card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Reading Progress Bar */
+.reading-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--accent);
+    width: 0%;
+    z-index: 1000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode .site-title, body.dark-mode a {
+    color: var(--white);
+}
+
+body.dark-mode .bg-light, body.dark-mode .card, body.dark-mode .table-of-contents {
+    background-color: #2d2d2d !important;
+    color: #f1f1f1;
+    border-color: #444 !important;
+}
+
+body.dark-mode .site-header {
+    background-color: #1a1a1a;
+    border-bottom-color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

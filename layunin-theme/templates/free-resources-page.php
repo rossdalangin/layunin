@@ -4,9 +4,10 @@
  */
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
-	<header class="page-header text-center mb-5">
-		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Free Resources' ) ); ?></h1>
-		<p class="lead"><?php echo esc_html( get_theme_mod( 'free_resources_description', 'Download our premium guides, templates, and tools at no cost.' ) ); ?></p>
+	<header class="page-header text-center mb-5 animate-up">
+		<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Knowledge Hub</span>
+		<h1 class="page-title display-4"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Free Resources' ) ); ?></h1>
+		<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'free_resources_content', 'Download our premium guides, templates, and tools at no cost.' ) ); ?></p>
 	</header>
 	<div class="resources-grid row">
 		<?php

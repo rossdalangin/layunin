@@ -4,9 +4,10 @@
  */
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
-	<header class="page-header text-center mb-5">
-		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Community Success Stories' ) ); ?></h1>
-		<p class="lead"><?php echo esc_html( get_theme_mod( 'testimonials_description', 'See how Layunin has helped others achieve their goals.' ) ); ?></p>
+	<header class="page-header text-center mb-5 animate-up">
+		<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Wall of Love</span>
+		<h1 class="page-title display-4"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Testimonials' ) ); ?></h1>
+		<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'testimonials_content', 'See how members of the Layunin community have transformed their lives.' ) ); ?></p>
 	</header>
 	<div class="row">
 		<?php

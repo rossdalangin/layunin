@@ -3,13 +3,13 @@
  * Template Name: Lead Magnet Landing
  */
 get_header(); ?>
-<main id="primary" class="site-main py-5 bg-light min-vh-100">
+<main id="primary" class="site-main py-5 bg-light min-vh-100 d-flex align-items-center">
 	<div class="container">
 		<div class="row align-items-center">
-			<div class="col-md-6">
-				<span class="badge bg-gold text-navy mb-3">Free Download</span>
-				<h1 class="display-4 fw-bold">Free 7-Day Goal Reset Guide</h1>
-				<p class="lead mb-4">Stop drifting. Start achieving. This guide provides the exact framework we use to reset our goals and get back on track in just one week.</p>
+			<div class="col-md-6 animate-up">
+				<span class="badge bg-gold text-white mb-3 px-3 py-2">Free Download</span>
+				<h1 class="display-4 fw-bold"><?php echo esc_html( get_theme_mod( 'lead_magnet_title', 'Free 7-Day Goal Reset Guide' ) ); ?></h1>
+				<p class="lead mb-4 text-muted"><?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop drifting. Start achieving. This guide provides the exact framework we use to reset our goals and get back on track in just one week.' ) ); ?></p>
 				<ul class="list-unstyled mb-5">
 					<li class="mb-2"><i class="icon-check"></i> <strong>Day 1:</strong> The Clarity Audit</li>
 					<li class="mb-2"><i class="icon-check"></i> <strong>Day 3:</strong> Systemizing Your Success</li>

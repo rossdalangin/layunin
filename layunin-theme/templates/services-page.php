@@ -4,9 +4,10 @@
  */
 get_header(); ?>
 <main id="primary" class="site-main container py-5">
-	<header class="page-header text-center mb-5">
-		<h1 class="page-title"><?php echo esc_html( get_theme_mod( 'services_title', 'Our Premium Services' ) ); ?></h1>
-		<p class="lead"><?php echo esc_html( get_theme_mod( 'services_description', 'Tailored solutions for your personal and professional growth.' ) ); ?></p>
+	<header class="page-header text-center mb-5 animate-up">
+		<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Premium Solutions</span>
+		<h1 class="page-title display-4"><?php echo esc_html( get_theme_mod( 'services_title', 'Our Solutions' ) ); ?></h1>
+		<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'services_content', 'Tailored solutions for your personal and professional growth.' ) ); ?></p>
 	</header>
 	<div class="services-grid row">
 		<div class="col-md-4 mb-4">

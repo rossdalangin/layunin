@@ -3,6 +3,22 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<?php echo esc_attr( get_theme_mod( 'meta_description', 'Layunin - Empowering Filipinos to transform goals into action.' ) ); ?>">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<meta property="og:title" content="<?php wp_title(); ?>">
+	<meta property="og:description" content="<?php echo esc_attr( get_theme_mod( 'meta_description' ) ); ?>">
+	<meta property="og:image" content="<?php echo esc_url( get_theme_mod( 'hero_bg_image' ) ); ?>">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<meta property="twitter:title" content="<?php wp_title(); ?>">
+	<meta property="twitter:description" content="<?php echo esc_attr( get_theme_mod( 'meta_description' ) ); ?>">
+	<meta property="twitter:image" content="<?php echo esc_url( get_theme_mod( 'hero_bg_image' ) ); ?>">
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 	<style>

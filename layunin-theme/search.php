@@ -17,8 +17,8 @@
 		</div>
 	<?php else : ?>
 		<section class="no-results not-found text-center py-5">
-			<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'layunin' ); ?></h2>
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'layunin' ); ?></p>
+			<h2 class="page-title nothing-found-title"><?php echo esc_html(get_theme_mod('nothing_found_title', 'Nothing Found')); ?></h2>
+			<p class="nothing-found-desc"><?php echo esc_html(get_theme_mod('nothing_found_desc', 'Sorry, but nothing matched your search terms. Please try again with some different keywords.')); ?></p>
 			<?php get_search_form(); ?>
 		</section>
 	<?php endif; ?>

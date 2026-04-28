@@ -1,9 +1,9 @@
 <section class="no-results not-found text-center py-5">
 	<header class="page-header mb-4">
-		<h1 class="page-title">Nothing Found</h1>
+		<h1 class="page-title nothing-found-title"><?php echo esc_html(get_theme_mod('nothing_found_title', 'Nothing Found')); ?></h1>
 	</header>
 	<div class="page-content">
-		<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>
+		<p class="nothing-found-desc"><?php echo esc_html(get_theme_mod('nothing_found_desc', 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.')); ?></p>
 		<?php get_search_form(); ?>
 	</div>
 </section>

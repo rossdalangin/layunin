@@ -1,5 +1,5 @@
 /**
- * Live preview for Customizer - Definitive Masterpiece (v8.8)
+ * Live preview for Customizer - Definitive Masterpiece (v8.9)
  */
 ( function( $ ) {
     // Helper function for list-based updates
@@ -80,6 +80,13 @@
     // Monetization
     wp.customize( 'product_item_1_title', function( value ) { value.bind( function( newval ) { $( '.monetization-product-title' ).text( newval ); } ); } );
     wp.customize( 'product_item_1_price', function( value ) { value.bind( function( newval ) { $( '.monetization-product-price' ).text( newval ); } ); } );
+
+    // Blog settings
+    wp.customize( 'author_box_title', function( value ) { value.bind( function( newval ) { $( '.author-box-title' ).text( newval ); } ); } );
+    wp.customize( 'related_posts_title', function( value ) { value.bind( function( newval ) { $( '.related-posts-title' ).text( newval ); } ); } );
+    wp.customize( 'read_more_text', function( value ) { value.bind( function( newval ) { $( '.read-more-text' ).text( newval ); } ); } );
+    wp.customize( 'nothing_found_title', function( value ) { value.bind( function( newval ) { $( '.nothing-found-title' ).text( newval ); } ); } );
+    wp.customize( 'nothing_found_desc', function( value ) { value.bind( function( newval ) { $( '.nothing-found-desc' ).text( newval ); } ); } );
 
     // Page Management - General Headings and Leads
     wp.customize( 'about_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-about-page-php .entry-title' ).text( newval ); } ); } );

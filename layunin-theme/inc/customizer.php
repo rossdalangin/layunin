@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - Absolute Masterpiece (v8.8)
+ * Layunin Theme Customizer - Absolute Masterpiece (v8.9)
  * 100% manageable Customizer registration for every single site section.
  */
 
@@ -163,7 +163,7 @@ function layunin_customize_register( $wp_customize ) {
         $wp_customize->add_setting( "product_item_{$i}_image", array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "product_item_{$i}_image", array( 'label' => "Product $i Image", 'section' => 'layunin_home_products' ) ) );
         $wp_customize->add_setting( "product_item_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
-		$wp_customize->add_control( "product_item_{$i}_link", array( 'label' => "Product $i Link", 'section' => 'layunin_home_products' ) );
+		$wp_customize->add_control( "product_item_{$i}_link", array( 'label' => "Product $i Link", 'section' => 'layunin_home_products' ) ) ;
 	}
 
     // 10. Services
@@ -230,6 +230,21 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_below_content', array( 'label' => 'Banner Below Post Content', 'section' => 'layunin_monetization' ) ) );
     $wp_customize->add_setting( 'affiliate_banner_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'affiliate_banner_url', array( 'label' => 'Global Affiliate Banner', 'section' => 'layunin_monetization' ) ) );
+
+    // --- 4.5 BLOG SETTINGS ---
+    $wp_customize->add_section( 'layunin_blog_settings', array( 'title' => 'Blog & Post Details', 'priority' => 44 ) );
+    $wp_customize->add_setting( 'show_author_box', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_author_box', array( 'label' => 'Show Author Box on Single Posts', 'section' => 'layunin_blog_settings', 'type' => 'checkbox' ) );
+    $wp_customize->add_setting( 'author_box_title', array( 'default' => 'About The Author', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'author_box_title', array( 'label' => 'Author Box Title', 'section' => 'layunin_blog_settings' ) );
+    $wp_customize->add_setting( 'related_posts_title', array( 'default' => 'You Might Also Like', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'related_posts_title', array( 'label' => 'Related Posts Title', 'section' => 'layunin_blog_settings' ) );
+    $wp_customize->add_setting( 'read_more_text', array( 'default' => 'Read More', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'read_more_text', array( 'label' => 'Read More Button Text', 'section' => 'layunin_blog_settings' ) );
+    $wp_customize->add_setting( 'nothing_found_title', array( 'default' => 'Nothing Found', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'nothing_found_title', array( 'label' => 'No Results Title', 'section' => 'layunin_blog_settings' ) );
+    $wp_customize->add_setting( 'nothing_found_desc', array( 'default' => 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'nothing_found_desc', array( 'label' => 'No Results Description', 'section' => 'layunin_blog_settings', 'type' => 'textarea' ) );
 
 	// --- 5. SOCIAL & SEO ---
     $wp_customize->add_section( 'layunin_seo_social', array( 'title' => 'SEO & Social Media', 'priority' => 45 ) );

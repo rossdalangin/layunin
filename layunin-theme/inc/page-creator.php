@@ -5,7 +5,7 @@
 
 function layunin_create_recommended_pages() {
     $trigger = get_theme_mod( 'recreate_pages_trigger', false );
-    if ( ! $trigger && did_action( 'after_switch_theme' ) === false ) {
+    if ( ! $trigger && did_action( 'after_switch_theme' ) === 0 ) {
         // Only run on theme switch or if trigger is explicitly checked
         if ( !isset($_POST['customized']) ) return;
     }

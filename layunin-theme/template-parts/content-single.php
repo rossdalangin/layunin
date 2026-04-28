@@ -32,7 +32,7 @@
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 120, '', '', array( 'class' => 'rounded-circle border border-4 border-light' ) ); ?>
 			</div>
 			<div class="author-info">
-				<span class="text-accent small text-uppercase fw-bold mb-2 d-block">About The Author</span>
+				<span class="text-accent small text-uppercase fw-bold mb-2 d-block author-box-title"><?php echo esc_html(get_theme_mod('author_box_title', 'About The Author')); ?></span>
 				<h3 class="author-name h4 fw-bold text-navy mb-3"><?php the_author(); ?></h3>
 				<p class="author-bio mb-4 text-muted"><?php the_author_meta( 'description' ); ?></p>
 				<div class="author-socials d-flex gap-3">
@@ -45,7 +45,7 @@
 		<?php endif; ?>
 
 		<div class="related-posts">
-			<h3 class="h4 fw-bold text-navy mb-5 text-center">You Might Also Like</h3>
+			<h3 class="h4 fw-bold text-navy mb-5 text-center related-posts-title"><?php echo esc_html(get_theme_mod('related_posts_title', 'You Might Also Like')); ?></h3>
 			<div class="row g-4">
 				<?php
 				$related = new WP_Query( array(

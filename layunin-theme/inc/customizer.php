@@ -17,6 +17,14 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'border_radius', array( 'label' => 'Global Roundedness (px)', 'section' => 'layunin_design_system', 'type' => 'number' ) );
 
 	// 2. Section Backgrounds
+	$wp_customize->add_section( 'layunin_category_colors', array( 'title' => 'Category Colors', 'priority' => 12 ) );
+	$cats = array('Goal Setting', 'Online Income', 'Productivity', 'AI Tools', 'Mindset', 'Business', 'Success Stories');
+	foreach($cats as $cat) {
+		$cat_id = sanitize_title($cat);
+		$wp_customize->add_setting( "color_cat_{$cat_id}", array( 'default' => '#D4AF37', 'sanitize_callback' => 'sanitize_hex_color' ) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "color_cat_{$cat_id}", array( 'label' => $cat . ' Color', 'section' => 'layunin_category_colors' ) ) );
+	}
+
 	$wp_customize->add_section( 'layunin_section_colors', array( 'title' => 'Section Backgrounds', 'priority' => 15 ) );
 	$sections_bg = array('problem', 'solution', 'categories', 'products', 'services', 'testimonials');
 	foreach ($sections_bg as $sec) {
@@ -40,6 +48,8 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'hero_headline', array( 'label' => 'Hero Title', 'section' => 'layunin_home_hero' ) );
 	$wp_customize->add_setting( 'hero_subheadline', array( 'default' => 'Layunin helps you turn your goals into clear action, real income, and a meaningful life.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'hero_subheadline', array( 'label' => 'Hero Subtitle', 'section' => 'layunin_home_hero', 'type' => 'textarea' ) );
+	$wp_customize->add_setting( 'hero_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hero_image', array( 'label' => 'Hero Background Image', 'section' => 'layunin_home_hero' ) ) );
 	$wp_customize->add_setting( 'hero_cta_1_text', array( 'default' => 'Download Free Guide', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'hero_cta_1_text', array( 'label' => 'CTA 1 Text', 'section' => 'layunin_home_hero' ) );
 	$wp_customize->add_setting( 'hero_cta_2_text', array( 'default' => 'Start Your Journey', 'sanitize_callback' => 'sanitize_text_field' ) );
@@ -47,10 +57,10 @@ function layunin_customize_register( $wp_customize ) {
 
 	// Section Visibility
 	$wp_customize->add_section( 'layunin_home_visibility', array( 'title' => 'Section Visibility', 'panel' => 'layunin_homepage_panel' ) );
-	$sections = array('trust_badges', 'process', 'features', 'problem', 'solution', 'categories', 'lead_magnet', 'products', 'services', 'testimonials', 'final_cta');
+	$sections = array('featured_posts', 'trust_badges', 'process', 'features', 'problem', 'solution', 'categories', 'lead_magnet', 'products', 'services', 'testimonials', 'final_cta');
 	foreach ($sections as $section) {
 		$wp_customize->add_setting( "show_home_{$section}", array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
-		$wp_customize->add_control( "show_home_{$section}", array( 'label' => 'Show ' . ucfirst($section), 'section' => 'layunin_home_visibility', 'type' => 'checkbox' ) );
+		$wp_customize->add_control( "show_home_{$section}", array( 'label' => 'Show ' . ucfirst(str_replace('_', ' ', $section)), 'section' => 'layunin_home_visibility', 'type' => 'checkbox' ) );
 	}
 
 	// Problem Section

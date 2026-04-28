@@ -22,7 +22,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Email Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_email', 'hello@layunin.com')); ?></p>
+							<p class="text-muted small mb-0 contact-email"><?php echo esc_html(get_theme_mod('contact_email', 'hello@layunin.com')); ?></p>
 						</div>
 					</div>
 
@@ -32,7 +32,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Call Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_phone', '+63 912 345 6789')); ?></p>
+							<p class="text-muted small mb-0 contact-phone"><?php echo esc_html(get_theme_mod('contact_phone', '+63 912 345 6789')); ?></p>
 						</div>
 					</div>
 
@@ -42,7 +42,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Visit Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_address', 'Manila, Philippines')); ?></p>
+							<p class="text-muted small mb-0 contact-address"><?php echo esc_html(get_theme_mod('contact_address', 'Manila, Philippines')); ?></p>
 						</div>
 					</div>
 
@@ -91,7 +91,7 @@ get_header(); ?>
 		</div>
 
 		<?php if(get_theme_mod('contact_map_url')) : ?>
-			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm">
+			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm contact-map">
 				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 		<?php endif; ?>

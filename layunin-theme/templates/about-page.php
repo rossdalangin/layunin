@@ -45,9 +45,9 @@ get_header(); ?>
                     $role = get_theme_mod("team_member_{$i}_role", 'Mastery Specialist');
                     $image = get_theme_mod("team_member_{$i}_image");
                 ?>
-                <div class="team-card text-center animate-up" style="animation-delay: <?php echo $i * 0.15; ?>s;">
+                <div class="team-card text-center animate-up team-member-<?php echo $i; ?>" style="animation-delay: <?php echo $i * 0.15; ?>s;">
                     <div class="card h-100 p-5 hover-lift border-0 shadow-premium">
-                        <div class="mb-4 mx-auto rounded-circle overflow-hidden shadow-lg border border-5 border-light" style="width: 160px; height: 160px;">
+                        <div class="mb-4 mx-auto rounded-circle overflow-hidden shadow-lg border border-5 border-light member-photo" style="width: 160px; height: 160px;">
                             <?php if($image) : ?>
                                 <img src="<?php echo esc_url($image); ?>" class="w-100 h-100 object-fit-cover" alt="<?php echo esc_attr($name); ?>">
                             <?php else: ?>
@@ -56,8 +56,8 @@ get_header(); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <h3 class="h4 fw-bold text-navy mb-2"><?php echo esc_html($name); ?></h3>
-                        <p class="text-gold small text-uppercase fw-black letter-spacing-1 mb-4"><?php echo esc_html($role); ?></p>
+                        <h3 class="h4 fw-bold text-navy mb-2 member-name"><?php echo esc_html($name); ?></h3>
+                        <p class="text-gold small text-uppercase fw-black letter-spacing-1 mb-4 member-role"><?php echo esc_html($role); ?></p>
                         <div class="social-mini d-flex justify-content-center gap-3">
                             <a href="#" class="text-muted hover-gold"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="text-muted hover-gold"><i class="fab fa-twitter"></i></a>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - Absolute Masterpiece (v8.2)
+ * Layunin Theme Customizer - Absolute Masterpiece (v8.4)
  * 100% manageable Customizer registration for every single site section.
  */
 
@@ -9,7 +9,7 @@ function layunin_customize_register( $wp_customize ) {
 	// --- 1. CORE DESIGN SYSTEM ---
 	$wp_customize->add_section( 'layunin_design_system', array( 'title' => 'Elite Design System', 'priority' => 10 ) );
 
-    $wp_customize->add_setting( 'body_font', array( 'default' => 'Inter', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( 'body_font', array( 'default' => 'Inter', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'body_font', array( 'label' => 'Body Font', 'section' => 'layunin_design_system', 'type' => 'select', 'choices' => array('Inter' => 'Inter', 'Roboto' => 'Roboto', 'Open Sans' => 'Open Sans') ) );
 
     $wp_customize->add_setting( 'primary_color', array( 'default' => '#0A192F', 'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
@@ -105,7 +105,7 @@ function layunin_customize_register( $wp_customize ) {
         $wp_customize->add_control( "problem_item_{$i}_title", array( 'label' => "Problem $i Title", 'section' => 'layunin_home_problem' ) );
         $wp_customize->add_setting( "problem_item_{$i}_desc", array( 'default' => "Problem description...", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
         $wp_customize->add_control( "problem_item_{$i}_desc", array( 'label' => "Problem $i Description", 'section' => 'layunin_home_problem', 'type' => 'textarea' ) );
-        $wp_customize->add_setting( "problem_item_{$i}_icon", array( 'default' => "fas fa-exclamation-triangle", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+        $wp_customize->add_setting( "problem_item_{$i}_icon", array( 'default' => "fas fa-exclamation-triangle", 'sanitize_callback' => 'sanitize_text_field' ) );
         $wp_customize->add_control( "problem_item_{$i}_icon", array( 'label' => "Problem $i Icon (FontAwesome)", 'section' => 'layunin_home_problem' ) );
     }
 
@@ -129,7 +129,7 @@ function layunin_customize_register( $wp_customize ) {
 	for($i = 1; $i <= 6; $i++) {
 		$wp_customize->add_setting( "category_item_{$i}_title", array( 'default' => "Category $i", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 		$wp_customize->add_control( "category_item_{$i}_title", array( 'label' => "Category $i Title", 'section' => 'layunin_home_categories' ) );
-		$wp_customize->add_setting( "category_item_{$i}_icon", array( 'default' => 'fas fa-star', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+		$wp_customize->add_setting( "category_item_{$i}_icon", array( 'default' => 'fas fa-star', 'sanitize_callback' => 'sanitize_text_field' ) );
 		$wp_customize->add_control( "category_item_{$i}_icon", array( 'label' => "Category $i Icon", 'section' => 'layunin_home_categories' ) );
 	}
 
@@ -139,13 +139,15 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'lm_title', array( 'label' => 'Title', 'section' => 'layunin_home_lm' ) );
     $wp_customize->add_setting( 'lm_subtitle', array( 'default' => 'Ready to stop procrastinating and start producing?', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'lm_subtitle', array( 'label' => 'Subtitle', 'section' => 'layunin_home_lm' ) );
-    $wp_customize->add_setting( 'lm_list', array( 'default' => "How to define your 'Layunin' in 10 minutes\nThe AI tools for 3x productivity\n3 daily habits of high achievers", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+    $wp_customize->add_setting( 'lm_list', array( 'default' => "How to define your 'Layunin' in 10 minutes\nThe AI tools for 3x productivity\n3 daily habits of high achievers", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'lm_list', array( 'label' => 'Benefit List (one per line)', 'section' => 'layunin_home_lm', 'type' => 'textarea' ) );
 
 	// 9. Products
 	$wp_customize->add_section( 'layunin_home_products', array( 'title' => '9. Products Section', 'panel' => 'layunin_homepage_panel' ) );
 	$wp_customize->add_setting( 'products_title', array( 'default' => 'Accelerate Your Success', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'products_title', array( 'label' => 'Title', 'section' => 'layunin_home_products' ) );
+    $wp_customize->add_setting( 'products_desc', array( 'default' => 'Tools designed for the modern Filipino achiever.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'products_desc', array( 'label' => 'Description', 'section' => 'layunin_home_products' ) );
 	for($i = 1; $i <= 3; $i++) {
 		$wp_customize->add_setting( "product_item_{$i}_title", array( 'default' => "Product $i", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 		$wp_customize->add_control( "product_item_{$i}_title", array( 'label' => "Product $i Title", 'section' => 'layunin_home_products' ) );
@@ -166,7 +168,7 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( "service_item_{$i}_title", array( 'label' => "Service $i Title", 'section' => 'layunin_home_services' ) );
         $wp_customize->add_setting( "service_item_{$i}_desc", array( 'default' => "Service description...", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 		$wp_customize->add_control( "service_item_{$i}_desc", array( 'label' => "Service $i Description", 'section' => 'layunin_home_services', 'type' => 'textarea' ) );
-		$wp_customize->add_setting( "service_item_{$i}_icon", array( 'default' => 'fas fa-briefcase', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+		$wp_customize->add_setting( "service_item_{$i}_icon", array( 'default' => 'fas fa-briefcase', 'sanitize_callback' => 'sanitize_text_field' ) );
 		$wp_customize->add_control( "service_item_{$i}_icon", array( 'label' => "Service $i Icon", 'section' => 'layunin_home_services' ) );
 	}
 
@@ -200,7 +202,7 @@ function layunin_customize_register( $wp_customize ) {
 
     // --- 5. PAGE CONTENT MANAGEMENT ---
 	$wp_customize->add_panel( 'layunin_pages_panel', array( 'title' => 'Page Management', 'priority' => 40 ) );
-	$pages = array( 'about', 'services', 'contact', 'shop', 'free_resources', 'testimonials' );
+	$pages = array( 'about', 'services', 'contact', 'shop', 'free_resources', 'testimonials', 'lead_magnet_landing', 'thank_you', 'affiliate_disclosure' );
 	foreach ( $pages as $id ) {
 		$label = ucfirst(str_replace('_', ' ', $id)) . ' Page';
 		$wp_customize->add_section( "layunin_page_{$id}", array( 'title' => $label, 'panel' => 'layunin_pages_panel' ) );
@@ -258,7 +260,7 @@ function layunin_customize_register( $wp_customize ) {
                 $wp_customize->add_control( "resource_{$i}_type", array( 'label' => "Resource $i Type", 'section' => "layunin_page_{$id}" ) );
                 $wp_customize->add_setting( "resource_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
                 $wp_customize->add_control( "resource_{$i}_link", array( 'label' => "Resource $i Link", 'section' => "layunin_page_{$id}" ) );
-                $wp_customize->add_setting( "resource_{$i}_icon", array( 'default' => 'fas fa-download', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_setting( "resource_{$i}_icon", array( 'default' => 'fas fa-download', 'sanitize_callback' => 'sanitize_text_field' ) );
                 $wp_customize->add_control( "resource_{$i}_icon", array( 'label' => "Resource $i Icon", 'section' => "layunin_page_{$id}" ) );
             }
         }
@@ -266,6 +268,27 @@ function layunin_customize_register( $wp_customize ) {
         if($id == 'testimonials') {
             $wp_customize->add_setting( 'testimonials_content', array( 'default' => 'See how members of the Layunin community have transformed their lives using our systems.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'testimonials_content', array( 'label' => 'Testimonials Description', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+        }
+
+        if($id == 'lead_magnet_landing') {
+            $wp_customize->add_setting( 'lead_magnet_landing_title', array( 'default' => 'Free 7-Day Goal Reset', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+		    $wp_customize->add_control( 'lead_magnet_landing_title', array( 'label' => 'Landing Headline', 'section' => "layunin_page_{$id}" ) );
+            $wp_customize->add_setting( 'lead_magnet_content', array( 'default' => 'Stop dreaming about your goals and start building them. Our most popular resource provides a day-by-day framework to audit your life.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'lead_magnet_content', array( 'label' => 'Landing Description', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+            for($i = 1; $i <= 3; $i++) {
+                $wp_customize->add_setting( "lm_benefit_{$i}", array( 'default' => "Exclusive Strategy #{$i} for success", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_control( "lm_benefit_{$i}", array( 'label' => "Benefit $i", 'section' => "layunin_page_{$id}" ) );
+            }
+        }
+
+        if($id == 'thank_you') {
+            $wp_customize->add_setting( 'thank_you_content', array( 'default' => 'Thank you for your interest. Please check your inbox for the link to your resource.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'thank_you_content', array( 'label' => 'Success Message', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+        }
+
+        if($id == 'affiliate_disclosure') {
+            $wp_customize->add_setting( 'affiliate_disclosure_content', array( 'default' => "In compliance with the FTC guidelines, please assume that any and all links on this website are affiliate links of which Layunin receives a small commission from sales of certain items, but the price is the same for you.\n\nLayunin is a participant in various affiliate programs designed to provide a means for sites to earn advertising fees by advertising and linking to partners.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'affiliate_disclosure_content', array( 'label' => 'Disclosure Text', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
         }
 	}
 

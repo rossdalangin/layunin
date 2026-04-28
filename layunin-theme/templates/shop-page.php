@@ -18,7 +18,7 @@ get_header(); ?>
 				$image = get_theme_mod("shop_item_{$i}_image");
 				$link = get_theme_mod("shop_item_{$i}_link", "#");
 			?>
-			<div class="col-lg-4 col-md-6 animate-up" style="animation-delay: <?php echo 0.05 * $i; ?>s;">
+			<div class="col-lg-4 col-md-6 animate-up product-item" style="animation-delay: <?php echo 0.05 * $i; ?>s;">
 				<div class="product-card card h-100 border-0 shadow-sm overflow-hidden transition-all hover-lift">
 					<div class="product-image position-relative">
 						<?php if($image) : ?>
@@ -35,9 +35,9 @@ get_header(); ?>
 					<div class="card-body p-4">
 						<div class="d-flex justify-content-between align-items-center mb-3">
 							<span class="badge bg-light text-navy small">Digital Resource</span>
-							<span class="text-accent fw-bold"><?php echo esc_html($price); ?></span>
+							<span class="text-accent fw-bold item-price"><?php echo esc_html($price); ?></span>
 						</div>
-						<h3 class="h5 fw-bold text-navy mb-0"><?php echo esc_html($title); ?></h3>
+						<h3 class="h5 fw-bold text-navy mb-0 item-title"><?php echo esc_html($title); ?></h3>
 					</div>
 					<div class="card-footer bg-white border-0 p-4 pt-0">
 						<a href="<?php echo esc_url($link); ?>" class="btn btn-navy btn-sm w-100 py-2">Add to Cart <i class="fas fa-shopping-cart ms-2"></i></a>

@@ -18,13 +18,13 @@ get_header(); ?>
 				$link = get_theme_mod("resource_{$i}_link", '#');
 				$icon = get_theme_mod("resource_{$i}_icon", 'fas fa-download');
 			?>
-			<div class="col-lg-3 col-md-6 animate-up" style="animation-delay: <?php echo 0.1 * $i; ?>s;">
+			<div class="col-lg-3 col-md-6 animate-up resource-item" style="animation-delay: <?php echo 0.1 * $i; ?>s;">
 				<div class="resource-card card h-100 p-4 border-0 shadow-sm text-center transition-all hover-lift">
 					<div class="icon-box bg-light text-accent rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
 						<i class="<?php echo esc_attr($icon); ?> fa-2x"></i>
 					</div>
-					<span class="badge bg-navy-subtle text-navy mb-3 small"><?php echo esc_html($type); ?></span>
-					<h3 class="h5 fw-bold text-navy mb-4"><?php echo esc_html($title); ?></h3>
+					<span class="badge bg-navy-subtle text-navy mb-3 small item-type"><?php echo esc_html($type); ?></span>
+					<h3 class="h5 fw-bold text-navy mb-4 item-title"><?php echo esc_html($title); ?></h3>
 					<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy btn-sm w-100 py-2 mt-auto fw-bold">Download Free</a>
 				</div>
 			</div>

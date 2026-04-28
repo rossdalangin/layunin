@@ -9,19 +9,19 @@ get_header(); ?>
 			<div class="col-lg-6 animate-up">
 				<div class="lm-content-box pe-lg-4">
 					<span class="badge bg-gold px-3 py-2 mb-3 shadow-sm">Free Digital Resource</span>
-					<h1 class="display-3 fw-bold text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lead_magnet_title', 'Free 7-Day Goal Reset' ) ); ?></h1>
+					<h1 class="display-3 fw-bold text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Free 7-Day Goal Reset' ) ); ?></h1>
 					<p class="lead text-muted mb-5 fs-4">
 						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop dreaming about your goals and start building them. Our most popular resource provides a day-by-day framework to audit your life.' ) ); ?>
 					</p>
 
 					<h3 class="h5 fw-bold text-navy mb-4">What's Inside This Guide:</h3>
-					<ul class="list-unstyled mb-5">
+					<ul class="list-unstyled mb-5 benefit-list">
 						<?php for($i = 1; $i <= 3; $i++) :
 							$benefit = get_theme_mod("lm_benefit_{$i}", "Exclusive Strategy #{$i} for success");
 						?>
-						<li class="mb-3 d-flex align-items-start">
+						<li class="mb-3 d-flex align-items-start benefit-item-<?php echo $i; ?>">
 							<div class="benefit-check text-accent me-3 fs-5"><i class="fas fa-check-circle"></i></div>
-							<span class="text-navy fw-bold"><?php echo esc_html($benefit); ?></span>
+							<span class="text-navy fw-bold benefit-text"><?php echo esc_html($benefit); ?></span>
 						</li>
 						<?php endfor; ?>
 					</ul>

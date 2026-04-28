@@ -1,6 +1,6 @@
-# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.0)
+# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.4)
 
-Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive guide to the theme's architecture, customization engine, and content strategy.
+Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive guide to the theme's architecture, customization engine, and navigation strategy.
 
 ---
 
@@ -14,8 +14,49 @@ Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive gui
 ### 2. Global Branding (Design System)
 Access the **Elite Design System** panel in the Customizer to define your core brand identity:
 - **Typography:** Choose between modern Inter, clean Roboto, or classic Open Sans.
-- **Color Palette:** Set your Primary Navy (brand trust) and Accent Gold (call-to-action).
-- **Global Roundedness:** Define the 'border-radius' for all UI components (buttons, cards, inputs) to ensure a consistent, premium feel.
+- **Color Palette:** Set your Primary Midnight Navy (#050A18) and Elite Royal Gold (#C5A02B).
+- **Global Roundedness:** Define the 'border-radius' (Default: 16px) for all UI components to ensure a consistent, premium feel.
+
+---
+
+## 🧭 Navigation & Menu Architecture
+
+To maintain the high-trust, conversion-focused design, follow these menu structures. Navigate to **Appearance > Menus** to configure.
+
+### A. Header Menu (Primary Navigation)
+*The objective is to guide users through the transformation funnel.*
+
+1. **Home** (Link: `/`)
+2. **About** (Link: `/about/`)
+3. **Mastery Areas** (Dropdown)
+   - Goal Setting (Category Link)
+   - Online Income (Category Link)
+   - Productivity (Category Link)
+   - AI Mastery (Category Link)
+4. **Resources** (Link: `/free-resources/`)
+5. **Shop** (Link: `/shop/`)
+6. **Services** (Link: `/services/`)
+7. **Contact** (Link: `/contact/`)
+8. **CTA Button:** Managed via Customizer (**Header & Navigation > CTA Button Text**). Usually points to `/lead-magnet/` or `/services/`.
+
+### B. Footer Menu (Utility & Trust)
+*The objective is to provide site-wide utility and legal compliance.*
+
+**Column 1: Site Branding** (Automatic)
+**Column 2: Mastery Area**
+- All Posts
+- Success Stories (Category)
+- Elite Mindset (Category)
+- Scalable Business (Category)
+**Column 3: Resources**
+- Free 7-Day Protocol
+- Knowledge Vault
+- FAQs
+- Testimonials
+**Column 4: Legal & Compliance**
+- Privacy Policy
+- Terms & Conditions
+- Affiliate Disclosure
 
 ---
 
@@ -24,41 +65,28 @@ Access the **Elite Design System** panel in the Customizer to define your core b
 The Layunin theme is **100% manageable**. Every text string, image, and section visibility toggle is centralized in the WordPress Customizer.
 
 ### 🏠 Homepage Construction (Modular Architecture)
-The homepage is composed of 13 high-conversion sections, each fully customizable:
-1. **Hero Section:** Primary headline, sub-headline, and two call-to-action buttons.
-2. **Featured Posts:** Dynamic display of your top 3 'Mastery' articles.
-3. **Trust Badges:** Showcase authority with partner logos.
-4. **Process/Framework:** Outline your unique 3-step transformation methodology.
-5. **Features/Benefits:** Detail why your approach is superior.
-6. **Problem/Solution:** Address audience pain points and present your 'Layunin' framework.
-7. **Categories:** Guide users to specific areas of mastery.
-8. **Lead Magnet:** High-converting capture section for your 7-day reset guide.
-9. **Products/Services:** Monetize directly with premium assets and coaching tiers.
-10. **Testimonials:** Build social proof with a dedicated "Wall of Mastery."
+The homepage is composed of 13 high-conversion sections:
+1. **Hero Section:** Persuasive headline and dual-action buttons.
+2. **Featured Posts:** Highlight your "Elite" content.
+3. **Trust Badges:** Logo bar for authority.
+4. **Process Section:** Your 3-step "Elite Protocol."
+5. **Features:** Why high-achievers choose your platform.
+6. **Problem/Solution:** Direct address of audience pain points.
+7. **Categories:** Visual navigation to mastery areas.
+8. **Lead Magnet:** The 7-Day Goal Reset Protocol capture.
+9. **Products/Services:** Monetization modules.
+10. **Testimonials:** Masonry "Wall of Impact."
 
 ### 📄 Inner Page Templates
-All specialized templates are dynamic. Customize the content for:
-- **About Page:** Main mission, lead paragraph, and 3-member team grid.
-- **Contact Page:** Full contact info (Email, Phone, Address) and Google Maps integration.
-- **Shop & Resources:** Manage grids of products and free downloads.
-- **Legal Pages:** Fully editable Privacy Policy, Terms, and Affiliate Disclosures.
-
----
-
-## 📈 SEO, Schema & Performance
-
-- **Automated Schema.org:** JSON-LD markup is automatically generated for Articles, FAQs, and Reviews to ensure maximum visibility in Google Search.
-- **Breadcrumbs:** Native, schema-compliant breadcrumb trail for improved UX and crawlability.
-- **Reading Progress & Modes:** Interactive progress bar and focus-optimized reading mode for single posts.
-- **Live Preview:** Powered by `postMessage` technology, providing an instant, responsive editing experience without page refreshes.
+17 dynamic templates are included. Each has dedicated Customizer controls for headlines, badges, and lead copy.
 
 ---
 
 ## 💰 Monetization Strategy
 
-- **Ad Banners:** Managed in the **Monetization & Ads** panel; place custom banners above or below post content.
-- **Affiliate Integration:** Global affiliate banner setting and dedicated disclosure template for compliance.
-- **Lead Capture:** Integrated exit-intent popup and sidebar newsletters to grow your elite community.
+- **Ad Banners:** Global controls for banners above/below content.
+- **Affiliate Integration:** Dedicated disclosure template and global affiliate banner settings.
+- **Lead Capture:** Exit-intent popup (Customizer > Lead Popup) and integrated newsletter widgets.
 
 ---
 
@@ -75,7 +103,7 @@ All specialized templates are dynamic. Customize the content for:
 
 ## 📞 Support & Architectural Credits
 - **Architect:** Jules (Layunin Lead Software Engineer)
-- **Technology Stack:** PHP 8+, Bootstrap 5.3, FontAwesome 6, AOS (Animate on Scroll).
+- **Technology Stack:** PHP 8+, Bootstrap 5.3, FontAwesome 6.
 - **Contact:** hello@layunin.com
 
-*© 2024 Layunin.com. Empowering Filipinos to turn goals into precise action.*
+*© 2024 Layunin.com. Architecting the next generation of Filipino excellence.*

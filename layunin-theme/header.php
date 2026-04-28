@@ -8,7 +8,6 @@
 		:root {
 			--navy: <?php echo get_theme_mod( 'primary_color', '#0A192F' ); ?>;
 			--gold: <?php echo get_theme_mod( 'accent_color', '#D4AF37' ); ?>;
-            --emerald: <?php echo get_theme_mod( 'emerald_color', '#00A36C' ); ?>;
 			--logo-width: <?php echo get_theme_mod( 'logo_width', '180' ); ?>px;
 		}
 	</style>
@@ -26,7 +25,7 @@
 					<?php if ( has_custom_logo() ) : ?>
 						<div class="logo-wrapper" style="max-width: var(--logo-width);"><?php the_custom_logo(); ?></div>
 					<?php else : ?>
-						<h1 class="site-title mb-0 h4"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="text-navy text-decoration-none fw-bold"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title mb-0 h3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="text-navy text-decoration-none fw-bold"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php endif; ?>
 				</div>
 
@@ -39,7 +38,7 @@
 						'menu_class'     => 'nav ms-auto gap-1'
 					) );
 					?>
-					<div class="header-actions ms-4 d-flex align-items-center gap-3">
+					<div class="header-actions ms-5 d-flex align-items-center gap-3">
 						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="Switch Mode">🌓</button>
 						<a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold px-4 py-2 small fw-bold shadow-sm"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite')); ?></a>
 					</div>
@@ -48,9 +47,7 @@
 				<div class="d-lg-none d-flex align-items-center gap-3">
 					<button id="dark-mode-toggle-mobile" class="btn btn-link text-navy p-0 fs-4">🌓</button>
 					<button class="menu-toggle btn p-0 text-navy fs-2" aria-expanded="false">
-						<span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
+						<i class="fas fa-bars"></i>
 					</button>
 				</div>
 
@@ -58,20 +55,21 @@
 		</div>
 
         <!-- Mobile Overlay Menu -->
-        <div id="mobile-overlay" class="mobile-overlay d-lg-none">
-            <div class="mobile-menu-inner container pt-5">
+        <div id="mobile-overlay" class="mobile-overlay">
+            <div class="mobile-menu-inner container text-center pt-5">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',
                     'container'      => false,
-                    'menu_class'     => 'mobile-nav list-unstyled text-center fs-3'
+                    'menu_class'     => 'mobile-nav list-unstyled fs-2'
                 ) );
                 ?>
                 <div class="text-center mt-5">
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold btn-lg w-100"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite')); ?></a>
                 </div>
+                <button class="mobile-close btn text-white fs-1 mt-5"><i class="fas fa-times"></i></button>
             </div>
         </div>
 
 	</header>
-    <div class="header-spacer" style="height: 100px;"></div>
+    <div class="header-spacer" style="height: 120px;"></div>

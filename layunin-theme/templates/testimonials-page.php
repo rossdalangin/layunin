@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="primary" class="site-main py-6 bg-light">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Wall of Love</span>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block testimonials-badge"><?php echo esc_html(get_theme_mod('testimonials_badge', 'Wall of Love')); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Success Stories' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'testimonials_content', 'See how members of the Layunin community have transformed their lives using our systems.' ) ); ?></p>
 		</header>

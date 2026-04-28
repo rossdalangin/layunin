@@ -27,9 +27,11 @@
 					get_template_part( 'template-parts/content', get_post_type() );
 				endwhile;
 
+                $older_label = get_theme_mod('archive_older_label', 'Older Posts');
+                $newer_label = get_theme_mod('archive_newer_label', 'Newer Posts');
 				the_posts_navigation( array(
-					'prev_text' => '<i class="fas fa-arrow-left me-2"></i> Older Posts',
-					'next_text' => 'Newer Posts <i class="fas fa-arrow-right ms-2"></i>',
+					'prev_text' => '<i class="fas fa-arrow-left me-2"></i> <span class="archive-older-label">' . esc_html($older_label) . '</span>',
+					'next_text' => '<span class="archive-newer-label">' . esc_html($newer_label) . '</span> <i class="fas fa-arrow-right ms-2"></i>',
 					'class' => 'posts-navigation d-flex justify-content-center gap-4 mt-5'
 				) );
 

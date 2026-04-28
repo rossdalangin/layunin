@@ -73,5 +73,15 @@
 				?>
 			</div>
 		</div>
+
+        <?php
+        $nav_prev_label = get_theme_mod('nav_prev_label', 'Previous Post');
+        $nav_next_label = get_theme_mod('nav_next_label', 'Next Post');
+        the_post_navigation( array(
+            'prev_text' => '<span class="text-muted small nav-prev-label">' . esc_html($nav_prev_label) . '</span><br><span class="h6 fw-bold">%title</span>',
+            'next_text' => '<span class="text-muted small nav-next-label">' . esc_html($nav_next_label) . '</span><br><span class="h6 fw-bold">%title</span>',
+            'class'     => 'post-navigation my-5 d-flex justify-content-between p-4 bg-light rounded-4'
+        ) );
+        ?>
 	</footer>
 </article>

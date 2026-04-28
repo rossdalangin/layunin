@@ -14,7 +14,7 @@ get_header(); ?>
 						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop dreaming about your goals and start building them. Our most popular resource provides a day-by-day framework to audit your life.' ) ); ?>
 					</p>
 
-					<h3 class="h5 fw-bold text-navy mb-4">What's Inside This Guide:</h3>
+					<h3 class="h5 fw-bold text-navy mb-4 lm-benefit-title"><?php echo esc_html(get_theme_mod('lm_benefit_title', "What's Inside This Guide:")); ?></h3>
 					<ul class="list-unstyled mb-5 benefit-list">
 						<?php for($i = 1; $i <= 3; $i++) :
 							$benefit = get_theme_mod("lm_benefit_{$i}", "Exclusive Strategy #{$i} for success");

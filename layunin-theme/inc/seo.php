@@ -38,7 +38,7 @@ function layunin_schema_markup() {
 				array(
 					'@type' => 'ListItem',
 					'position' => 1,
-					'name' => 'Home',
+					'name' => get_theme_mod('breadcrumb_home_label', 'Home'),
 					'item' => home_url()
 				)
 			)
@@ -81,8 +81,9 @@ add_action( 'wp_head', 'layunin_schema_markup' );
 function layunin_breadcrumbs() {
     if ( is_front_page() ) return;
 
+    $home_label = get_theme_mod('breadcrumb_home_label', 'Home');
     echo '<nav class="breadcrumbs container my-3 small text-muted" aria-label="breadcrumb">';
-    echo '<a href="' . esc_url( home_url( '/' ) ) . '">Home</a>';
+    echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="breadcrumb-home-label">' . esc_html($home_label) . '</a>';
 
     if ( is_category() || is_single() ) {
         echo ' &raquo; ';

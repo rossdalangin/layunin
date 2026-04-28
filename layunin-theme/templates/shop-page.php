@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Premium Assets</span>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block shop-badge"><?php echo esc_html(get_theme_mod('shop_badge', 'Premium Assets')); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'shop_title', 'Premium Tools' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'shop_content', 'Invest in your growth with our curated collection of digital products and frameworks.' ) ); ?></p>
 		</header>

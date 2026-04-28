@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Knowledge Library</span>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block free-resources-badge"><?php echo esc_html(get_theme_mod('free_resources_badge', 'Knowledge Library')); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Success Library' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'free_resources_content', 'Free guides, planners, and templates designed to give you a head start in your personal and professional development.' ) ); ?></p>
 		</header>

@@ -1,6 +1,6 @@
 <div class="cta-box newsletter-box p-4 bg-primary text-white rounded mb-4">
-	<h3 class="h5">Join the Layunin Community</h3>
-	<p class="small">Get our weekly tips on personal growth and income delivered to your inbox.</p>
+	<h3 class="h5 monetization-newsletter-title"><?php echo esc_html(get_theme_mod('monetization_newsletter_title', 'Join the Layunin Community')); ?></h3>
+	<p class="small monetization-newsletter-desc"><?php echo esc_html(get_theme_mod('monetization_newsletter_desc', 'Get our weekly tips on personal growth and income delivered to your inbox.')); ?></p>
 	<form class="cta-newsletter-form">
 		<input type="email" placeholder="Email" class="form-control form-control-sm mb-2" required>
 		<button type="submit" class="btn btn-gold btn-sm w-100">Subscribe</button>
@@ -13,7 +13,7 @@
     $product_img = get_theme_mod('product_item_1_image', 'https://images.unsplash.com/photo-1506784919141-93584869786a?auto=format&fit=crop&q=80&w=400');
     ?>
 	<img src="<?php echo esc_url($product_img); ?>" alt="Planner" class="img-fluid mb-2 rounded monetization-product-img">
-	<p class="small">Take control of your life with our best-selling digital planner.</p>
+	<p class="small monetization-product-desc"><?php echo esc_html(get_theme_mod('monetization_product_desc', 'Take control of your life with our best-selling digital planner.')); ?></p>
     <?php
     $product_price = get_theme_mod('product_item_1_price', '₱999');
     $product_link = get_theme_mod('product_item_1_link', '#');

@@ -54,8 +54,8 @@
 				</div>
 
 				<div class="col-lg-4">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2">Newsletter</h3>
-					<p class="text-white-50 small mb-4">Join 10,000+ subscribers for weekly high-output insights.</p>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'Newsletter')); ?></h3>
+					<p class="text-white-50 small mb-4 footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 10,000+ subscribers for weekly high-output insights.')); ?></p>
 					<form class="newsletter-form mb-4">
 						<div class="input-group">
 							<input type="email" class="form-control bg-navy-light border-0 text-white py-3" placeholder="Enter your best email" style="border-radius: 12px 0 0 12px !important;">

@@ -20,7 +20,7 @@
 							<div class="rounded-circle border border-3 border-white bg-gold overflow-hidden shadow-sm" style="width: 45px; height: 45px; margin-right: -15px;"><i class="fas fa-user text-white p-2"></i></div>
 							<div class="rounded-circle border border-3 border-white bg-emerald overflow-hidden shadow-sm" style="width: 45px; height: 45px;"><i class="fas fa-user text-white p-2"></i></div>
 						</div>
-						<div class="small text-navy fw-bold fs-6">Joined by 10,000+ Filipino High-Achievers</div>
+						<div class="small text-navy fw-bold fs-6 hero-social-proof"><?php echo esc_html(get_theme_mod('hero_social_proof', 'Joined by 10,000+ Filipino High-Achievers')); ?></div>
 					</div>
 				</div>
 			</div>

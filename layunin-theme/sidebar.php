@@ -15,8 +15,8 @@
 
 	<?php if(get_theme_mod('show_sidebar_newsletter', true)) : ?>
 	<div class="sidebar-box p-4 card mb-5 bg-navy text-white border-0">
-		<h3 class="h6 text-uppercase fw-bold text-accent mb-3">Goal Reset Guide</h3>
-		<p class="small opacity-75 mb-4">Reset your life and reclaim your purpose in just 7 days.</p>
+		<h3 class="h6 text-uppercase fw-bold text-accent mb-3 sidebar-newsletter-title"><?php echo esc_html(get_theme_mod('sidebar_newsletter_title', 'Goal Reset Guide')); ?></h3>
+		<p class="small opacity-75 mb-4 sidebar-newsletter-desc"><?php echo esc_html(get_theme_mod('sidebar_newsletter_desc', 'Reset your life and reclaim your purpose in just 7 days.')); ?></p>
 		<form class="sidebar-newsletter">
 			<input type="email" class="form-control form-control-sm mb-3 bg-white text-navy" placeholder="Email Address" required>
 			<button class="btn btn-gold btn-sm w-100" type="submit">Download Free</button>

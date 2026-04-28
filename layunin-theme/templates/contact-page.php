@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Let's Connect</span>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block contact-badge"><?php echo esc_html(get_theme_mod('contact_badge', "Let's Connect")); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'contact_title', 'Get In Touch' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'contact_content', 'Have questions about our resources, services, or your own growth journey? We are here to help.' ) ); ?></p>
 		</header>

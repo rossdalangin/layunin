@@ -98,8 +98,9 @@ function layunin_generate_toc( $content ) {
 
     if ( empty( $toc_items ) ) return $content;
 
+    $toc_title = get_theme_mod('toc_title', 'Table of Contents');
     $toc = '<div class="table-of-contents p-4 bg-light border-0 rounded-4 mb-5 shadow-sm">';
-    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy"><i class="fas fa-list-ul me-2 text-accent"></i>Table of Contents</h4><ul class="list-unstyled mb-0">';
+    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy toc-title"><i class="fas fa-list-ul me-2 text-accent"></i>' . esc_html($toc_title) . '</h4><ul class="list-unstyled mb-0">';
 
     foreach ( $toc_items as $item ) {
         $indent = ($item['level'] == 'h3') ? 'ps-4 small' : 'fw-bold small';

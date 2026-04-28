@@ -66,10 +66,10 @@ function layunin_scripts() {
 
 	wp_enqueue_style( 'layunin-fonts', $fonts_url, array(), null );
 	wp_enqueue_style( 'layunin-style', get_stylesheet_uri(), array(), '1.0.0' );
-	wp_enqueue_style( 'layunin-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0' );
+	wp_enqueue_style( 'layunin-main', get_template_directory_uri() . '/assets/css/main.css', array(), '5.0.0' );
 
 	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', array(), '5.3.0', true );
-	wp_enqueue_script( 'layunin-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'layunin-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '5.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'layunin_scripts' );
 
@@ -83,52 +83,34 @@ function layunin_reading_time() {
 function layunin_generate_toc( $content ) {
     if ( ! is_single() ) return $content;
 
-    // More robust regex to handle attributes in tags
-    preg_match_all( '/<(h[2-3]).*?>(.*?)<\/\1>/i', $content, $matches );
+    // Use a callback to ensure unique IDs and precise replacement
+    $count = 0;
+    $toc_items = array();
 
-    if ( empty( $matches[0] ) ) return $content;
+    $new_content = preg_replace_callback( '/<(h[2-3]).*?>(.*?)<\/\1>/i', function( $matches ) use ( &$count, &$toc_items ) {
+        $tag = $matches[1];
+        $title = strip_tags($matches[2]);
+        $slug = sanitize_title( $title ) . '-' . $count;
+        $count++;
+        $toc_items[] = array('slug' => $slug, 'title' => $title, 'level' => $tag);
+        return sprintf( '<%s id="%s">%s</%s>', $tag, $slug, $matches[2], $tag );
+    }, $content );
 
-    $toc = '<div class="table-of-contents p-4 bg-light border rounded mb-4">';
-    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3">Table of Contents</h4><ul>';
+    if ( empty( $toc_items ) ) return $content;
 
-    foreach ( $matches[2] as $i => $title ) {
-        $tag = $matches[1][$i];
-        $slug = sanitize_title( $title ) . '-' . $i; // Ensure unique ID
-        $content = str_replace( $matches[0][$i], sprintf( '<%s id="%s">%s</%s>', $tag, $slug, $title, $tag ), $content );
-        $toc .= sprintf( '<li><a href="#%s">%s</a></li>', $slug, $title );
+    $toc = '<div class="table-of-contents p-4 bg-light border-0 rounded-4 mb-5 shadow-sm">';
+    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy"><i class="fas fa-list-ul me-2 text-accent"></i>Table of Contents</h4><ul class="list-unstyled mb-0">';
+
+    foreach ( $toc_items as $item ) {
+        $indent = ($item['level'] == 'h3') ? 'ps-4 small' : 'fw-bold small';
+        $toc .= sprintf( '<li class="mb-2 %s"><a href="#%s" class="text-navy text-decoration-none hover-gold">%s</a></li>', $indent, $item['slug'], $item['title'] );
     }
 
     $toc .= '</ul></div>';
 
-    return $toc . $content;
+    return $toc . $new_content;
 }
 add_filter( 'the_content', 'layunin_generate_toc' );
-
-/**
- * Dashboard Welcome Widget
- */
-function layunin_dashboard_widget() {
-	wp_add_dashboard_widget(
-		'layunin_welcome_widget',
-		'Welcome to Layunin Premium',
-		'layunin_dashboard_widget_content'
-	);
-}
-add_action( 'wp_dashboard_setup', 'layunin_dashboard_widget' );
-
-function layunin_dashboard_widget_content() {
-	?>
-	<div class="layunin-widget">
-		<p>Thank you for choosing the <strong>Layunin Premium Theme</strong>. Here's how to get started:</p>
-		<ul>
-			<li><a href="<?php echo admin_url( 'customize.php' ); ?>">🎨 Open Customizer</a> - Stylize your brand.</li>
-			<li><a href="<?php echo esc_url( get_template_directory_uri() . '/DOCUMENTATION.md' ); ?>" target="_blank">📄 Read Documentation</a> - Setup guide.</li>
-			<li><a href="<?php echo admin_url( 'edit.php?post_type=page' ); ?>">📃 Manage Pages</a> - Customize your 17+ templates.</li>
-		</ul>
-		<p class="small">Need help? Contact Jules at hello@layunin.com</p>
-	</div>
-	<?php
-}
 
 /**
  * Custom User Profile Fields

@@ -1,30 +1,43 @@
 <?php get_header(); ?>
-<?php layunin_breadcrumbs(); ?>
-<main id="primary" class="site-main container py-5">
-	<?php if ( have_posts() ) : ?>
-		<header class="page-header mb-5 text-center">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Journal & Insights</span>
-			<?php
-			the_archive_title( '<h1 class="page-title display-4">', '</h1>' );
-			the_archive_description( '<div class="archive-description text-muted mx-auto" style="max-width: 600px;">', '</div>' );
-			?>
+<main id="primary" class="site-main py-6 bg-light">
+	<div class="container">
+		<header class="archive-header text-center mb-6 animate-up">
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block">Explore Our</span>
+			<h1 class="display-3 fw-black text-navy mb-3">
+				<?php
+				if ( is_category() ) :
+					single_cat_title();
+				elseif ( is_tag() ) :
+					single_tag_title();
+				elseif ( is_author() ) :
+					echo 'Author: ' . get_the_author();
+				else :
+					echo 'Our Insights';
+				endif;
+				?>
+			</h1>
+			<div class="accent-line mx-auto mb-4" style="width: 80px; height: 4px; background: var(--gold);"></div>
 		</header>
-		<?php $layout = get_theme_mod( 'blog_layout', 'grid' ); ?>
-		<div class="blog-archive-wrapper <?php echo esc_attr( $layout ); ?>-layout row">
+
+		<div class="row g-4">
 			<?php
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content', get_post_type() );
-			endwhile;
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
+					get_template_part( 'template-parts/content', get_post_type() );
+				endwhile;
+
+				the_posts_navigation( array(
+					'prev_text' => '<i class="fas fa-arrow-left me-2"></i> Older Posts',
+					'next_text' => 'Newer Posts <i class="fas fa-arrow-right ms-2"></i>',
+					'class' => 'posts-navigation d-flex justify-content-center gap-4 mt-5'
+				) );
+
+			else :
+				get_template_part( 'template-parts/content', 'none' );
+			endif;
 			?>
 		</div>
-		<div class="row mt-5">
-			<div class="col-12">
-				<?php the_posts_navigation(); ?>
-			</div>
-		</div>
-	<?php else : ?>
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
-	<?php endif; ?>
+	</div>
 </main>
 <?php get_footer(); ?>

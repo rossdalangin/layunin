@@ -9,7 +9,7 @@
 						<img src="<?php echo esc_url( $image ); ?>" alt="Layunin Solution" class="img-fluid rounded-4 shadow-lg">
 					<?php else : ?>
 						<div class="solution-placeholder bg-navy rounded-4 shadow-lg d-flex align-items-center justify-content-center" style="height: 450px;">
-							<i class="fas fa-rocket fa-5x text-white opacity-20"></i>
+							<i class="fas fa-rocket fa-5x text-white opacity-25"></i>
 						</div>
 					<?php endif; ?>
 					<div class="floating-badge bg-gold p-4 rounded-4 shadow-lg position-absolute bottom-0 end-0 m-4 d-none d-md-block animate-float">

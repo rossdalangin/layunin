@@ -7,20 +7,38 @@
 	<?php wp_head(); ?>
 	<style>
 		:root {
-			--primary: <?php echo get_theme_mod( 'primary_color', '#001f3f' ); ?>;
+			--navy: <?php echo get_theme_mod( 'primary_color', '#001f3f' ); ?>;
+			--gold: <?php echo get_theme_mod( 'accent_color', '#D4AF37' ); ?>;
 			--accent: <?php echo get_theme_mod( 'accent_color', '#D4AF37' ); ?>;
 			--logo-width: <?php echo get_theme_mod( 'logo_width', '180' ); ?>px;
+            --border-radius: <?php echo get_theme_mod( 'border_radius', '12' ); ?>px;
+            --body-font: '<?php echo get_theme_mod( "body_font", "Inter" ); ?>', sans-serif;
+            --heading-font: 'Playfair Display', serif;
 		}
+		body { font-family: var(--body-font); }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); }
 		.custom-logo-link img { max-width: var(--logo-width); height: auto; }
+        .card, .btn, .form-control { border-radius: var(--border-radius) !important; }
 	</style>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="reading-progress-bar"></div>
 
 	<div id="preloader">
 		<div class="loader-circle"></div>
 	</div>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="search-overlay">
+        <span id="search-close" class="search-close">&times;</span>
+        <div class="search-overlay-content container text-center">
+            <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <input type="search" class="search-field-overlay" placeholder="Type your goal and hit enter..." value="<?php echo get_search_query(); ?>" name="s" autofocus />
+            </form>
+        </div>
+    </div>
 
 <?php if ( get_theme_mod( 'show_announcement', true ) ) : ?>
 	<a href="<?php echo esc_url( get_theme_mod('announcement_link', '/lead-magnet/') ); ?>" class="announcement-bar bg-gold text-navy text-center py-2 small fw-bold text-uppercase d-block text-decoration-none">
@@ -49,12 +67,19 @@
 						'menu_class'     => 'nav'
 					) );
 					?>
-					<div class="header-cta">
-						<a href="<?php echo esc_url( get_theme_mod('header_cta_link', '/contact/') ); ?>" class="btn btn-gold"><?php echo esc_html(get_theme_mod('header_cta_text', 'Work With Us')); ?></a>
+					<div class="header-cta d-flex align-items-center gap-3">
+                        <button id="search-open" class="btn btn-link text-navy p-0 fs-5" title="Search"><i class="fas fa-search"></i></button>
+                        <?php if(is_single()): ?>
+                            <button id="reading-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="Reading Mode"><i class="fas fa-book-open"></i></button>
+                        <?php endif; ?>
+                        <button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="Toggle Dark Mode">🌓</button>
+						<a href="<?php echo esc_url( get_theme_mod('header_cta_link', '/contact/') ); ?>" class="btn btn-gold"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Community')); ?></a>
 					</div>
 				</nav>
 
 				<div class="d-lg-none d-flex align-items-center gap-3">
+                    <button id="search-open-mobile" class="btn btn-link text-navy p-0 fs-4"><i class="fas fa-search"></i></button>
+                    <button id="dark-mode-toggle-mobile" class="btn btn-link text-navy p-0 fs-4">🌓</button>
 					<button class="menu-toggle btn p-0 text-navy fs-3">
 						<i class="fas fa-bars"></i>
 					</button>

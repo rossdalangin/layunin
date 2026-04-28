@@ -90,6 +90,11 @@ function layunin_create_recommended_pages() {
             }
         }
     }
+
+    // Reset trigger if it was manual
+    if ( $trigger ) {
+        set_theme_mod( 'recreate_pages_trigger', false );
+    }
 }
 add_action( 'after_switch_theme', 'layunin_create_recommended_pages' );
 add_action( 'customize_save_after', 'layunin_create_recommended_pages' );

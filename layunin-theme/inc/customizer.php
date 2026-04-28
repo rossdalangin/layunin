@@ -32,14 +32,27 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "bg_color_{$sec}", array( 'label' => ucfirst($sec) . ' Background', 'section' => 'layunin_section_colors' ) ) );
 	}
 
-	// 3. Global Elements
+	// 3. Header Settings
+	$wp_customize->add_section( 'layunin_header_settings', array( 'title' => 'Header Settings', 'priority' => 18 ) );
+	$wp_customize->add_setting( 'header_sticky', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'header_sticky', array( 'label' => 'Enable Sticky Header', 'section' => 'layunin_header_settings', 'type' => 'checkbox' ) );
+	$wp_customize->add_setting( 'header_cta_text', array( 'default' => 'Work With Us', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'header_cta_text', array( 'label' => 'Header CTA Button Text', 'section' => 'layunin_header_settings' ) );
+	$wp_customize->add_setting( 'header_cta_link', array( 'default' => '/contact/', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'header_cta_link', array( 'label' => 'Header CTA Button Link', 'section' => 'layunin_header_settings' ) );
+	$wp_customize->add_setting( 'logo_width', array( 'default' => '150', 'sanitize_callback' => 'absint' ) );
+	$wp_customize->add_control( 'logo_width', array( 'label' => 'Logo Max Width (px)', 'section' => 'layunin_header_settings', 'type' => 'number' ) );
+
+	// 4. Global Elements
 	$wp_customize->add_section( 'layunin_global_elements', array( 'title' => 'Global Elements', 'priority' => 20 ) );
 	$wp_customize->add_setting( 'show_announcement', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
 	$wp_customize->add_control( 'show_announcement', array( 'label' => 'Show Announcement Bar', 'section' => 'layunin_global_elements', 'type' => 'checkbox' ) );
 	$wp_customize->add_setting( 'announcement_text', array( 'default' => 'Exclusive: Get the 7-Day Goal Reset Guide Free Today!', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'announcement_text', array( 'label' => 'Announcement Text', 'section' => 'layunin_global_elements', 'type' => 'text' ) );
+	$wp_customize->add_setting( 'announcement_link', array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( 'announcement_link', array( 'label' => 'Announcement Link', 'section' => 'layunin_global_elements', 'type' => 'text' ) );
 
-	// 3. Homepage Content Panel
+	// 5. Homepage Content Panel
 	$wp_customize->add_panel( 'layunin_homepage_panel', array( 'title' => 'Homepage Content', 'priority' => 30 ) );
 
 	// Hero
@@ -198,6 +211,22 @@ function layunin_customize_register( $wp_customize ) {
 				$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "team_member_{$i}_image", array( 'label' => "Team Member {$i} Photo", 'section' => "layunin_page_{$id}" ) ) );
 			}
 		}
+		if ( $id == 'contact' ) {
+			$wp_customize->add_setting( 'contact_email', array( 'default' => 'hello@layunin.com', 'sanitize_callback' => 'sanitize_email' ) );
+			$wp_customize->add_control( 'contact_email', array( 'label' => 'Contact Email', 'section' => "layunin_page_{$id}" ) );
+			$wp_customize->add_setting( 'contact_phone', array( 'default' => '+63 912 345 6789', 'sanitize_callback' => 'sanitize_text_field' ) );
+			$wp_customize->add_control( 'contact_phone', array( 'label' => 'Contact Phone', 'section' => "layunin_page_{$id}" ) );
+			$wp_customize->add_setting( 'contact_address', array( 'default' => 'Manila, Philippines', 'sanitize_callback' => 'sanitize_text_field' ) );
+			$wp_customize->add_control( 'contact_address', array( 'label' => 'Office Address', 'section' => "layunin_page_{$id}" ) );
+			$wp_customize->add_setting( 'contact_map_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+			$wp_customize->add_control( 'contact_map_url', array( 'label' => 'Google Maps Embed URL', 'section' => "layunin_page_{$id}" ) );
+		}
+		if ( $id == 'lead_magnet' ) {
+			for($i = 1; $i <= 3; $i++) {
+				$wp_customize->add_setting( "lm_benefit_{$i}", array( 'default' => 'Benefit ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "lm_benefit_{$i}", array( 'label' => "Benefit {$i}", 'section' => "layunin_page_{$id}" ) );
+			}
+		}
 	}
 
 	// 5. Trust Badges
@@ -216,10 +245,20 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'layunin_footer_options', array( 'title' => 'Footer Settings', 'priority' => 42 ) );
 	$wp_customize->add_setting( 'footer_branding_text', array( 'default' => 'Empowering Filipinos to turn their goals into action, income, and success. Your journey to a meaningful life starts here.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_branding_text', array( 'label' => 'Footer Branding Text', 'section' => 'layunin_footer_options', 'type' => 'textarea' ) );
+
+	$wp_customize->add_setting( 'footer_col2_title', array( 'default' => 'Quick Links', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'footer_col2_title', array( 'label' => 'Column 2 Title', 'section' => 'layunin_footer_options' ) );
+
+	$wp_customize->add_setting( 'footer_col3_title', array( 'default' => 'Resources', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'footer_col3_title', array( 'label' => 'Column 3 Title', 'section' => 'layunin_footer_options' ) );
+
 	$wp_customize->add_setting( 'footer_newsletter_title', array( 'default' => 'Newsletter', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_newsletter_title', array( 'label' => 'Newsletter Title', 'section' => 'layunin_footer_options' ) );
 	$wp_customize->add_setting( 'footer_newsletter_desc', array( 'default' => 'Join 10,000+ subscribers for weekly growth tips.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_newsletter_desc', array( 'label' => 'Newsletter Description', 'section' => 'layunin_footer_options', 'type' => 'textarea' ) );
+
+	$wp_customize->add_setting( 'footer_copyright', array( 'default' => '© ' . date('Y') . ' Layunin.com. All rights reserved.', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'footer_copyright', array( 'label' => 'Copyright Text', 'section' => 'layunin_footer_options' ) );
 
 	// 6. Sidebar Options
 	$wp_customize->add_section( 'layunin_sidebar_options', array( 'title' => 'Sidebar & Widgets', 'priority' => 45 ) );

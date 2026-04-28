@@ -1,58 +1,62 @@
-# Layunin Premium Theme Documentation
+# 🏛️ Layunin Premium Theme - Professional User Manual
 
-## 1. Theme Overview
-Layunin is a premium WordPress theme designed for high conversion, authority building, and educational business growth.
+Welcome to the **Layunin Premium Theme**. This documentation will guide you through the setup and optimization of your new world-class educational business brand.
 
-## 2. Page Directory
-| Page | Purpose | Importance |
-|------|---------|------------|
-| Homepage | Brand Hub | First impression, lead capture, and direction. |
-| About | Trust Building | Connects the audience with the founder's story. |
-| Blog Archive | Authority | Showcases depth of knowledge and SEO value. |
-| Free Resources | Lead Gen | High-value library to grow the email list. |
-| Shop | Monetization | Direct sales of digital products. |
-| Services | High-Ticket | Promotes coaching and consulting. |
-| Testimonials | Social Proof | Validates the systems through community success. |
-| Lead Magnet LP | Conversion | Single-purpose page for the 7-Day Guide. |
+---
 
-## 3. Menu Setup
-### Header Menu (Menu-1)
-- Home
-- Success Library (Free Resources)
-- Premium Tools (Shop)
-- Our Solutions (Services)
-- Journal (Blog)
+## 🚀 Quick Start Guide
 
-### Footer Menu
-- Privacy Policy
-- Terms of Service
-- Affiliate Disclosure
-- Contact Us
+### 1. Installation
+1. Upload the `layunin-theme` folder to your `/wp-content/themes/` directory.
+2. Activate the theme via **Appearance > Themes**.
+3. The theme will automatically create the 17 required pages for you.
 
-## 4. Setup Instructions
-1. **Install Theme:** Upload the `layunin-theme.zip`.
-2. **Activate:** On activation, missing core pages will be created automatically.
-3. **Menu Configuration:** Go to Appearance > Menus and assign your links to "Primary" and "Footer".
-4. **Customizer:** Go to Appearance > Customize to:
-   - Upload your Logo.
-   - Set Brand Colors.
-   - Configure Homepage Section copy.
-5. **Import Content:** Use the `layunin-sample-content.xml` to populate 365 days of SEO posts.
-6. **Social Links:** Enter your URLs in the SEO & Social tab of the Customizer.
+### 2. Branding (Customizer)
+Navigate to **Appearance > Customize** to configure your global design:
+- **Design System:** Set your primary color (Deep Navy), accent color (Warm Gold), and global border radius.
+- **Header Settings:** Enable/disable the sticky header and customize the "Work With Us" CTA.
+- **Announcement Bar:** Set a global notification for your lead magnets.
 
-## 5. Requirements
-- PHP 7.4+
-- WordPress 6.0+
-- FontAwesome 6 (Enqueued automatically)
-- Bootstrap 5 (Enqueued automatically)
+### 3. Homepage Construction
+The homepage is built using modular sections. You can toggle them and edit their content in the **Homepage Content** panel:
+1. **Hero:** Your primary value proposition.
+2. **Problem/Solution:** Build trust by addressing visitor struggles.
+3. **Lead Magnet:** High-converting email capture section.
+4. **Services/Products:** Monetize your expertise directly.
 
-## 6. Shortcodes
-- `[pricing_table]` / `[pricing_item title='...' price='...' features='feat1 | feat2']`: Create premium pricing tiers.
-- `[faq_page]` / `[faq_item question='...']`: Create SEO-optimized FAQ sections.
+---
 
-## 7. Content Preparation Checklist
-- [ ] **High-Res Hero Image:** 1600x900px JPG/WebP.
-- [ ] **Logo:** Transparent PNG/SVG (250px width).
-- [ ] **Author Bio:** 1-2 sentences for the sidebar.
-- [ ] **Core Values:** 4 key pillars for the About page.
-- [ ] **Product Links:** Checkout URLs for your digital assets.
+## 🛠️ Advanced Features
+
+### 💎 Shortcodes Library
+Use these shortcodes in your pages and posts to maintain a premium look:
+
+- `[cta_box title="Custom Title" button_text="Click Here" button_url="#"]`
+- `[pricing_table]` containing `[pricing_item]`
+- `[faq_page]` containing `[faq_item question="..."]Content[/faq_item]`
+- `[testimonial_grid]` containing `[testimonial_item]`
+
+### 📈 SEO & Schema
+- The theme automatically generates **JSON-LD Schema** for Articles, FAQs, and Reviews.
+- **Breadcrumbs** are handled via `layunin_breadcrumbs()` and are schema-compliant.
+- **Open Graph** and **Twitter Cards** are automatically populated using your Customizer settings and post data.
+
+### 🌓 Interactive Modes
+- **Dark Mode:** Toggled via the 🌓 icon in the header; persists via `localStorage`.
+- **Reading Mode:** Available on single posts to remove distractions and focus on content.
+
+---
+
+## 💰 Monetization
+- **Ads:** Configure "Banner Above Content" and "Banner Below Content" in **Content Ads**.
+- **Affiliates:** Use the **Affiliate Disclosure** template for compliance.
+- **Email Capture:** The theme includes a built-in Exit-Intent and Timed Popup controlled in **Lead Popup**.
+
+---
+
+## 📞 Support & Credits
+- **Designed & Developed by:** Jules (Layunin Architect)
+- **Frameworks:** Bootstrap 5.3, FontAwesome 6, AOS (Animate on Scroll)
+- **Support:** hello@layunin.com
+
+*© 2024 Layunin.com. Empowering Filipinos to turn goals into action.*

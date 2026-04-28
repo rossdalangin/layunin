@@ -315,3 +315,19 @@ body.reading-mode .entry-content {
 .search-close:hover {
     color: var(--gold);
 }
+
+/* Final Polish Utilities */
+.bg-navy-subtle { background-color: rgba(0, 31, 63, 0.05); }
+.text-navy-subtle { color: rgba(0, 31, 63, 0.7); }
+.letter-spacing-1 { letter-spacing: 0.1em; }
+.letter-spacing-2 { letter-spacing: 0.2em; }
+.display-3 { font-size: 3.5rem; line-height: 1.1; }
+
+.hover-gold:hover { color: var(--gold) !important; }
+
+/* Sticky Header Polish */
+.site-header.sticky-top {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}

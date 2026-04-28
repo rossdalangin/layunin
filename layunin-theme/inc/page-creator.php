@@ -1,115 +1,114 @@
 <?php
 /**
- * terminal Supreme Page Creator and CPT Seeding (v9.0)
+ * Elite Site Ecosystem - v9.3 Refinement
  */
 
 function layunin_create_recommended_pages() {
-    $trigger = get_theme_mod( 'recreate_pages_trigger', false );
-    if ( ! $trigger && did_action( 'after_switch_theme' ) === 0 ) {
-        if ( !isset($_POST['customized']) ) return;
+    // Only run on theme activation or via customizer trigger
+    $is_trigger = get_theme_mod( 'recreate_pages_trigger', false );
+
+    // We use a flag to only run once per activation, or when triggered manually
+    if ( ! $is_trigger && did_action( 'after_switch_theme' ) === 0 && get_option( 'layunin_pages_created' ) ) {
+        return;
     }
 
     $pages = array(
-        'home' => array(
-            'title' => 'Home',
-            'template' => 'front-page.php',
-            'content' => ''
-        ),
-        'about' => array(
-            'title' => 'The Mastery Mission',
+        'About' => array(
             'template' => 'templates/about-page.php',
-            'content' => '<!-- wp:heading {"level":2} --><h2>Our Core Philosophy</h2><!-- /wp:heading --><!-- wp:paragraph --><p>At Layunin, we believe that true success is built on the intersection of clarity and precision. Most people fail not because they lack ambition, but because they lack a system. We provide the architectural blueprints for your life and business.</p><!-- /wp:paragraph --><!-- wp:shortcode -->[benefit_list][benefit_item title="Unwavering Clarity"]Defining your life mission with surgical precision.[/benefit_item][benefit_item title="High-Output Systems"]Frameworks that prioritize execution over planning.[/benefit_item][/benefit_list]<!-- /wp:shortcode -->'
+            'content'  => '<!-- wp:heading {"level":2} --><h2>Our Elite Mission</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Layunin is the premier platform for Filipino high-achievers seeking life mastery.</p><!-- /wp:paragraph -->'
         ),
-        'services' => array(
-            'title' => 'Elite Guidance Systems',
+        'Services' => array(
             'template' => 'templates/services-page.php',
-            'content' => '<!-- wp:heading {"level":2, "textAlign":"center"} --><h2 class="has-text-align-center">Choose Your Transformation Tier</h2><!-- /wp:heading --><!-- wp:shortcode -->[pricing_table][pricing_item title="Strategy Audit" price="₱4,999" features="1-Hour Session|Gap Analysis|Custom Action Plan" button="Book Audit"][pricing_item title="Mastery Coaching" price="₱14,999" features="Monthly Access|System Design|Weekly Check-ins" featured="yes" button="Apply Now"][pricing_item title="Elite Partnership" price="Custom" features="Done-for-you Setup|Brand Architecture|Full Implementation" button="Inquire"][/pricing_table]<!-- /wp:shortcode -->'
+            'content'  => '[pricing_table][pricing_item title="Strategy" price="₱4,999" features="Audit|Map|Systems" link="#"][pricing_item title="Mastery" price="₱14,999" features="Mentorship|AI|Wealth" featured="yes" link="#"][pricing_item title="Architect" price="₱49,999" features="Global|Scale|Legacy" link="#"][/pricing_table]'
         ),
-        'contact' => array(
-            'title' => 'Strategic Connection',
+        'Contact' => array(
             'template' => 'templates/contact-page.php',
-            'content' => '<!-- wp:paragraph --><p>Ready to bridge the execution gap? Our team of strategists is standing by to help you take the next precise step in your journey. Fill out the form below or reach out directly.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Ready to architect your journey? Connect with our team of specialists today.</p><!-- /wp:paragraph -->'
         ),
-        'shop' => array(
-            'title' => 'The Asset Library',
+        'Shop' => array(
             'template' => 'templates/shop-page.php',
-            'content' => '<!-- wp:heading {"level":2} --><h2>Accelerate Your Progress</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Invest in proven tools that save you years of trial and error. Our asset library contains the exact systems we use to run high-output digital businesses.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Explore our high-performance digital assets and architectural frameworks.</p><!-- /wp:paragraph -->'
         ),
-        'free-resources' => array(
-            'title' => 'Success Accelerator',
+        'Free Resources' => array(
             'template' => 'templates/free-resources-page.php',
-            'content' => '<!-- wp:heading {"level":2} --><h2>Foundational Mastery</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Every journey starts with a single step. These free resources are designed to provide immediate value and help you begin your transformation today.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Access the knowledge vault and accelerate your path to mastery.</p><!-- /wp:paragraph -->'
         ),
-        'testimonials' => array(
-            'title' => 'Wall of Mastery',
+        'Testimonials' => array(
             'template' => 'templates/testimonials-page.php',
-            'content' => '<!-- wp:paragraph --><p>Real results from real achievers. See how the Layunin systems have transformed businesses and lives across the Philippines.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Proof of the Layunin transformation framework in action.</p><!-- /wp:paragraph -->'
         ),
-        'lead-magnet' => array(
-            'title' => 'The 7-Day Reset',
+        'Lead Magnet' => array(
             'template' => 'templates/lead-magnet-landing.php',
-            'content' => ''
+            'content'  => '<!-- wp:paragraph --><p>Download the Elite 7-Day Goal Reset Protocol and reclaim your time.</p><!-- /wp:paragraph -->'
         ),
-        'thank-you' => array(
-            'title' => 'Success Confirmed',
-            'template' => 'templates/thank-you.php',
-            'content' => ''
+        'Thank You' => array(
+            'template' => 'templates/thank-you-page.php',
+            'content'  => '<!-- wp:paragraph --><p>Your transformation has begun. Check your inbox for the protocol.</p><!-- /wp:paragraph -->'
         ),
-        'affiliate-disclosure' => array(
-            'title' => 'Transparency',
+        'Affiliate Disclosure' => array(
             'template' => 'templates/affiliate-disclosure.php',
-            'content' => ''
+            'content'  => '<!-- wp:paragraph --><p>Our commitment to transparency and elite tool recommendations.</p><!-- /wp:paragraph -->'
         ),
-        'privacy-policy' => array(
-            'title' => 'Privacy Protocol',
+        'Privacy Policy' => array(
             'template' => 'templates/privacy-policy.php',
-            'content' => ''
+            'content'  => '<!-- wp:paragraph --><p>Your data security is paramount in the pursuit of mastery.</p><!-- /wp:paragraph -->'
         ),
-        'terms-and-conditions' => array(
-            'title' => 'Rules of Engagement',
+        'Terms' => array(
             'template' => 'templates/terms.php',
-            'content' => ''
+            'content'  => '<!-- wp:paragraph --><p>The standards of excellence for the Layunin community.</p><!-- /wp:paragraph -->'
         ),
-        'faq' => array(
-            'title' => 'Clarity Center',
-            'template' => 'templates/full-width.php',
-            'content' => '<!-- wp:heading {"level":2, "textAlign":"center"} --><h2 class="has-text-align-center">Frequently Asked Questions</h2><!-- /wp:heading --><!-- wp:shortcode -->[faq_page][faq_item question="How long does it take to see results?"]Most community members report a shift in clarity within 48 hours and tangible productivity gains within the first 7 days.[/faq_item][faq_item question="Is this suitable for beginners?"]Absolutely. Our systems are modular, allowing you to start simple and scale as you grow.[/faq_item][/faq_page]<!-- /wp:shortcode -->'
+        'FAQs' => array(
+            'template' => '',
+            'content'  => '[faq_page][faq_item question="What is the Layunin Framework?"]It is a modular system for life re-engineering.[/faq_item][faq_item question="How do I join the Elite Network?"]Start with the 7-Day Protocol.[/faq_item][/faq_page]'
         )
     );
 
-    foreach ( $pages as $slug => $data ) {
-        $query = new WP_Query( array( 'post_type' => 'page', 'name' => $slug, 'post_status' => 'any' ) );
-        if ( ! $query->have_posts() ) {
+    foreach ( $pages as $title => $data ) {
+        $check = get_page_by_title( $title );
+        if ( ! $check || $is_trigger ) {
             $page_id = wp_insert_post( array(
-                'post_title'   => $data['title'],
-                'post_name'    => $slug,
-                'post_content' => $data['content'] ?: '<!-- wp:paragraph --><p>Welcome to ' . $data['title'] . '. Elite content is being prepared for your growth journey.</p><!-- /wp:paragraph -->',
+                'post_title'   => $title,
+                'post_content' => $data['content'],
                 'post_status'  => 'publish',
                 'post_type'    => 'page',
+                'page_template' => $data['template']
             ) );
-            if ( $page_id ) update_post_meta( $page_id, '_wp_page_template', $data['template'] );
         }
     }
 
+    // Seed sample CPT data
     layunin_seed_sample_cpts();
 
-    if ( $trigger ) set_theme_mod( 'recreate_pages_trigger', false );
+    // Reset trigger
+    if ( $is_trigger ) {
+        set_theme_mod( 'recreate_pages_trigger', false );
+    }
+    update_option( 'layunin_pages_created', true );
 }
+add_action( 'admin_init', 'layunin_create_recommended_pages' );
 
 function layunin_seed_sample_cpts() {
+    // Seed Testimonials
     $testimonials = array(
-        array('title' => 'Maria Santos', 'content' => 'Transitioned from freelance burnout to a high-output agency in 4 months using the Layunin framework.', 'role' => 'Founder, Digital Elite'),
-        array('title' => 'Juan Dela Cruz', 'content' => 'The AI productivity systems doubled my income while reducing my work hours by half.', 'role' => 'Tech Entrepreneur'),
-        array('title' => 'Elena Reyes', 'content' => 'Finally a system that understands the Filipino context. My productivity has never been higher.', 'role' => 'Creative Director'),
+        array('title' => 'Katrina Reyes', 'content' => 'The systems gave me my life back.', 'role' => 'Founder'),
+        array('title' => 'Mark Dizon', 'content' => 'I tripled my output in 30 days.', 'role' => 'Executive'),
     );
-    foreach ($testimonials as $t) {
-        $query = new WP_Query( array( 'post_type' => 'testimonial', 'title' => $t['title'], 'post_status' => 'any' ) );
-        if ( ! $query->have_posts() ) {
-            $id = wp_insert_post( array( 'post_title' => $t['title'], 'post_content' => $t['content'], 'post_status' => 'publish', 'post_type' => 'testimonial' ) );
-            if ($id) update_post_meta( $id, '_testimonial_role', $t['role'] );
+    foreach($testimonials as $t) {
+        if(!get_page_by_title($t['title'], OBJECT, 'testimonial')) {
+            $tid = wp_insert_post(array('post_title' => $t['title'], 'post_content' => $t['content'], 'post_type' => 'testimonial', 'post_status' => 'publish'));
+            update_post_meta($tid, '_testimonial_role', $t['role']);
+        }
+    }
+
+    // Seed Resources
+    $resources = array(
+        array('title' => 'Elite Goal Tracker', 'desc' => 'High-output excel framework', 'type' => 'Planner'),
+        array('title' => 'AI Prompt Bible', 'desc' => '200+ prompts for productivity', 'type' => 'Vault'),
+    );
+    foreach($resources as $r) {
+        if(!get_page_by_title($r['title'], OBJECT, 'resource')) {
+            $rid = wp_insert_post(array('post_title' => $r['title'], 'post_content' => $r['desc'], 'post_type' => 'resource', 'post_status' => 'publish'));
+            update_post_meta($rid, '_resource_type', $r['type']);
         }
     }
 }
-
-add_action( 'after_switch_theme', 'layunin_create_recommended_pages' );
-add_action( 'customize_save_after', 'layunin_create_recommended_pages' );

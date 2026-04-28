@@ -609,3 +609,62 @@ label {
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
+
+/* Premium Glassmorphism Utilities */
+.glass-header {
+    background: rgba(0, 31, 63, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', serif;
+}
+.display-1, .display-2, .display-3 {
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+/* Buttons */
+.btn-gold {
+    background: linear-gradient(45deg, #D4AF37 0%, #F1D36E 100%);
+    border: none;
+    color: var(--navy);
+}
+.btn-gold:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Floating Animations */
+@keyframes float {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-15px); }
+	100% { transform: translateY(0px); }
+}
+.animate-float {
+	animation: float 4s ease-in-out infinite;
+}

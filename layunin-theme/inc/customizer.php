@@ -193,10 +193,14 @@ function layunin_customize_register( $wp_customize ) {
 
 		if ( $id == 'services' ) {
 			for($i = 1; $i <= 3; $i++) {
-				$wp_customize->add_setting( "page_service_{$i}_title", array( 'default' => 'Service ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_setting( "page_service_{$i}_title", array( 'default' => 'Service Tier ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
 				$wp_customize->add_control( "page_service_{$i}_title", array( 'label' => "Service {$i} Title", 'section' => "layunin_page_{$id}" ) );
-				$wp_customize->add_setting( "page_service_{$i}_desc", array( 'default' => 'Description for service ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
-				$wp_customize->add_control( "page_service_{$i}_desc", array( 'label' => "Service {$i} Description", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "page_service_{$i}_desc", array( 'default' => 'Description for tier ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "page_service_{$i}_desc", array( 'label' => "Service {$i} Subtitle", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "page_service_{$i}_price", array( 'default' => '₱' . ($i * 5000), 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "page_service_{$i}_price", array( 'label' => "Service {$i} Price", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "page_service_{$i}_features", array( 'default' => "Feature A\nFeature B\nFeature C", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+				$wp_customize->add_control( "page_service_{$i}_features", array( 'label' => "Service {$i} Features", 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
 			}
 		}
 		if ( $id == 'about' ) {
@@ -225,6 +229,18 @@ function layunin_customize_register( $wp_customize ) {
 			for($i = 1; $i <= 3; $i++) {
 				$wp_customize->add_setting( "lm_benefit_{$i}", array( 'default' => 'Benefit ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
 				$wp_customize->add_control( "lm_benefit_{$i}", array( 'label' => "Benefit {$i}", 'section' => "layunin_page_{$id}" ) );
+			}
+		}
+		if ( $id == 'shop' ) {
+			for($i = 1; $i <= 6; $i++) {
+				$wp_customize->add_setting( "shop_item_{$i}_title", array( 'default' => 'Digital Product ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "shop_item_{$i}_title", array( 'label' => "Product {$i} Title", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "shop_item_{$i}_price", array( 'default' => '₱999', 'sanitize_callback' => 'sanitize_text_field' ) );
+				$wp_customize->add_control( "shop_item_{$i}_price", array( 'label' => "Product {$i} Price", 'section' => "layunin_page_{$id}" ) );
+				$wp_customize->add_setting( "shop_item_{$i}_image", array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+				$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "shop_item_{$i}_image", array( 'label' => "Product {$i} Image", 'section' => "layunin_page_{$id}" ) ) );
+				$wp_customize->add_setting( "shop_item_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
+				$wp_customize->add_control( "shop_item_{$i}_link", array( 'label' => "Product {$i} Link", 'section' => "layunin_page_{$id}" ) );
 			}
 		}
 	}
@@ -259,6 +275,9 @@ function layunin_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'footer_copyright', array( 'default' => '© ' . date('Y') . ' Layunin.com. All rights reserved.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'footer_copyright', array( 'label' => 'Copyright Text', 'section' => 'layunin_footer_options' ) );
+
+	$wp_customize->add_setting( 'footer_trust_statement', array( 'default' => 'Transforming Filipino Dreams into Reality Since 2024.', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'footer_trust_statement', array( 'label' => 'Footer Trust Statement', 'section' => 'layunin_footer_options' ) );
 
 	// 6. Sidebar Options
 	$wp_customize->add_section( 'layunin_sidebar_options', array( 'title' => 'Sidebar & Widgets', 'priority' => 45 ) );

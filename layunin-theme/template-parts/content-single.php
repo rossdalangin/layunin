@@ -1,45 +1,52 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('animate-up'); ?>>
 	<header class="entry-header mb-5 text-center">
-		<?php the_title( '<h1 class="entry-title display-1 mb-4">', '</h1>' ); ?>
-		<div class="entry-meta text-muted mb-3">
-			<span class="posted-on"><?php the_date(); ?></span> |
-			<span class="reading-time"><?php echo layunin_reading_time(); ?> min read</span>
+		<div class="entry-meta text-accent text-uppercase fw-bold letter-spacing-1 mb-3">
+			<?php the_category(' &bull; '); ?>
+		</div>
+		<?php the_title( '<h1 class="entry-title display-2 fw-bold mb-4">', '</h1>' ); ?>
+		<div class="entry-meta text-muted mb-5 d-flex align-items-center justify-content-center gap-3">
+			<span class="author-vcard"><i class="far fa-user me-1"></i> By <?php the_author(); ?></span>
+			<span class="sep">|</span>
+			<span class="posted-on"><i class="far fa-calendar-alt me-1"></i> <?php the_date(); ?></span>
+			<span class="sep">|</span>
+			<span class="reading-time"><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> min read</span>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="post-thumbnail mb-4 rounded overflow-hidden shadow-sm">
-				<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid w-100' ) ); ?>
+			<div class="post-thumbnail mb-5 rounded-4 overflow-hidden shadow-lg">
+				<?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid w-100' ) ); ?>
 			</div>
 		<?php endif; ?>
 	</header>
 
-	<div class="entry-content">
+	<div class="entry-content px-lg-5">
 		<?php
 		the_content();
 		wp_link_pages();
 		?>
 	</div>
 
-	<footer class="entry-footer mt-5 pt-5 border-top">
+	<footer class="entry-footer mt-6 pt-5 border-top">
 		<?php if ( get_theme_mod( 'show_author_box', true ) ) : ?>
-		<div class="author-box d-flex align-items-center p-4 bg-light rounded mb-5">
-			<div class="author-avatar me-4">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 90, '', '', array( 'class' => 'rounded-circle' ) ); ?>
+		<div class="author-box d-md-flex align-items-center p-5 bg-white shadow-sm rounded-4 mb-6 border">
+			<div class="author-avatar me-md-5 mb-4 mb-md-0 text-center">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 120, '', '', array( 'class' => 'rounded-circle border border-4 border-light' ) ); ?>
 			</div>
 			<div class="author-info">
-				<h3 class="author-name h5 mb-2">About <?php the_author(); ?></h3>
-				<p class="author-bio mb-3 small text-muted"><?php the_author_meta( 'description' ); ?></p>
-				<div class="author-socials d-flex gap-2">
-					<?php if(get_the_author_meta('facebook')) : ?><a href="<?php echo esc_url(get_the_author_meta('facebook')); ?>" class="text-navy small"><i class="fab fa-facebook-f"></i></a><?php endif; ?>
-					<?php if(get_the_author_meta('twitter')) : ?><a href="<?php echo esc_url(get_the_author_meta('twitter')); ?>" class="text-navy small"><i class="fab fa-twitter"></i></a><?php endif; ?>
-					<?php if(get_the_author_meta('linkedin')) : ?><a href="<?php echo esc_url(get_the_author_meta('linkedin')); ?>" class="text-navy small"><i class="fab fa-linkedin-in"></i></a><?php endif; ?>
+				<span class="text-accent small text-uppercase fw-bold mb-2 d-block">About The Author</span>
+				<h3 class="author-name h4 fw-bold text-navy mb-3"><?php the_author(); ?></h3>
+				<p class="author-bio mb-4 text-muted"><?php the_author_meta( 'description' ); ?></p>
+				<div class="author-socials d-flex gap-3">
+					<?php if(get_the_author_meta('facebook')) : ?><a href="<?php echo esc_url(get_the_author_meta('facebook')); ?>" class="btn btn-navy btn-sm px-3"><i class="fab fa-facebook-f me-2"></i> Facebook</a><?php endif; ?>
+					<?php if(get_the_author_meta('twitter')) : ?><a href="<?php echo esc_url(get_the_author_meta('twitter')); ?>" class="btn btn-navy btn-sm px-3"><i class="fab fa-twitter me-2"></i> Twitter</a><?php endif; ?>
+					<?php if(get_the_author_meta('linkedin')) : ?><a href="<?php echo esc_url(get_the_author_meta('linkedin')); ?>" class="btn btn-navy btn-sm px-3"><i class="fab fa-linkedin-in me-2"></i> LinkedIn</a><?php endif; ?>
 				</div>
 			</div>
 		</div>
 		<?php endif; ?>
 
 		<div class="related-posts">
-			<h3 class="mb-4">You Might Also Like</h3>
-			<div class="row">
+			<h3 class="h4 fw-bold text-navy mb-5 text-center">You Might Also Like</h3>
+			<div class="row g-4">
 				<?php
 				$related = new WP_Query( array(
 					'category__in'   => wp_get_post_categories( get_the_ID() ),
@@ -49,12 +56,14 @@
 				if ( $related->have_posts() ) :
 					while ( $related->have_posts() ) : $related->the_post();
 						?>
-						<div class="col-md-4 mb-3">
-							<div class="related-card">
+						<div class="col-md-4">
+							<div class="related-card card h-100 border-0 shadow-sm transition-all hover-lift overflow-hidden">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-fluid rounded mb-2' ) ); ?></a>
+									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium_large', array( 'class' => 'card-img-top' ) ); ?></a>
 								<?php endif; ?>
-								<h4 class="h6"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+								<div class="card-body p-4">
+									<h4 class="h6 fw-bold mb-0"><a href="<?php the_permalink(); ?>" class="text-navy text-decoration-none"><?php the_title(); ?></a></h4>
+								</div>
 							</div>
 						</div>
 						<?php

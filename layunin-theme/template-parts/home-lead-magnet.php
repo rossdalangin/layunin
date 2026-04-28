@@ -5,12 +5,15 @@
 				<div class="col-lg-6">
 					<div class="lm-content text-white">
 						<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block">Free Training</span>
-						<h2 class="display-5 fw-bold mb-4">The 7-Day Goal Reset Guide</h2>
-						<p class="text-white-50 mb-4 fs-5">Ready to stop procrastinating and start producing? Get the exact roadmap used by over 10,000+ Filipinos to reclaim their time and achieve clarity.</p>
+						<h2 class="display-5 fw-bold mb-4"><?php echo esc_html(get_theme_mod('lm_title', 'The 7-Day Goal Reset Guide')); ?></h2>
+						<p class="text-white-50 mb-4 fs-5"><?php echo esc_html(get_theme_mod('lm_subtitle', 'Ready to stop procrastinating and start producing? Get the exact roadmap used by over 10,000+ Filipinos to reclaim their time and achieve clarity.')); ?></p>
 						<ul class="list-unstyled mb-5">
-							<li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> How to define your "Layunin" in 10 minutes</li>
-							<li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> The AI tools for 3x productivity</li>
-							<li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> 3 daily habits of high achievers</li>
+                            <?php
+                            $list = get_theme_mod('lm_list', "How to define your 'Layunin' in 10 minutes\nThe AI tools for 3x productivity\n3 daily habits of high achievers");
+                            $items = explode("\n", $list);
+                            foreach($items as $item) : if(trim($item)) : ?>
+							    <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> <?php echo esc_html(trim($item)); ?></li>
+                            <?php endif; endforeach; ?>
 						</ul>
 					</div>
 				</div>

@@ -38,7 +38,7 @@
 						'menu_class'     => 'nav ms-auto gap-1'
 					) );
 					?>
-					<div class="header-actions ms-5 d-flex align-items-center gap-3">
+					<div class="header-actions header-cta ms-5 d-flex align-items-center gap-3">
 						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="Switch Mode">🌓</button>
 						<a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold px-4 py-2 small fw-bold shadow-sm"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite')); ?></a>
 					</div>

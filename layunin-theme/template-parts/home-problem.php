@@ -7,20 +7,31 @@
 		</div>
 		<div class="master-grid">
 			<?php
-            $problem_items = array(
-                1 => array('title' => 'Directional Paralysis', 'desc' => 'Having grand visions but lacking a granular roadmap for the next 24 hours of execution.', 'icon' => 'fas fa-map-signs'),
-                2 => array('title' => 'Income Ceiling', 'desc' => 'Trading time for money in outdated models instead of leveraging digital systems.', 'icon' => 'fas fa-money-bill-wave'),
-                3 => array('title' => 'Cognitive Overload', 'desc' => 'Drowning in tasks and notifications without a filter for high-impact objectives.', 'icon' => 'fas fa-brain'),
-                4 => array('title' => 'Tool Obsolescence', 'desc' => 'Failing to utilize AI and modern automation while competitors move at light speed.', 'icon' => 'fas fa-robot'),
-            );
-            for($i = 1; $i <= 4; $i++) : ?>
+            for($i = 1; $i <= 4; $i++) :
+                $title = get_theme_mod("problem_item_{$i}_title");
+                $desc = get_theme_mod("problem_item_{$i}_desc");
+                $icon = get_theme_mod("problem_item_{$i}_icon", "fas fa-exclamation-triangle");
+
+                // Default fallbacks for fresh installs
+                if(!$title) {
+                    $defaults = array(
+                        1 => array('title' => 'Directional Paralysis', 'desc' => 'Having grand visions but lacking a granular roadmap for the next 24 hours of execution.', 'icon' => 'fas fa-map-signs'),
+                        2 => array('title' => 'Income Ceiling', 'desc' => 'Trading time for money in outdated models instead of leveraging digital systems.', 'icon' => 'fas fa-money-bill-wave'),
+                        3 => array('title' => 'Cognitive Overload', 'desc' => 'Drowning in tasks and notifications without a filter for high-impact objectives.', 'icon' => 'fas fa-brain'),
+                        4 => array('title' => 'Tool Obsolescence', 'desc' => 'Failing to utilize AI and modern automation while competitors move at light speed.', 'icon' => 'fas fa-robot'),
+                    );
+                    $title = $defaults[$i]['title'];
+                    $desc = $defaults[$i]['desc'];
+                    $icon = $defaults[$i]['icon'];
+                }
+            ?>
 			<div class="problem-item">
 				<div class="card h-100 p-5 border-0 text-center hover-lift bg-white shadow-premium">
 					<div class="icon-circle bg-light text-gold rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center shadow-sm" style="width: 90px; height: 90px;">
-						<i class="<?php echo $problem_items[$i]['icon']; ?> fa-2x"></i>
+						<i class="<?php echo esc_attr($icon); ?> fa-2x"></i>
 					</div>
-					<h3 class="h4 fw-bold text-navy mb-3"><?php echo $problem_items[$i]['title']; ?></h3>
-					<p class="text-muted small mb-0 lh-lg"><?php echo $problem_items[$i]['desc']; ?></p>
+					<h3 class="h4 fw-bold text-navy mb-3"><?php echo esc_html($title); ?></h3>
+					<p class="text-muted small mb-0 lh-lg"><?php echo esc_html($desc); ?></p>
 				</div>
 			</div>
 			<?php endfor; ?>

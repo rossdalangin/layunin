@@ -8,7 +8,7 @@ get_header(); ?>
 		<header class="entry-header text-center mb-6 animate-up pe-lg-5 ps-lg-5">
 			<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block">The Journey to Mastery</span>
 			<h1 class="entry-title display-1 fw-black text-navy mb-4"><?php echo esc_html( get_theme_mod( 'about_title', 'Our Story' ) ); ?></h1>
-            <p class="lead text-muted mx-auto fs-4" style="max-width: 800px;">Empowering Filipinos to transform their purpose into clear action, real income, and lasting success.</p>
+            <p class="lead text-muted mx-auto fs-4" style="max-width: 800px;"><?php echo esc_html( get_theme_mod( 'about_lead', 'Empowering Filipinos to transform their purpose into clear action, real income, and lasting success.' ) ); ?></p>
 		</header>
 
 		<div class="row g-5 align-items-center mb-xl">

@@ -12,8 +12,8 @@ get_header();
 			<div class="icon-box text-navy mb-5 mt-5">
 				<i class="fas fa-compass fa-5x animate-float"></i>
 			</div>
-			<h1 class="display-4 fw-bold text-navy mb-4">Are You Lost In Your Journey?</h1>
-			<p class="lead text-muted mx-auto mb-5" style="max-width: 600px;">We couldn't find the page you're looking for. But don't worry, even high achievers sometimes take a wrong turn. Let's get you back on track.</p>
+			<h1 class="display-4 fw-bold text-navy mb-4 error-404-title"><?php echo esc_html(get_theme_mod('error_404_title', 'Are You Lost In Your Journey?')); ?></h1>
+			<p class="lead text-muted mx-auto mb-5 error-404-desc" style="max-width: 600px;"><?php echo esc_html(get_theme_mod('error_404_desc', "We couldn't find the page you're looking for. But don't worry, even high achievers sometimes take a wrong turn. Let's get you back on track.")); ?></p>
 
 			<div class="d-flex flex-wrap justify-content-center gap-3">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-gold btn-lg px-5 py-3 fw-bold shadow-lg">Return to Home</a>

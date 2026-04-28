@@ -1,5 +1,5 @@
 /**
- * Live preview for Customizer - Definitive Masterpiece (v8.4)
+ * Live preview for Customizer - Definitive Masterpiece (v8.7)
  */
 ( function( $ ) {
     // Helper function for list-based updates
@@ -17,7 +17,14 @@
     // Hero Section
 	wp.customize( 'hero_headline', function( value ) { value.bind( function( newval ) { $( '.hero-section h1' ).text( newval ); } ); } );
 	wp.customize( 'hero_subheadline', function( value ) { value.bind( function( newval ) { $( '.hero-section p.lead' ).text( newval ); } ); } );
-    wp.customize( 'hero_cta_1_text', function( value ) { value.bind( function( newval ) { $( '.hero-section .btn-gold' ).text( newval ); } ); } );
+    wp.customize( 'hero_cta_1_text', function( value ) { value.bind( function( newval ) { $( '.hero-section .hero-cta-1' ).text( newval ); } ); } );
+    wp.customize( 'hero_cta_2_text', function( value ) { value.bind( function( newval ) { $( '.hero-section .hero-cta-2' ).text( newval ); } ); } );
+
+    // Featured Posts
+    wp.customize( 'featured_posts_title', function( value ) { value.bind( function( newval ) { $( '.featured-posts-title' ).text( newval ); } ); } );
+
+    // Trust Badges
+    wp.customize( 'trust_badges_title', function( value ) { value.bind( function( newval ) { $( '.trust-badges-title' ).text( newval ); } ); } );
 
     // Colors
     wp.customize( 'primary_color', function( value ) { value.bind( function( newval ) { $( ':root' ).css('--navy', newval); } ); } );
@@ -37,11 +44,11 @@
     wp.customize( 'announcement_text', function( value ) { value.bind( function( newval ) { $( '.announcement-bar .text' ).text( newval ); } ); } );
 
     // Homepage Sections
-    wp.customize( 'process_title', function( value ) { value.bind( function( newval ) { $( '.process-section h2' ).text( newval ); } ); } );
-    wp.customize( 'features_title', function( value ) { value.bind( function( newval ) { $( '.features-section h2' ).text( newval ); } ); } );
+    wp.customize( 'process_title', function( value ) { value.bind( function( newval ) { $( '.process-title' ).text( newval ); } ); } );
+    wp.customize( 'features_title', function( value ) { value.bind( function( newval ) { $( '.features-title' ).text( newval ); } ); } );
     wp.customize( 'problem_title', function( value ) { value.bind( function( newval ) { $( '.problem-section h2' ).text( newval ); } ); } );
-    wp.customize( 'solution_title', function( value ) { value.bind( function( newval ) { $( '.solution-section h2' ).text( newval ); } ); } );
-    wp.customize( 'solution_desc', function( value ) { value.bind( function( newval ) { $( '.solution-section p.lead' ).text( newval ); } ); } );
+    wp.customize( 'solution_title', function( value ) { value.bind( function( newval ) { $( '.solution-title' ).text( newval ); } ); } );
+    wp.customize( 'solution_desc', function( value ) { value.bind( function( newval ) { $( '.solution-desc' ).text( newval ); } ); } );
     wp.customize( 'categories_title', function( value ) { value.bind( function( newval ) { $( '.categories-section h2' ).text( newval ); } ); } );
     wp.customize( 'categories_desc', function( value ) { value.bind( function( newval ) { $( '.categories-section .section-desc' ).text( newval ); } ); } );
 
@@ -55,6 +62,17 @@
     wp.customize( 'services_home_title', function( value ) { value.bind( function( newval ) { $( '.services-section h2' ).text( newval ); } ); } );
     wp.customize( 'final_cta_title', function( value ) { value.bind( function( newval ) { $( '.final-cta-section h2' ).text( newval ); } ); } );
     wp.customize( 'final_cta_desc', function( value ) { value.bind( function( newval ) { $( '.final-cta-section p.lead' ).text( newval ); } ); } );
+    wp.customize( 'final_cta_1_text', function( value ) { value.bind( function( newval ) { $( '.final-cta-section .final-cta-1' ).text( newval ); } ); } );
+    wp.customize( 'final_cta_2_text', function( value ) { value.bind( function( newval ) { $( '.final-cta-section .final-cta-2' ).text( newval ); } ); } );
+
+    // Home Testimonial
+    wp.customize( 'testimonial_quote', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .quote-text' ).text( newval ); } ); } );
+    wp.customize( 'testimonial_author', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .author-name' ).text( newval ); } ); } );
+    wp.customize( 'testimonial_role', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .author-role' ).text( newval ); } ); } );
+
+    // Lead Popup
+    wp.customize( 'popup_title', function( value ) { value.bind( function( newval ) { $( '.popup-title' ).text( newval ); } ); } );
+    wp.customize( 'popup_desc', function( value ) { value.bind( function( newval ) { $( '.popup-desc' ).text( newval ); } ); } );
 
     // Page Management - General Headings and Leads
     wp.customize( 'about_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-about-page-php .entry-title' ).text( newval ); } ); } );
@@ -84,17 +102,28 @@
     wp.customize( 'thank_you_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-page-php p.lead' ).text( newval ); } ); } );
 
     wp.customize( 'affiliate_disclosure_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-affiliate-disclosure-php h1' ).text( newval ); } ); } );
+    wp.customize( 'affiliate_disclosure_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-affiliate-disclosure-php .legal-content' ).html( newval ); } ); } );
+    wp.customize( 'privacy_policy_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php h1' ).text( newval ); } ); } );
+    wp.customize( 'privacy_policy_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php .legal-content' ).html( newval ); } ); } );
+    wp.customize( 'terms_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php h1' ).text( newval ); } ); } );
+    wp.customize( 'terms_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php .legal-content' ).html( newval ); } ); } );
+
+    // 404 and Search
+    wp.customize( 'error_404_title', function( value ) { value.bind( function( newval ) { $( '.error-404-title' ).text( newval ); } ); } );
+    wp.customize( 'error_404_desc', function( value ) { value.bind( function( newval ) { $( '.error-404-desc' ).text( newval ); } ); } );
+    wp.customize( 'search_results_title', function( value ) { value.bind( function( newval ) { $( '.search-results-title' ).text( newval + ' ' + '...' ); } ); } );
+    wp.customize( 'archive_title_prefix', function( value ) { value.bind( function( newval ) { $( '.archive-title-prefix' ).text( newval ); } ); } );
 
     // Loop through indexed items
     for ( var i = 1; i <= 6; i++ ) {
         ( function( i ) {
             // Process Steps
-            wp.customize( 'process_step_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.process-section .col-md-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
-            wp.customize( 'process_step_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.process-section .col-md-4:nth-child(' + i + ') p' ).text( newval ); } ); } );
+            wp.customize( 'process_step_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.process-step-' + i + ' .step-title' ).text( newval ); } ); } );
+            wp.customize( 'process_step_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.process-step-' + i + ' .step-desc' ).text( newval ); } ); } );
 
             // Features
-            wp.customize( 'feature_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.features-section .col-md-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
-            wp.customize( 'feature_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.features-section .col-md-4:nth-child(' + i + ') p' ).text( newval ); } ); } );
+            wp.customize( 'feature_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.feature-item-' + i + ' .item-title' ).text( newval ); } ); } );
+            wp.customize( 'feature_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.feature-item-' + i + ' .item-desc' ).text( newval ); } ); } );
 
             // Problem Items
             wp.customize( 'problem_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.problem-section .problem-item:nth-child(' + i + ') h3' ).text( newval ); } ); } );
@@ -129,7 +158,9 @@
     }
 
     // Footer
-    wp.customize( 'footer_branding_text', function( value ) { value.bind( function( newval ) { $( '.site-footer p.text-white-50' ).text( newval ); } ); } );
+    wp.customize( 'footer_branding_text', function( value ) { value.bind( function( newval ) { $( '.branding-text' ).text( newval ); } ); } );
+    wp.customize( 'footer_col2_title', function( value ) { value.bind( function( newval ) { $( '.footer-col2-title' ).text( newval ); } ); } );
+    wp.customize( 'footer_col3_title', function( value ) { value.bind( function( newval ) { $( '.footer-col3-title' ).text( newval ); } ); } );
     wp.customize( 'footer_copyright', function( value ) { value.bind( function( newval ) { $( '.site-footer .copyright' ).text( newval ); } ); } );
 
 } )( jQuery );

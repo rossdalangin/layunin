@@ -9,7 +9,11 @@
 			--navy: <?php echo get_theme_mod( 'primary_color', '#0A192F' ); ?>;
 			--gold: <?php echo get_theme_mod( 'accent_color', '#D4AF37' ); ?>;
 			--logo-width: <?php echo get_theme_mod( 'logo_width', '180' ); ?>px;
+            --border-radius: <?php echo get_theme_mod( 'border_radius', '12' ); ?>px;
+            --body-font: '<?php echo get_theme_mod( 'body_font', 'Inter' ); ?>', sans-serif;
 		}
+        body { font-family: var(--body-font); }
+        .card, .btn, .form-control, .rounded-4 { border-radius: var(--border-radius) !important; }
 	</style>
 </head>
 

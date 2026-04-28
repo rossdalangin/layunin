@@ -1,7 +1,7 @@
-<?php if ( get_theme_mod( 'show_trust_badges', true ) ) : ?>
+<?php if ( get_theme_mod( 'show_home_trust_badges', true ) ) : ?>
 <section class="trust-badges-section py-5 border-top border-bottom bg-white">
 	<div class="container">
-		<h2 class="h6 text-center text-uppercase fw-bold text-muted mb-5 letter-spacing-2"><?php echo esc_html( get_theme_mod( 'trust_badges_title', 'Trusted By Forward-Thinking Filipinos' ) ); ?></h2>
+		<h2 class="h6 text-center text-uppercase fw-bold text-muted mb-5 letter-spacing-2 trust-badges-title"><?php echo esc_html( get_theme_mod( 'trust_badges_title', 'Trusted By Forward-Thinking Filipinos' ) ); ?></h2>
 		<div class="d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-50 grayscale">
 			<?php for($i = 1; $i <= 4; $i++) :
 				$badge = get_theme_mod("trust_badge_{$i}");

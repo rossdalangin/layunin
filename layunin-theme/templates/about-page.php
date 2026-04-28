@@ -23,8 +23,11 @@ get_header(); ?>
             </div>
             <div class="col-lg-6 animate-up" style="animation-delay: 0.2s;">
                 <div class="about-visual position-relative">
-                    <div class="rounded-4 shadow-premium overflow-hidden" style="height: 500px; border-radius: 60px !important;">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="w-100 h-100 object-fit-cover" alt="Elite Strategy Team">
+                    <div class="rounded-4 shadow-premium overflow-hidden about-main-visual" style="height: 500px; border-radius: 60px !important;">
+                        <?php
+                        $visual = get_theme_mod( 'about_visual', 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800' );
+                        ?>
+                        <img src="<?php echo esc_url($visual); ?>" class="w-100 h-100 object-fit-cover" alt="Elite Strategy Team">
                     </div>
                     <div class="floating-stat glass p-4 rounded-4 position-absolute top-0 start-0 m-4 animate-float shadow-lg">
                         <div class="h3 fw-bold text-navy mb-0">10k+</div>

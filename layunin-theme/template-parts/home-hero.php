@@ -11,8 +11,8 @@
 						<?php echo esc_html( get_theme_mod( 'hero_subheadline', 'We provide the systems, AI productivity tools, and elite guidance to help Filipinos bridge the gap between where they are and where they belong.' ) ); ?>
 					</p>
 					<div class="hero-btns d-flex flex-wrap gap-4">
-						<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-gold shadow-lg"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start My Journey') ); ?></a>
-						<a href="<?php echo esc_url( home_url('/about/') ); ?>" class="btn btn-outline-navy fw-bold border-2">Explore Our Methods</a>
+						<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-gold shadow-lg hero-cta-1"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start My Journey') ); ?></a>
+						<a href="<?php echo esc_url( home_url('/about/') ); ?>" class="btn btn-outline-navy fw-bold border-2 hero-cta-2"><?php echo esc_html( get_theme_mod('hero_cta_2_text', 'Explore Our Methods') ); ?></a>
 					</div>
 					<div class="hero-trust mt-5 pt-4 d-flex align-items-center gap-4 border-top border-light">
 						<div class="avatars d-flex ps-1">

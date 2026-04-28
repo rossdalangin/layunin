@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - Absolute Masterpiece (v8.4)
+ * Layunin Theme Customizer - Absolute Masterpiece (v8.7)
  * 100% manageable Customizer registration for every single site section.
  */
 
@@ -50,7 +50,7 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_panel( 'layunin_homepage_panel', array( 'title' => 'Homepage Content', 'priority' => 30 ) );
 
 	$wp_customize->add_section( 'layunin_home_visibility', array( 'title' => 'Section Visibility', 'panel' => 'layunin_homepage_panel' ) );
-	$sections = array('hero', 'trust_badges', 'process', 'features', 'problem', 'solution', 'categories', 'lead_magnet', 'products', 'services', 'testimonials', 'final_cta');
+	$sections = array('hero', 'featured_posts', 'trust_badges', 'process', 'features', 'problem', 'solution', 'categories', 'lead_magnet', 'products', 'services', 'testimonials', 'final_cta');
 	foreach ($sections as $section) {
 		$wp_customize->add_setting( "show_home_{$section}", array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
 		$wp_customize->add_control( "show_home_{$section}", array( 'label' => 'Show ' . ucfirst(str_replace('_', ' ', $section)), 'section' => 'layunin_home_visibility', 'type' => 'checkbox' ) );
@@ -64,6 +64,13 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'hero_subheadline', array( 'label' => 'Sub-headline', 'section' => 'layunin_home_hero', 'type' => 'textarea' ) );
     $wp_customize->add_setting( 'hero_cta_1_text', array( 'default' => 'Start My Journey', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'hero_cta_1_text', array( 'label' => 'Primary Button Text', 'section' => 'layunin_home_hero' ) );
+    $wp_customize->add_setting( 'hero_cta_2_text', array( 'default' => 'Explore Our Methods', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'hero_cta_2_text', array( 'label' => 'Secondary Button Text', 'section' => 'layunin_home_hero' ) );
+
+    // 1.5 Featured Posts
+    $wp_customize->add_section( 'layunin_home_featured_posts', array( 'title' => '1.5 Featured Posts', 'panel' => 'layunin_homepage_panel' ) );
+    $wp_customize->add_setting( 'featured_posts_title', array( 'default' => "Editor's Picks", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'featured_posts_title', array( 'label' => 'Title', 'section' => 'layunin_home_featured_posts' ) );
 
 	// 2. Trust Badges
 	$wp_customize->add_section( 'layunin_home_trust', array( 'title' => '2. Trust Badges', 'panel' => 'layunin_homepage_panel' ) );
@@ -189,6 +196,19 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'final_cta_title', array( 'label' => 'Title', 'section' => 'layunin_home_final' ) );
     $wp_customize->add_setting( 'final_cta_desc', array( 'default' => 'Stop dreaming and start building.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'final_cta_desc', array( 'label' => 'Description', 'section' => 'layunin_home_final', 'type' => 'textarea' ) );
+    $wp_customize->add_setting( 'final_cta_1_text', array( 'default' => 'Join the Community', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'final_cta_1_text', array( 'label' => 'Button 1 Text', 'section' => 'layunin_home_final' ) );
+    $wp_customize->add_setting( 'final_cta_2_text', array( 'default' => 'Explore Resources', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'final_cta_2_text', array( 'label' => 'Button 2 Text', 'section' => 'layunin_home_final' ) );
+
+    // --- 3.5 LEAD POPUP ---
+    $wp_customize->add_section( 'layunin_lead_popup', array( 'title' => 'Lead Popup', 'priority' => 35 ) );
+    $wp_customize->add_setting( 'show_popup', array( 'default' => true, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
+	$wp_customize->add_control( 'show_popup', array( 'label' => 'Enable Exit-Intent Popup', 'section' => 'layunin_lead_popup', 'type' => 'checkbox' ) );
+    $wp_customize->add_setting( 'popup_title', array( 'default' => "Wait! Don't Miss Out", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'popup_title', array( 'label' => 'Popup Title', 'section' => 'layunin_lead_popup' ) );
+    $wp_customize->add_setting( 'popup_desc', array( 'default' => 'Get our "Free 7-Day Goal Reset Guide" and start taking action today.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'popup_desc', array( 'label' => 'Popup Description', 'section' => 'layunin_lead_popup', 'type' => 'textarea' ) );
 
 	// --- 4. SOCIAL & SEO ---
     $wp_customize->add_section( 'layunin_seo_social', array( 'title' => 'SEO & Social Media', 'priority' => 45 ) );
@@ -202,16 +222,30 @@ function layunin_customize_register( $wp_customize ) {
 
     // --- 5. PAGE CONTENT MANAGEMENT ---
 	$wp_customize->add_panel( 'layunin_pages_panel', array( 'title' => 'Page Management', 'priority' => 40 ) );
-	$pages = array( 'about', 'services', 'contact', 'shop', 'free_resources', 'testimonials', 'lead_magnet_landing', 'thank_you', 'affiliate_disclosure' );
+	$pages = array( 'about', 'services', 'contact', 'shop', 'free_resources', 'testimonials', 'lead_magnet_landing', 'thank_you', 'affiliate_disclosure', 'privacy_policy', 'terms', 'search_404' );
 	foreach ( $pages as $id ) {
 		$label = ucfirst(str_replace('_', ' ', $id)) . ' Page';
 		$wp_customize->add_section( "layunin_page_{$id}", array( 'title' => $label, 'panel' => 'layunin_pages_panel' ) );
-		$wp_customize->add_setting( "{$id}_title", array( 'default' => $label, 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
-		$wp_customize->add_control( "{$id}_title", array( 'label' => 'Headline', 'section' => "layunin_page_{$id}" ) );
+
+        if($id == 'search_404') {
+            $wp_customize->add_setting( 'error_404_title', array( 'default' => 'Are You Lost In Your Journey?', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'error_404_title', array( 'label' => '404 Headline', 'section' => "layunin_page_{$id}" ) );
+            $wp_customize->add_setting( 'error_404_desc', array( 'default' => "We couldn't find the page you're looking for. But don't worry, even high achievers sometimes take a wrong turn. Let's get you back on track.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'error_404_desc', array( 'label' => '404 Description', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+            $wp_customize->add_setting( 'search_results_title', array( 'default' => 'Search Results for:', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'search_results_title', array( 'label' => 'Search Title Prefix', 'section' => "layunin_page_{$id}" ) );
+            $wp_customize->add_setting( 'archive_title_prefix', array( 'default' => 'Exploring:', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'archive_title_prefix', array( 'label' => 'Archive Title Prefix', 'section' => "layunin_page_{$id}" ) );
+        } else {
+            $wp_customize->add_setting( "{$id}_title", array( 'default' => $label, 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( "{$id}_title", array( 'label' => 'Headline', 'section' => "layunin_page_{$id}" ) );
+        }
 
         if($id == 'about') {
             $wp_customize->add_setting( 'about_lead', array( 'default' => 'Empowering Filipinos to transform their purpose into clear action, real income, and lasting success.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'about_lead', array( 'label' => 'Lead Paragraph', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+            $wp_customize->add_setting( 'about_visual', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'about_visual', array( 'label' => 'Main Visual', 'section' => "layunin_page_{$id}" ) ) );
             for($i=1; $i<=3; $i++) {
                 $wp_customize->add_setting( "team_member_{$i}_name", array( 'default' => "Expert $i", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "team_member_{$i}_name", array( 'label' => "Member $i Name", 'section' => "layunin_page_{$id}" ) );
@@ -289,6 +323,16 @@ function layunin_customize_register( $wp_customize ) {
         if($id == 'affiliate_disclosure') {
             $wp_customize->add_setting( 'affiliate_disclosure_content', array( 'default' => "In compliance with the FTC guidelines, please assume that any and all links on this website are affiliate links of which Layunin receives a small commission from sales of certain items, but the price is the same for you.\n\nLayunin is a participant in various affiliate programs designed to provide a means for sites to earn advertising fees by advertising and linking to partners.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'affiliate_disclosure_content', array( 'label' => 'Disclosure Text', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+        }
+
+        if($id == 'privacy_policy') {
+            $wp_customize->add_setting( 'privacy_policy_content', array( 'default' => "At Layunin, accessible from Layunin.com, one of our main priorities is the privacy of our visitors.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'privacy_policy_content', array( 'label' => 'Policy Text', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+        }
+
+        if($id == 'terms') {
+            $wp_customize->add_setting( 'terms_content', array( 'default' => "Welcome to Layunin! These terms and conditions outline the rules and regulations for the use of Layunin's Website.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'terms_content', array( 'label' => 'Terms Text', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
         }
 	}
 

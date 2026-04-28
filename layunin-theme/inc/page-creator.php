@@ -1,12 +1,13 @@
 <?php
 /**
- * terminal Supreme Page Creator and CPT Seeding (v7.0)
+ * terminal Supreme Page Creator and CPT Seeding (v8.0)
  */
 
 function layunin_create_recommended_pages() {
     $trigger = get_theme_mod( 'recreate_pages_trigger', false );
-    if ( ! $trigger && did_action( 'customize_save_after' ) ) {
-        return;
+    if ( ! $trigger && did_action( 'after_switch_theme' ) === false ) {
+        // Only run on theme switch or if trigger is explicitly checked
+        if ( !isset($_POST['customized']) ) return;
     }
 
     $pages = array(
@@ -17,10 +18,13 @@ function layunin_create_recommended_pages() {
         'shop' => array('title' => 'The Asset Library', 'template' => 'templates/shop-page.php'),
         'free-resources' => array('title' => 'Success Accelerator', 'template' => 'templates/free-resources-page.php'),
         'testimonials' => array('title' => 'Wall of Mastery', 'template' => 'templates/testimonials-page.php'),
+        'lead-magnet' => array('title' => 'The 7-Day Reset', 'template' => 'templates/lead-magnet-landing.php'),
+        'thank-you' => array('title' => 'Success Confirmed', 'template' => 'templates/thank-you.php'),
+        'affiliate-disclosure' => array('title' => 'Transparency', 'template' => 'templates/affiliate-disclosure.php'),
     );
 
     foreach ( $pages as $slug => $data ) {
-        $query = new WP_Query( array( 'post_type' => 'page', 'name' => $slug ) );
+        $query = new WP_Query( array( 'post_type' => 'page', 'name' => $slug, 'post_status' => 'any' ) );
         if ( ! $query->have_posts() ) {
             $page_id = wp_insert_post( array(
                 'post_title'   => $data['title'],
@@ -42,9 +46,10 @@ function layunin_seed_sample_cpts() {
     $testimonials = array(
         array('title' => 'Maria Santos', 'content' => 'Transitioned from freelance burnout to a high-output agency in 4 months using the Layunin framework.', 'role' => 'Founder, Digital Elite'),
         array('title' => 'Juan Dela Cruz', 'content' => 'The AI productivity systems doubled my income while reducing my work hours by half.', 'role' => 'Tech Entrepreneur'),
+        array('title' => 'Elena Reyes', 'content' => 'Finally a system that understands the Filipino context. My productivity has never been higher.', 'role' => 'Creative Director'),
     );
     foreach ($testimonials as $t) {
-        $query = new WP_Query( array( 'post_type' => 'testimonial', 'title' => $t['title'] ) );
+        $query = new WP_Query( array( 'post_type' => 'testimonial', 'title' => $t['title'], 'post_status' => 'any' ) );
         if ( ! $query->have_posts() ) {
             $id = wp_insert_post( array( 'post_title' => $t['title'], 'post_content' => $t['content'], 'post_status' => 'publish', 'post_type' => 'testimonial' ) );
             if ($id) update_post_meta( $id, '_testimonial_role', $t['role'] );

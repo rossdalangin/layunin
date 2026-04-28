@@ -1,6 +1,7 @@
+<?php if ( get_theme_mod( 'show_home_featured_posts', true ) ) : ?>
 <section class="featured-posts-section bg-light py-5">
 	<div class="container">
-		<h2 class="text-center mb-5">Editor's Picks</h2>
+		<h2 class="text-center mb-5 featured-posts-title"><?php echo esc_html(get_theme_mod('featured_posts_title', "Editor's Picks")); ?></h2>
 		<div class="row">
 			<?php
 			$featured = new WP_Query( array(
@@ -31,3 +32,4 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>

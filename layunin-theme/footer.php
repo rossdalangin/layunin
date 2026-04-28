@@ -13,7 +13,7 @@
 						<?php else : ?>
 							<h2 class="h3 text-white fw-black mb-4"><?php bloginfo('name'); ?></h2>
 						<?php endif; ?>
-						<p class="text-white-50 lh-lg">
+						<p class="text-white-50 lh-lg branding-text">
 							<?php echo esc_html( get_theme_mod( 'footer_branding_text', 'Empowering Filipinos to transform their goals into action, income, and success through modular systems.' ) ); ?>
 						</p>
 						<div class="social-links d-flex gap-4 mt-5">
@@ -30,7 +30,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col2-title"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Resources')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col3-title"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Resources')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'footer',

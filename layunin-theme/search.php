@@ -2,8 +2,8 @@
 <main id="primary" class="site-main container py-5">
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header mb-5 text-center animate-up">
-			<h1 class="page-title display-4">
-				<?php echo esc_html( get_theme_mod( 'search_title', 'Search Results' ) ); ?>: <?php echo get_search_query(); ?>
+			<h1 class="page-title display-4 search-results-title">
+				<?php echo esc_html( get_theme_mod( 'search_results_title', 'Search Results for:' ) ); ?> <?php echo get_search_query(); ?>
 			</h1>
 		</header>
 		<div class="search-results-grid">

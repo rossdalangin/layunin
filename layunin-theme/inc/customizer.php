@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - terminal Masterpiece (v5.6)
+ * Layunin Theme Customizer - terminal Masterpiece (v5.9)
  */
 
 function layunin_customize_register( $wp_customize ) {
@@ -85,11 +85,24 @@ function layunin_customize_register( $wp_customize ) {
 
     // Process Section
     $wp_customize->add_section( 'layunin_home_process', array( 'title' => 'Process Section', 'panel' => 'layunin_homepage_panel' ) );
+    $wp_customize->add_setting( 'process_title', array( 'default' => 'How Layunin Works', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'process_title', array( 'label' => 'Title', 'section' => 'layunin_home_process' ) );
     for($i = 1; $i <= 3; $i++) {
         $wp_customize->add_setting( "process_step_{$i}_title", array( 'default' => 'Step ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
         $wp_customize->add_control( "process_step_{$i}_title", array( 'label' => "Step {$i} Title", 'section' => 'layunin_home_process' ) );
         $wp_customize->add_setting( "process_step_{$i}_desc", array( 'default' => 'Process details...', 'sanitize_callback' => 'sanitize_text_field' ) );
         $wp_customize->add_control( "process_step_{$i}_desc", array( 'label' => "Step {$i} Description", 'section' => 'layunin_home_process' ) );
+    }
+
+    // Features Section
+    $wp_customize->add_section( 'layunin_home_features', array( 'title' => 'Features Section', 'panel' => 'layunin_homepage_panel' ) );
+    $wp_customize->add_setting( 'features_title', array( 'default' => 'Why Choose Layunin?', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'features_title', array( 'label' => 'Title', 'section' => 'layunin_home_features' ) );
+    for($i = 1; $i <= 3; $i++) {
+        $wp_customize->add_setting( "feature_{$i}_title", array( 'default' => 'Feature ' . $i, 'sanitize_callback' => 'sanitize_text_field' ) );
+        $wp_customize->add_control( "feature_{$i}_title", array( 'label' => "Feature {$i} Title", 'section' => 'layunin_home_features' ) );
+        $wp_customize->add_setting( "feature_{$i}_desc", array( 'default' => 'Benefit details...', 'sanitize_callback' => 'sanitize_text_field' ) );
+        $wp_customize->add_control( "feature_{$i}_desc", array( 'label' => "Feature {$i} Description", 'section' => 'layunin_home_features' ) );
     }
 
 	// Categories Section
@@ -126,6 +139,8 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'testimonial_quote', array( 'label' => 'Quote', 'section' => 'layunin_home_testimonials', 'type' => 'textarea' ) );
 	$wp_customize->add_setting( 'testimonial_author', array( 'default' => 'Maria Santos', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'testimonial_author', array( 'label' => 'Author', 'section' => 'layunin_home_testimonials' ) );
+    $wp_customize->add_setting( 'testimonial_role', array( 'default' => 'Digital Freelancer', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'testimonial_role', array( 'label' => 'Author Role', 'section' => 'layunin_home_testimonials' ) );
 	$wp_customize->add_setting( 'testimonial_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'testimonial_image', array( 'label' => 'Author Image', 'section' => 'layunin_home_testimonials' ) ) );
 

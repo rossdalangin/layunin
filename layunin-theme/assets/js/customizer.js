@@ -1,5 +1,5 @@
 /**
- * Live preview for Customizer - Definitive Masterpiece (v8.7)
+ * Live preview for Customizer - Definitive Masterpiece (v8.8)
  */
 ( function( $ ) {
     // Helper function for list-based updates
@@ -73,6 +73,13 @@
     // Lead Popup
     wp.customize( 'popup_title', function( value ) { value.bind( function( newval ) { $( '.popup-title' ).text( newval ); } ); } );
     wp.customize( 'popup_desc', function( value ) { value.bind( function( newval ) { $( '.popup-desc' ).text( newval ); } ); } );
+
+    // Sidebar & Author
+    wp.customize( 'sidebar_bio_text', function( value ) { value.bind( function( newval ) { $( '.sidebar-bio' ).text( newval ); } ); } );
+
+    // Monetization
+    wp.customize( 'product_item_1_title', function( value ) { value.bind( function( newval ) { $( '.monetization-product-title' ).text( newval ); } ); } );
+    wp.customize( 'product_item_1_price', function( value ) { value.bind( function( newval ) { $( '.monetization-product-price' ).text( newval ); } ); } );
 
     // Page Management - General Headings and Leads
     wp.customize( 'about_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-about-page-php .entry-title' ).text( newval ); } ); } );

@@ -1,8 +1,11 @@
 <aside id="secondary" class="widget-area">
 	<div class="sidebar-box p-4 card mb-5 text-center">
 		<h3 class="h6 text-uppercase fw-bold mb-4">About the Author</h3>
-		<img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" alt="Author" class="rounded-circle mb-3 mx-auto" style="width: 100px; height: 100px; object-fit: cover;">
-		<p class="small text-muted mb-3"><?php echo esc_html( get_theme_mod('sidebar_bio_text', 'Dedicated to helping Filipinos achieve their greatest Layunin.') ); ?></p>
+        <?php
+        $author_img = get_theme_mod('sidebar_author_image', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200');
+        ?>
+		<img src="<?php echo esc_url($author_img); ?>" alt="Author" class="rounded-circle mb-3 mx-auto sidebar-author-img" style="width: 100px; height: 100px; object-fit: cover;">
+		<p class="small text-muted mb-3 sidebar-bio"><?php echo esc_html( get_theme_mod('sidebar_bio_text', 'Dedicated to helping Filipinos achieve their greatest Layunin.') ); ?></p>
 		<div class="author-socials d-flex justify-content-center gap-2">
 			<?php if(get_theme_mod('author_facebook')) : ?><a href="<?php echo esc_url(get_theme_mod('author_facebook')); ?>" class="text-navy small"><i class="fab fa-facebook-f"></i></a><?php endif; ?>
 			<?php if(get_theme_mod('author_twitter')) : ?><a href="<?php echo esc_url(get_theme_mod('author_twitter')); ?>" class="text-navy small"><i class="fab fa-twitter"></i></a><?php endif; ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - Absolute Masterpiece (v8.7)
+ * Layunin Theme Customizer - Absolute Masterpiece (v8.8)
  * 100% manageable Customizer registration for every single site section.
  */
 
@@ -210,7 +210,28 @@ function layunin_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'popup_desc', array( 'default' => 'Get our "Free 7-Day Goal Reset Guide" and start taking action today.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'popup_desc', array( 'label' => 'Popup Description', 'section' => 'layunin_lead_popup', 'type' => 'textarea' ) );
 
-	// --- 4. SOCIAL & SEO ---
+	// --- 4. SIDEBAR & MONETIZATION ---
+    $wp_customize->add_section( 'layunin_sidebar_author', array( 'title' => 'Sidebar & Author', 'priority' => 42 ) );
+    $wp_customize->add_setting( 'sidebar_bio_text', array( 'default' => 'Dedicated to helping Filipinos achieve their greatest Layunin.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'sidebar_bio_text', array( 'label' => 'Sidebar Bio', 'section' => 'layunin_sidebar_author', 'type' => 'textarea' ) );
+    $wp_customize->add_setting( 'sidebar_author_image', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_author_image', array( 'label' => 'Sidebar Author Photo', 'section' => 'layunin_sidebar_author' ) ) );
+    $wp_customize->add_setting( 'author_facebook', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( 'author_facebook', array( 'label' => 'Author Facebook', 'section' => 'layunin_sidebar_author' ) );
+    $wp_customize->add_setting( 'author_twitter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( 'author_twitter', array( 'label' => 'Author Twitter', 'section' => 'layunin_sidebar_author' ) );
+    $wp_customize->add_setting( 'author_linkedin', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( 'author_linkedin', array( 'label' => 'Author LinkedIn', 'section' => 'layunin_sidebar_author' ) );
+
+    $wp_customize->add_section( 'layunin_monetization', array( 'title' => 'Monetization & Ads', 'priority' => 43 ) );
+    $wp_customize->add_setting( 'banner_above_content', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_above_content', array( 'label' => 'Banner Above Post Content', 'section' => 'layunin_monetization' ) ) );
+    $wp_customize->add_setting( 'banner_below_content', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_below_content', array( 'label' => 'Banner Below Post Content', 'section' => 'layunin_monetization' ) ) );
+    $wp_customize->add_setting( 'affiliate_banner_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'affiliate_banner_url', array( 'label' => 'Global Affiliate Banner', 'section' => 'layunin_monetization' ) ) );
+
+	// --- 5. SOCIAL & SEO ---
     $wp_customize->add_section( 'layunin_seo_social', array( 'title' => 'SEO & Social Media', 'priority' => 45 ) );
     $socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 	foreach ( $socials as $social ) {
@@ -220,7 +241,7 @@ function layunin_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'meta_description', array( 'default' => 'Layunin helps Filipinos achieve their goals.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'meta_description', array( 'label' => 'Meta Description', 'section' => 'layunin_seo_social', 'type' => 'textarea' ) );
 
-    // --- 5. PAGE CONTENT MANAGEMENT ---
+    // --- 6. PAGE CONTENT MANAGEMENT ---
 	$wp_customize->add_panel( 'layunin_pages_panel', array( 'title' => 'Page Management', 'priority' => 40 ) );
 	$pages = array( 'about', 'services', 'contact', 'shop', 'free_resources', 'testimonials', 'lead_magnet_landing', 'thank_you', 'affiliate_disclosure', 'privacy_policy', 'terms', 'search_404' );
 	foreach ( $pages as $id ) {
@@ -336,7 +357,7 @@ function layunin_customize_register( $wp_customize ) {
         }
 	}
 
-    // --- 6. FOOTER OPTIONS ---
+    // --- 7. FOOTER OPTIONS ---
 	$wp_customize->add_section( 'layunin_footer_options', array( 'title' => 'Elite Footer Settings', 'priority' => 50 ) );
 	$wp_customize->add_setting( 'footer_branding_text', array( 'default' => 'Empowering Filipinos with elite tools and systems.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'footer_branding_text', array( 'label' => 'Branding Text', 'section' => 'layunin_footer_options', 'type' => 'textarea' ) );
@@ -347,7 +368,7 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'footer_copyright', array( 'default' => '© ' . date('Y') . ' Layunin.com. All rights reserved.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'footer_copyright', array( 'label' => 'Copyright Text', 'section' => 'layunin_footer_options' ) );
 
-	// --- 7. SITE AUTOMATION ---
+	// --- 8. SITE AUTOMATION ---
 	$wp_customize->add_section( 'layunin_automation', array( 'title' => 'Master Setup', 'priority' => 100 ) );
 	$wp_customize->add_setting( 'recreate_pages_trigger', array( 'default' => false, 'sanitize_callback' => 'layunin_sanitize_checkbox' ) );
 	$wp_customize->add_control( 'recreate_pages_trigger', array( 'label' => 'Initialize Elite Site Ecosystem', 'section' => 'layunin_automation', 'type' => 'checkbox' ) );

@@ -1,30 +1,46 @@
 /**
- * Layunin Navigation - Masterpiece Elite
+ * Layunin Masterpiece Navigation (v7.0)
  */
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const siteNavigation = document.getElementById('site-navigation');
+    const mobileOverlay = document.getElementById('mobile-overlay');
     const siteHeader = document.querySelector('.site-header');
 
-    if (menuToggle && siteNavigation) {
+    if (menuToggle && mobileOverlay) {
         menuToggle.addEventListener('click', function() {
-            siteNavigation.classList.toggle('toggled');
-            siteNavigation.classList.toggle('d-none');
-            const isToggled = siteNavigation.classList.contains('toggled');
-            menuToggle.innerHTML = isToggled ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            document.body.style.overflow = isToggled ? 'hidden' : '';
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+
+            // Hamburger icon animation
+            menuToggle.classList.toggle('active');
         });
     }
 
+    // Scroll handling
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 30) {
             siteHeader.classList.add('scrolled');
         } else {
             siteHeader.classList.remove('scrolled');
         }
     });
 
-    // Intersection Observer for AOS
+    // Dark Mode persistence
+    const darkModeToggles = document.querySelectorAll('#dark-mode-toggle, #dark-mode-toggle-mobile');
+    const toggleDark = () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('layunin_theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    };
+
+    darkModeToggles.forEach(btn => btn.addEventListener('click', toggleDark));
+
+    if (localStorage.getItem('layunin_theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
+    // AOS Logic
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -34,20 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
-
-    // Dark Mode persistent logic
-    const darkModeBtn = document.getElementById('dark-mode-toggle');
-    const darkModeBtnMobile = document.getElementById('dark-mode-toggle-mobile');
-
-    const toggleDark = () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('layunin_dark', document.body.classList.contains('dark-mode'));
-    };
-
-    if(darkModeBtn) darkModeBtn.onclick = toggleDark;
-    if(darkModeBtnMobile) darkModeBtnMobile.onclick = toggleDark;
-
-    if(localStorage.getItem('layunin_dark') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
 });

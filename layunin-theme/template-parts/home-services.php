@@ -23,7 +23,7 @@
 					<div class="service-icon text-gold mb-4 display-4"><i class="<?php echo esc_attr($icon); ?>"></i></div>
 					<h3 class="h4 fw-bold text-navy mb-3"><?php echo esc_html($title); ?></h3>
 					<p class="text-muted mb-5"><?php echo esc_html($desc); ?></p>
-					<a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-link text-navy text-decoration-none fw-bold p-0">Explore Service <i class="fas fa-arrow-right ms-2"></i></a>
+						<a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-link text-navy text-decoration-none fw-bold p-0 services-home-btn-text"><?php echo esc_html(get_theme_mod('services_home_btn_text', 'Explore Service')); ?> <i class="fas fa-arrow-right ms-2"></i></a>
 				</div>
 			</div>
 			<?php endif; endfor; ?>

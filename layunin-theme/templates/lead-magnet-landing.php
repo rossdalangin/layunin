@@ -8,7 +8,7 @@ get_header(); ?>
 		<div class="row align-items-center g-5">
 			<div class="col-lg-6 animate-up">
 				<div class="lm-content-box pe-lg-4">
-					<span class="badge bg-gold px-3 py-2 mb-3 shadow-sm">Free Digital Resource</span>
+					<span class="badge bg-gold px-3 py-2 mb-3 shadow-sm lm-badge-text"><?php echo esc_html(get_theme_mod('lm_badge_text', 'Free Digital Resource')); ?></span>
 					<h1 class="display-3 fw-bold text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Elite 7-Day Goal Reset Protocol' ) ); ?></h1>
 					<p class="lead text-muted mb-5 fs-4">
 						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop existing on autopilot. This is the exact audit used by high-output leaders to reclaim their time and refocus their absolute purpose.' ) ); ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 							<div class="rounded-circle border border-2 border-white bg-gold overflow-hidden" style="width: 35px; height: 35px; margin-right: -10px;"><i class="fas fa-user text-white p-2"></i></div>
 							<div class="rounded-circle border border-2 border-white bg-accent overflow-hidden" style="width: 35px; height: 35px;"><i class="fas fa-user text-white p-2"></i></div>
 						</div>
-						<span class="small text-muted fw-bold">Joined by 25,000+ Filipinos</span>
+						<span class="small text-muted fw-bold lm-trust-pill"><?php echo esc_html(get_theme_mod('lm_trust_pill', 'Joined by 25,000+ Filipinos')); ?></span>
 					</div>
 				</div>
 			</div>
@@ -41,24 +41,24 @@ get_header(); ?>
 				<div class="landing-form-card card border-0 shadow-2xl p-5 rounded-4 bg-white overflow-hidden position-relative">
 					<div class="accent-line bg-gold position-absolute top-0 start-0 w-100" style="height: 6px;"></div>
 					<div class="text-center mb-5">
-						<h2 class="h3 fw-bold text-navy">Get the Reset Guide</h2>
-						<p class="text-muted">Enter your details below for instant access.</p>
+						<h2 class="h3 fw-bold text-navy lm-form-title"><?php echo esc_html(get_theme_mod('lm_form_title', 'Get the Reset Guide')); ?></h2>
+						<p class="text-muted lm-form-desc"><?php echo esc_html(get_theme_mod('lm_form_desc', 'Enter your details below for instant access.')); ?></p>
 					</div>
 
 					<form class="row g-3">
 						<div class="col-12">
-							<label class="form-label small fw-bold">Your First Name</label>
+							<label class="form-label small fw-bold lm-form-name-label"><?php echo esc_html(get_theme_mod('lm_form_name_label', 'Your First Name')); ?></label>
 							<input type="text" class="form-control form-control-lg bg-light border-0" placeholder="e.g. Maria" required>
 						</div>
 						<div class="col-12">
-							<label class="form-label small fw-bold">Your Primary Email</label>
+							<label class="form-label small fw-bold lm-form-email-label"><?php echo esc_html(get_theme_mod('lm_form_email_label', 'Your Primary Email')); ?></label>
 							<input type="email" class="form-control form-control-lg bg-light border-0" placeholder="e.g. maria@example.com" required>
 						</div>
 						<div class="col-12 mt-4">
-							<button type="submit" class="btn btn-navy btn-lg w-100 py-3 fw-bold shadow-lg transition-all">Download My Copy Now <i class="fas fa-download ms-2"></i></button>
+							<button type="submit" class="btn btn-navy btn-lg w-100 py-3 fw-bold shadow-lg transition-all lm-form-btn"><?php echo esc_html(get_theme_mod('lm_form_btn', 'Download My Copy Now')); ?> <i class="fas fa-download ms-2"></i></button>
 						</div>
 						<div class="col-12 text-center mt-3">
-							<p class="small text-muted mb-0"><i class="fas fa-lock me-1"></i> Your data is safe. We hate spam too.</p>
+							<p class="small text-muted mb-0 lm-form-trust"><i class="fas fa-lock me-1"></i> <?php echo esc_html(get_theme_mod('lm_form_trust', 'Your data is safe. We hate spam too.')); ?></p>
 						</div>
 					</form>
 				</div>
@@ -71,13 +71,13 @@ get_header(); ?>
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-8">
-				<p class="text-white mb-0 h5 fst-italic">"This guide was exactly what I needed to get my career back on track. I finally have a clear plan!"</p>
+				<p class="text-white mb-0 h5 fst-italic lm-quote-text">"<?php echo esc_html(get_theme_mod('lm_quote_text', 'This guide was exactly what I needed to get my career back on track. I finally have a clear plan!')); ?>"</p>
 			</div>
 			<div class="col-md-4 text-md-end mt-4 mt-md-0">
 				<div class="d-flex align-items-center justify-content-md-end">
 					<div class="text-end me-3">
-						<h4 class="h6 text-white mb-0">Juan Dela Cruz</h4>
-						<span class="small text-white-50">High-Output Leader</span>
+						<h4 class="h6 text-white mb-0 lm-quote-author"><?php echo esc_html(get_theme_mod('lm_quote_author', 'Juan Dela Cruz')); ?></h4>
+						<span class="small text-white-50 lm-quote-role"><?php echo esc_html(get_theme_mod('lm_quote_role', 'High-Output Leader')); ?></span>
 					</div>
 					<div class="rounded-circle bg-gold" style="width: 50px; height: 50px;"></div>
 				</div>

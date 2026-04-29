@@ -5,11 +5,11 @@
 		</div>
 		<?php the_title( '<h1 class="entry-title display-2 fw-bold mb-4">', '</h1>' ); ?>
 		<div class="entry-meta text-muted mb-5 d-flex align-items-center justify-content-center gap-3">
-			<span class="author-vcard"><i class="far fa-user me-1"></i> By <?php the_author(); ?></span>
+			<span class="author-vcard"><i class="far fa-user me-1"></i> <?php echo esc_html(get_theme_mod('blog_by_text', 'By')); ?> <?php the_author(); ?></span>
 			<span class="sep">|</span>
 			<span class="posted-on"><i class="far fa-calendar-alt me-1"></i> <?php the_date(); ?></span>
 			<span class="sep">|</span>
-			<span class="reading-time"><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> min read</span>
+			<span class="reading-time"><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> <?php echo esc_html(get_theme_mod('blog_min_read_text', 'min read')); ?></span>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="post-thumbnail mb-5 rounded-4 overflow-hidden shadow-lg">

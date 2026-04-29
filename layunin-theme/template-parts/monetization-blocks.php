@@ -2,8 +2,8 @@
 	<h3 class="h5 monetization-newsletter-title"><?php echo esc_html(get_theme_mod('monetization_newsletter_title', 'Join the Elite Network')); ?></h3>
 	<p class="small monetization-newsletter-desc"><?php echo esc_html(get_theme_mod('monetization_newsletter_desc', 'Strategic insights on personal growth and scalable income.')); ?></p>
 	<form class="cta-newsletter-form">
-		<input type="email" placeholder="Email" class="form-control form-control-sm mb-2" required>
-		<button type="submit" class="btn btn-gold btn-sm w-100">Subscribe</button>
+		<input type="email" placeholder="<?php echo esc_attr(get_theme_mod('monetization_newsletter_ph', 'Email')); ?>" class="form-control form-control-sm mb-2" required>
+			<button type="submit" class="btn btn-gold btn-sm w-100 monetization-newsletter-btn"><?php echo esc_html(get_theme_mod('monetization_newsletter_btn', 'Subscribe')); ?></button>
 	</form>
 </div>
 
@@ -18,7 +18,7 @@
     $product_price = get_theme_mod('product_item_1_price', '₱999');
     $product_link = get_theme_mod('product_item_1_link', '#');
     ?>
-	<a href="<?php echo esc_url($product_link); ?>" class="btn btn-outline-primary btn-sm w-100">Buy Now - <span class="monetization-product-price"><?php echo esc_html($product_price); ?></span></a>
+	<a href="<?php echo esc_url($product_link); ?>" class="btn btn-outline-primary btn-sm w-100 monetization-product-btn"><?php echo esc_html(get_theme_mod('monetization_product_btn', 'Buy Now')); ?> - <span class="monetization-product-price"><?php echo esc_html($product_price); ?></span></a>
 </div>
 
 <div class="affiliate-banner mb-4">

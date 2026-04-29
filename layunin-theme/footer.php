@@ -59,10 +59,10 @@
 					<form class="newsletter-form mb-4">
 						<div class="input-group">
 							<input type="email" class="form-control bg-navy-light border-0 text-white py-3" placeholder="Enter your best email" style="border-radius: 12px 0 0 12px !important;">
-							<button class="btn btn-gold px-4" type="button" style="border-radius: 0 12px 12px 0 !important; padding: 0.5rem 1.5rem;">Join</button>
+							<button class="btn btn-gold px-4 footer-newsletter-btn" type="button" style="border-radius: 0 12px 12px 0 !important; padding: 0.5rem 1.5rem;"><?php echo esc_html(get_theme_mod('footer_newsletter_btn', 'Join')); ?></button>
 						</div>
 					</form>
-                    <p class="small text-accent fw-bold"><i class="fas fa-shield-alt me-2"></i> No spam. Only purpose.</p>
+                    <p class="small text-accent fw-bold footer-newsletter-trust"><i class="fas fa-shield-alt me-2"></i> <?php echo esc_html(get_theme_mod('footer_newsletter_trust', 'No spam. Only purpose.')); ?></p>
 				</div>
 			</div>
 
@@ -73,8 +73,8 @@
 					<?php echo esc_html(get_theme_mod('footer_copyright', '© ' . date('Y') . ' Layunin.com. All rights reserved. Architected in the Philippines.')); ?>
 				</div>
 				<div class="footer-meta d-flex gap-4 mt-3 mt-md-0">
-					<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>" class="text-white-50 text-decoration-none hover-white">Privacy</a>
-					<a href="<?php echo esc_url( home_url('/terms/') ); ?>" class="text-white-50 text-decoration-none hover-white">Terms</a>
+					<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>" class="text-white-50 text-decoration-none hover-white footer-privacy-label"><?php echo esc_html(get_theme_mod('footer_privacy_label', 'Privacy')); ?></a>
+					<a href="<?php echo esc_url( home_url('/terms/') ); ?>" class="text-white-50 text-decoration-none hover-white footer-terms-label"><?php echo esc_html(get_theme_mod('footer_terms_label', 'Terms')); ?></a>
 				</div>
 			</div>
 		</div>

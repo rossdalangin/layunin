@@ -29,15 +29,15 @@
 					<div class="d-flex align-items-center gap-4 mb-4">
 						<div class="bg-gold text-white rounded-circle p-3 shadow-sm"><i class="fas fa-bolt fa-2x"></i></div>
 						<div>
-							<h3 class="h4 mb-0 fw-bold">Clarity Engine</h3>
-							<span class="small text-muted">Active Success Protocol</span>
+							<h3 class="h4 mb-0 fw-bold hero-card-title"><?php echo esc_html(get_theme_mod('hero_card_title', 'Clarity Engine')); ?></h3>
+							<span class="small text-muted hero-card-status"><?php echo esc_html(get_theme_mod('hero_card_status', 'Active Success Protocol')); ?></span>
 						</div>
 					</div>
 					<div class="progress mb-4 shadow-sm" style="height: 15px; border-radius: 10px;">
 						<div class="progress-bar bg-gold" role="progressbar" style="width: 95%"></div>
 					</div>
 					<div class="d-flex justify-content-between align-items-center">
-						<div class="small text-navy fw-bold">Optimization Rate: 95%</div>
+						<div class="small text-navy fw-bold hero-card-rate"><?php echo esc_html(get_theme_mod('hero_card_rate', 'Optimization Rate: 95%')); ?></div>
 						<i class="fas fa-check-circle text-emerald fs-4"></i>
 					</div>
 				</div>

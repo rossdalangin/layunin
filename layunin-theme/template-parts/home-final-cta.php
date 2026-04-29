@@ -13,7 +13,7 @@
 					<a href="<?php echo esc_url( home_url('/free-resources/') ); ?>" class="btn btn-outline-white btn-xl px-5 py-3 fs-5 fw-bold border-2 final-cta-2"><?php echo esc_html( get_theme_mod('final_cta_2_text', 'Explore the Knowledge Library') ); ?></a>
 				</div>
                 <div class="mt-6 pt-5 opacity-50 small">
-                    <p>Backed by our commitment to Filipino excellence. No commitment required to start.</p>
+                    <p class="final-cta-trust"><?php echo esc_html(get_theme_mod('final_cta_trust', 'Backed by our commitment to Filipino excellence. No commitment required to start.')); ?></p>
                 </div>
 			</div>
 		</div>

@@ -27,7 +27,7 @@ $col_class = ($layout == 'list') ? 'col-12 mb-5' : 'col-lg-4 col-md-6 mb-4';
 			<div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
 				<div class="small text-muted">
 					<span class="me-2"><i class="far fa-calendar-alt me-1"></i> <?php echo get_the_date(); ?></span>
-					<span><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> min</span>
+					<span><i class="far fa-clock me-1"></i> <?php echo layunin_reading_time(); ?> <?php echo esc_html(get_theme_mod('blog_min_text', 'min')); ?></span>
 				</div>
 				<a href="<?php the_permalink(); ?>" class="text-navy fw-bold small text-decoration-none read-more-text"><?php echo esc_html(get_theme_mod('read_more_text', 'Unlock Full Strategy')); ?> <i class="fas fa-arrow-right ms-1"></i></a>
 			</div>

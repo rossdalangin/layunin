@@ -30,16 +30,16 @@ get_header(); ?>
 								<li class="mb-2 small"><i class="fas fa-check text-accent me-2"></i><?php echo esc_html(trim($f)); ?></li>
 							<?php endif; endforeach; ?>
 						</ul>
-						<a href="<?php echo esc_url($link); ?>" class="btn <?php echo ($i==2?'btn-gold':'btn-outline-navy'); ?> w-100 py-3 fw-bold mt-auto">Get Started</a>
+						<a href="<?php echo esc_url($link); ?>" class="btn <?php echo ($i==2?'btn-gold':'btn-outline-navy'); ?> w-100 py-3 fw-bold mt-auto"><?php echo esc_html(get_theme_mod("services_tier_{$i}_btn", 'Get Started')); ?></a>
 					</div>
 				</div>
 				<?php endfor; ?>
 			</div>
 
 			<div class="mt-6 p-5 bg-navy text-white rounded-4 text-center">
-				<h2 class="h3 fw-bold mb-4 text-white">Need a Custom Solution?</h2>
-				<p class="text-white-50 mb-4 mx-auto" style="max-width: 600px;">For large scale operations and international firms, we offer bespoke architectural consulting tailored to your specific mastery goals.</p>
-				<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-gold btn-lg px-5">Initiate Consultation</a>
+				<h2 class="h3 fw-bold mb-4 text-white services-custom-title"><?php echo esc_html(get_theme_mod('services_custom_title', 'Need a Custom Solution?')); ?></h2>
+				<p class="text-white-50 mb-4 mx-auto services-custom-desc" style="max-width: 600px;"><?php echo esc_html(get_theme_mod('services_custom_desc', 'For large scale operations and international firms, we offer bespoke architectural consulting tailored to your specific mastery goals.')); ?></p>
+				<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-gold btn-lg px-5 services-custom-btn"><?php echo esc_html(get_theme_mod('services_custom_btn', 'Initiate Consultation')); ?></a>
 			</div>
 		</div>
 	</div>

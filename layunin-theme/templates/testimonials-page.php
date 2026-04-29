@@ -66,9 +66,9 @@ get_header(); ?>
 		</div>
 
 		<div class="cta-banner bg-gold p-5 rounded-4 text-center animate-up shadow-lg">
-			<h2 class="h3 fw-bold text-white mb-3">Ready To Be Our Next Success Story?</h2>
-			<p class="text-white-50 mb-4">Join thousands of Filipinos who have transformed their lives.</p>
-			<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-navy btn-lg px-5 shadow">Get Started Today</a>
+			<h2 class="h3 fw-bold text-white mb-3 testimonials-cta-title"><?php echo esc_html(get_theme_mod('testimonials_cta_title', 'Ready To Be Our Next Success Story?')); ?></h2>
+			<p class="text-white-50 mb-4 testimonials-cta-desc"><?php echo esc_html(get_theme_mod('testimonials_cta_desc', 'Join thousands of Filipinos who have transformed their lives.')); ?></p>
+			<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-navy btn-lg px-5 shadow testimonials-cta-btn"><?php echo esc_html(get_theme_mod('testimonials_cta_btn', 'Get Started Today')); ?></a>
 		</div>
 	</div>
 </main>

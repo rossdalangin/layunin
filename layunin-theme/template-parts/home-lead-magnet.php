@@ -20,9 +20,9 @@
 
 				<form class="lead-magnet-form d-flex flex-column flex-sm-row gap-3">
 					<input type="email" placeholder="Enter your business email" class="form-control form-control-lg bg-white border-0 shadow-sm" style="min-width: 300px;" required>
-					<button type="submit" class="btn btn-gold btn-lg px-5 shadow-lg fw-bold">Get the Protocol</button>
+					<button type="submit" class="btn btn-gold btn-lg px-5 shadow-lg fw-bold lm-btn-text"><?php echo esc_html(get_theme_mod('lm_btn_text', 'Get the Protocol')); ?></button>
 				</form>
-				<p class="small opacity-50 mt-4"><i class="fas fa-lock me-2"></i> Join 25,000+ others pursuing their absolute mastery. Your data is 100% secure.</p>
+				<p class="small opacity-50 mt-4 lm-social-proof"><i class="fas fa-lock me-2"></i> <?php echo esc_html(get_theme_mod('lm_social_proof', 'Join 25,000+ others pursuing their absolute mastery. Your data is 100% secure.')); ?></p>
 			</div>
 			<div class="col-lg-6 d-none d-lg-block animate-up" style="animation-delay: 0.2s;">
 				<div class="lm-visual-wrapper p-3 bg-white-10 rounded-4 shadow-lg rotate-3">

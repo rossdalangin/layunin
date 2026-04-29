@@ -14,7 +14,7 @@ get_header(); ?>
 		<div class="row g-5 align-items-center mb-xl">
             <div class="col-lg-6 animate-up">
                 <div class="entry-content fs-5 lh-lg">
-                    <h2 class="display-6 fw-bold text-navy mb-4">Our Elite Mission</h2>
+                    <h2 class="display-6 fw-bold text-navy mb-4 about-mission-title"><?php echo esc_html(get_theme_mod('about_mission_title', 'Our Elite Mission')); ?></h2>
                     <div class="mission-text mb-5">
                         <?php echo wpautop(esc_html(get_theme_mod('about_mission_content', 'Layunin is the premier platform for Filipino high-achievers seeking life mastery. We provide the systems and tools to bridge the gap between ambition and execution.'))); ?>
                     </div>
@@ -34,8 +34,8 @@ get_header(); ?>
                         <img src="<?php echo esc_url($visual); ?>" class="w-100 h-100 object-fit-cover" alt="Elite Strategy Team">
                     </div>
                     <div class="floating-stat glass p-4 rounded-4 position-absolute top-0 start-0 m-4 animate-float shadow-lg">
-                        <div class="h3 fw-bold text-navy mb-0">25k+</div>
-                        <div class="small text-muted fw-bold">High Achievers</div>
+                        <div class="h3 fw-bold text-navy mb-0 about-stat-number"><?php echo esc_html(get_theme_mod('about_stat_number', '25k+')); ?></div>
+                        <div class="small text-muted fw-bold about-stat-text"><?php echo esc_html(get_theme_mod('about_stat_text', 'High Achievers')); ?></div>
                     </div>
                 </div>
             </div>
@@ -60,8 +60,12 @@ get_header(); ?>
                         <h3 class="h4 fw-bold text-navy mb-2 member-name"><?php echo esc_html($name); ?></h3>
                         <p class="text-gold small text-uppercase fw-black letter-spacing-1 mb-4 member-role"><?php echo esc_html($role); ?></p>
                         <div class="social-mini d-flex justify-content-center gap-3">
-                            <a href="#" class="text-muted hover-gold"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="text-muted hover-gold"><i class="fab fa-twitter"></i></a>
+                            <?php
+                            $linkedin = get_theme_mod("team_member_{$i}_linkedin", "#");
+                            $twitter = get_theme_mod("team_member_{$i}_twitter", "#");
+                            ?>
+                            <a href="<?php echo esc_url($linkedin); ?>" class="text-muted hover-gold"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="<?php echo esc_url($twitter); ?>" class="text-muted hover-gold"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>

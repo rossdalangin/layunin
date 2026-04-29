@@ -27,7 +27,7 @@
 					</div>
 					<div class="card-body p-5">
 						<h3 class="h5 fw-bold text-navy mb-4"><?php echo esc_html($title); ?></h3>
-						<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy w-100 py-3 fw-bold">View Asset</a>
+						<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy w-100 py-3 fw-bold products-btn-text"><?php echo esc_html(get_theme_mod('products_btn_text', 'View Asset')); ?></a>
 					</div>
 				</div>
 			</div>

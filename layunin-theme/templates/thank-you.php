@@ -12,7 +12,7 @@ get_header(); ?>
 			<div class="next-steps py-4 border-top border-bottom">
 				<h3 class="thank-you-next-title"><?php echo esc_html(get_theme_mod('thank_you_next_title', "The Next Phase")); ?></h3>
 				<p class="thank-you-next-desc"><?php echo esc_html(get_theme_mod('thank_you_next_desc', 'While your guide arrives, immerse yourself in our most impactful case studies.')); ?></p>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-outline-primary">Return to Launchpad</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-outline-primary"><?php echo esc_html(get_theme_mod('thank_you_btn_text', 'Return to Launchpad')); ?></a>
 			</div>
 		</div>
 	</div>

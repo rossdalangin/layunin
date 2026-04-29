@@ -23,18 +23,18 @@ get_header(); ?>
 					<div class="product-image position-relative">
 						<img src="<?php echo esc_url($image); ?>" class="card-img-top" alt="<?php echo esc_attr($title); ?>">
 						<div class="product-overlay position-absolute top-0 start-0 w-100 h-100 bg-navy bg-opacity-10 d-flex align-items-center justify-content-center opacity-0 transition-all hover-opacity-100">
-							<a href="<?php echo esc_url($link); ?>" class="btn btn-gold px-4 shadow">View Details</a>
+							<a href="<?php echo esc_url($link); ?>" class="btn btn-gold px-4 shadow shop-view-btn"><?php echo esc_html(get_theme_mod('shop_view_btn', 'View Details')); ?></a>
 						</div>
 					</div>
 					<div class="card-body p-4">
 						<div class="d-flex justify-content-between align-items-center mb-3">
-							<span class="badge bg-light text-navy small">Digital Resource</span>
-							<span class="text-accent fw-bold item-price"><?php echo esc_html($price); ?></span>
+							<span class="badge bg-light text-navy small shop-item-badge"><?php echo esc_html(get_theme_mod('shop_item_badge', 'Digital Resource')); ?></span>
+							<span class="text-accent fw-bold item-price"><?php echo $price; ?></span>
 						</div>
 						<h3 class="h5 fw-bold text-navy mb-0 item-title"><?php echo esc_html($title); ?></h3>
 					</div>
 					<div class="card-footer bg-white border-0 p-4 pt-0">
-						<a href="<?php echo esc_url($link); ?>" class="btn btn-navy btn-sm w-100 py-2">Add to Cart <i class="fas fa-shopping-cart ms-2"></i></a>
+						<a href="<?php echo esc_url($link); ?>" class="btn btn-navy btn-sm w-100 py-2 shop-btn-text"><?php echo esc_html(get_theme_mod('shop_btn_text', 'Add to Cart')); ?> <i class="fas fa-shopping-cart ms-2"></i></a>
 					</div>
 				</div>
 			</div>
@@ -42,14 +42,14 @@ get_header(); ?>
 		</div>
 
 		<div class="newsletter-cta mt-6 p-5 bg-light rounded-4 text-center animate-up">
-			<h2 class="h4 fw-bold text-navy mb-3">Want Exclusive Discounts?</h2>
-			<p class="text-muted mb-4">Join our community and get 20% off your first digital product purchase.</p>
+			<h2 class="h4 fw-bold text-navy mb-3 shop-newsletter-title"><?php echo esc_html(get_theme_mod('shop_newsletter_title', 'Want Exclusive Discounts?')); ?></h2>
+			<p class="text-muted mb-4 shop-newsletter-desc"><?php echo esc_html(get_theme_mod('shop_newsletter_desc', 'Join our community and get 20% off your first digital product purchase.')); ?></p>
 			<form class="row g-2 justify-content-center" style="max-width: 500px; margin: 0 auto;">
 				<div class="col-md-8">
-					<input type="email" class="form-control bg-white border-0 py-3" placeholder="Enter your email">
+					<input type="email" class="form-control bg-white border-0 py-3" placeholder="<?php echo esc_attr(get_theme_mod('shop_newsletter_ph', 'Enter your email')); ?>">
 				</div>
 				<div class="col-md-4">
-					<button type="submit" class="btn btn-gold w-100 py-3 fw-bold">Join Now</button>
+					<button type="submit" class="btn btn-gold w-100 py-3 fw-bold shop-newsletter-btn"><?php echo esc_html(get_theme_mod('shop_newsletter_btn', 'Join Now')); ?></button>
 				</div>
 			</form>
 		</div>

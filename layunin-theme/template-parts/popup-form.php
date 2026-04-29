@@ -7,10 +7,10 @@
 				<h2 class="h3 mb-3 popup-title"><?php echo esc_html( get_theme_mod( 'popup_title', "Wait! Don't Miss Out" ) ); ?></h2>
 				<p class="mb-4 popup-desc"><?php echo esc_html( get_theme_mod( 'popup_desc', 'Get our "Free 7-Day Goal Reset Guide" and start taking action today.' ) ); ?></p>
 				<form class="popup-form">
-					<input type="email" placeholder="Your Email Address" class="form-control mb-3" required>
-					<button type="submit" class="btn btn-gold w-100">Send Me The Guide</button>
+					<input type="email" placeholder="<?php echo esc_attr(get_theme_mod('popup_ph', 'Your Email Address')); ?>" class="form-control mb-3" required>
+					<button type="submit" class="btn btn-gold w-100 popup-btn-text"><?php echo esc_html(get_theme_mod('popup_btn_text', 'Send Me The Guide')); ?></button>
 				</form>
-				<p class="small text-muted mt-3">Join 5,000+ others pursuing their purpose.</p>
+				<p class="small text-muted mt-3 popup-social-proof"><?php echo esc_html(get_theme_mod('popup_social_proof', 'Join 25,000+ others pursuing their absolute mastery.')); ?></p>
 			</div>
 		</div>
 	</div>

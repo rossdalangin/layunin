@@ -25,7 +25,7 @@ get_header(); ?>
 					</div>
 					<span class="badge bg-navy-subtle text-navy mb-3 small item-type"><?php echo esc_html($type); ?></span>
 					<h3 class="h5 fw-bold text-navy mb-4 item-title"><?php echo esc_html($title); ?></h3>
-					<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy btn-sm w-100 py-2 mt-auto fw-bold">Download Free</a>
+					<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy btn-sm w-100 py-2 mt-auto fw-bold resources-btn-text"><?php echo esc_html(get_theme_mod('resources_btn_text', 'Download Free')); ?></a>
 				</div>
 			</div>
 			<?php endfor; ?>
@@ -34,11 +34,11 @@ get_header(); ?>
 		<div class="entry-content animate-up bg-light p-5 rounded-4 shadow-sm">
 			<div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="h3 fw-bold text-navy mb-3">Looking for more?</h2>
-                    <p class="text-muted mb-0">Our Success Library is updated monthly with new tools for the community. Subscribe to be the first to know when we release new high-value resources.</p>
+                    <h2 class="h3 fw-bold text-navy mb-3 resources-cta-title"><?php echo esc_html(get_theme_mod('resources_cta_title', 'Looking for more?')); ?></h2>
+                    <p class="text-muted mb-0 resources-cta-desc"><?php echo esc_html(get_theme_mod('resources_cta_desc', 'Our Success Library is updated monthly with new tools for the community. Subscribe to be the first to know when we release new high-value resources.')); ?></p>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold btn-lg">Join the VIP List</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold btn-lg resources-cta-btn"><?php echo esc_html(get_theme_mod('resources_cta_btn', 'Join the VIP List')); ?></a>
                 </div>
             </div>
 		</div>

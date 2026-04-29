@@ -17,7 +17,7 @@
 			<div class="col-lg-4 animate-up feature-item-<?php echo $i; ?>" style="animation-delay: <?php echo $i * 0.1; ?>s;">
 				<div class="d-flex align-items-start gap-4">
 					<div class="feature-icon bg-light text-gold p-4 rounded-4 shadow-sm">
-						<i class="fas <?php echo ($i == 1) ? 'fa-map-marker-alt' : (($i == 2) ? 'fa-microchip' : 'fa-users'); ?> fa-2x"></i>
+						<i class="fas <?php echo esc_attr(get_theme_mod("feature_{$i}_icon", ($i == 1) ? 'fa-map-marker-alt' : (($i == 2) ? 'fa-microchip' : 'fa-users'))); ?> fa-2x"></i>
 					</div>
 					<div>
 						<h3 class="h5 fw-bold mb-2 item-title"><?php echo esc_html( get_theme_mod("feature_{$i}_title", $features[$i]['title']) ); ?></h3>

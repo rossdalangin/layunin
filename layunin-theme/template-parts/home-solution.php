@@ -9,8 +9,8 @@
 					<img src="<?php echo esc_url($image); ?>" alt="Elite Protocol" class="img-fluid rounded-4">
 				</div>
 				<div class="solution-badge position-absolute bottom-0 end-0 bg-gold text-white p-4 rounded-4 shadow-lg translate-middle-y translate-middle-x animate-float">
-					<div class="h4 fw-black mb-0">Elite</div>
-					<div class="small fw-bold">Certified Framework</div>
+					<div class="h4 fw-black mb-0 solution-cert-title"><?php echo esc_html(get_theme_mod('solution_cert_title', 'Elite')); ?></div>
+					<div class="small fw-bold solution-cert-desc"><?php echo esc_html(get_theme_mod('solution_cert_desc', 'Certified Framework')); ?></div>
 				</div>
 			</div>
 			<div class="col-lg-6 animate-up" style="animation-delay: 0.2s;">

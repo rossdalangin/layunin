@@ -11,11 +11,36 @@ get_header(); ?>
 		</header>
 
 		<div class="entry-content animate-up">
-			<?php
-			while ( have_posts() ) : the_post();
-				the_content();
-			endwhile;
-			?>
+			<div class="pricing-table-wrapper row justify-content-center mt-5">
+				<?php for($i = 1; $i <= 3; $i++) :
+					$title = get_theme_mod("services_tier_{$i}_title", ($i==1?'Strategy':($i==2?'Mastery':'Architect')));
+					$price = get_theme_mod("services_tier_{$i}_price", ($i==1?'&#8369;4,999':($i==2?'&#8369;14,999':'&#8369;49,999')));
+					$features_raw = get_theme_mod("services_tier_{$i}_features", '');
+					$link = get_theme_mod("services_tier_{$i}_link", '#');
+					$featured = ($i == 2) ? 'featured border-accent shadow-lg' : 'border-0 shadow-sm';
+
+					$features = explode('|', $features_raw);
+				?>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="pricing-card card <?php echo $featured; ?> text-center p-5 rounded-4 transition-all hover-lift h-100">
+						<h3 class="h5 text-uppercase fw-bold mb-3"><?php echo esc_html($title); ?></h3>
+						<div class="price display-4 fw-bold mb-4 text-navy"><?php echo $price; ?></div>
+						<ul class="list-unstyled mb-5 text-start">
+							<?php foreach($features as $f) : if(trim($f)) : ?>
+								<li class="mb-2 small"><i class="fas fa-check text-accent me-2"></i><?php echo esc_html(trim($f)); ?></li>
+							<?php endif; endforeach; ?>
+						</ul>
+						<a href="<?php echo esc_url($link); ?>" class="btn <?php echo ($i==2?'btn-gold':'btn-outline-navy'); ?> w-100 py-3 fw-bold mt-auto">Get Started</a>
+					</div>
+				</div>
+				<?php endfor; ?>
+			</div>
+
+			<div class="mt-6 p-5 bg-navy text-white rounded-4 text-center">
+				<h2 class="h3 fw-bold mb-4 text-white">Need a Custom Solution?</h2>
+				<p class="text-white-50 mb-4 mx-auto" style="max-width: 600px;">For large scale operations and international firms, we offer bespoke architectural consulting tailored to your specific mastery goals.</p>
+				<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-gold btn-lg px-5">Initiate Consultation</a>
+			</div>
 		</div>
 	</div>
 </main>

@@ -1,3 +1,4 @@
+<?php
 /**
  * Elite Site Ecosystem - v9.6 Refinement
  */
@@ -16,11 +17,11 @@ function layunin_create_recommended_pages() {
         ),
         'About' => array(
             'template' => 'templates/about-page.php',
-            'content'  => '<!-- wp:heading {"level":2} --><h2>Our Elite Mission</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Layunin is the premier platform for Filipino high-achievers seeking life mastery. We provide the systems and tools to bridge the gap between ambition and execution.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Our journey began with a simple observation: Filipinos are among the most hard-working people on the planet, yet many are trapped in systems that don\'t scale. Layunin is the antidote to that friction.</p><!-- /wp:paragraph -->'
         ),
         'Services' => array(
             'template' => 'templates/services-page.php',
-            'content'  => '[pricing_table][pricing_item title="Strategy" price="₱4,999" features="Protocol Audit|Alignment Map|Base Systems" link="#"][pricing_item title="Mastery" price="₱14,999" features="1-on-1 Mentorship|AI Implementation|Wealth Architecture" featured="yes" link="#"][pricing_item title="Architect" price="₱49,999" features="Global Expansion|Scale Frameworks|Legacy Building" link="#"][/pricing_table]'
+            'content'  => '<!-- wp:paragraph --><p>Select the level of implementation that aligns with your current growth trajectory. Each protocol is designed for maximum strategic impact.</p><!-- /wp:paragraph -->'
         ),
         'Contact' => array(
             'template' => 'templates/contact-page.php',

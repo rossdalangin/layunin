@@ -14,6 +14,10 @@ get_header(); ?>
 		<div class="row g-5 align-items-center mb-xl">
             <div class="col-lg-6 animate-up">
                 <div class="entry-content fs-5 lh-lg">
+                    <h2 class="display-6 fw-bold text-navy mb-4">Our Elite Mission</h2>
+                    <div class="mission-text mb-5">
+                        <?php echo wpautop(esc_html(get_theme_mod('about_mission_content', 'Layunin is the premier platform for Filipino high-achievers seeking life mastery. We provide the systems and tools to bridge the gap between ambition and execution.'))); ?>
+                    </div>
                     <?php
                     while ( have_posts() ) : the_post();
                         the_content();

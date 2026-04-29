@@ -198,9 +198,9 @@ function layunin_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'products_desc', array( 'default' => 'Precision-engineered tools to compress your learning curve and amplify your results.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'products_desc', array( 'label' => 'Description', 'section' => 'layunin_home_products' ) );
     $prods = array(
-        1 => array('title' => 'The Master Planner', 'price' => '₱1,499'),
-        2 => array('title' => 'AI Prompt Vault', 'price' => '₱2,999'),
-        3 => array('title' => 'The Creator System', 'price' => '₱4,999')
+        1 => array('title' => 'The Master Planner', 'price' => '&#8369;1,499'),
+        2 => array('title' => 'AI Prompt Vault', 'price' => '&#8369;2,999'),
+        3 => array('title' => 'The Creator System', 'price' => '&#8369;4,999')
     );
 	for($i = 1; $i <= 3; $i++) {
 		$wp_customize->add_setting( "product_item_{$i}_title", array( 'default' => $prods[$i]['title'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -305,7 +305,7 @@ function layunin_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'product_item_1_title', array( 'default' => 'The Ultimate Goal Planner', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'product_item_1_title', array( 'label' => 'Offer Title', 'section' => 'layunin_monetization' ) );
-    $wp_customize->add_setting( 'product_item_1_price', array( 'default' => '₱999', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( 'product_item_1_price', array( 'default' => '&#8369;999', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'product_item_1_price', array( 'label' => 'Offer Price', 'section' => 'layunin_monetization' ) );
     $wp_customize->add_setting( 'product_item_1_image', array( 'default' => 'https://images.unsplash.com/photo-1506784919141-93584869786a?auto=format&fit=crop&q=80&w=400', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'product_item_1_image', array( 'label' => 'Offer Image', 'section' => 'layunin_monetization' ) ) );
@@ -378,6 +378,8 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_control( 'about_badge', array( 'label' => 'Top Badge Text', 'section' => "layunin_page_{$id}" ) );
             $wp_customize->add_setting( 'about_lead', array( 'default' => 'Layunin was built on a single, uncompromising principle: that every Filipino has the potential to achieve world-class excellence when equipped with the right systems.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'about_lead', array( 'label' => 'Lead Paragraph', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+            $wp_customize->add_setting( 'about_mission_content', array( 'default' => 'Layunin is the premier platform for Filipino high-achievers seeking life mastery. We provide the systems and tools to bridge the gap between ambition and execution.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'about_mission_content', array( 'label' => 'Our Elite Mission Content', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
             $wp_customize->add_setting( 'about_visual', array( 'default' => 'https://images.unsplash.com/photo-1522071823991-b9671f30c46f?auto=format&fit=crop&q=80&w=1200', 'sanitize_callback' => 'esc_url_raw' ) );
             $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'about_visual', array( 'label' => 'Main Visual', 'section' => "layunin_page_{$id}" ) ) );
             $wp_customize->add_setting( 'about_team_title', array( 'default' => 'The Architects of Excellence', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -395,6 +397,22 @@ function layunin_customize_register( $wp_customize ) {
         if($id == 'services') {
             $wp_customize->add_setting( 'services_badge', array( 'default' => 'Strategic Implementation', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'services_badge', array( 'label' => 'Top Badge Text', 'section' => "layunin_page_{$id}" ) );
+
+            $serv_tiers = array(
+                1 => array('title' => 'Strategy', 'price' => '&#8369;4,999', 'features' => 'Protocol Audit|Alignment Map|Base Systems'),
+                2 => array('title' => 'Mastery', 'price' => '&#8369;14,999', 'features' => '1-on-1 Mentorship|AI Implementation|Wealth Architecture'),
+                3 => array('title' => 'Architect', 'price' => '&#8369;49,999', 'features' => 'Global Expansion|Scale Frameworks|Legacy Building')
+            );
+            for($i = 1; $i <= 3; $i++) {
+                $wp_customize->add_setting( "services_tier_{$i}_title", array( 'default' => $serv_tiers[$i]['title'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_control( "services_tier_{$i}_title", array( 'label' => "Tier $i Title", 'section' => "layunin_page_{$id}" ) );
+                $wp_customize->add_setting( "services_tier_{$i}_price", array( 'default' => $serv_tiers[$i]['price'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_control( "services_tier_{$i}_price", array( 'label' => "Tier $i Price", 'section' => "layunin_page_{$id}" ) );
+                $wp_customize->add_setting( "services_tier_{$i}_features", array( 'default' => $serv_tiers[$i]['features'], 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_control( "services_tier_{$i}_features", array( 'label' => "Tier $i Features (pipe separated)", 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+                $wp_customize->add_setting( "services_tier_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
+                $wp_customize->add_control( "services_tier_{$i}_link", array( 'label' => "Tier $i Link", 'section' => "layunin_page_{$id}" ) );
+            }
         }
 
         if($id == 'contact') {
@@ -420,7 +438,7 @@ function layunin_customize_register( $wp_customize ) {
             for($i = 1; $i <= 6; $i++) {
                 $wp_customize->add_setting( "shop_item_{$i}_title", array( 'default' => 'Elite Framework ' . $i, 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "shop_item_{$i}_title", array( 'label' => "Product $i Title", 'section' => "layunin_page_{$id}" ) );
-                $wp_customize->add_setting( "shop_item_{$i}_price", array( 'default' => '₱2,499', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_setting( "shop_item_{$i}_price", array( 'default' => '&#8369;2,499', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "shop_item_{$i}_price", array( 'label' => "Product $i Price", 'section' => "layunin_page_{$id}" ) );
                 $wp_customize->add_setting( "shop_item_{$i}_image", array( 'default' => 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400', 'sanitize_callback' => 'esc_url_raw' ) );
                 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "shop_item_{$i}_image", array( 'label' => "Product $i Image", 'section' => "layunin_page_{$id}" ) ) );

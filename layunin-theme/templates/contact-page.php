@@ -6,9 +6,9 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Let's Connect</span>
-			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'contact_title', 'Get In Touch' ) ); ?></h1>
-			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'contact_content', 'Have questions about our resources, services, or your own growth journey? We are here to help.' ) ); ?></p>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block contact-badge"><?php echo esc_html(get_theme_mod('contact_badge', "Initiate Protocol")); ?></span>
+			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'contact_title', 'Contact Page' ) ); ?></h1>
+			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'contact_content', 'Ready to architect your high-impact reality? Our team is standing by to assist with your growth journey.' ) ); ?></p>
 		</header>
 
 		<div class="row g-5">
@@ -22,7 +22,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Email Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_email', 'hello@layunin.com')); ?></p>
+							<p class="text-muted small mb-0 contact-email"><?php echo esc_html(get_theme_mod('contact_email', 'elite@layunin.com')); ?></p>
 						</div>
 					</div>
 
@@ -32,7 +32,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Call Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_phone', '+63 912 345 6789')); ?></p>
+							<p class="text-muted small mb-0 contact-phone"><?php echo esc_html(get_theme_mod('contact_phone', '+63 917 123 4567')); ?></p>
 						</div>
 					</div>
 
@@ -42,7 +42,7 @@ get_header(); ?>
 						</div>
 						<div>
 							<h3 class="h6 fw-bold mb-1">Visit Us</h3>
-							<p class="text-muted small mb-0"><?php echo esc_html(get_theme_mod('contact_address', 'Manila, Philippines')); ?></p>
+							<p class="text-muted small mb-0 contact-address"><?php echo esc_html(get_theme_mod('contact_address', 'BGC, Taguig, Philippines')); ?></p>
 						</div>
 					</div>
 
@@ -52,7 +52,7 @@ get_header(); ?>
 							<?php
 							$socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 							foreach ( $socials as $social ) :
-								$link = get_theme_mod( "social_{$social}" );
+								$link = get_theme_mod( "social_{$social}", '#' );
 								if ( $link ) : ?>
 									<a href="<?php echo esc_url( $link ); ?>" class="btn btn-navy btn-sm rounded-circle shadow-sm" style="width: 35px; height: 35px; padding: 0; line-height: 35px;"><i class="fab fa-<?php echo $social; ?>"></i></a>
 								<?php endif;
@@ -91,7 +91,7 @@ get_header(); ?>
 		</div>
 
 		<?php if(get_theme_mod('contact_map_url')) : ?>
-			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm">
+			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm contact-map">
 				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 		<?php endif; ?>

@@ -98,8 +98,9 @@ function layunin_generate_toc( $content ) {
 
     if ( empty( $toc_items ) ) return $content;
 
+    $toc_title = get_theme_mod('toc_title', 'Strategic Overview');
     $toc = '<div class="table-of-contents p-4 bg-light border-0 rounded-4 mb-5 shadow-sm">';
-    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy"><i class="fas fa-list-ul me-2 text-accent"></i>Table of Contents</h4><ul class="list-unstyled mb-0">';
+    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy toc-title"><i class="fas fa-list-ul me-2 text-accent"></i>' . esc_html($toc_title) . '</h4><ul class="list-unstyled mb-0">';
 
     foreach ( $toc_items as $item ) {
         $indent = ($item['level'] == 'h3') ? 'ps-4 small' : 'fw-bold small';
@@ -122,6 +123,30 @@ function layunin_add_user_social_fields( $contactmethods ) {
 	return $contactmethods;
 }
 add_filter( 'user_contactmethods', 'layunin_add_user_social_fields' );
+
+/**
+ * Add Bootstrap classes to nav menu links
+ */
+function layunin_nav_menu_link_attributes( $atts, $item, $args ) {
+    if ( property_exists( $args, 'theme_location' ) ) {
+        if ( $args->theme_location === 'menu-1' || $args->theme_location === 'footer' ) {
+            $atts['class'] = 'nav-link';
+        }
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'layunin_nav_menu_link_attributes', 10, 3 );
+
+/**
+ * Add active class to current menu item
+ */
+function layunin_nav_menu_css_class( $classes, $item ) {
+    if ( in_array( 'current-menu-item', $classes ) ) {
+        $classes[] = 'active';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'layunin_nav_menu_css_class', 10, 2 );
 
 // Require additional files
 require get_template_directory() . '/inc/customizer.php';

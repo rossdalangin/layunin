@@ -1,62 +1,109 @@
-# 🏛️ Layunin Premium Theme - Professional User Manual
+# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.6)
 
-Welcome to the **Layunin Premium Theme**. This documentation will guide you through the setup and optimization of your new world-class educational business brand.
-
----
-
-## 🚀 Quick Start Guide
-
-### 1. Installation
-1. Upload the `layunin-theme` folder to your `/wp-content/themes/` directory.
-2. Activate the theme via **Appearance > Themes**.
-3. The theme will automatically create the 17 required pages for you.
-
-### 2. Branding (Customizer)
-Navigate to **Appearance > Customize** to configure your global design:
-- **Design System:** Set your primary color (Deep Navy), accent color (Warm Gold), and global border radius.
-- **Header Settings:** Enable/disable the sticky header and customize the "Work With Us" CTA.
-- **Announcement Bar:** Set a global notification for your lead magnets.
-
-### 3. Homepage Construction
-The homepage is built using modular sections. You can toggle them and edit their content in the **Homepage Content** panel:
-1. **Hero:** Your primary value proposition.
-2. **Problem/Solution:** Build trust by addressing visitor struggles.
-3. **Lead Magnet:** High-converting email capture section.
-4. **Services/Products:** Monetize your expertise directly.
+Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive guide to the theme's architecture, customization engine, and navigation strategy.
 
 ---
 
-## 🛠️ Advanced Features
+## 🚀 Professional Installation & Setup
 
-### 💎 Shortcodes Library
-Use these shortcodes in your pages and posts to maintain a premium look:
+### 1. Theme Activation
+1. Upload the `layunin-theme` directory to `/wp-content/themes/`.
+2. Navigate to **Appearance > Themes** and click **Activate**.
+3. **Automated Ecosystem Initialization:** Upon activation, the theme automatically generates 17 essential pages (Home, About, Services, Shop, etc.) with professional default content and structure.
 
-- `[cta_box title="Custom Title" button_text="Click Here" button_url="#"]`
-- `[pricing_table]` containing `[pricing_item]`
-- `[faq_page]` containing `[faq_item question="..."]Content[/faq_item]`
-- `[testimonial_grid]` containing `[testimonial_item]`
-
-### 📈 SEO & Schema
-- The theme automatically generates **JSON-LD Schema** for Articles, FAQs, and Reviews.
-- **Breadcrumbs** are handled via `layunin_breadcrumbs()` and are schema-compliant.
-- **Open Graph** and **Twitter Cards** are automatically populated using your Customizer settings and post data.
-
-### 🌓 Interactive Modes
-- **Dark Mode:** Toggled via the 🌓 icon in the header; persists via `localStorage`.
-- **Reading Mode:** Available on single posts to remove distractions and focus on content.
+### 2. Global Branding (Design System)
+Access the **Elite Design System** panel in the Customizer to define your core brand identity:
+- **Typography:** Choose between modern Inter, clean Roboto, or classic Open Sans.
+- **Color Palette:** Set your Primary Midnight Navy (#050A18) and Elite Royal Gold (#C5A02B).
+- **Global Roundedness:** Define the 'border-radius' (Default: 16px) for all UI components to ensure a consistent, premium feel.
 
 ---
 
-## 💰 Monetization
-- **Ads:** Configure "Banner Above Content" and "Banner Below Content" in **Content Ads**.
-- **Affiliates:** Use the **Affiliate Disclosure** template for compliance.
-- **Email Capture:** The theme includes a built-in Exit-Intent and Timed Popup controlled in **Lead Popup**.
+## 🧭 Navigation & Menu Architecture
+
+To maintain the high-trust, conversion-focused design, follow these menu structures. Navigate to **Appearance > Menus** to configure.
+
+### A. Header Menu (Primary Navigation)
+*The objective is to guide users through the transformation funnel.*
+
+1. **Home** (Link: `/`)
+2. **About** (Link: `/about/`)
+3. **Mastery Areas** (Dropdown)
+   - Goal Setting (Category Link)
+   - Online Income (Category Link)
+   - Productivity (Category Link)
+   - AI Mastery (Category Link)
+4. **Resources** (Link: `/free-resources/`)
+5. **Shop** (Link: `/shop/`)
+6. **Services** (Link: `/services/`)
+7. **Contact** (Link: `/contact/`)
+8. **CTA Button:** Managed via Customizer (**Header & Navigation > CTA Button Text**). Usually points to `/lead-magnet/` or `/services/`.
+
+### B. Footer Menu (Utility & Trust)
+*The objective is to provide site-wide utility and legal compliance.*
+
+**Column 1: Site Branding** (Automatic)
+**Column 2: Mastery Area**
+- All Posts
+- Success Stories (Category)
+- Elite Mindset (Category)
+- Scalable Business (Category)
+**Column 3: Resources**
+- Free 7-Day Protocol
+- Knowledge Vault
+- FAQs
+- Testimonials
+**Column 4: Legal & Compliance**
+- Privacy Policy
+- Terms & Conditions
+- Affiliate Disclosure
 
 ---
 
-## 📞 Support & Credits
-- **Designed & Developed by:** Jules (Layunin Architect)
-- **Frameworks:** Bootstrap 5.3, FontAwesome 6, AOS (Animate on Scroll)
-- **Support:** hello@layunin.com
+## 🛠️ Content Management & The Customizer Engine
 
-*© 2024 Layunin.com. Empowering Filipinos to turn goals into action.*
+The Layunin theme is **100% manageable**. Every text string, image, and section visibility toggle is centralized in the WordPress Customizer.
+
+### 🏠 Homepage Construction (Modular Architecture)
+The homepage is composed of 13 high-conversion sections:
+1. **Hero Section:** Persuasive headline and dual-action buttons.
+2. **Featured Posts:** Highlight your "Elite" content.
+3. **Trust Badges:** Logo bar for authority.
+4. **Process Section:** Your 3-step "Elite Protocol."
+5. **Features:** Why high-achievers choose your platform.
+6. **Problem/Solution:** Direct address of audience pain points.
+7. **Categories:** Visual navigation to mastery areas.
+8. **Lead Magnet:** The 7-Day Goal Reset Protocol capture.
+9. **Products/Services:** Monetization modules.
+10. **Testimonials:** Masonry "Wall of Impact."
+
+### 📄 Inner Page Templates
+17 dynamic templates are included. Each has dedicated Customizer controls for headlines, badges, and lead copy.
+
+---
+
+## 💰 Monetization Strategy
+
+- **Ad Banners:** Global controls for banners above/below content.
+- **Affiliate Integration:** Dedicated disclosure template and global affiliate banner settings.
+- **Lead Capture:** Exit-intent popup (Customizer > Lead Popup) and integrated newsletter widgets.
+
+---
+
+## 💎 Shortcode Reference Library
+
+| Shortcode | Purpose | Example |
+| :--- | :--- | :--- |
+| `[cta_box]` | Highlighted call-to-action | `[cta_box title="Title" button_text="Join"]` |
+| `[pricing_table]` | 3-tier product comparison | Wrap `[pricing_item]` shortcodes |
+| `[faq_page]` | Interactive accordion FAQ | Wrap `[faq_item]` shortcodes |
+| `[benefit_list]` | List of features/outcomes | Wrap `[benefit_item]` shortcodes |
+
+---
+
+## 📞 Support & Architectural Credits
+- **Architect:** Jules (Layunin Lead Software Engineer)
+- **Technology Stack:** PHP 8+, Bootstrap 5.3, FontAwesome 6.
+- **Contact:** hello@layunin.com
+
+*© 2024 Layunin.com. Architecting the next generation of Filipino excellence.*

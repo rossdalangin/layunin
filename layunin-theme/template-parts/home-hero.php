@@ -5,14 +5,14 @@
 		<div class="row align-items-center g-5">
 			<div class="col-lg-7">
 				<div class="hero-content animate-up">
-					<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Elite Success Systems for Filipinos</span>
-					<h1 class="display-1 fw-black mb-4"><?php echo esc_html( get_theme_mod( 'hero_headline', 'Turn Your Ambitions Into Precise Action' ) ); ?></h1>
+					<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block hero-badge-text"><?php echo esc_html(get_theme_mod('hero_badge', 'Elite Success Systems for Filipinos')); ?></span>
+					<h1 class="display-1 fw-black mb-4"><?php echo esc_html( get_theme_mod( 'hero_headline', 'Manifest Your "Layunin" Into A High-Impact Reality' ) ); ?></h1>
 					<p class="lead mb-5 text-muted fs-4 pe-lg-5">
-						<?php echo esc_html( get_theme_mod( 'hero_subheadline', 'We provide the systems, AI productivity tools, and elite guidance to help Filipinos bridge the gap between where they are and where they belong.' ) ); ?>
+						<?php echo esc_html( get_theme_mod( 'hero_subheadline', 'Bridging the gap between Filipino ambition and world-class execution through elite systems, AI productivity, and financial mastery.' ) ); ?>
 					</p>
 					<div class="hero-btns d-flex flex-wrap gap-4">
-						<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-gold shadow-lg"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start My Journey') ); ?></a>
-						<a href="<?php echo esc_url( home_url('/about/') ); ?>" class="btn btn-outline-navy fw-bold border-2">Explore Our Methods</a>
+						<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-gold shadow-lg hero-cta-1"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start Your Transformation') ); ?></a>
+						<a href="<?php echo esc_url( home_url('/about/') ); ?>" class="btn btn-outline-navy fw-bold border-2 hero-cta-2"><?php echo esc_html( get_theme_mod('hero_cta_2_text', 'Browse Elite Systems') ); ?></a>
 					</div>
 					<div class="hero-trust mt-5 pt-4 d-flex align-items-center gap-4 border-top border-light">
 						<div class="avatars d-flex ps-1">
@@ -20,7 +20,7 @@
 							<div class="rounded-circle border border-3 border-white bg-gold overflow-hidden shadow-sm" style="width: 45px; height: 45px; margin-right: -15px;"><i class="fas fa-user text-white p-2"></i></div>
 							<div class="rounded-circle border border-3 border-white bg-emerald overflow-hidden shadow-sm" style="width: 45px; height: 45px;"><i class="fas fa-user text-white p-2"></i></div>
 						</div>
-						<div class="small text-navy fw-bold fs-6">Joined by 10,000+ Filipino High-Achievers</div>
+						<div class="small text-navy fw-bold fs-6 hero-social-proof"><?php echo esc_html(get_theme_mod('hero_social_proof', 'Trusted by 25,000+ Filipino High-Achievers & Entrepreneurs')); ?></div>
 					</div>
 				</div>
 			</div>

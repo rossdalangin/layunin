@@ -5,20 +5,30 @@
 
 get_header();
 
-// Hero Section (Always visible)
-get_template_part( 'template-parts/home-hero' );
+// Section 1: Hero
+if ( get_theme_mod( 'show_home_hero', true ) ) {
+	get_template_part( 'template-parts/home-hero' );
+}
 
 // Featured Posts
-get_template_part( 'template-parts/featured-posts' );
+if ( get_theme_mod( 'show_home_featured_posts', true ) ) {
+	get_template_part( 'template-parts/featured-posts' );
+}
 
 // Trust Badges
-get_template_part( 'template-parts/home-trust-badges' );
+if ( get_theme_mod( 'show_home_trust_badges', true ) ) {
+	get_template_part( 'template-parts/home-trust-badges' );
+}
 
 // Process Section
-get_template_part( 'template-parts/home-process' );
+if ( get_theme_mod( 'show_home_process', true ) ) {
+	get_template_part( 'template-parts/home-process' );
+}
 
 // Features Section
-get_template_part( 'template-parts/home-features' );
+if ( get_theme_mod( 'show_home_features', true ) ) {
+	get_template_part( 'template-parts/home-features' );
+}
 
 // Section 2: Problem
 if ( get_theme_mod( 'show_home_problem', true ) ) {

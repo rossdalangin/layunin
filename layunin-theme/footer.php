@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer (v8.0 Masterpiece)
+ * The template for displaying the footer (v9.4 Masterpiece)
  */
 ?>
 	<footer id="colophon" class="site-footer bg-navy text-white pt-6 pb-4 mt-auto">
@@ -13,14 +13,14 @@
 						<?php else : ?>
 							<h2 class="h3 text-white fw-black mb-4"><?php bloginfo('name'); ?></h2>
 						<?php endif; ?>
-						<p class="text-white-50 lh-lg">
-							<?php echo esc_html( get_theme_mod( 'footer_branding_text', 'Empowering Filipinos to transform their goals into action, income, and success through modular systems.' ) ); ?>
+						<p class="text-white-50 lh-lg branding-text">
+							<?php echo esc_html( get_theme_mod( 'footer_branding_text', 'Architecting the next generation of Filipino excellence.' ) ); ?>
 						</p>
 						<div class="social-links d-flex gap-4 mt-5">
 							<?php
 							$socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 							foreach ( $socials as $social ) :
-								$link = get_theme_mod( "social_{$social}" );
+								$link = get_theme_mod( "social_{$social}", '#' );
 								if ( $link ) : ?>
 									<a href="<?php echo esc_url( $link ); ?>" class="text-white-50 hover-gold transition-all fs-5"><i class="fab fa-<?php echo $social; ?>"></i></a>
 								<?php endif;
@@ -30,7 +30,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col2-title"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery Areas')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Resources')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col3-title"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Elite Vault')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'footer',
@@ -54,8 +54,8 @@
 				</div>
 
 				<div class="col-lg-4">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2">Newsletter</h3>
-					<p class="text-white-50 small mb-4">Join 10,000+ subscribers for weekly high-output insights.</p>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
+					<p class="text-white-50 small mb-4 footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 25,000+ subscribers for weekly high-output insights.')); ?></p>
 					<form class="newsletter-form mb-4">
 						<div class="input-group">
 							<input type="email" class="form-control bg-navy-light border-0 text-white py-3" placeholder="Enter your best email" style="border-radius: 12px 0 0 12px !important;">
@@ -70,11 +70,11 @@
 
 			<div class="footer-bottom d-md-flex align-items-center justify-content-between small text-white-50">
 				<div class="copyright">
-					<?php echo esc_html(get_theme_mod('footer_copyright', '© ' . date('Y') . ' Layunin.com. All rights reserved.')); ?>
+					<?php echo esc_html(get_theme_mod('footer_copyright', '© ' . date('Y') . ' Layunin.com. All rights reserved. Architected in the Philippines.')); ?>
 				</div>
 				<div class="footer-meta d-flex gap-4 mt-3 mt-md-0">
 					<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>" class="text-white-50 text-decoration-none hover-white">Privacy</a>
-					<a href="<?php echo esc_url( home_url('/terms-and-conditions/') ); ?>" class="text-white-50 text-decoration-none hover-white">Terms</a>
+					<a href="<?php echo esc_url( home_url('/terms/') ); ?>" class="text-white-50 text-decoration-none hover-white">Terms</a>
 				</div>
 			</div>
 		</div>

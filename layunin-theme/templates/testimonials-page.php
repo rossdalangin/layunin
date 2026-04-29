@@ -6,9 +6,9 @@ get_header(); ?>
 <main id="primary" class="site-main py-6 bg-light">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Wall of Love</span>
-			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Success Stories' ) ); ?></h1>
-			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'testimonials_content', 'See how members of the Layunin community have transformed their lives using our systems.' ) ); ?></p>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block testimonials-badge"><?php echo esc_html(get_theme_mod('testimonials_badge', 'Proof of Impact')); ?></span>
+			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'testimonials_title', 'Testimonials Page' ) ); ?></h1>
+			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'testimonials_content', 'Hear from the high-achievers who have architected their lives using the Layunin framework.' ) ); ?></p>
 		</header>
 
 		<div class="row g-4 mb-6">
@@ -25,7 +25,7 @@ get_header(); ?>
 					$count++;
 					$delay = ($count % 3) * 0.1;
 					?>
-					<div class="col-lg-4 col-md-6 animate-up" style="animation-delay: <?php echo $delay; ?>s;">
+					<div class="col-lg-4 col-md-6 animate-up testimonial-card-item" style="animation-delay: <?php echo $delay; ?>s;">
 						<div class="testimonial-card card h-100 border-0 shadow-sm p-4 rounded-4 transition-all hover-lift bg-white">
 							<div class="rating mb-3 text-accent small">
 								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>

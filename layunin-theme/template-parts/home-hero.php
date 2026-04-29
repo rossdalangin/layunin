@@ -27,14 +27,14 @@
 			<div class="col-lg-5 d-none d-lg-block animate-up" style="animation-delay: 0.2s;">
 				<div class="hero-status-card card glass p-5 rounded-4 animate-float" style="border-radius: 40px !important;">
 					<div class="d-flex align-items-center gap-4 mb-4">
-						<div class="bg-gold text-white rounded-circle p-3 shadow-sm"><i class="fas fa-bolt fa-2x"></i></div>
+						<div class="bg-gold text-white rounded-circle p-3 shadow-sm"><i class="<?php echo esc_attr(get_theme_mod('hero_card_icon', 'fas fa-bolt')); ?> fa-2x"></i></div>
 						<div>
 							<h3 class="h4 mb-0 fw-bold hero-card-title"><?php echo esc_html(get_theme_mod('hero_card_title', 'Clarity Engine')); ?></h3>
 							<span class="small text-muted hero-card-status"><?php echo esc_html(get_theme_mod('hero_card_status', 'Active Success Protocol')); ?></span>
 						</div>
 					</div>
 					<div class="progress mb-4 shadow-sm" style="height: 15px; border-radius: 10px;">
-						<div class="progress-bar bg-gold" role="progressbar" style="width: 95%"></div>
+						<div class="progress-bar bg-gold" role="progressbar" style="width: <?php echo esc_attr(get_theme_mod('hero_card_percent', '95')); ?>%"></div>
 					</div>
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="small text-navy fw-bold hero-card-rate"><?php echo esc_html(get_theme_mod('hero_card_rate', 'Optimization Rate: 95%')); ?></div>

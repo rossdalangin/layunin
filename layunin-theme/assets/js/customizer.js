@@ -48,6 +48,7 @@
     wp.customize( 'hero_card_title', function( value ) { value.bind( function( newval ) { $( '.hero-card-title' ).text( newval ); } ); } );
     wp.customize( 'hero_card_status', function( value ) { value.bind( function( newval ) { $( '.hero-card-status' ).text( newval ); } ); } );
     wp.customize( 'hero_card_rate', function( value ) { value.bind( function( newval ) { $( '.hero-card-rate' ).text( newval ); } ); } );
+    wp.customize( 'hero_card_percent', function( value ) { value.bind( function( newval ) { $( '.hero-status-card .progress-bar' ).css('width', newval + '%'); } ); } );
 
     // 1.5 Featured Posts
     wp.customize( 'featured_posts_title', function( value ) { value.bind( function( newval ) { $( '.featured-posts-title' ).text( newval ); } ); } );
@@ -177,6 +178,12 @@
     wp.customize( 'nothing_found_title', function( value ) { value.bind( function( newval ) { $( '.nothing-found-title' ).text( newval ); } ); } );
     wp.customize( 'nothing_found_desc', function( value ) { value.bind( function( newval ) { $( '.nothing-found-desc' ).text( newval ); } ); } );
     wp.customize( 'toc_title', function( value ) { value.bind( function( newval ) { $( '.toc-title' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(newval); } ); } );
+    wp.customize( 'trust_badge_fallback', function( value ) { value.bind( function( newval ) {
+        $( '.trust-badges-section .row div span' ).each(function() {
+            var index = $(this).text().split(' ').pop();
+            $(this).text(newval + ' ' + index);
+        });
+    } ); } );
 
     // --- 8. PAGE MANAGEMENT ---
 
@@ -232,6 +239,7 @@
         $( '.shop-btn-text' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(newval + ' ');
     } ); } );
     wp.customize( 'shop_newsletter_title', function( value ) { value.bind( function( newval ) { $( '.shop-newsletter-title' ).text( newval ); } ); } );
+    wp.customize( 'affiliate_banner_alt', function( value ) { value.bind( function( newval ) { $( '.affiliate-banner-img' ).attr('alt', newval); } ); } );
     wp.customize( 'shop_newsletter_desc', function( value ) { value.bind( function( newval ) { $( '.shop-newsletter-desc' ).text( newval ); } ); } );
     wp.customize( 'shop_newsletter_btn', function( value ) { value.bind( function( newval ) { $( '.shop-newsletter-btn' ).text( newval ); } ); } );
     wp.customize( 'shop_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.newsletter-cta input', newval); } ); } );
@@ -315,8 +323,8 @@
             wp.customize( 'process_step_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.process-step-' + i + ' .step-desc' ).text( newval ); } ); } );
             wp.customize( 'feature_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.feature-item-' + i + ' .item-title' ).text( newval ); } ); } );
             wp.customize( 'feature_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.feature-item-' + i + ' .item-desc' ).text( newval ); } ); } );
-            wp.customize( 'problem_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.problem-section .problem-item:nth-child(' + i + ') h3' ).text( newval ); } ); } );
-            wp.customize( 'problem_item_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.problem-section .problem-item:nth-child(' + i + ') p' ).text( newval ); } ); } );
+            wp.customize( 'problem_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.problem-section .col-md-6:nth-child(' + i + ') h3' ).text( newval ); } ); } );
+            wp.customize( 'problem_item_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.problem-section .col-md-6:nth-child(' + i + ') p' ).text( newval ); } ); } );
             wp.customize( 'service_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.services-section .col-lg-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
             wp.customize( 'service_item_' + i + '_desc', function( value ) { value.bind( function( newval ) { $( '.services-section .col-lg-4:nth-child(' + i + ') p' ).text( newval ); } ); } );
             wp.customize( 'product_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.products-section .col-lg-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
@@ -326,9 +334,9 @@
             wp.customize( 'team_member_' + i + '_role', function( value ) { value.bind( function( newval ) { $( '.team-member-' + i + ' .member-role' ).text( newval ); } ); } );
             wp.customize( 'shop_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.product-item:nth-child(' + i + ') .item-title' ).text( newval ); } ); } );
             wp.customize( 'shop_item_' + i + '_price', function( value ) { value.bind( function( newval ) { $( '.product-item:nth-child(' + i + ') .item-price' ).text( newval ); } ); } );
-            wp.customize( 'services_tier_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.pricing-card:nth-child(' + i + ') h3' ).text( newval ); } ); } );
-            wp.customize( 'services_tier_' + i + '_price', function( value ) { value.bind( function( newval ) { $( '.pricing-card:nth-child(' + i + ') .price' ).text( newval ); } ); } );
-            wp.customize( 'services_tier_' + i + '_btn', function( value ) { value.bind( function( newval ) { $( '.pricing-card:nth-child(' + i + ') .btn' ).text( newval ); } ); } );
+            wp.customize( 'services_tier_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.pricing-card-wrapper .col-lg-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
+            wp.customize( 'services_tier_' + i + '_price', function( value ) { value.bind( function( newval ) { $( '.pricing-card-wrapper .col-lg-4:nth-child(' + i + ') .price' ).text( newval ); } ); } );
+            wp.customize( 'services_tier_' + i + '_btn', function( value ) { value.bind( function( newval ) { $( '.pricing-card-wrapper .col-lg-4:nth-child(' + i + ') .btn' ).text( newval ); } ); } );
             wp.customize( 'resource_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.resource-item:nth-child(' + i + ') .item-title' ).text( newval ); } ); } );
             wp.customize( 'resource_' + i + '_type', function( value ) { value.bind( function( newval ) { $( '.resource-item:nth-child(' + i + ') .item-type' ).text( newval ); } ); } );
             wp.customize( 'lm_benefit_' + i, function( value ) { value.bind( function( newval ) { $( '.benefit-item-' + i + ' .benefit-text' ).text( newval ); } ); } );

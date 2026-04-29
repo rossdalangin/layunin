@@ -88,6 +88,10 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'hero_card_status', array( 'label' => 'Status Card Subtitle', 'section' => 'layunin_home_hero' ) );
     $wp_customize->add_setting( 'hero_card_rate', array( 'default' => 'Optimization Rate: 95%', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'hero_card_rate', array( 'label' => 'Status Card Rate Text', 'section' => 'layunin_home_hero' ) );
+    $wp_customize->add_setting( 'hero_card_percent', array( 'default' => '95', 'sanitize_callback' => 'absint', 'transport' => 'postMessage' ) );
+	$wp_customize->add_control( 'hero_card_percent', array( 'label' => 'Status Card Percentage', 'section' => 'layunin_home_hero', 'type' => 'number' ) );
+    $wp_customize->add_setting( 'hero_card_icon', array( 'default' => 'fas fa-bolt', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'hero_card_icon', array( 'label' => 'Status Card Icon', 'section' => 'layunin_home_hero' ) );
 
     // 1.5 Featured Posts
     $wp_customize->add_section( 'layunin_home_featured_posts', array( 'title' => '1.5 Featured Posts', 'panel' => 'layunin_homepage_panel' ) );
@@ -176,6 +180,8 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'solution_cert_title', array( 'label' => 'Badge Title', 'section' => 'layunin_home_solution' ) );
     $wp_customize->add_setting( 'solution_cert_desc', array( 'default' => 'Certified Framework', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'solution_cert_desc', array( 'label' => 'Badge Subtitle', 'section' => 'layunin_home_solution' ) );
+    $wp_customize->add_setting( 'solution_cert_icon', array( 'default' => 'fas fa-shield-check', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'solution_cert_icon', array( 'label' => 'Badge Icon', 'section' => 'layunin_home_solution' ) );
     $wp_customize->add_setting( 'solution_image', array( 'default' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'solution_image', array( 'label' => 'Image', 'section' => 'layunin_home_solution' ) ) );
 

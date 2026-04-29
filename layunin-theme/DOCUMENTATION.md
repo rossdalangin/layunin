@@ -36,27 +36,33 @@ The **Elite Design System** (Customizer > Elite Design System) is where you defi
 
 To maintain high conversion rates, we recommend the following menu configurations in **Appearance > Menus**.
 
-### Primary Navigation (The Funnel)
-*Designed to lead users from awareness to implementation.*
-1. **Home** (Launchpad)
-2. **About** (Our Mission)
-3. **Mastery Areas** (Mega-Menu / Dropdown)
-   - Goal Setting
-   - Online Income
-   - Productivity
-   - AI Mastery
-4. **Knowledge Vault** (Free Resources)
-5. **The Collection** (Shop)
-6. **Implementation** (Services)
-7. **Initiate Protocol** (Contact)
-8. **CTA Button:** Controlled via **Customizer > Header & Navigation**. Usually points to your Lead Magnet or Discovery Call.
+### Primary Navigation (Header Menu)
+*Designed to guide users through the absolute transformation funnel. Create a new menu and assign it to the "Primary" location.*
 
-### Footer Navigation (Trust & Compliance)
-*Organized into 4 strategic columns.*
-- **Col 1:** Dynamic Branding (Logo/Bio).
-- **Col 2:** Mastery Areas (Primary Categories).
-- **Col 3:** Elite Vault (FAQ, Testimonials, Resources).
-- **Col 4:** Legal (Privacy, Terms, Affiliate Disclosure).
+| Menu Item | Recommended Label | Target URL / Slug | Strategy |
+| :--- | :--- | :--- | :--- |
+| **Home** | Launchpad | `/` | The entry point. |
+| **About** | Our Mission | `/about/` | Authority & Trust. |
+| **Dropdown** | Mastery Areas | `#` | Content pillars. |
+| -- Category | Goal Setting | `/category/goal-setting/` | Outcome focus. |
+| -- Category | Online Income | `/category/online-income/` | Monetization focus. |
+| -- Category | Productivity | `/category/productivity/` | System focus. |
+| **Resources**| Knowledge Vault | `/free-resources/` | Lead nurturing. |
+| **Shop** | The Collection | `/shop/` | Low-ticket entry. |
+| **Services** | Implementation | `/services/` | High-ticket conversion. |
+| **Contact** | Initiate Protocol| `/contact/` | Direct access. |
+
+### Secondary Navigation (Footer Menu)
+*Provides utility and maintains legal compliance. Assign to the "Footer" location.*
+
+| Menu Item | Recommended Label | Target URL / Slug | Strategy |
+| :--- | :--- | :--- | :--- |
+| **Blog** | All Insights | `/blog/` | Content discovery. |
+| **Testimonials**| Wall of Impact | `/testimonials/` | Social proof. |
+| **FAQs** | Support Vault | `/faqs/` | Objection handling. |
+| **Privacy** | Privacy Policy | `/privacy-policy/` | Legal compliance. |
+| **Terms** | Terms of Service | `/terms/` | Quality standards. |
+| **Disclosure** | Affiliate Disclosure| `/affiliate-disclosure/` | Transparency. |
 
 ---
 
@@ -73,10 +79,10 @@ Before publishing any content or launching a product, use the **Elite Protocol**
 ### 2. The Content Deployment Lifecycle (The Micro Process)
 1. **Strategic Selection:** Choose a **Mastery Area** (Category) that needs reinforcement.
 2. **Drafting with Precision:** Utilize the Gutenberg editor. The theme's **Editor Styles** ensure your workspace reflects the final premium output.
-3. **Shortcode Implementation:**
-    - Use `[faq_item]` for common objections.
-    - Use `[benefit_list]` for value propositions.
-    - Use `[cta_box]` at the midpoint and end of the article.
+3. **The Shortcode Protocol:**
+    - **Objection Handling:** Use `[faq_page]` with nested `[faq_item]` codes at the bottom of long-form guides to address common achiever concerns.
+    - **Value Crystallization:** Use `[benefit_list]` with `[benefit_item]` to transform abstract concepts into concrete outcomes.
+    - **Conversion Injection:** Insert `[cta_box]` at the 50% scroll mark and 100% mark to maintain funnel momentum.
 4. **Visual Synchronization:** Select a high-quality featured image (1200x800px recommended). The theme automatically applies a premium shadow and rounded-corner treatment.
 5. **Funnel Integration:** After publishing, update your **Exit-Intent Popup** (Customizer > Lead Popup) to offer a resource specifically related to the new content pillar.
 
@@ -114,13 +120,36 @@ Every page has a specialized template with granular controls:
 
 ---
 
-## 💰 Phase 5: Strategic Monetization & Funnel Logic
+## 💰 Phase 5: The Monetization & Conversion Engine
 
--   **Monetization Blocks:** Manage sidebar ads and product offers in **Customizer > Monetization & Ads**.
--   **Lead Capture:**
-    -   **Exit-Intent Popup:** Configure under **Customizer > Lead Popup**.
-    -   **Global Newsletters:** 3 distinct capture areas (Footer, Sidebar, Bottom-of-Shop).
--   **SEO & Schema:** The theme automatically injects JSON-LD for Articles, FAQ pages, and Reviews to maximize Google search visibility.
+The Layunin engine is designed to facilitate various monetization streams simultaneously.
+
+### 1. The Low-Ticket Funnel (Digital Assets)
+- **Asset Placement:** Managed via **Customizer > Page Management > Shop Page**.
+- **Process:**
+    1. Upload product covers (400x400px suggested) to the 6 Shop Item slots.
+    2. Define your pricing (Standardize currency via **Elite Design System** if needed).
+    3. Link each "Add to Cart" button directly to your payment provider or checkout page.
+- **Optimization:** Use the **Shop Newsletter** block at the bottom of the page to offer "Early Bird" discounts for new assets.
+
+### 2. The High-Ticket Funnel (Strategic Implementation)
+- **Service Placement:** Managed via **Customizer > Page Management > Services Page**.
+- **Process:**
+    1. Define your 3 Tiers (e.g., Strategy, Mastery, Architect).
+    2. Use the **Pipe-Separated List** format for features (e.g., `Feature 1|Feature 2|Feature 3`).
+    3. Direct the CTA buttons to your **Contact Page** or an external booking system (Calendly).
+- **Consultation Process:** Enable the **Custom Solution** block at the footer of the services page to capture enterprise-level inquiries.
+
+### 3. The Lead Capture Ecosystem
+- **The 7-Day Reset Funnel:**
+    1. Direct cold traffic to the **Lead Magnet Landing Page**.
+    2. Manage the high-impact "Architecture of the Protocol" list via Customizer.
+    3. Ensure the **Lead Popup** (Customizer > Lead Popup) is enabled for exit-intent capture across the entire site.
+- **Automation:** Connect your form placeholders to your CRM (Mailchimp, ConvertKit) via third-party plugins.
+
+### 4. Strategic Ad Placement
+- Use **Customizer > Monetization & Ads** to inject global banners above and below your post content.
+- Use the **Global Affiliate Banner** to promote elite tools and frameworks that align with your mission.
 
 ---
 
@@ -159,5 +188,18 @@ The theme implements a "Set and Forget" technical SEO strategy:
 -   **Stack:** PHP 8.3, Bootstrap 5.3 (Mobile-First), FontAwesome 6 (Pro-grade icons).
 -   **Performance:** Zero external dependencies except for CDN-delivered assets. All logic is modularly contained in `/inc/`.
 -   **Support:** elite-support@layunin.com
+
+---
+
+## 🏁 The Master Launch Checklist (The Final Process)
+
+Before going live with your Absolute Masterpiece, execute this final verification protocol:
+
+1.  **Identity Audit:** Ensure HEX codes in **Elite Design System** match your brand book.
+2.  **Typography Check:** Verify that headings (Playfair Display) and body (Inter/Roboto/Open Sans) create the desired authority.
+3.  **Friction Test:** Walk through the **Lead Magnet Landing Page**. Ensure placeholders and button text are persuasive.
+4.  **Monetization Audit:** Verify all "Add to Cart" and "Initiate Protocol" links point to active checkout/contact flows.
+5.  **Social Proof Verification:** Ensure at least 3 high-quality testimonials are published in the `testimonial` post type.
+6.  **SEO Finalization:** Check **SEO & Social Media** settings to ensure your Global Meta Description is optimized for high-achiever keywords.
 
 *© 2024 Layunin.com. Developed for absolute mastery and Filipino excellence.*

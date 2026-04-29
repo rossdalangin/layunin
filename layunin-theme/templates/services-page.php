@@ -11,7 +11,7 @@ get_header(); ?>
 		</header>
 
 		<div class="entry-content animate-up">
-			<div class="pricing-table-wrapper row justify-content-center mt-5">
+			<div class="pricing-table-wrapper pricing-card-wrapper row justify-content-center mt-5">
 				<?php for($i = 1; $i <= 3; $i++) :
 					$title = get_theme_mod("services_tier_{$i}_title", ($i==1?'Strategy':($i==2?'Mastery':'Architect')));
 					$price = get_theme_mod("services_tier_{$i}_price", ($i==1?'&#8369;4,999':($i==2?'&#8369;14,999':'&#8369;49,999')));

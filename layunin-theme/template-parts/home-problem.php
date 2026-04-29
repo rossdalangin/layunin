@@ -1,5 +1,5 @@
 <?php if ( get_theme_mod( 'show_home_problem', true ) ) : ?>
-<section class="problem-section py-6 bg-navy text-white position-relative overflow-hidden">
+<section class="problem-section py-6 bg-navy text-white position-relative overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
     <div class="position-absolute top-0 end-0 opacity-10"><i class="fas fa-lock fa-20x" style="transform: translate(30%, -30%);"></i></div>
 
 	<div class="container position-relative z-index-1">

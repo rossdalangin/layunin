@@ -17,10 +17,16 @@ Version: 8.0
     --text-muted: #64748B;
 
     /* Fluid Design System */
-    --space-xl: clamp(6rem, 10vw, 12rem);
-    --space-l: clamp(3rem, 6vw, 5rem);
-    --space-m: clamp(1.5rem, 4vw, 2.5rem);
-    --space-s: clamp(1rem, 2vw, 1.5rem);
+    --phi: 1.618;
+    --space-phi-xl: calc(5rem * var(--phi));
+    --space-phi-l: calc(3rem * var(--phi));
+    --space-phi-m: calc(1.85rem * var(--phi));
+    --space-phi-s: calc(1.15rem * var(--phi));
+
+    --space-xl: var(--space-phi-xl);
+    --space-l: var(--space-phi-l);
+    --space-m: var(--space-phi-m);
+    --space-s: var(--space-phi-s);
 
     --radius-lg: 32px;
     --radius-md: 20px;
@@ -187,7 +193,9 @@ section { padding: var(--space-xl) 0; }
 
 /* Contrast & Layering Fixes */
 .text-gold { color: var(--gold) !important; }
-.bg-white .text-gold, .bg-light .text-gold { color: #A67C00 !important; }
+.bg-white .text-gold, .bg-light .text-gold, .testimonials-section .text-gold { color: #91761E !important; }
+.bg-white .text-muted, .bg-light .text-muted { color: #475569 !important; }
+.bg-white .lead, .bg-light .lead { color: #334155 !important; }
 
 .z-index-1 { z-index: 1 !important; position: relative; }
 .z-index-0 { z-index: 0 !important; }
@@ -195,6 +203,33 @@ section { padding: var(--space-xl) 0; }
 .testimonial-card-main .quote-icon {
     pointer-events: none;
     user-select: none;
+    opacity: 0.05 !important; /* Reduced for better text visibility */
+    transform: translate(-10%, -10%);
+}
+
+/* Premium Boxes */
+.cta-box, .newsletter-box, .product-offer {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--space-m);
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition);
+}
+
+.newsletter-box {
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    color: var(--white);
+}
+
+.product-offer {
+    border: 2px solid var(--gold);
+}
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hover-opacity-100:hover { opacity: 1 !important; }

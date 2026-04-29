@@ -1,4 +1,4 @@
-<section class="lead-magnet-section py-6 bg-navy text-white position-relative overflow-hidden">
+<section class="lead-magnet-section py-6 bg-navy text-white position-relative overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
     <div class="bg-pattern position-absolute top-0 start-0 w-100 h-100 opacity-05" style="background-image: radial-gradient(var(--gold) 1px, transparent 1px); background-size: 30px 30px;"></div>
 
 	<div class="container position-relative z-index-1">

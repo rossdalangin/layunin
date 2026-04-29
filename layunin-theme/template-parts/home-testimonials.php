@@ -1,5 +1,5 @@
 <?php if ( get_theme_mod( 'show_home_testimonials', true ) ) : ?>
-<section class="testimonials-section py-6 bg-white overflow-hidden">
+<section class="testimonials-section py-6 bg-white overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
 	<div class="container">
 		<div class="row align-items-center g-6">
 			<div class="col-lg-5 animate-up">

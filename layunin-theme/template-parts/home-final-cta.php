@@ -1,4 +1,4 @@
-<section class="final-cta-section py-7 bg-navy text-white text-center position-relative overflow-hidden">
+<section class="final-cta-section py-7 bg-navy text-white text-center position-relative overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
     <div class="bg-gradient-accent position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at center, var(--gold) 0%, transparent 70%);"></div>
 
 	<div class="container position-relative z-index-1">

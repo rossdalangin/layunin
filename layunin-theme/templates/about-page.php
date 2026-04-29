@@ -1,23 +1,27 @@
 <?php
 /**
- * Template Name: About Page (v8.0 Masterpiece)
+ * Template Name: About Page
  */
 get_header(); ?>
 <main id="primary" class="site-main py-xl">
 	<div class="container">
-		<header class="entry-header text-center mb-6 animate-up pe-lg-5 ps-lg-5">
+		<header class="entry-header text-center mb-6 animate-up">
 			<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block">The Journey to Mastery</span>
 			<h1 class="entry-title display-1 fw-black text-navy mb-4"><?php echo esc_html( get_theme_mod( 'about_title', 'Our Story' ) ); ?></h1>
-            <p class="lead text-muted mx-auto fs-4" style="max-width: 800px;">Empowering Filipinos to transform their purpose into clear action, real income, and lasting success.</p>
 		</header>
 
 		<div class="row g-5 align-items-center mb-xl">
             <div class="col-lg-6 animate-up">
                 <div class="entry-content fs-5 lh-lg">
                     <?php
-                    while ( have_posts() ) : the_post();
-                        the_content();
-                    endwhile;
+                    $custom_content = get_theme_mod('about_content');
+                    if($custom_content) {
+                        echo wpautop(do_shortcode($custom_content));
+                    } else {
+                        while ( have_posts() ) : the_post();
+                            the_content();
+                        endwhile;
+                    }
                     ?>
                 </div>
             </div>
@@ -25,10 +29,6 @@ get_header(); ?>
                 <div class="about-visual position-relative">
                     <div class="rounded-4 shadow-premium overflow-hidden" style="height: 500px; border-radius: 60px !important;">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="w-100 h-100 object-fit-cover" alt="Elite Strategy Team">
-                    </div>
-                    <div class="floating-stat glass p-4 rounded-4 position-absolute top-0 start-0 m-4 animate-float shadow-lg">
-                        <div class="h3 fw-bold text-navy mb-0">10k+</div>
-                        <div class="small text-muted fw-bold">Success Stories</div>
                     </div>
                 </div>
             </div>
@@ -58,10 +58,6 @@ get_header(); ?>
                         </div>
                         <h3 class="h4 fw-bold text-navy mb-2"><?php echo esc_html($name); ?></h3>
                         <p class="text-gold small text-uppercase fw-black letter-spacing-1 mb-4"><?php echo esc_html($role); ?></p>
-                        <div class="social-mini d-flex justify-content-center gap-3">
-                            <a href="#" class="text-muted hover-gold"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="text-muted hover-gold"><i class="fab fa-twitter"></i></a>
-                        </div>
                     </div>
                 </div>
                 <?php endfor; ?>

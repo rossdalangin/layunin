@@ -1,6 +1,6 @@
 <?php
 /**
- * terminal Supreme Page Creator and CPT Seeding (v7.0)
+ * terminal Supreme Page Creator and CPT Seeding (v8.2)
  */
 
 function layunin_create_recommended_pages() {
@@ -10,13 +10,20 @@ function layunin_create_recommended_pages() {
     }
 
     $pages = array(
-        'home' => array('title' => 'Home', 'template' => 'front-page.php'),
-        'about' => array('title' => 'The Mastery Mission', 'template' => 'templates/about-page.php'),
-        'services' => array('title' => 'Elite Guidance Systems', 'template' => 'templates/services-page.php'),
-        'contact' => array('title' => 'Strategic Connection', 'template' => 'templates/contact-page.php'),
-        'shop' => array('title' => 'The Asset Library', 'template' => 'templates/shop-page.php'),
-        'free-resources' => array('title' => 'Success Accelerator', 'template' => 'templates/free-resources-page.php'),
-        'testimonials' => array('title' => 'Wall of Mastery', 'template' => 'templates/testimonials-page.php'),
+        'about' => array(
+            'title'    => 'The Mastery Mission',
+            'template' => 'templates/about-page.php',
+            'content'  => "Our mission is to provide the world-class tools and elite guidance needed to transform Filipino potential into measurable success."
+        ),
+        'services' => array(
+            'title'    => 'Elite Guidance Systems',
+            'template' => 'templates/services-page.php',
+            'content'  => "[pricing_table]\n[pricing_item title='Strategic Audit' price='₱5,000' features='Deep Goal Analysis | 30-Day Action Plan']\n[/pricing_table]"
+        ),
+        'contact' => array('title' => 'Strategic Connection', 'template' => 'templates/contact-page.php', 'content' => 'Ready to level up?'),
+        'shop' => array('title' => 'The Asset Library', 'template' => 'templates/shop-page.php', 'content' => 'Premium tools.'),
+        'free-resources' => array('title' => 'Success Accelerator', 'template' => 'templates/free-resources-page.php', 'content' => 'Free tools.'),
+        'testimonials' => array('title' => 'Wall of Mastery', 'template' => 'templates/testimonials-page.php', 'content' => 'Real results.'),
     );
 
     foreach ( $pages as $slug => $data ) {
@@ -25,11 +32,15 @@ function layunin_create_recommended_pages() {
             $page_id = wp_insert_post( array(
                 'post_title'   => $data['title'],
                 'post_name'    => $slug,
-                'post_content' => '<!-- wp:paragraph --><p>Welcome to ' . $data['title'] . '. Elite content is being prepared for your growth journey.</p><!-- /wp:paragraph -->',
+                'post_content' => $data['content'],
                 'post_status'  => 'publish',
                 'post_type'    => 'page',
             ) );
-            if ( $page_id ) update_post_meta( $page_id, '_wp_page_template', $data['template'] );
+            if ( $page_id ) {
+                update_post_meta( $page_id, '_wp_page_template', $data['template'] );
+                // Seed the Customizer setting for this page too
+                set_theme_mod( str_replace('-', '_', $slug) . '_content', $data['content'] );
+            }
         }
     }
 
@@ -40,8 +51,7 @@ function layunin_create_recommended_pages() {
 
 function layunin_seed_sample_cpts() {
     $testimonials = array(
-        array('title' => 'Maria Santos', 'content' => 'Transitioned from freelance burnout to a high-output agency in 4 months using the Layunin framework.', 'role' => 'Founder, Digital Elite'),
-        array('title' => 'Juan Dela Cruz', 'content' => 'The AI productivity systems doubled my income while reducing my work hours by half.', 'role' => 'Tech Entrepreneur'),
+        array('title' => 'Maria Santos', 'content' => 'The system-building session was a game-changer.', 'role' => 'Founder, Digital Elite'),
     );
     foreach ($testimonials as $t) {
         $query = new WP_Query( array( 'post_type' => 'testimonial', 'title' => $t['title'] ) );

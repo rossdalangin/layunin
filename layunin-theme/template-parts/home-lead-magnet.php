@@ -1,37 +1,32 @@
-<section class="lead-magnet-section py-6 animate-up">
-	<div class="container">
-		<div class="card bg-navy border-0 overflow-hidden rounded-4 shadow-lg p-5">
-			<div class="row align-items-center g-5">
-				<div class="col-lg-6">
-					<div class="lm-content text-white">
-						<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block">Free Training</span>
-						<h2 class="display-5 fw-bold mb-4"><?php echo esc_html(get_theme_mod('lm_title', 'The 7-Day Goal Reset Guide')); ?></h2>
-						<p class="text-white-50 mb-4 fs-5"><?php echo esc_html(get_theme_mod('lm_subtitle', 'Ready to stop procrastinating and start producing? Get the exact roadmap used by over 10,000+ Filipinos to reclaim their time and achieve clarity.')); ?></p>
-						<ul class="list-unstyled mb-5">
-                            <?php
-                            $list = get_theme_mod('lm_list', "How to define your 'Layunin' in 10 minutes\nThe AI tools for 3x productivity\n3 daily habits of high achievers");
-                            $items = explode("\n", $list);
-                            foreach($items as $item) : if(trim($item)) : ?>
-							    <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> <?php echo esc_html(trim($item)); ?></li>
-                            <?php endif; endforeach; ?>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-5 offset-lg-1">
-					<div class="lm-form-card bg-white p-5 rounded-4 shadow-sm text-center">
-						<div class="icon mb-4 text-navy fs-1"><i class="fas fa-envelope-open-text"></i></div>
-						<h3 class="h4 fw-bold text-navy mb-4">Get Instant Access</h3>
-						<form>
-							<div class="mb-3">
-								<input type="text" class="form-control form-control-lg bg-light border-0" placeholder="Your Name" required>
-							</div>
-							<div class="mb-4">
-								<input type="email" class="form-control form-control-lg bg-light border-0" placeholder="Your Best Email" required>
-							</div>
-							<button type="submit" class="btn btn-gold btn-lg w-100 py-3 fw-bold">Send Me My Free Guide</button>
-							<p class="small text-muted mt-3 mb-0">We respect your privacy. No spam, ever.</p>
-						</form>
-					</div>
+<section class="lead-magnet-section py-6 bg-navy text-white position-relative overflow-hidden">
+    <div class="bg-pattern position-absolute top-0 start-0 w-100 h-100 opacity-05" style="background-image: radial-gradient(var(--gold) 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+	<div class="container position-relative z-index-1">
+		<div class="row align-items-center g-6">
+			<div class="col-lg-6 animate-up">
+				<h2 class="display-3 fw-black text-white mb-4"><?php echo esc_html( get_theme_mod( 'lm_title', 'The Elite 7-Day Goal Reset Protocol' ) ); ?></h2>
+				<p class="fs-5 opacity-75 mb-5"><?php echo esc_html( get_theme_mod( 'lm_subtitle', 'Stop existing. Start executing. This is the exact audit used by top CEOs to reclaim 20+ hours per week.' ) ); ?></p>
+
+				<ul class="list-unstyled mb-5">
+					<?php
+                    $default_list = "The 'Layunin' Alignment Map (10-Min Audit)\nTop 5 AI Tools for 300% More Output\nDay-by-Day Life Re-Engineering Framework";
+					$items = explode("\n", get_theme_mod('lm_list', $default_list));
+					foreach($items as $item) :
+						if(trim($item)) :
+					?>
+					<li class="mb-3 d-flex align-items-center gap-3 fs-5"><i class="fas fa-check-circle text-gold"></i> <?php echo esc_html($item); ?></li>
+					<?php endif; endforeach; ?>
+				</ul>
+
+				<form class="lead-magnet-form d-flex flex-column flex-sm-row gap-3">
+					<input type="email" placeholder="Enter your business email" class="form-control form-control-lg bg-white border-0 shadow-sm" style="min-width: 300px;" required>
+					<button type="submit" class="btn btn-gold btn-lg px-5 shadow-lg fw-bold">Get the Protocol</button>
+				</form>
+				<p class="small opacity-50 mt-4"><i class="fas fa-lock me-2"></i> Join 25,000+ others pursuing their absolute mastery. Your data is 100% secure.</p>
+			</div>
+			<div class="col-lg-6 d-none d-lg-block animate-up" style="animation-delay: 0.2s;">
+				<div class="lm-visual-wrapper p-3 bg-white-10 rounded-4 shadow-lg rotate-3">
+					<img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800" alt="Guide Cover" class="img-fluid rounded-4">
 				</div>
 			</div>
 		</div>

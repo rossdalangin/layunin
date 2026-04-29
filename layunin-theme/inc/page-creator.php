@@ -1,65 +1,70 @@
-<?php
 /**
- * Elite Site Ecosystem - v9.3 Refinement
+ * Elite Site Ecosystem - v9.6 Refinement
  */
 
 function layunin_create_recommended_pages() {
-    // Only run on theme activation or via customizer trigger
     $is_trigger = get_theme_mod( 'recreate_pages_trigger', false );
 
-    // We use a flag to only run once per activation, or when triggered manually
-    if ( ! $is_trigger && did_action( 'after_switch_theme' ) === 0 && get_option( 'layunin_pages_created' ) ) {
+    if ( ! $is_trigger && get_option( 'layunin_pages_created' ) ) {
         return;
     }
 
     $pages = array(
+        'Home' => array(
+            'template' => 'front-page.php',
+            'content'  => ''
+        ),
         'About' => array(
             'template' => 'templates/about-page.php',
-            'content'  => '<!-- wp:heading {"level":2} --><h2>Our Elite Mission</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Layunin is the premier platform for Filipino high-achievers seeking life mastery.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:heading {"level":2} --><h2>Our Elite Mission</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Layunin is the premier platform for Filipino high-achievers seeking life mastery. We provide the systems and tools to bridge the gap between ambition and execution.</p><!-- /wp:paragraph -->'
         ),
         'Services' => array(
             'template' => 'templates/services-page.php',
-            'content'  => '[pricing_table][pricing_item title="Strategy" price="₱4,999" features="Audit|Map|Systems" link="#"][pricing_item title="Mastery" price="₱14,999" features="Mentorship|AI|Wealth" featured="yes" link="#"][pricing_item title="Architect" price="₱49,999" features="Global|Scale|Legacy" link="#"][/pricing_table]'
+            'content'  => '[pricing_table][pricing_item title="Strategy" price="₱4,999" features="Protocol Audit|Alignment Map|Base Systems" link="#"][pricing_item title="Mastery" price="₱14,999" features="1-on-1 Mentorship|AI Implementation|Wealth Architecture" featured="yes" link="#"][pricing_item title="Architect" price="₱49,999" features="Global Expansion|Scale Frameworks|Legacy Building" link="#"][/pricing_table]'
         ),
         'Contact' => array(
             'template' => 'templates/contact-page.php',
-            'content'  => '<!-- wp:paragraph --><p>Ready to architect your journey? Connect with our team of specialists today.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Ready to architect your journey? Connect with our team of specialists today to initiate your protocol.</p><!-- /wp:paragraph -->'
         ),
         'Shop' => array(
             'template' => 'templates/shop-page.php',
-            'content'  => '<!-- wp:paragraph --><p>Explore our high-performance digital assets and architectural frameworks.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Explore our high-performance digital assets and architectural frameworks designed for the modern Filipino achiever.</p><!-- /wp:paragraph -->'
         ),
         'Free Resources' => array(
             'template' => 'templates/free-resources-page.php',
-            'content'  => '<!-- wp:paragraph --><p>Access the knowledge vault and accelerate your path to mastery.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Access the knowledge vault and accelerate your path to mastery with our complimentary high-output guides.</p><!-- /wp:paragraph -->'
         ),
         'Testimonials' => array(
             'template' => 'templates/testimonials-page.php',
-            'content'  => '<!-- wp:paragraph --><p>Proof of the Layunin transformation framework in action.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Proof of the Layunin transformation framework in action. See how others have architected their lives.</p><!-- /wp:paragraph -->'
         ),
         'Lead Magnet' => array(
             'template' => 'templates/lead-magnet-landing.php',
-            'content'  => '<!-- wp:paragraph --><p>Download the Elite 7-Day Goal Reset Protocol and reclaim your time.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Download the Elite 7-Day Goal Reset Protocol and reclaim your time today. Join 25,000+ others.</p><!-- /wp:paragraph -->'
         ),
         'Thank You' => array(
-            'template' => 'templates/thank-you-page.php',
-            'content'  => '<!-- wp:paragraph --><p>Your transformation has begun. Check your inbox for the protocol.</p><!-- /wp:paragraph -->'
+            'template' => 'templates/thank-you.php',
+            'content'  => '<!-- wp:paragraph --><p>Your transformation has begun. Check your inbox for the protocol and next-phase instructions.</p><!-- /wp:paragraph -->'
         ),
         'Affiliate Disclosure' => array(
             'template' => 'templates/affiliate-disclosure.php',
-            'content'  => '<!-- wp:paragraph --><p>Our commitment to transparency and elite tool recommendations.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Transparency is a core value. We only recommend elite tools we use ourselves in our own mastery journeys.</p><!-- /wp:paragraph -->'
         ),
         'Privacy Policy' => array(
             'template' => 'templates/privacy-policy.php',
-            'content'  => '<!-- wp:paragraph --><p>Your data security is paramount in the pursuit of mastery.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>Your data security is paramount. We use industry-standard encryption to protect the community.</p><!-- /wp:paragraph -->'
         ),
         'Terms' => array(
             'template' => 'templates/terms.php',
-            'content'  => '<!-- wp:paragraph --><p>The standards of excellence for the Layunin community.</p><!-- /wp:paragraph -->'
+            'content'  => '<!-- wp:paragraph --><p>The standards of excellence for the Layunin community. Excellence is our only baseline.</p><!-- /wp:paragraph -->'
+        ),
+        'Blog' => array(
+            'template' => '',
+            'content'  => '<!-- wp:paragraph --><p>Strategic insights and case studies for the pursuit of mastery.</p><!-- /wp:paragraph -->'
         ),
         'FAQs' => array(
             'template' => '',
-            'content'  => '[faq_page][faq_item question="What is the Layunin Framework?"]It is a modular system for life re-engineering.[/faq_item][faq_item question="How do I join the Elite Network?"]Start with the 7-Day Protocol.[/faq_item][/faq_page]'
+            'content'  => '[faq_page][faq_item question="What is the Layunin Framework?"]It is a modular system for life re-engineering and output optimization.[/faq_item][faq_item question="How do I join the Elite Network?"]Start with the 7-Day Protocol and join our mailing list.[/faq_item][/faq_page]'
         )
     );
 
@@ -73,13 +78,16 @@ function layunin_create_recommended_pages() {
                 'post_type'    => 'page',
                 'page_template' => $data['template']
             ) );
+
+            // Set Home and Blog pages
+            if($title == 'Home') update_option('show_on_front', 'page');
+            if($title == 'Home') update_option('page_on_front', $page_id);
+            if($title == 'Blog') update_option('page_for_posts', $page_id);
         }
     }
 
-    // Seed sample CPT data
     layunin_seed_sample_cpts();
 
-    // Reset trigger
     if ( $is_trigger ) {
         set_theme_mod( 'recreate_pages_trigger', false );
     }
@@ -88,10 +96,9 @@ function layunin_create_recommended_pages() {
 add_action( 'admin_init', 'layunin_create_recommended_pages' );
 
 function layunin_seed_sample_cpts() {
-    // Seed Testimonials
     $testimonials = array(
-        array('title' => 'Katrina Reyes', 'content' => 'The systems gave me my life back.', 'role' => 'Founder'),
-        array('title' => 'Mark Dizon', 'content' => 'I tripled my output in 30 days.', 'role' => 'Executive'),
+        array('title' => 'Dr. Katrina Reyes', 'content' => 'The systems I learned through Layunin didn\'t just increase my income; they gave me my life back. I finally feel like I\'m living my true "Layunin".', 'role' => 'Global Entrepreneur'),
+        array('title' => 'Mark Dizon', 'content' => 'I tripled my output in 30 days. The AI integration protocols are absolute game-changers for my agency.', 'role' => 'Tech Founder'),
     );
     foreach($testimonials as $t) {
         if(!get_page_by_title($t['title'], OBJECT, 'testimonial')) {
@@ -100,10 +107,9 @@ function layunin_seed_sample_cpts() {
         }
     }
 
-    // Seed Resources
     $resources = array(
-        array('title' => 'Elite Goal Tracker', 'desc' => 'High-output excel framework', 'type' => 'Planner'),
-        array('title' => 'AI Prompt Bible', 'desc' => '200+ prompts for productivity', 'type' => 'Vault'),
+        array('title' => 'The Master Planner', 'desc' => 'High-output excel framework for life audit.', 'type' => 'Elite Protocol'),
+        array('title' => 'AI Prompt Vault', 'desc' => '200+ prompts for creative productivity.', 'type' => 'Strategic Tool'),
     );
     foreach($resources as $r) {
         if(!get_page_by_title($r['title'], OBJECT, 'resource')) {

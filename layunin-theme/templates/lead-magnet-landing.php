@@ -9,15 +9,15 @@ get_header(); ?>
 			<div class="col-lg-6 animate-up">
 				<div class="lm-content-box pe-lg-4">
 					<span class="badge bg-gold px-3 py-2 mb-3 shadow-sm">Free Digital Resource</span>
-					<h1 class="display-3 fw-bold text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Free 7-Day Goal Reset' ) ); ?></h1>
+					<h1 class="display-3 fw-bold text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Elite 7-Day Goal Reset Protocol' ) ); ?></h1>
 					<p class="lead text-muted mb-5 fs-4">
-						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop dreaming about your goals and start building them. Our most popular resource provides a day-by-day framework to audit your life.' ) ); ?>
+						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop existing on autopilot. This is the exact audit used by high-output leaders to reclaim their time and refocus their absolute purpose.' ) ); ?>
 					</p>
 
-					<h3 class="h5 fw-bold text-navy mb-4 lm-benefit-title"><?php echo esc_html(get_theme_mod('lm_benefit_title', "What's Inside This Guide:")); ?></h3>
+					<h3 class="h5 fw-bold text-navy mb-4 lm-benefit-title"><?php echo esc_html(get_theme_mod('lm_benefit_title', "The Architecture of the Protocol:")); ?></h3>
 					<ul class="list-unstyled mb-5 benefit-list">
 						<?php for($i = 1; $i <= 3; $i++) :
-							$benefit = get_theme_mod("lm_benefit_{$i}", "Exclusive Strategy #{$i} for success");
+							$benefit = get_theme_mod("lm_benefit_{$i}", "Strategic Level {$i} Optimization");
 						?>
 						<li class="mb-3 d-flex align-items-start benefit-item-<?php echo $i; ?>">
 							<div class="benefit-check text-accent me-3 fs-5"><i class="fas fa-check-circle"></i></div>
@@ -32,7 +32,7 @@ get_header(); ?>
 							<div class="rounded-circle border border-2 border-white bg-gold overflow-hidden" style="width: 35px; height: 35px; margin-right: -10px;"><i class="fas fa-user text-white p-2"></i></div>
 							<div class="rounded-circle border border-2 border-white bg-accent overflow-hidden" style="width: 35px; height: 35px;"><i class="fas fa-user text-white p-2"></i></div>
 						</div>
-						<span class="small text-muted fw-bold">Joined by 10,000+ Filipinos</span>
+						<span class="small text-muted fw-bold">Joined by 25,000+ Filipinos</span>
 					</div>
 				</div>
 			</div>
@@ -71,13 +71,13 @@ get_header(); ?>
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-8">
-				<p class="text-white mb-0 h5 fst-italic">"This guide was exactly what I needed to get my freelancing career back on track. I finally have a clear plan!"</p>
+				<p class="text-white mb-0 h5 fst-italic">"This guide was exactly what I needed to get my career back on track. I finally have a clear plan!"</p>
 			</div>
 			<div class="col-md-4 text-md-end mt-4 mt-md-0">
 				<div class="d-flex align-items-center justify-content-md-end">
 					<div class="text-end me-3">
 						<h4 class="h6 text-white mb-0">Juan Dela Cruz</h4>
-						<span class="small text-white-50">Web Developer</span>
+						<span class="small text-white-50">High-Output Leader</span>
 					</div>
 					<div class="rounded-circle bg-gold" style="width: 50px; height: 50px;"></div>
 				</div>

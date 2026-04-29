@@ -1,4 +1,4 @@
-# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.4)
+# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.6)
 
 Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive guide to the theme's architecture, customization engine, and navigation strategy.
 

@@ -1,29 +1,35 @@
-<section class="testimonials-section bg-light py-6">
-	<div class="container text-center">
-		<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block">Testimonials</span>
-		<h2 class="display-4 mb-5">What Our Community Says</h2>
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
+<?php if ( get_theme_mod( 'show_home_testimonials', true ) ) : ?>
+<section class="testimonials-section py-6 bg-white overflow-hidden">
+	<div class="container">
+		<div class="row align-items-center g-6">
+			<div class="col-lg-5 animate-up">
+				<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block testimonials-badge-text"><?php echo esc_html(get_theme_mod('testimonials_badge_text', 'Elite Validation')); ?></span>
+				<h2 class="display-4 fw-black text-navy mb-4 testimonials-home-title"><?php echo esc_html(get_theme_mod('testimonials_home_title', 'Proof of Impact')); ?></h2>
+				<p class="lead text-muted mb-5 testimonials-home-lead"><?php echo esc_html(get_theme_mod('testimonials_home_lead', 'Our framework has been battle-tested by thousands of Filipinos across the globe. Here is one of our most recent success stories.')); ?></p>
+				<a href="<?php echo esc_url( home_url('/testimonials/') ); ?>" class="btn btn-outline-navy btn-lg px-5 fw-bold border-2">See Wall of Impact</a>
+			</div>
+			<div class="col-lg-7 animate-up" style="animation-delay: 0.2s;">
 				<?php
-				$quote = get_theme_mod('testimonial_quote', "Layunin changed how I approach my career. I finally have the clarity I've been seeking for years. The systems are practical and the mindset shift is real.");
-				$author = get_theme_mod('testimonial_author', 'Maria Santos');
-				$role = get_theme_mod('testimonial_role', 'Digital Freelancer');
-				$image = get_theme_mod('testimonial_image', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100');
+				$quote = get_theme_mod('testimonial_quote', 'The systems I learned through Layunin didn\'t just increase my income; they gave me my life back. I finally feel like I\'m living my true "Layunin".');
+				$author = get_theme_mod('testimonial_author', 'Dr. Katrina Reyes');
+				$role = get_theme_mod('testimonial_role', 'Global Entrepreneur');
+				$image = get_theme_mod('testimonial_image', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300');
 				?>
-				<div class="testimonial-card card animate-up p-5 shadow-lg border-0" style="background: var(--white); border-radius: 40px;">
-					<div class="quote-icon mb-4 fs-1 text-accent opacity-25"><i class="fas fa-quote-left"></i></div>
-					<blockquote class="blockquote fs-4 mb-4" style="font-family: 'Playfair Display', serif; font-style: italic;">
-						"<span class="quote-text"><?php echo esc_html($quote); ?></span>"
-					</blockquote>
-					<cite class="d-flex align-items-center justify-content-center gap-3 mt-4">
-						<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($author); ?>" class="rounded-circle testimonial-img" style="width: 60px; height: 60px; object-fit: cover;">
-						<div class="text-start">
-							<div class="fw-bold text-navy author-name"><?php echo esc_html($author); ?></div>
-							<div class="small text-muted author-role"><?php echo esc_html($role); ?></div>
+				<div class="testimonial-card-main p-6 bg-light rounded-4 shadow-sm position-relative" style="border-radius: 40px !important;">
+					<div class="quote-icon position-absolute top-0 start-0 m-5 opacity-10"><i class="fas fa-quote-left fa-6x text-gold"></i></div>
+					<div class="position-relative z-index-1">
+						<p class="fs-3 fw-bold text-navy mb-5 quote-text italic">"<?php echo esc_html($quote); ?>"</p>
+						<div class="d-flex align-items-center gap-4">
+							<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($author); ?>" class="rounded-circle shadow-sm author-img" style="width: 80px; height: 80px; object-fit: cover;">
+							<div>
+								<h4 class="h5 fw-bold text-navy mb-1 author-name"><?php echo esc_html($author); ?></h4>
+								<span class="small text-muted author-role"><?php echo esc_html($role); ?></span>
+							</div>
 						</div>
-					</cite>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+<?php endif; ?>

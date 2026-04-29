@@ -1,5 +1,5 @@
 /**
- * Live preview for Customizer - Definitive Masterpiece (v9.2)
+ * Live preview for Customizer - Definitive Masterpiece (v9.6)
  */
 ( function( $ ) {
     // Helper function for list-based updates
@@ -15,6 +15,7 @@
     }
 
     // Hero Section
+    wp.customize( 'hero_badge', function( value ) { value.bind( function( newval ) { $( '.hero-badge-text' ).text( newval ); } ); } );
 	wp.customize( 'hero_headline', function( value ) { value.bind( function( newval ) { $( '.hero-section h1' ).text( newval ); } ); } );
 	wp.customize( 'hero_subheadline', function( value ) { value.bind( function( newval ) { $( '.hero-section p.lead' ).text( newval ); } ); } );
     wp.customize( 'hero_cta_1_text', function( value ) { value.bind( function( newval ) { $( '.hero-section .hero-cta-1' ).text( newval ); } ); } );
@@ -42,32 +43,63 @@
     wp.customize( 'logo_width', function( value ) { value.bind( function( newval ) { $( ':root' ).css('--logo-width', newval + 'px'); } ); } );
 
     // Announcement Bar
-    wp.customize( 'announcement_text', function( value ) { value.bind( function( newval ) { $( '.announcement-bar .text' ).text( newval ); } ); } );
+    wp.customize( 'announcement_text', function( value ) { value.bind( function( newval ) { $( '.announcement-bar .announcement-text' ).text( newval ); } ); } );
 
     // Homepage Sections
     wp.customize( 'process_title', function( value ) { value.bind( function( newval ) { $( '.process-title' ).text( newval ); } ); } );
     wp.customize( 'features_title', function( value ) { value.bind( function( newval ) { $( '.features-title' ).text( newval ); } ); } );
+
+    wp.customize( 'problem_badge', function( value ) { value.bind( function( newval ) { $( '.problem-section .text-gold' ).text( newval ); } ); } );
     wp.customize( 'problem_title', function( value ) { value.bind( function( newval ) { $( '.problem-section h2' ).text( newval ); } ); } );
+    wp.customize( 'problem_lead', function( value ) { value.bind( function( newval ) { $( '.problem-section p.lead' ).text( newval ); } ); } );
+
+    wp.customize( 'solution_badge_text', function( value ) { value.bind( function( newval ) { $( '.solution-section .text-gold' ).text( newval ); } ); } );
     wp.customize( 'solution_title', function( value ) { value.bind( function( newval ) { $( '.solution-title' ).text( newval ); } ); } );
     wp.customize( 'solution_desc', function( value ) { value.bind( function( newval ) { $( '.solution-desc' ).text( newval ); } ); } );
+    wp.customize( 'solution_bullets', function( value ) { value.bind( function( newval ) {
+        var items = newval.split('\n');
+        var html = '';
+        items.forEach(function(item) {
+            if(item.trim()) {
+                html += '<li class="d-flex align-items-center gap-3 mb-4 fs-5 fw-bold text-navy"><div class="bg-light-gold text-gold rounded-circle p-2" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-check"></i></div>' + item.trim() + '</li>';
+            }
+        });
+        $( '.solution-section ul' ).html( html );
+    } ); } );
+
     wp.customize( 'categories_title', function( value ) { value.bind( function( newval ) { $( '.categories-section h2' ).text( newval ); } ); } );
     wp.customize( 'categories_desc', function( value ) { value.bind( function( newval ) { $( '.categories-section .section-desc' ).text( newval ); } ); } );
 
     // Lead Magnet Home
     wp.customize( 'lm_title', function( value ) { value.bind( function( newval ) { $( '.lead-magnet-section h2' ).text( newval ); } ); } );
     wp.customize( 'lm_subtitle', function( value ) { value.bind( function( newval ) { $( '.lead-magnet-section p.fs-5' ).text( newval ); } ); } );
-    wp.customize( 'lm_list', function( value ) { value.bind( function( newval ) { updateList( '.lead-magnet-section ul', newval ); } ); } );
+    wp.customize( 'lm_list', function( value ) { value.bind( function( newval ) {
+        var items = newval.split('\n');
+        var html = '';
+        items.forEach(function(item) {
+            if(item.trim()) {
+                html += '<li class="mb-3 d-flex align-items-center gap-3 fs-5"><i class="fas fa-check-circle text-gold"></i> ' + item.trim() + '</li>';
+            }
+        });
+        $( '.lead-magnet-section ul' ).html( html );
+    } ); } );
+    wp.customize( 'lm_social_proof', function( value ) { value.bind( function( newval ) { $( '.lead-magnet-section p.small' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(newval); } ); } );
 
     wp.customize( 'products_title', function( value ) { value.bind( function( newval ) { $( '.products-section h2' ).text( newval ); } ); } );
     wp.customize( 'products_desc', function( value ) { value.bind( function( newval ) { $( '.products-section .section-desc' ).text( newval ); } ); } );
     wp.customize( 'services_home_title', function( value ) { value.bind( function( newval ) { $( '.services-section h2' ).text( newval ); } ); } );
+
+    wp.customize( 'testimonials_badge_text', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .text-gold' ).text( newval ); } ); } );
+    wp.customize( 'testimonials_home_title', function( value ) { value.bind( function( newval ) { $( '.testimonials-section h2' ).text( newval ); } ); } );
+    wp.customize( 'testimonials_home_lead', function( value ) { value.bind( function( newval ) { $( '.testimonials-section p.lead' ).text( newval ); } ); } );
+
     wp.customize( 'final_cta_title', function( value ) { value.bind( function( newval ) { $( '.final-cta-section h2' ).text( newval ); } ); } );
     wp.customize( 'final_cta_desc', function( value ) { value.bind( function( newval ) { $( '.final-cta-section p.lead' ).text( newval ); } ); } );
     wp.customize( 'final_cta_1_text', function( value ) { value.bind( function( newval ) { $( '.final-cta-section .final-cta-1' ).text( newval ); } ); } );
     wp.customize( 'final_cta_2_text', function( value ) { value.bind( function( newval ) { $( '.final-cta-section .final-cta-2' ).text( newval ); } ); } );
 
     // Home Testimonial
-    wp.customize( 'testimonial_quote', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .quote-text' ).text( newval ); } ); } );
+    wp.customize( 'testimonial_quote', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .quote-text' ).text( '"' + newval + '"' ); } ); } );
     wp.customize( 'testimonial_author', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .author-name' ).text( newval ); } ); } );
     wp.customize( 'testimonial_role', function( value ) { value.bind( function( newval ) { $( '.testimonials-section .author-role' ).text( newval ); } ); } );
 
@@ -133,8 +165,8 @@
     wp.customize( 'lead_magnet_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-lead-magnet-landing-php p.lead' ).text( newval ); } ); } );
     wp.customize( 'lm_benefit_title', function( value ) { value.bind( function( newval ) { $( '.lm-benefit-title' ).text( newval ); } ); } );
 
-    wp.customize( 'thank_you_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-page-php h1' ).text( newval ); } ); } );
-    wp.customize( 'thank_you_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-page-php p.lead' ).text( newval ); } ); } );
+    wp.customize( 'thank_you_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php h1' ).text( newval ); } ); } );
+    wp.customize( 'thank_you_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php p.lead' ).text( newval ); } ); } );
     wp.customize( 'thank_you_next_title', function( value ) { value.bind( function( newval ) { $( '.thank-you-next-title' ).text( newval ); } ); } );
     wp.customize( 'thank_you_next_desc', function( value ) { value.bind( function( newval ) { $( '.thank-you-next-desc' ).text( newval ); } ); } );
 
@@ -172,7 +204,7 @@
 
             // Product Items (Home)
             wp.customize( 'product_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.products-section .col-lg-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );
-            wp.customize( 'product_item_' + i + '_price', function( value ) { value.bind( function( newval ) { $( '.products-section .col-lg-4:nth-child(' + i + ') .price' ).text( newval ); } ); } );
+            wp.customize( 'product_item_' + i + '_price', function( value ) { value.bind( function( newval ) { $( '.products-section .col-lg-4:nth-child(' + i + ') .price-tag' ).text( newval ); } ); } );
 
             // Category Items
             wp.customize( 'category_item_' + i + '_title', function( value ) { value.bind( function( newval ) { $( '.categories-section .col-lg-4:nth-child(' + i + ') h3' ).text( newval ); } ); } );

@@ -2,7 +2,7 @@
 <main id="primary" class="site-main py-6 bg-light">
 	<div class="container">
 		<header class="archive-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block archive-title-prefix"><?php echo esc_html(get_theme_mod('archive_title_prefix', 'Explore Our')); ?></span>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block archive-title-prefix"><?php echo esc_html(get_theme_mod('archive_title_prefix', 'Mastering:')); ?></span>
 			<h1 class="display-3 fw-black text-navy mb-3">
 				<?php
 				if ( is_category() ) :
@@ -10,9 +10,9 @@
 				elseif ( is_tag() ) :
 					single_tag_title();
 				elseif ( is_author() ) :
-					echo 'Author: ' . get_the_author();
+					echo 'Strategist: ' . get_the_author();
 				else :
-					echo 'Our Insights';
+					echo 'Elite Insights';
 				endif;
 				?>
 			</h1>
@@ -27,8 +27,8 @@
 					get_template_part( 'template-parts/content', get_post_type() );
 				endwhile;
 
-                $older_label = get_theme_mod('archive_older_label', 'Older Posts');
-                $newer_label = get_theme_mod('archive_newer_label', 'Newer Posts');
+                $older_label = get_theme_mod('archive_older_label', 'Previous Strategies');
+                $newer_label = get_theme_mod('archive_newer_label', 'Recent Strategics');
 				the_posts_navigation( array(
 					'prev_text' => '<i class="fas fa-arrow-left me-2"></i> <span class="archive-older-label">' . esc_html($older_label) . '</span>',
 					'next_text' => '<span class="archive-newer-label">' . esc_html($newer_label) . '</span> <i class="fas fa-arrow-right ms-2"></i>',

@@ -32,7 +32,7 @@
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 120, '', '', array( 'class' => 'rounded-circle border border-4 border-light' ) ); ?>
 			</div>
 			<div class="author-info">
-				<span class="text-accent small text-uppercase fw-bold mb-2 d-block author-box-title"><?php echo esc_html(get_theme_mod('author_box_title', 'About The Author')); ?></span>
+				<span class="text-accent small text-uppercase fw-bold mb-2 d-block author-box-title"><?php echo esc_html(get_theme_mod('author_box_title', 'The Strategist Behind The Words')); ?></span>
 				<h3 class="author-name h4 fw-bold text-navy mb-3"><?php the_author(); ?></h3>
 				<p class="author-bio mb-4 text-muted"><?php the_author_meta( 'description' ); ?></p>
 				<div class="author-socials d-flex gap-3">
@@ -45,7 +45,7 @@
 		<?php endif; ?>
 
 		<div class="related-posts">
-			<h3 class="h4 fw-bold text-navy mb-5 text-center related-posts-title"><?php echo esc_html(get_theme_mod('related_posts_title', 'You Might Also Like')); ?></h3>
+			<h3 class="h4 fw-bold text-navy mb-5 text-center related-posts-title"><?php echo esc_html(get_theme_mod('related_posts_title', 'Continue Your Mastery Journey')); ?></h3>
 			<div class="row g-4">
 				<?php
 				$related = new WP_Query( array(
@@ -75,8 +75,8 @@
 		</div>
 
         <?php
-        $nav_prev_label = get_theme_mod('nav_prev_label', 'Previous Post');
-        $nav_next_label = get_theme_mod('nav_next_label', 'Next Post');
+        $nav_prev_label = get_theme_mod('nav_prev_label', 'Previous Insight');
+        $nav_next_label = get_theme_mod('nav_next_label', 'Next Level Insight');
         the_post_navigation( array(
             'prev_text' => '<span class="text-muted small nav-prev-label">' . esc_html($nav_prev_label) . '</span><br><span class="h6 fw-bold">%title</span>',
             'next_text' => '<span class="text-muted small nav-next-label">' . esc_html($nav_next_label) . '</span><br><span class="h6 fw-bold">%title</span>',

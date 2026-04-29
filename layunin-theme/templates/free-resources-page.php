@@ -6,17 +6,17 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block free-resources-badge"><?php echo esc_html(get_theme_mod('free_resources_badge', 'Knowledge Library')); ?></span>
-			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Success Library' ) ); ?></h1>
-			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'free_resources_content', 'Free guides, planners, and templates designed to give you a head start in your personal and professional development.' ) ); ?></p>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block free-resources-badge"><?php echo esc_html(get_theme_mod('free_resources_badge', 'The Knowledge Vault')); ?></span>
+			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'free_resources_title', 'Free Resources Page' ) ); ?></h1>
+			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'free_resources_content', 'Start your journey with our complimentary high-output guides and frameworks.' ) ); ?></p>
 		</header>
 
 		<div class="row g-4 mb-6">
 			<?php for($i = 1; $i <= 4; $i++) :
-				$title = get_theme_mod("resource_{$i}_title", 'Resource ' . $i);
-				$type = get_theme_mod("resource_{$i}_type", 'Guide');
+				$title = get_theme_mod("resource_{$i}_title", 'Mastery Guide ' . $i);
+				$type = get_theme_mod("resource_{$i}_type", 'Elite Protocol');
 				$link = get_theme_mod("resource_{$i}_link", '#');
-				$icon = get_theme_mod("resource_{$i}_icon", 'fas fa-download');
+				$icon = get_theme_mod("resource_{$i}_icon", 'fas fa-shield-halved');
 			?>
 			<div class="col-lg-3 col-md-6 animate-up resource-item" style="animation-delay: <?php echo 0.1 * $i; ?>s;">
 				<div class="resource-card card h-100 p-4 border-0 shadow-sm text-center transition-all hover-lift">

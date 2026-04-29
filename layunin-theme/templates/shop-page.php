@@ -6,28 +6,22 @@ get_header(); ?>
 <main id="primary" class="site-main py-6">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block shop-badge"><?php echo esc_html(get_theme_mod('shop_badge', 'Premium Assets')); ?></span>
-			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'shop_title', 'Premium Tools' ) ); ?></h1>
-			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'shop_content', 'Invest in your growth with our curated collection of digital products and frameworks.' ) ); ?></p>
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block shop-badge"><?php echo esc_html(get_theme_mod('shop_badge', 'The Mastery Collection')); ?></span>
+			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'shop_title', 'Shop Page' ) ); ?></h1>
+			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'shop_content', 'Invest in the precision-engineered digital assets that drive world-class execution.' ) ); ?></p>
 		</header>
 
 		<div class="row g-4">
 			<?php for($i = 1; $i <= 6; $i++) :
-				$title = get_theme_mod("shop_item_{$i}_title", 'Digital Product ' . $i);
-				$price = get_theme_mod("shop_item_{$i}_price", '₱999');
-				$image = get_theme_mod("shop_item_{$i}_image");
+				$title = get_theme_mod("shop_item_{$i}_title", 'Elite Framework ' . $i);
+				$price = get_theme_mod("shop_item_{$i}_price", '₱2,499');
+				$image = get_theme_mod("shop_item_{$i}_image", 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400');
 				$link = get_theme_mod("shop_item_{$i}_link", "#");
 			?>
 			<div class="col-lg-4 col-md-6 animate-up product-item" style="animation-delay: <?php echo 0.05 * $i; ?>s;">
 				<div class="product-card card h-100 border-0 shadow-sm overflow-hidden transition-all hover-lift">
 					<div class="product-image position-relative">
-						<?php if($image) : ?>
-							<img src="<?php echo esc_url($image); ?>" class="card-img-top" alt="<?php echo esc_attr($title); ?>">
-						<?php else : ?>
-							<div class="bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
-								<i class="fas fa-file-pdf fa-4x text-muted opacity-25"></i>
-							</div>
-						<?php endif; ?>
+						<img src="<?php echo esc_url($image); ?>" class="card-img-top" alt="<?php echo esc_attr($title); ?>">
 						<div class="product-overlay position-absolute top-0 start-0 w-100 h-100 bg-navy bg-opacity-10 d-flex align-items-center justify-content-center opacity-0 transition-all hover-opacity-100">
 							<a href="<?php echo esc_url($link); ?>" class="btn btn-gold px-4 shadow">View Details</a>
 						</div>

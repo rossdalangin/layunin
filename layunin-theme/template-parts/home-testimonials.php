@@ -16,7 +16,7 @@
 				$image = get_theme_mod('testimonial_image', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300');
 				?>
 				<div class="testimonial-card-main p-6 bg-light rounded-4 shadow-sm position-relative" style="border-radius: 40px !important;">
-					<div class="quote-icon position-absolute top-0 start-0 m-5 opacity-10"><i class="fas fa-quote-left fa-6x text-gold"></i></div>
+					<div class="quote-icon position-absolute top-0 start-0 m-5 opacity-10 z-index-0"><i class="fas fa-quote-left fa-6x text-gold"></i></div>
 					<div class="position-relative z-index-1">
 						<p class="fs-3 fw-bold text-navy mb-5 quote-text italic">"<?php echo esc_html($quote); ?>"</p>
 						<div class="d-flex align-items-center gap-4">

@@ -14,8 +14,8 @@
 				</div>
 
 				<div class="d-flex justify-content-center gap-4">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-navy px-5 py-3 fw-bold"><?php echo esc_html(get_theme_mod('error_404_btn1', 'Back to Launchpad')); ?></a>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-outline-navy px-5 py-3 fw-bold border-2"><?php echo esc_html(get_theme_mod('error_404_btn2', 'Contact Support')); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-navy px-5 py-3 fw-bold error-404-btn1"><?php echo esc_html(get_theme_mod('error_404_btn1', 'Back to Launchpad')); ?></a>
+					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-outline-navy px-5 py-3 fw-bold border-2 error-404-btn2"><?php echo esc_html(get_theme_mod('error_404_btn2', 'Contact Support')); ?></a>
 				</div>
 			</div>
 		</div>

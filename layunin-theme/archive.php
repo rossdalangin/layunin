@@ -10,7 +10,7 @@
 				elseif ( is_tag() ) :
 					single_tag_title();
 				elseif ( is_author() ) :
-					echo 'Strategist: ' . get_the_author();
+					echo esc_html(get_theme_mod('blog_by_text', 'By')) . ': ' . get_the_author();
 				else :
 					echo 'Elite Insights';
 				endif;

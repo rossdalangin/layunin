@@ -185,6 +185,20 @@ section { padding: var(--space-xl) 0; }
 
 .animate-float { animation: float 8s ease-in-out infinite; }
 
+/* Contrast & Layering Fixes */
+.text-gold { color: var(--gold) !important; }
+.bg-white .text-gold, .bg-light .text-gold { color: #A67C00 !important; }
+
+.z-index-1 { z-index: 1 !important; position: relative; }
+.z-index-0 { z-index: 0 !important; }
+
+.testimonial-card-main .quote-icon {
+    pointer-events: none;
+    user-select: none;
+}
+
+.hover-opacity-100:hover { opacity: 1 !important; }
+
 /* Grid Mastery */
 .master-grid {
     display: grid;

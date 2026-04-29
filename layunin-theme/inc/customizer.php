@@ -431,6 +431,10 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_control( 'error_404_title', array( 'label' => '404 Headline', 'section' => "layunin_page_{$id}" ) );
             $wp_customize->add_setting( 'error_404_desc', array( 'default' => "We couldn't find the page you're looking for. But don't worry, every wrong turn is a chance to re-audit your direction. Let's get you back on course.", 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'error_404_desc', array( 'label' => '404 Description', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+            $wp_customize->add_setting( 'error_404_btn1', array( 'default' => 'Back to Launchpad', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'error_404_btn1', array( 'label' => '404 Button 1 Text', 'section' => "layunin_page_{$id}" ) );
+            $wp_customize->add_setting( 'error_404_btn2', array( 'default' => 'Contact Support', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+            $wp_customize->add_control( 'error_404_btn2', array( 'label' => '404 Button 2 Text', 'section' => "layunin_page_{$id}" ) );
             $wp_customize->add_setting( 'search_results_title', array( 'default' => 'Strategic Results for:', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'search_results_title', array( 'label' => 'Search Title Prefix', 'section' => "layunin_page_{$id}" ) );
             $wp_customize->add_setting( 'archive_title_prefix', array( 'default' => 'Mastering:', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );

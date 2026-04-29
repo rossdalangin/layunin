@@ -1,4 +1,4 @@
-# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.6)
+# 🏛️ Layunin Premium Theme - Comprehensive Architectural Documentation (v9.7)
 
 Welcome to the **Layunin Premium Theme**. This manual provides an exhaustive guide to the theme's architecture, customization engine, and navigation strategy.
 
@@ -62,7 +62,7 @@ To maintain the high-trust, conversion-focused design, follow these menu structu
 
 ## 🛠️ Content Management & The Customizer Engine
 
-The Layunin theme is **100% manageable**. Every text string, image, and section visibility toggle is centralized in the WordPress Customizer.
+The Layunin theme is **100% manageable**. Every text string, image, form placeholder, and section visibility toggle is centralized in the WordPress Customizer.
 
 ### 🏠 Homepage Construction (Modular Architecture)
 The homepage is composed of 13 high-conversion sections:

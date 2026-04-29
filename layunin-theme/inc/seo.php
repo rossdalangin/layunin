@@ -106,7 +106,7 @@ add_shortcode( 'pricing_table', 'layunin_pricing_table_shortcode' );
 function layunin_pricing_item_shortcode( $atts, $content = null ) {
     $a = shortcode_atts( array(
         'title' => 'Starter',
-        'price' => '₱0',
+        'price' => '&#8369;0',
         'features' => '',
         'link' => '#',
         'button' => 'Get Started',

@@ -9,12 +9,9 @@ get_header(); ?>
 			<h1 class="mb-4"><?php echo esc_html( get_theme_mod( 'terms_title', 'Terms Page' ) ); ?></h1>
 			<div class="legal-content">
                 <?php
-                $content = get_theme_mod( 'terms_content' );
-                if ( $content ) :
-                    echo wp_kses_post( wpautop( $content ) );
-                else : ?>
-                    <p>The standards of excellence for the Layunin community. By using this site, you agree to our elite protocols.</p>
-                <?php endif; ?>
+                $content = get_theme_mod( 'terms_content', 'The standards of excellence for the Layunin community. By using this site, you agree to our elite protocols.' );
+                echo wp_kses_post( wpautop( $content ) );
+                ?>
 			</div>
 		</div>
 	</div>

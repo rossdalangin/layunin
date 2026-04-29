@@ -64,7 +64,7 @@ function layunin_create_recommended_pages() {
             'content'  => '<!-- wp:paragraph --><p>Strategic insights and case studies for the pursuit of mastery.</p><!-- /wp:paragraph -->'
         ),
         'FAQs' => array(
-            'template' => '',
+            'template' => 'templates/faq-page.php',
             'content'  => '[faq_page][faq_item question="What is the Layunin Framework?"]It is a modular system for life re-engineering and output optimization.[/faq_item][faq_item question="How do I join the Elite Network?"]Start with the 7-Day Protocol and join our mailing list.[/faq_item][/faq_page]'
         )
     );

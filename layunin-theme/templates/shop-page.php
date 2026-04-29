@@ -14,7 +14,7 @@ get_header(); ?>
 		<div class="row g-4">
 			<?php for($i = 1; $i <= 6; $i++) :
 				$title = get_theme_mod("shop_item_{$i}_title", 'Elite Framework ' . $i);
-				$price = get_theme_mod("shop_item_{$i}_price", '₱2,499');
+				$price = get_theme_mod("shop_item_{$i}_price", '&#8369;2,499');
 				$image = get_theme_mod("shop_item_{$i}_image", 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400');
 				$link = get_theme_mod("shop_item_{$i}_link", "#");
 			?>

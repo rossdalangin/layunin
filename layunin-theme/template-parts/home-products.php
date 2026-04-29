@@ -8,9 +8,9 @@
 		<div class="row g-4">
 			<?php
             $prods = array(
-                1 => array('title' => 'The Master Planner', 'price' => '₱1,499'),
-                2 => array('title' => 'AI Prompt Vault', 'price' => '₱2,999'),
-                3 => array('title' => 'The Creator System', 'price' => '₱4,999')
+                1 => array('title' => 'The Master Planner', 'price' => '&#8369;1,499'),
+                2 => array('title' => 'AI Prompt Vault', 'price' => '&#8369;2,999'),
+                3 => array('title' => 'The Creator System', 'price' => '&#8369;4,999')
             );
 			for($i = 1; $i <= 3; $i++) :
 				$title = get_theme_mod("product_item_{$i}_title", $prods[$i]['title']);

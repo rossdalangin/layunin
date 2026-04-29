@@ -7,14 +7,14 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Layunin is a premium-grade educational WordPress theme designed specifically for personal growth brands, online income coaches, and productivity experts.
+Description: The definitive premium WordPress theme for personal growth brands, online income architects, and productivity experts. Version 9.7 - Absolute Masterpiece.
 
 == Description ==
 
-Layunin (Tagalog for 'Goal' or 'Purpose') is built to help Filipinos and global achievers turn their ambitions into precise action. It features a robust Customizer engine that gives you 100% control over your branding and content.
+Layunin (Tagalog for 'Goal' or 'Purpose') is built to help Filipinos and global high-achievers turn their ambitions into precise, high-impact action. It features a robust Customizer engine that provides 100% control over every word, button, and image on your site.
 
 Key Features:
-* 100% Manageable Content: Edit everything via the WordPress Customizer.
+* 100% Manageable Architecture: Edit every headline, description, badge, list item, and button text via the Customizer.
 * Automated Ecosystem: Generates essential pages and sample data upon activation.
 * High-Conversion Homepage: 13 modular sections designed for authority and leads.
 * SEO & Schema Ready: Built-in JSON-LD for articles, FAQs, and reviews.

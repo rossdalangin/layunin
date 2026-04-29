@@ -17,9 +17,11 @@
 				get_template_part( 'template-parts/content-single', get_post_type() );
 
 				// Post Navigation
+                $nav_prev = get_theme_mod('nav_prev_label', 'Previous Insight');
+                $nav_next = get_theme_mod('nav_next_label', 'Next Level Insight');
 				the_post_navigation( array(
-					'prev_text' => '<span class="text-muted small">Previous Post</span><br><span class="h6 fw-bold">%title</span>',
-					'next_text' => '<span class="text-muted small">Next Post</span><br><span class="h6 fw-bold">%title</span>',
+					'prev_text' => '<span class="text-muted small">' . esc_html($nav_prev) . '</span><br><span class="h6 fw-bold">%title</span>',
+					'next_text' => '<span class="text-muted small">' . esc_html($nav_next) . '</span><br><span class="h6 fw-bold">%title</span>',
 					'class'     => 'post-navigation my-5 d-flex justify-content-between p-4 bg-light rounded-4'
 				) );
 

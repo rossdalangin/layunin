@@ -48,11 +48,11 @@ get_header(); ?>
 					<form class="row g-3">
 						<div class="col-12">
 							<label class="form-label small fw-bold lm-form-name-label"><?php echo esc_html(get_theme_mod('lm_form_name_label', 'Your First Name')); ?></label>
-							<input type="text" class="form-control form-control-lg bg-light border-0" placeholder="e.g. Maria" required>
+							<input type="text" class="form-control form-control-lg bg-light border-0" placeholder="<?php echo esc_attr(get_theme_mod('lm_form_name_ph', 'e.g. Maria')); ?>" required>
 						</div>
 						<div class="col-12">
 							<label class="form-label small fw-bold lm-form-email-label"><?php echo esc_html(get_theme_mod('lm_form_email_label', 'Your Primary Email')); ?></label>
-							<input type="email" class="form-control form-control-lg bg-light border-0" placeholder="e.g. maria@example.com" required>
+							<input type="email" class="form-control form-control-lg bg-light border-0" placeholder="<?php echo esc_attr(get_theme_mod('lm_form_email_ph', 'e.g. maria@example.com')); ?>" required>
 						</div>
 						<div class="col-12 mt-4">
 							<button type="submit" class="btn btn-navy btn-lg w-100 py-3 fw-bold shadow-lg transition-all lm-form-btn"><?php echo esc_html(get_theme_mod('lm_form_btn', 'Download My Copy Now')); ?> <i class="fas fa-download ms-2"></i></button>

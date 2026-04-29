@@ -56,8 +56,8 @@ get_header(); ?>
 				for($i=1; $i<=3; $i++) : ?>
 					<div class="col-lg-4 col-md-6">
 						<div class="testimonial-card card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
-							<blockquote class="text-muted mb-4">Layunin has completely changed my mindset toward goal setting. I finally have the tools to succeed.</blockquote>
-							<h4 class="h6 fw-bold text-navy mb-0">Maria Santos</h4>
+							<blockquote class="text-muted mb-4"><?php echo esc_html(get_theme_mod('testimonials_fallback_quote', 'Layunin has completely changed my mindset toward goal setting. I finally have the tools to succeed.')); ?></blockquote>
+							<h4 class="h6 fw-bold text-navy mb-0"><?php echo esc_html(get_theme_mod('testimonials_fallback_author', 'Maria Santos')); ?></h4>
 						</div>
 					</div>
 				<?php endfor;

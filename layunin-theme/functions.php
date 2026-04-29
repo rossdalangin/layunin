@@ -76,7 +76,9 @@ add_action( 'wp_enqueue_scripts', 'layunin_scripts' );
 function layunin_reading_time() {
     $content = get_post_field( 'post_content', get_the_ID() );
     $word_count = str_word_count( strip_tags( $content ) );
-    $reading_time = ceil( $word_count / 200 );
+    $wpm = get_theme_mod('blog_wpm', 200);
+    if(!$wpm) $wpm = 200;
+    $reading_time = ceil( $word_count / $wpm );
     return $reading_time;
 }
 

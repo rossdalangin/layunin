@@ -9,12 +9,9 @@ get_header(); ?>
 			<h1 class="mb-4"><?php echo esc_html( get_theme_mod( 'privacy_policy_title', 'Privacy Policy Page' ) ); ?></h1>
 			<div class="legal-content">
                 <?php
-                $content = get_theme_mod( 'privacy_policy_content' );
-                if ( $content ) :
-                    echo wp_kses_post( wpautop( $content ) );
-                else : ?>
-                    <p>Your data security is paramount in the pursuit of mastery. We use industry-standard encryption.</p>
-                <?php endif; ?>
+                $content = get_theme_mod( 'privacy_policy_content', 'Your data security is paramount in the pursuit of mastery. We use industry-standard encryption.' );
+                echo wp_kses_post( wpautop( $content ) );
+                ?>
 			</div>
 		</div>
 	</div>

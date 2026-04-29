@@ -34,6 +34,7 @@
     // --- 2. HEADER & ANNOUNCEMENT ---
     wp.customize( 'announcement_text', function( value ) { value.bind( function( newval ) { $( '.announcement-bar .announcement-text' ).text( newval ); } ); } );
     wp.customize( 'header_cta_text', function( value ) { value.bind( function( newval ) { $( '.header-cta .btn-gold, .offcanvas-body .btn-gold' ).text( newval ); } ); } );
+    wp.customize( 'header_dark_mode_title', function( value ) { value.bind( function( newval ) { $( '#dark-mode-toggle' ).attr('title', newval); } ); } );
 
     // --- 3. HOMEPAGE MASTER ENGINE ---
 
@@ -89,6 +90,7 @@
     // 8. Lead Magnet Home
     wp.customize( 'lm_title', function( value ) { value.bind( function( newval ) { $( '.lead-magnet-section h2' ).text( newval ); } ); } );
     wp.customize( 'lm_subtitle', function( value ) { value.bind( function( newval ) { $( '.lead-magnet-section p.fs-5' ).text( newval ); } ); } );
+    wp.customize( 'lm_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.lead-magnet-section input', newval); } ); } );
     wp.customize( 'lm_btn_text', function( value ) { value.bind( function( newval ) { $( '.lm-btn-text' ).text( newval ); } ); } );
     wp.customize( 'lm_list', function( value ) { value.bind( function( newval ) {
         updateList('.lead-magnet-section ul', newval);
@@ -156,6 +158,15 @@
     wp.customize( 'blog_by_text', function( value ) { value.bind( function( newval ) { $( '.author-vcard' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(' ' + newval + ' '); } ); } );
     wp.customize( 'blog_min_text', function( value ) { value.bind( function( newval ) { $( '.small.text-muted span:last-child' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(' ' + newval); } ); } );
     wp.customize( 'blog_min_read_text', function( value ) { value.bind( function( newval ) { $( '.reading-time' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(' ' + newval); } ); } );
+    wp.customize( 'blog_posted_on_text', function( value ) { value.bind( function( newval ) { $( '.posted-on' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(' ' + newval + ' '); } ); } );
+    wp.customize( 'blog_search_btn_text', function( value ) { value.bind( function( newval ) { $( 'body.search-results .btn-navy' ).text( newval ); } ); } );
+    wp.customize( 'blog_share_text', function( value ) { value.bind( function( newval ) { $( '.blog-share-text' ).text( newval ); } ); } );
+    wp.customize( 'blog_share_on_text', function( value ) { value.bind( function( newval ) {
+        $( '.sticky-social-share a' ).each(function() {
+            var platform = $(this).attr('aria-label').split(' ').pop();
+            $(this).attr('aria-label', newval + ' ' + platform);
+        });
+    } ); } );
     wp.customize( 'read_more_text', function( value ) { value.bind( function( newval ) { $( '.read-more-text' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(newval + ' '); } ); } );
     wp.customize( 'author_box_title', function( value ) { value.bind( function( newval ) { $( '.author-box-title' ).text( newval ); } ); } );
     wp.customize( 'related_posts_title', function( value ) { value.bind( function( newval ) { $( '.related-posts-title' ).text( newval ); } ); } );
@@ -241,6 +252,8 @@
     wp.customize( 'testimonials_cta_title', function( value ) { value.bind( function( newval ) { $( '.testimonials-cta-title' ).text( newval ); } ); } );
     wp.customize( 'testimonials_cta_desc', function( value ) { value.bind( function( newval ) { $( '.testimonials-cta-desc' ).text( newval ); } ); } );
     wp.customize( 'testimonials_cta_btn', function( value ) { value.bind( function( newval ) { $( '.testimonials-cta-btn' ).text( newval ); } ); } );
+    wp.customize( 'testimonials_fallback_quote', function( value ) { value.bind( function( newval ) { $( 'body.page-template-testimonials-page-php blockquote' ).text( newval ); } ); } );
+    wp.customize( 'testimonials_fallback_author', function( value ) { value.bind( function( newval ) { $( 'body.page-template-testimonials-page-php .h6.fw-bold' ).text( newval ); } ); } );
 
     // Lead Magnet Landing
     wp.customize( 'lead_magnet_landing_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-lead-magnet-landing-php h1' ).text( newval ); } ); } );
@@ -251,7 +264,9 @@
     wp.customize( 'lm_form_title', function( value ) { value.bind( function( newval ) { $( '.lm-form-title' ).text( newval ); } ); } );
     wp.customize( 'lm_form_desc', function( value ) { value.bind( function( newval ) { $( '.lm-form-desc' ).text( newval ); } ); } );
     wp.customize( 'lm_form_name_label', function( value ) { value.bind( function( newval ) { $( '.lm-form-name-label' ).text( newval ); } ); } );
+    wp.customize( 'lm_form_name_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.landing-form-card input:first', newval); } ); } );
     wp.customize( 'lm_form_email_label', function( value ) { value.bind( function( newval ) { $( '.lm-form-email-label' ).text( newval ); } ); } );
+    wp.customize( 'lm_form_email_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.landing-form-card input[type=email]', newval); } ); } );
     wp.customize( 'lm_form_btn', function( value ) { value.bind( function( newval ) {
         $( '.lm-form-btn' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(newval + ' ');
     } ); } );
@@ -276,6 +291,14 @@
     wp.customize( 'privacy_policy_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php .legal-content' ).html( newval ); } ); } );
     wp.customize( 'terms_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php h1' ).text( newval ); } ); } );
     wp.customize( 'terms_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php .legal-content' ).html( newval ); } ); } );
+
+    // FAQ Page
+    wp.customize( 'faq_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-faq-page-php .faq-title' ).text( newval ); } ); } );
+    wp.customize( 'faq_badge', function( value ) { value.bind( function( newval ) { $( '.faq-badge' ).text( newval ); } ); } );
+    wp.customize( 'faq_lead', function( value ) { value.bind( function( newval ) { $( '.faq-lead' ).text( newval ); } ); } );
+    wp.customize( 'faq_cta_title', function( value ) { value.bind( function( newval ) { $( '.faq-cta-title' ).text( newval ); } ); } );
+    wp.customize( 'faq_cta_desc', function( value ) { value.bind( function( newval ) { $( '.faq-cta-desc' ).text( newval ); } ); } );
+    wp.customize( 'faq_cta_btn', function( value ) { value.bind( function( newval ) { $( '.faq-cta-btn' ).text( newval ); } ); } );
 
     // 404 & Search
     wp.customize( 'error_404_title', function( value ) { value.bind( function( newval ) { $( '.error-404-title' ).text( newval ); } ); } );
@@ -318,6 +341,7 @@
     wp.customize( 'footer_col3_title', function( value ) { value.bind( function( newval ) { $( '.footer-col3-title' ).text( newval ); } ); } );
     wp.customize( 'footer_newsletter_title', function( value ) { value.bind( function( newval ) { $( '.footer-newsletter-title' ).text( newval ); } ); } );
     wp.customize( 'footer_newsletter_desc', function( value ) { value.bind( function( newval ) { $( '.footer-newsletter-desc' ).text( newval ); } ); } );
+    wp.customize( 'footer_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.site-footer .newsletter-form input', newval); } ); } );
     wp.customize( 'footer_newsletter_btn', function( value ) { value.bind( function( newval ) { $( '.footer-newsletter-btn' ).text( newval ); } ); } );
     wp.customize( 'footer_newsletter_trust', function( value ) { value.bind( function( newval ) { $( '.footer-newsletter-trust' ).contents().filter(function(){ return this.nodeType == 3; }).replaceWith(' ' + newval); } ); } );
     wp.customize( 'footer_privacy_label', function( value ) { value.bind( function( newval ) { $( '.footer-privacy-label' ).text( newval ); } ); } );

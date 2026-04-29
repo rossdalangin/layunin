@@ -9,12 +9,9 @@ get_header(); ?>
 			<h1 class="mb-4"><?php echo esc_html( get_theme_mod( 'affiliate_disclosure_title', 'Affiliate Disclosure Page' ) ); ?></h1>
 			<div class="legal-content">
                 <?php
-                $content = get_theme_mod( 'affiliate_disclosure_content' );
-                if ( $content ) :
-                    echo wp_kses_post( wpautop( $content ) );
-                else : ?>
-                    <p>Transparency is a core value of the Layunin community. Please assume that links on this site may be affiliate links. We only recommend elite tools we use ourselves.</p>
-                <?php endif; ?>
+                $content = get_theme_mod( 'affiliate_disclosure_content', 'Transparency is a core value of the Layunin community. Please assume that links on this site may be affiliate links. We only recommend elite tools we use ourselves.' );
+                echo wp_kses_post( wpautop( $content ) );
+                ?>
 			</div>
 		</div>
 	</div>

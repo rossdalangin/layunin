@@ -12,7 +12,7 @@
 				</div>
 				<?php else: ?>
 				<div class="col-6 col-md-3 text-center">
-					<span class="h4 fw-bold text-muted">PARTNER <?php echo $i; ?></span>
+					<span class="h4 fw-bold text-muted"><?php echo esc_html(get_theme_mod('trust_badge_fallback', 'PARTNER')); ?> <?php echo $i; ?></span>
 				</div>
 				<?php endif; ?>
 			<?php endfor; ?>

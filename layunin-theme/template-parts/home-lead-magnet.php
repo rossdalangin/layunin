@@ -26,7 +26,10 @@
 			</div>
 			<div class="col-lg-6 d-none d-lg-block animate-up" style="animation-delay: 0.2s;">
 				<div class="lm-visual-wrapper p-3 bg-white-10 rounded-4 shadow-lg rotate-3">
-					<img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800" alt="Guide Cover" class="img-fluid rounded-4">
+					<?php
+					$lm_image = get_theme_mod('lm_image', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800');
+					?>
+					<img src="<?php echo esc_url($lm_image); ?>" alt="Guide Cover" class="img-fluid rounded-4">
 				</div>
 			</div>
 		</div>

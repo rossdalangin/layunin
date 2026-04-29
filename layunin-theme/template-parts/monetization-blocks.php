@@ -15,7 +15,7 @@
 	<img src="<?php echo esc_url($product_img); ?>" alt="Planner" class="img-fluid mb-2 rounded monetization-product-img">
 	<p class="small monetization-product-desc"><?php echo esc_html(get_theme_mod('monetization_product_desc', 'The exact blueprint used to 10X our digital asset portfolio.')); ?></p>
     <?php
-    $product_price = get_theme_mod('product_item_1_price', '₱999');
+    $product_price = get_theme_mod('product_item_1_price', '&#8369;999');
     $product_link = get_theme_mod('product_item_1_link', '#');
     ?>
 	<a href="<?php echo esc_url($product_link); ?>" class="btn btn-outline-primary btn-sm w-100 monetization-product-btn"><?php echo esc_html(get_theme_mod('monetization_product_btn', 'Buy Now')); ?> - <span class="monetization-product-price"><?php echo esc_html($product_price); ?></span></a>
@@ -24,6 +24,8 @@
 <div class="affiliate-banner mb-4">
 	<?php
 	$banner = get_theme_mod( 'affiliate_banner_url', 'https://images.unsplash.com/photo-1512428559083-a40ea9013f01?auto=format&fit=crop&q=80&w=800' );
+	$link = get_theme_mod( 'affiliate_banner_link', '#' );
+    $alt = get_theme_mod( 'affiliate_banner_alt', 'Partner Offer' );
 	?>
-	<a href="#"><img src="<?php echo esc_url($banner); ?>" alt="Partner Offer" class="img-fluid rounded affiliate-banner-img"></a>
+	<a href="<?php echo esc_url($link); ?>"><img src="<?php echo esc_url($banner); ?>" alt="<?php echo esc_attr($alt); ?>" class="img-fluid rounded affiliate-banner-img"></a>
 </div>

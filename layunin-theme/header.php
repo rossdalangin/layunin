@@ -12,6 +12,18 @@
             --border-radius: <?php echo get_theme_mod( 'border_radius', '16' ); ?>px;
             --body-font: '<?php echo get_theme_mod( 'body_font', 'Inter' ); ?>', sans-serif;
 		}
+        <?php
+        $cats = array('Goal Setting', 'Online Income', 'Productivity', 'AI Tools', 'Mindset', 'Business', 'Success Stories');
+        foreach($cats as $cat) {
+            $cat_id = sanitize_title($cat);
+            $color = get_theme_mod("color_cat_{$cat_id}");
+            if($color) {
+                echo ".category-{$cat_id} { --cat-color: {$color}; }\n";
+                echo ".bg-cat-{$cat_id} { background-color: {$color} !important; }\n";
+                echo ".text-cat-{$cat_id} { color: {$color} !important; }\n";
+            }
+        }
+        ?>
         body { font-family: var(--body-font); }
         .card, .btn, .form-control, .rounded-4 { border-radius: var(--border-radius) !important; }
         .announcement-bar { background: var(--navy); color: #fff; padding: 10px 0; text-align: center; font-size: 0.875rem; font-weight: 600; position: relative; z-index: 2001; }
@@ -62,7 +74,7 @@
 					) );
 					?>
 					<div class="header-actions header-cta ms-5 d-flex align-items-center gap-3">
-						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="Switch Mode">🌓</button>
+						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="<?php echo esc_attr(get_theme_mod('header_dark_mode_title', 'Switch Mode')); ?>">🌓</button>
 						<a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold px-4 py-2 small fw-bold shadow-sm"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
 					</div>
 				</nav>

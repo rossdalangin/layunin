@@ -1,0 +1,27 @@
+LAYUNIN SEO & ORGANIC GROWTH STRATEGY
+MASTERING THE DIGITAL LANDSCAPE FOR FILIPINO ACHIEVERS
+
+1. CORE KEYWORD ARCHITECTURE (LOCALIZED)
+- Primary Keywords: Goal Setting Philippines, Online Income Systems PH, AI Productivity Filipino, Remote Work Systems BGC.
+- Long-Tail Intent: "How to exit BPO for freelancing", "Best digital planners for Gcash", "AI tools for Filipino VAs", "Personal growth communities Manila".
+
+2. PILLAR-CLUSTER CONTENT MODEL
+Each of the 4 Homepage Pillars serves as a Content Hub:
+- Pillar 1 (Goal Setting): Cluster around "Layunin alignment", "Yearly Audit", "Quarterly Sprints".
+- Pillar 2 (Online Income): Cluster around "Digital Assets", "Affiliate Protocols", "Scalable Services".
+- Pillar 3 (Productivity): Cluster around "Deep Work Manila", "Golden Ratio Scheduling", "BPO Optimization".
+- Pillar 4 (AI Mastery): Cluster around "ChatGPT for Filipinos", "Modular Prompting", "Future-proof Careers".
+
+3. TECHNICAL SEO PROTOCOL
+- Site Speed: The v9.8 theme is built on a minimal PHP architecture for <1s load times (Elite standard).
+- Schema.org: Every Pillar Post must include JSON-LD Article and FAQ schema (built into 'inc/seo.php').
+- Mobile-First: 90% of your traffic will be mobile (Gcash/Maya users). Ensure all "Product Offers" look perfect on narrow viewports.
+
+4. ORGANIC TRAFFIC CHANNELS
+- LinkedIn: The primary channel for "Plateaued Professionals." Post high-contrast "Architecture" carousels.
+- Facebook Groups: Join "Digital Nomads Philippines" and "VA Philippines." Provide value-first protocols, never spam links.
+- YouTube/TikTok: Short-form videos demonstrating the "3X Output" with AI. Link back to the Lead Magnet Landing Page.
+
+5. THE "MASTERY" BACKLINK STRATEGY
+- Local PR: Reach out to tech/lifestyle blogs like Rappler or Inquirer for "Modern Filipino Achievement" features.
+- Guest Protocols: Write for "When In Manila" or "Outsource Accelerator" focusing on high-output systems.

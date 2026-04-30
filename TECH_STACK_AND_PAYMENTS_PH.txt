@@ -1,0 +1,27 @@
+LAYUNIN TECH STACK & PH PAYMENT PROTOCOLS
+ARCHITECTING THE TRANSACTION LAYER FOR THE PHILIPPINE MARKET
+
+1. THE "ELITE" TECH STACK (MINIMALIST & SCALABLE)
+- Website: WordPress + Layunin v9.8 (Masterpiece Edition).
+- Hosting: SiteGround or Hostinger (Singapore Servers) for <1s local latency.
+- Email Marketing: ConvertKit or MailerLite (High deliverability for PH ISPs).
+- Course/Asset Delivery: Thrivecart or Gumroad (for ease) OR MemberPress (integrated into WordPress).
+
+2. LOCAL PAYMENT GATEWAYS (THE GCASH/MAYA FACTOR)
+90% of your Filipino customers will prefer non-credit card options.
+- Primary Recommendation: PayMongo. Support for GCash, Maya, BillEase (Installments), and local cards via a single API.
+- Alternative: Xendit. Excellent dashboard and local support.
+- Manual Protocol: Bank Transfer (BPI/BDO) + GCash QR. Use the "Contact" page for manual high-ticket onboarding.
+
+3. INSTALLMENT SYSTEMS (BUY NOW, PAY LATER)
+For the ₱15k - ₱49k tiers, installments increase conversion by 40%.
+- Integrated BNPL: BillEase (via PayMongo) or Maya Credit.
+- Internal Protocol: 3-month payment plan for the "Mastery" tier handled via PayPal/Stripe subscriptions.
+
+4. AUTOMATION & INTEGRATION
+- Use Zapier or Pabbly Connect to link PayMongo -> ConvertKit -> WordPress.
+- Trigger the "Thank You" protocol immediately upon payment confirmation.
+
+5. TAX & COMPLIANCE (PH CONTEXT)
+- Use JuanaTax or Taxumo for automated BIR filing as a "Self-Employed" professional/freelancer.
+- Ensure the "Terms" and "Privacy" templates (v9.8) are updated with your local business details.

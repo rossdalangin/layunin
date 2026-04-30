@@ -16,7 +16,7 @@ function layunin_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'heading_font', array( 'label' => 'Heading Font', 'section' => 'layunin_design_system', 'type' => 'select', 'choices' => array('Playfair Display' => 'Playfair Display', 'Inter' => 'Inter', 'Montserrat' => 'Montserrat') ) );
 
     $wp_customize->add_setting( 'primary_color', array( 'default' => '#050A18', 'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array( 'label' => 'Primary Midnight', 'section' => 'colors' ) ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array( 'label' => 'Brand Navy', 'section' => 'colors' ) ) );
 	$wp_customize->add_setting( 'accent_color', array( 'default' => '#C5A02B', 'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array( 'label' => 'Elite Gold', 'section' => 'colors' ) ) );
 

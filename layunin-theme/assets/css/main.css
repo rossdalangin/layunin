@@ -1,14 +1,14 @@
 /*
 Theme Name: Layunin Masterpiece Ultimate
-Version: 8.0
+Version: 9.8
 */
 
 :root {
     /* Absolute Premium Palette */
-    --navy: #0A192F;
-    --navy-light: #112240;
-    --navy-dark: #020C1B;
-    --gold: #D4AF37;
+    --navy: #050A18;
+    --navy-light: #121E3B;
+    --navy-dark: #020612;
+    --gold: #C5A02B;
     --gold-hover: #F1D36E;
     --emerald: #00A36C;
     --white: #FFFFFF;
@@ -300,4 +300,63 @@ section { padding: var(--space-xl) 0; }
 @media (max-width: 991px) {
     .display-1 { font-size: 3.5rem; }
     .site-header { padding: 1rem 0; }
+}
+
+/* Dark Mode Architecture */
+body.dark-mode {
+    --white: #050A18;
+    --bg-light: #020612;
+    --text-main: #E2E8F0;
+    --text-muted: #94A3B8;
+    --navy: #0A192F;
+    --navy-light: #112240;
+}
+
+body.dark-mode .site-header {
+    background: rgba(5, 10, 24, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-link { color: #E2E8F0 !important; }
+body.dark-mode .card { background: var(--navy-light); color: #E2E8F0; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #FFFFFF; }
+body.dark-mode .text-navy { color: #E2E8F0 !important; }
+
+/* Utility Classes for Navy Backgrounds */
+.bg-navy { background-color: var(--navy) !important; }
+.bg-navy-light { background-color: var(--navy-light) !important; }
+.text-white { color: #FFFFFF !important; }
+.text-white-50 { color: rgba(255, 255, 255, 0.5) !important; }
+
+/* Footer Excellence */
+.site-footer {
+    background-color: var(--navy) !important;
+}
+
+.site-footer .footer-branding .branding-text,
+.site-footer .footer-newsletter-desc,
+.site-footer .footer-bottom,
+.site-footer .copyright {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.site-footer h3,
+.site-footer .footer-newsletter-title {
+    color: #FFFFFF !important;
+}
+
+.site-footer .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.site-footer .nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.site-footer .footer-meta a {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.site-footer .footer-meta a:hover {
+    color: #FFFFFF !important;
 }

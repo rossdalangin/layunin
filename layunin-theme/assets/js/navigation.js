@@ -1,5 +1,5 @@
 /**
- * Layunin Masterpiece Navigation (v8.0)
+ * Layunin Masterpiece Navigation (v9.8)
  */
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -8,35 +8,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const siteHeader = document.querySelector('.site-header');
 
     const toggleOverlay = () => {
-        mobileOverlay.classList.toggle('active');
+        if(mobileOverlay) mobileOverlay.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
     };
 
-    if (menuToggle) menuToggle.onclick = toggleOverlay;
-    if (mobileClose) mobileClose.onclick = toggleOverlay;
+    if (menuToggle) menuToggle.addEventListener('click', toggleOverlay);
+    if (mobileClose) mobileClose.addEventListener('click', toggleOverlay);
 
     // Sticky Scroll
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 40) {
-            siteHeader.classList.add('scrolled');
-        } else {
-            siteHeader.classList.remove('scrolled');
+        if (siteHeader) {
+            if (window.scrollY > 40) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
         }
     });
 
-    // Dark Mode persistence
+    // Dark Mode persistence - REPAIRED
     const darkModeToggles = document.querySelectorAll('#dark-mode-toggle, #dark-mode-toggle-mobile');
-    const toggleDark = () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('layunin_elite_dark', document.body.classList.contains('dark-mode'));
+
+    const applyDarkMode = (isDark) => {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
     };
 
-    darkModeToggles.forEach(btn => btn.addEventListener('click', toggleDark));
-    if (localStorage.getItem('layunin_elite_dark') === 'true') {
-        document.body.classList.add('dark-mode');
+    // Initial load
+    const savedMode = localStorage.getItem('layunin_elite_dark');
+    if (savedMode === 'true') {
+        applyDarkMode(true);
     }
 
-    // AOS
+    darkModeToggles.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isNowDark = !document.body.classList.contains('dark-mode');
+            applyDarkMode(isNowDark);
+            localStorage.setItem('layunin_elite_dark', isNowDark);
+        });
+    });
+
+    // AOS - Intersection Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -46,4 +62,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+
+    // Smooth Scroll for TOC
+    document.querySelectorAll('.table-of-contents a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerOffset = 150;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 });

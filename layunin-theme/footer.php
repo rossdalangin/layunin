@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer (v9.4 Masterpiece)
+ * The template for displaying the footer (v9.8 Masterpiece)
  */
 ?>
 	<footer id="colophon" class="site-footer bg-navy text-white py-phi mt-auto">
@@ -54,7 +54,7 @@
 				</div>
 
 				<div class="col-lg-4">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-phi-l letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-phi-l footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
 					<p class="text-white-50 small mb-phi-l footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 25,000+ subscribers for weekly high-output insights.')); ?></p>
 					<form class="newsletter-form mb-phi-l" action="<?php echo esc_url(get_theme_mod('newsletter_form_action')); ?>" method="POST">
 						<div class="input-group">
@@ -69,7 +69,7 @@
 			<hr class="my-phi border-white opacity-10">
 
 			<div class="footer-bottom d-md-flex align-items-center justify-content-between small text-white-50">
-				<div class="copyright">
+				<div class="copyright text-white-50">
 					<?php echo esc_html(get_theme_mod('footer_copyright', '© ' . date('Y') . ' Layunin.com. All rights reserved. Architected in the Philippines.')); ?>
 				</div>
 				<div class="footer-meta d-flex gap-4 mt-phi-s mt-md-0">

@@ -3,7 +3,7 @@
  * Template Name: Lead Magnet Landing
  */
 get_header(); ?>
-<main id="primary" class="site-main py-6 bg-light">
+<main id="primary" class="site-main py-phi bg-light">
 	<div class="container">
 		<div class="row align-items-center g-5">
 			<div class="col-lg-6 animate-up">
@@ -67,7 +67,7 @@ get_header(); ?>
 	</div>
 </main>
 
-<section class="testimonial-bar bg-navy py-5 overflow-hidden">
+<section class="testimonial-bar bg-navy py-phi overflow-hidden">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-8">

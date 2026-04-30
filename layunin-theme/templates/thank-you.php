@@ -3,9 +3,9 @@
  * Template Name: Thank You Page
  */
 get_header(); ?>
-<main id="primary" class="site-main py-5 text-center">
+<main id="primary" class="site-main py-phi text-center">
 	<div class="container">
-		<div class="py-5">
+		<div class="py-phi">
 			<i class="fas fa-circle-check display-1 text-success mb-4"></i>
 			<h1 class="display-3"><?php echo esc_html( get_theme_mod( 'thank_you_title', "Thank You Page" ) ); ?></h1>
 			<p class="lead mb-5"><?php echo esc_html( get_theme_mod( 'thank_you_content', 'Your protocol is being delivered. Stand by for transformation.' ) ); ?></p>

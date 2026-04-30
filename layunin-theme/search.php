@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="primary" class="site-main py-6 bg-light">
+<main id="primary" class="site-main py-phi bg-light">
 	<div class="container">
 		<header class="page-header text-center mb-6 animate-up">
 			<h1 class="display-3 fw-black text-navy mb-3 search-results-title">

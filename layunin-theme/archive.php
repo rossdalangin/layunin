@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="primary" class="site-main py-6 bg-light">
+<main id="primary" class="site-main py-phi bg-light">
 	<div class="container">
 		<header class="archive-header text-center mb-6 animate-up">
 			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-2 d-block archive-title-prefix"><?php echo esc_html(get_theme_mod('archive_title_prefix', 'Mastering:')); ?></span>

@@ -3,7 +3,7 @@
  * Template Name: Privacy Policy
  */
 get_header(); ?>
-<main id="primary" class="site-main container py-5">
+<main id="primary" class="site-main container py-phi">
 	<div class="row">
 		<div class="col-lg-8 offset-lg-2">
 			<h1 class="mb-4"><?php echo esc_html( get_theme_mod( 'privacy_policy_title', 'Privacy Policy Page' ) ); ?></h1>

@@ -1,5 +1,5 @@
 <?php if ( get_theme_mod( 'show_home_featured_posts', true ) ) : ?>
-<section class="featured-posts-section bg-light py-6">
+<section class="featured-posts-section bg-light py-phi">
 	<div class="container">
         <div class="text-center mb-6 animate-up">
 		    <h2 class="display-4 fw-black text-navy mb-3 featured-posts-title"><?php echo esc_html(get_theme_mod('featured_posts_title', "Strategic Insights & Case Studies")); ?></h2>

@@ -56,10 +56,10 @@
 				<div class="col-lg-4">
 					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
 					<p class="text-white-50 small mb-4 footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 25,000+ subscribers for weekly high-output insights.')); ?></p>
-					<form class="newsletter-form mb-4">
+					<form class="newsletter-form mb-4" action="<?php echo esc_url(get_theme_mod('newsletter_form_action')); ?>" method="POST">
 						<div class="input-group">
-							<input type="email" class="form-control bg-navy-light border-0 text-white py-3" placeholder="Enter your best email" style="border-radius: 12px 0 0 12px !important;">
-							<button class="btn btn-gold px-4 footer-newsletter-btn" type="button" style="border-radius: 0 12px 12px 0 !important; padding: 0.5rem 1.5rem;"><?php echo esc_html(get_theme_mod('footer_newsletter_btn', 'Join')); ?></button>
+							<input type="email" name="EMAIL" class="form-control bg-navy-light border-0 text-white py-3" placeholder="<?php echo esc_attr(get_theme_mod('footer_newsletter_ph', 'Enter your best email')); ?>" style="border-radius: 12px 0 0 12px !important;">
+							<button class="btn btn-gold px-4 footer-newsletter-btn" type="submit" style="border-radius: 0 12px 12px 0 !important; padding: 0.5rem 1.5rem;"><?php echo esc_html(get_theme_mod('footer_newsletter_btn', 'Join')); ?></button>
 						</div>
 					</form>
                     <p class="small text-accent fw-bold footer-newsletter-trust"><i class="fas fa-shield-alt me-2"></i> <?php echo esc_html(get_theme_mod('footer_newsletter_trust', 'No spam. Only purpose.')); ?></p>

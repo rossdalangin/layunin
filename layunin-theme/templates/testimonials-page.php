@@ -3,7 +3,7 @@
  * Template Name: Testimonials Page
  */
 get_header(); ?>
-<main id="primary" class="site-main py-6 bg-light">
+<main id="primary" class="site-main py-phi bg-light">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
 			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block testimonials-badge"><?php echo esc_html(get_theme_mod('testimonials_badge', 'Proof of Impact')); ?></span>
@@ -26,7 +26,9 @@ get_header(); ?>
 					$delay = ($count % 3) * 0.1;
 					?>
 					<div class="col-lg-4 col-md-6 animate-up testimonial-card-item" style="animation-delay: <?php echo $delay; ?>s;">
-						<div class="testimonial-card card h-100 border-0 shadow-sm p-4 rounded-4 transition-all hover-lift bg-white">
+						<div class="testimonial-card card h-100 border-0 shadow-sm p-5 rounded-4 transition-all hover-lift bg-white position-relative overflow-hidden">
+                            <div class="quote-icon position-absolute top-0 start-0 m-4 opacity-05 z-index-0"><i class="fas fa-quote-left fa-4x text-gold"></i></div>
+							<div class="position-relative z-index-1">
 							<div class="rating mb-3 text-accent small">
 								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
 							</div>
@@ -46,6 +48,7 @@ get_header(); ?>
 									<span class="small text-muted"><?php echo esc_html( $role ? $role : 'Member' ); ?></span>
 								</div>
 							</div>
+                            </div>
 						</div>
 					</div>
 					<?php

@@ -1,12 +1,12 @@
 <?php if ( get_theme_mod( 'show_home_testimonials', true ) ) : ?>
-<section class="testimonials-section py-6 bg-white overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
+<section class="testimonials-section py-phi bg-white overflow-hidden">
 	<div class="container">
 		<div class="row align-items-center g-6">
 			<div class="col-lg-5 animate-up">
 				<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-3 d-block testimonials-badge-text"><?php echo esc_html(get_theme_mod('testimonials_badge_text', 'Elite Validation')); ?></span>
 				<h2 class="display-4 fw-black text-navy mb-4 testimonials-home-title"><?php echo esc_html(get_theme_mod('testimonials_home_title', 'Proof of Impact')); ?></h2>
 				<p class="lead text-muted mb-5 testimonials-home-lead"><?php echo esc_html(get_theme_mod('testimonials_home_lead', 'Our framework has been battle-tested by thousands of Filipinos across the globe. Here is one of our most recent success stories.')); ?></p>
-				<a href="<?php echo esc_url( home_url('/testimonials/') ); ?>" class="btn btn-outline-navy btn-lg px-5 fw-bold border-2 testimonials-home-btn-text"><?php echo esc_html(get_theme_mod('testimonials_home_btn_text', 'See Wall of Impact')); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod('testimonials_home_btn_link', home_url('/testimonials/')) ); ?>" class="btn btn-outline-navy btn-lg px-5 fw-bold border-2 testimonials-home-btn-text"><?php echo esc_html(get_theme_mod('testimonials_home_btn_text', 'See Wall of Impact')); ?></a>
 			</div>
 			<div class="col-lg-7 animate-up" style="animation-delay: 0.2s;">
 				<?php

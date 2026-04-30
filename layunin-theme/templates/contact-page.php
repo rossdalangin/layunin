@@ -3,7 +3,7 @@
  * Template Name: Contact Page
  */
 get_header(); ?>
-<main id="primary" class="site-main py-6">
+<main id="primary" class="site-main py-phi">
 	<div class="container">
 		<header class="entry-header text-center mb-6 animate-up">
 			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block contact-badge"><?php echo esc_html(get_theme_mod('contact_badge', "Initiate Protocol")); ?></span>
@@ -64,6 +64,12 @@ get_header(); ?>
 
 			<div class="col-lg-8 animate-up" style="animation-delay: 0.2s;">
 				<div class="contact-form-card card border-0 shadow-lg p-5 rounded-4">
+                    <?php
+                    $cf7_shortcode = get_theme_mod('contact_cf7_shortcode');
+                    if ( !empty($cf7_shortcode) ) :
+                        echo do_shortcode( $cf7_shortcode );
+                    else :
+                    ?>
 					<h2 class="h4 fw-bold text-navy mb-4 contact-form-title"><?php echo esc_html(get_theme_mod('contact_form_title', 'Send a Message')); ?></h2>
 					<form class="row g-4">
 						<div class="col-md-6">
@@ -86,13 +92,14 @@ get_header(); ?>
 							<button type="submit" class="btn btn-gold btn-lg px-5 py-3 fw-bold shadow contact-form-btn"><?php echo esc_html(get_theme_mod('contact_form_btn', 'Send Message')); ?> <i class="fas fa-paper-plane ms-2"></i></button>
 						</div>
 					</form>
+                    <?php endif; ?>
 				</div>
 			</div>
 		</div>
 
 		<?php if(get_theme_mod('contact_map_url')) : ?>
 			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm contact-map">
-				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen= loading="lazy"></iframe>
 			</div>
 		<?php endif; ?>
 	</div>

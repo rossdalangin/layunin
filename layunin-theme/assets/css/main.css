@@ -13,8 +13,8 @@ Version: 8.0
     --emerald: #00A36C;
     --white: #FFFFFF;
     --bg-light: #F8F9FA;
-    --text-main: #334155;
-    --text-muted: #64748B;
+    --text-main: #1E293B;
+    --text-muted: #475569;
 
     /* Fluid Design System */
     --phi: 1.618;
@@ -22,6 +22,7 @@ Version: 8.0
     --space-phi-l: calc(3rem * var(--phi));
     --space-phi-m: calc(1.85rem * var(--phi));
     --space-phi-s: calc(1.15rem * var(--phi));
+    --gap-phi: calc(1rem * var(--phi));
 
     --space-xl: var(--space-phi-xl);
     --space-l: var(--space-phi-l);
@@ -193,9 +194,13 @@ section { padding: var(--space-xl) 0; }
 
 /* Contrast & Layering Fixes */
 .text-gold { color: var(--gold) !important; }
-.bg-white .text-gold, .bg-light .text-gold, .testimonials-section .text-gold { color: #91761E !important; }
-.bg-white .text-muted, .bg-light .text-muted { color: #475569 !important; }
-.bg-white .lead, .bg-light .lead { color: #334155 !important; }
+.bg-white .text-gold, .bg-light .text-gold, .testimonials-section .text-gold { color: #8A6D1B !important; }
+.bg-white .text-muted, .bg-light .text-muted { color: #334155 !important; }
+.bg-white .lead, .bg-light .lead { color: #1E293B !important; }
+
+/* Refined Typography for Absolute Masterpiece */
+.display-1, .display-2, .display-3 { font-weight: 950; letter-spacing: -0.03em; }
+.lead { font-weight: 500; line-height: 1.7; }
 
 .z-index-1 { z-index: 1 !important; position: relative; }
 .z-index-0 { z-index: 0 !important; }
@@ -209,21 +214,29 @@ section { padding: var(--space-xl) 0; }
 
 /* Premium Boxes */
 .cta-box, .newsletter-box, .product-offer {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.05);
     border-radius: var(--radius-lg);
-    padding: var(--space-m);
+    padding: var(--space-phi-m);
     box-shadow: var(--shadow-premium);
     transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
 }
 
 .newsletter-box {
-    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
     color: var(--white);
+    border: none;
 }
 
 .product-offer {
+    background: var(--white);
     border: 2px solid var(--gold);
+}
+
+.cta-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px -15px rgba(10, 25, 47, 0.15);
 }
 
 .glass-morphism {
@@ -233,6 +246,13 @@ section { padding: var(--space-xl) 0; }
 }
 
 .hover-opacity-100:hover { opacity: 1 !important; }
+
+/* Golden Ratio Utilities */
+.py-phi { padding-top: var(--space-phi-xl) !important; padding-bottom: var(--space-phi-xl) !important; }
+.pb-phi { padding-bottom: var(--space-phi-xl) !important; }
+.pt-phi { padding-top: var(--space-phi-xl) !important; }
+.my-phi { margin-top: var(--space-phi-xl) !important; margin-bottom: var(--space-phi-xl) !important; }
+.py-phi-l { padding-top: var(--space-phi-l) !important; padding-bottom: var(--space-phi-l) !important; }
 
 /* Grid Mastery */
 .master-grid {

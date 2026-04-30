@@ -1,4 +1,4 @@
-<section class="categories-section py-6 bg-light">
+<section class="categories-section py-phi bg-light">
 	<div class="container text-center mb-6 animate-up">
 		<h2 class="display-4 fw-black text-navy mb-3"><?php echo esc_html( get_theme_mod( 'categories_title', 'The Pillars of Your Purpose' ) ); ?></h2>
 		<p class="section-desc lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'categories_desc', 'Deep-dive into the strategies that move the needle.' ) ); ?></p>

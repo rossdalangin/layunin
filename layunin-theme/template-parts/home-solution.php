@@ -1,4 +1,4 @@
-<section class="solution-section py-6 bg-white overflow-hidden">
+<section class="solution-section py-phi bg-white overflow-hidden">
 	<div class="container">
 		<div class="row align-items-center g-6">
 			<div class="col-lg-6 position-relative animate-up">

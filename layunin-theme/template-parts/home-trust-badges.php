@@ -1,5 +1,5 @@
 <?php if ( get_theme_mod( 'show_home_trust_badges', true ) ) : ?>
-<section class="trust-badges-section py-5 bg-white border-bottom border-light">
+<section class="trust-badges-section py-phi bg-white border-bottom border-light" >
 	<div class="container">
 		<h2 class="h6 text-center text-uppercase fw-bold text-muted mb-5 letter-spacing-2 trust-badges-title"><?php echo esc_html( get_theme_mod( 'trust_badges_title', 'The Standard for Modern Filipino Excellence' ) ); ?></h2>
 		<div class="row align-items-center justify-content-center g-5 opacity-50">

@@ -141,9 +141,9 @@ function layunin_cta_shortcode( $atts ) {
     ), $atts );
 
     return '
-    <div class="content-cta p-5 my-5 bg-navy text-white text-center rounded-4 shadow-lg animate-up">
-        <h3 class="text-white mb-4">' . esc_html($a['title']) . '</h3>
-        <a href="' . esc_url($a['button_url']) . '" class="btn btn-gold btn-lg px-5">' . esc_html($a['button_text']) . '</a>
+    <div class="content-cta cta-box newsletter-box p-5 my-5 text-center shadow-lg animate-up">
+        <h3 class="text-white mb-4 fw-bold">' . esc_html($a['title']) . '</h3>
+        <a href="' . esc_url($a['button_url']) . '" class="btn btn-gold btn-lg px-5 shadow-lg fw-black">' . esc_html($a['button_text']) . '</a>
     </div>';
 }
 add_shortcode( 'cta_box', 'layunin_cta_shortcode' );

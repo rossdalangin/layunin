@@ -153,6 +153,8 @@
     wp.customize( 'monetization_newsletter_desc', function( value ) { value.bind( function( newval ) { $( '.monetization-newsletter-desc' ).text( newval ); } ); } );
     wp.customize( 'monetization_newsletter_btn', function( value ) { value.bind( function( newval ) { $( '.monetization-newsletter-btn' ).text( newval ); } ); } );
     wp.customize( 'monetization_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.cta-newsletter-form input', newval); } ); } );
+    wp.customize( 'lm_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.lead-magnet-section input', newval); } ); } );
+    wp.customize( 'footer_newsletter_ph', function( value ) { value.bind( function( newval ) { updatePlaceholder('.site-footer .newsletter-form input', newval); } ); } );
 
     // --- 7. BLOG & POSTS ---
     wp.customize( 'breadcrumb_home_label', function( value ) { value.bind( function( newval ) { $( '.breadcrumb-home-label' ).text( newval ); } ); } );
@@ -311,8 +313,8 @@
     // 404 & Search
     wp.customize( 'error_404_title', function( value ) { value.bind( function( newval ) { $( '.error-404-title' ).text( newval ); } ); } );
     wp.customize( 'error_404_desc', function( value ) { value.bind( function( newval ) { $( '.error-404-desc' ).text( newval ); } ); } );
-    wp.customize( 'error_404_btn1', function( value ) { value.bind( function( newval ) { $( '.error-404 .btn-navy' ).text( newval ); } ); } );
-    wp.customize( 'error_404_btn2', function( value ) { value.bind( function( newval ) { $( '.error-404 .btn-outline-navy' ).text( newval ); } ); } );
+    wp.customize( 'error_404_btn1', function( value ) { value.bind( function( newval ) { $( '.error-404-btn1' ).text( newval ); } ); } );
+    wp.customize( 'error_404_btn2', function( value ) { value.bind( function( newval ) { $( '.error-404-btn2' ).text( newval ); } ); } );
     wp.customize( 'search_results_title', function( value ) { value.bind( function( newval ) { $( '.search-results-title' ).text( newval + ' ' + '...' ); } ); } );
     wp.customize( 'archive_title_prefix', function( value ) { value.bind( function( newval ) { $( '.archive-title-prefix' ).text( newval ); } ); } );
 

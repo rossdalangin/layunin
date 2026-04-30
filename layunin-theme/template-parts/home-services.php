@@ -1,4 +1,4 @@
-<section class="services-section py-6 bg-light">
+<section class="services-section py-phi bg-light">
 	<div class="container text-center mb-6 animate-up">
 		<h2 class="display-4 fw-black text-navy mb-3"><?php echo esc_html( get_theme_mod( 'services_home_title', 'Strategic Implementation Systems' ) ); ?></h2>
         <div class="accent-line mx-auto" style="width: 80px; height: 4px; background: var(--gold);"></div>

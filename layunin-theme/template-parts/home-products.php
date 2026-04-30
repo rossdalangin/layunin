@@ -1,4 +1,4 @@
-<section class="products-section py-6 bg-white">
+<section class="products-section py-phi bg-white">
 	<div class="container text-center mb-6 animate-up">
 		<h2 class="display-4 fw-bold text-navy mb-3"><?php echo esc_html( get_theme_mod( 'products_title', 'Elite Assets & Accelerators' ) ); ?></h2>
 		<p class="section-desc lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'products_desc', 'Precision-engineered tools to compress your learning curve and amplify your results.' ) ); ?></p>

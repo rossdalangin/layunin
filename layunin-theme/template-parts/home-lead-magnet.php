@@ -1,11 +1,11 @@
-<section class="lead-magnet-section py-6 bg-navy text-white position-relative overflow-hidden" style="padding-top: var(--space-phi-xl); padding-bottom: var(--space-phi-xl);">
+<section class="lead-magnet-section py-phi bg-white position-relative overflow-hidden">
     <div class="bg-pattern position-absolute top-0 start-0 w-100 h-100 opacity-05" style="background-image: radial-gradient(var(--gold) 1px, transparent 1px); background-size: 30px 30px;"></div>
 
 	<div class="container position-relative z-index-1">
 		<div class="row align-items-center g-6">
 			<div class="col-lg-6 animate-up">
-				<h2 class="display-3 fw-black text-white mb-4"><?php echo esc_html( get_theme_mod( 'lm_title', 'The Elite 7-Day Goal Reset Protocol' ) ); ?></h2>
-				<p class="fs-5 opacity-75 mb-5"><?php echo esc_html( get_theme_mod( 'lm_subtitle', 'Stop existing. Start executing. This is the exact audit used by top CEOs to reclaim 20+ hours per week.' ) ); ?></p>
+				<h2 class="display-3 fw-black text-navy mb-4"><?php echo esc_html( get_theme_mod( 'lm_title', 'The Elite 7-Day Goal Reset Protocol' ) ); ?></h2>
+				<p class="fs-5 text-muted mb-5"><?php echo esc_html( get_theme_mod( 'lm_subtitle', 'Stop existing. Start executing. This is the exact audit used by top CEOs to reclaim 20+ hours per week.' ) ); ?></p>
 
 				<ul class="list-unstyled mb-5">
 					<?php
@@ -18,11 +18,11 @@
 					<?php endif; endforeach; ?>
 				</ul>
 
-				<form class="lead-magnet-form d-flex flex-column flex-sm-row gap-3">
-					<input type="email" placeholder="Enter your business email" class="form-control form-control-lg bg-white border-0 shadow-sm" style="min-width: 300px;" required>
+				<form class="lead-magnet-form d-flex flex-column flex-sm-row gap-3" action="<?php echo esc_url(get_theme_mod('lead_magnet_form_action')); ?>" method="POST">
+					<input type="email" name="EMAIL" placeholder="<?php echo esc_attr(get_theme_mod('lm_newsletter_ph', 'Enter your business email')); ?>" class="form-control form-control-lg bg-light border-0 shadow-sm" style="min-width: 300px;" required>
 					<button type="submit" class="btn btn-gold btn-lg px-5 shadow-lg fw-bold lm-btn-text"><?php echo esc_html(get_theme_mod('lm_btn_text', 'Get the Protocol')); ?></button>
 				</form>
-				<p class="small opacity-50 mt-4 lm-social-proof"><i class="fas fa-lock me-2"></i> <?php echo esc_html(get_theme_mod('lm_social_proof', 'Join 25,000+ others pursuing their absolute mastery. Your data is 100% secure.')); ?></p>
+				<p class="small text-muted mt-4 lm-social-proof"><i class="fas fa-lock me-2 text-gold"></i> <?php echo esc_html(get_theme_mod('lm_social_proof', 'Join 25,000+ others pursuing their absolute mastery. Your data is 100% secure.')); ?></p>
 			</div>
 			<div class="col-lg-6 d-none d-lg-block animate-up" style="animation-delay: 0.2s;">
 				<div class="lm-visual-wrapper p-3 bg-white-10 rounded-4 shadow-lg rotate-3">

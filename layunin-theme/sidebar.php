@@ -17,8 +17,8 @@
 	<div class="sidebar-box p-4 card mb-5 bg-navy text-white border-0">
 		<h3 class="h6 text-uppercase fw-bold text-accent mb-3 sidebar-newsletter-title"><?php echo esc_html(get_theme_mod('sidebar_newsletter_title', 'Elite Growth Protocol')); ?></h3>
 		<p class="small opacity-75 mb-4 sidebar-newsletter-desc"><?php echo esc_html(get_theme_mod('sidebar_newsletter_desc', 'Architect your life and reclaim your purpose in just 7 days.')); ?></p>
-		<form class="sidebar-newsletter">
-			<input type="email" class="form-control form-control-sm mb-3 bg-white text-navy" placeholder="<?php echo esc_attr(get_theme_mod('sidebar_newsletter_ph', 'Email Address')); ?>" required>
+		<form class="sidebar-newsletter" action="<?php echo esc_url(get_theme_mod('newsletter_form_action')); ?>" method="POST">
+			<input type="email" name="EMAIL" class="form-control form-control-sm mb-3 bg-white text-navy" placeholder="<?php echo esc_attr(get_theme_mod('sidebar_newsletter_ph', 'Email Address')); ?>" required>
 			<button class="btn btn-gold btn-sm w-100 sidebar-newsletter-btn" type="submit"><?php echo esc_html(get_theme_mod('sidebar_newsletter_btn', 'Download Free')); ?></button>
 		</form>
 	</div>

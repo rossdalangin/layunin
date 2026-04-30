@@ -1,4 +1,4 @@
-<section class="hero-section text-navy d-flex align-items-center position-relative overflow-hidden" style="min-height: 85vh; background: #fff;">
+<section class="hero-section text-navy d-flex align-items-center position-relative overflow-hidden py-phi" style="min-height: 85vh; background: #fff;">
 	<div class="hero-bg-accent position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block" style="background: rgba(212, 175, 55, 0.05); transform: skewX(-10deg) translateX(15%);"></div>
 
 	<div class="container position-relative z-index-1">
@@ -11,8 +11,8 @@
 						<?php echo esc_html( get_theme_mod( 'hero_subheadline', 'Bridging the gap between Filipino ambition and world-class execution through elite systems, AI productivity, and financial mastery.' ) ); ?>
 					</p>
 					<div class="hero-btns d-flex flex-wrap gap-4">
-						<a href="<?php echo esc_url( home_url('/lead-magnet/') ); ?>" class="btn btn-gold shadow-lg hero-cta-1"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start Your Transformation') ); ?></a>
-						<a href="<?php echo esc_url( home_url('/about/') ); ?>" class="btn btn-outline-navy fw-bold border-2 hero-cta-2"><?php echo esc_html( get_theme_mod('hero_cta_2_text', 'Browse Elite Systems') ); ?></a>
+						<a href="<?php echo esc_url( get_theme_mod('hero_cta_1_link', home_url('/lead-magnet/')) ); ?>" class="btn btn-gold shadow-lg hero-cta-1"><?php echo esc_html( get_theme_mod('hero_cta_1_text', 'Start Your Transformation') ); ?></a>
+						<a href="<?php echo esc_url( get_theme_mod('hero_cta_2_link', home_url('/about/')) ); ?>" class="btn btn-outline-navy fw-bold border-2 hero-cta-2"><?php echo esc_html( get_theme_mod('hero_cta_2_text', 'Browse Elite Systems') ); ?></a>
 					</div>
 					<div class="hero-trust mt-5 pt-4 d-flex align-items-center gap-4 border-top border-light">
 						<div class="avatars d-flex ps-1">

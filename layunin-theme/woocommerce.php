@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main container py-5">
+<main id="primary" class="site-main container py-phi">
 	<?php woocommerce_content(); ?>
 </main>
 

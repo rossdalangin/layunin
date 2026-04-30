@@ -1,4 +1,4 @@
-<div class="newsletter-box mb-4">
+<div class="cta-box newsletter-box mb-4">
 	<h3 class="h5 monetization-newsletter-title text-white mb-3 fw-bold"><?php echo esc_html(get_theme_mod('monetization_newsletter_title', 'Join the Elite Network')); ?></h3>
 	<p class="small monetization-newsletter-desc opacity-75 mb-4"><?php echo esc_html(get_theme_mod('monetization_newsletter_desc', 'Strategic insights on personal growth and scalable income.')); ?></p>
 	<form class="cta-newsletter-form">
@@ -7,7 +7,7 @@
 	</form>
 </div>
 
-<div class="product-offer mb-4 shadow-premium">
+<div class="cta-box product-offer mb-4 shadow-premium">
 	<h3 class="h5 text-navy monetization-product-title fw-bold mb-3"><?php echo esc_html( get_theme_mod('product_item_1_title', 'The Ultimate Goal Planner') ); ?></h3>
     <?php
     $product_img = get_theme_mod('product_item_1_image', 'https://images.unsplash.com/photo-1506784919141-93584869786a?auto=format&fit=crop&q=80&w=400');

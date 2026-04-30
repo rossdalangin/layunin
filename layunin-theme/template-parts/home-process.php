@@ -1,5 +1,5 @@
 <?php if ( get_theme_mod( 'show_home_process', true ) ) : ?>
-<section class="process-section py-6 bg-light overflow-hidden position-relative">
+<section class="process-section py-phi bg-light overflow-hidden position-relative">
     <div class="bg-accent-blob position-absolute top-0 start-0 w-100 h-100 opacity-05" style="background: radial-gradient(circle, var(--gold) 0%, transparent 70%); transform: translate(-50%, -50%);"></div>
 
 	<div class="container position-relative z-index-1">

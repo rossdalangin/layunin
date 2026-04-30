@@ -8,9 +8,11 @@
 		:root {
 			--navy: <?php echo get_theme_mod( 'primary_color', '#050A18' ); ?>;
 			--gold: <?php echo get_theme_mod( 'accent_color', '#C5A02B' ); ?>;
+            --accent: var(--gold);
 			--logo-width: <?php echo get_theme_mod( 'logo_width', '200' ); ?>px;
             --border-radius: <?php echo get_theme_mod( 'border_radius', '16' ); ?>px;
             --body-font: '<?php echo get_theme_mod( 'body_font', 'Inter' ); ?>', sans-serif;
+            --phi: 1.618;
 		}
         <?php
         $cats = array('Goal Setting', 'Online Income', 'Productivity', 'AI Tools', 'Mindset', 'Business', 'Success Stories');

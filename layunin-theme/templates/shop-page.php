@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main py-phi">
 	<div class="container">
-		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block shop-badge"><?php echo esc_html(get_theme_mod('shop_badge', 'The Mastery Collection')); ?></span>
+		<header class="entry-header text-center mb-phi animate-up">
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-phi-s d-block shop-badge"><?php echo esc_html(get_theme_mod('shop_badge', 'The Mastery Collection')); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'shop_title', 'Shop Page' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'shop_content', 'Invest in the precision-engineered digital assets that drive world-class execution.' ) ); ?></p>
 		</header>
@@ -27,7 +27,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="card-body p-4">
-						<div class="d-flex justify-content-between align-items-center mb-3">
+						<div class="d-flex justify-content-between align-items-center mb-phi-s">
 							<span class="badge bg-light text-navy small shop-item-badge"><?php echo esc_html(get_theme_mod('shop_item_badge', 'Digital Resource')); ?></span>
 							<span class="text-accent fw-bold item-price"><?php echo $price; ?></span>
 						</div>
@@ -41,9 +41,9 @@ get_header(); ?>
 			<?php endfor; ?>
 		</div>
 
-		<div class="newsletter-cta mt-6 p-5 bg-light rounded-4 text-center animate-up">
-			<h2 class="h4 fw-bold text-navy mb-3 shop-newsletter-title"><?php echo esc_html(get_theme_mod('shop_newsletter_title', 'Want Exclusive Discounts?')); ?></h2>
-			<p class="text-muted mb-4 shop-newsletter-desc"><?php echo esc_html(get_theme_mod('shop_newsletter_desc', 'Join our community and get 20% off your first digital product purchase.')); ?></p>
+		<div class="newsletter-cta mt-phi p-5 bg-light rounded-4 text-center animate-up">
+			<h2 class="h4 fw-bold text-navy mb-phi-s shop-newsletter-title"><?php echo esc_html(get_theme_mod('shop_newsletter_title', 'Want Exclusive Discounts?')); ?></h2>
+			<p class="text-muted mb-phi-l shop-newsletter-desc"><?php echo esc_html(get_theme_mod('shop_newsletter_desc', 'Join our community and get 20% off your first digital product purchase.')); ?></p>
 			<form class="row g-2 justify-content-center" style="max-width: 500px; margin: 0 auto;">
 				<div class="col-md-8">
 					<input type="email" class="form-control bg-white border-0 py-3" placeholder="<?php echo esc_attr(get_theme_mod('shop_newsletter_ph', 'Enter your email')); ?>">

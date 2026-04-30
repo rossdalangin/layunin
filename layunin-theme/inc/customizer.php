@@ -12,6 +12,9 @@ function layunin_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'body_font', array( 'default' => 'Inter', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'body_font', array( 'label' => 'Body Font', 'section' => 'layunin_design_system', 'type' => 'select', 'choices' => array('Inter' => 'Inter', 'Roboto' => 'Roboto', 'Open Sans' => 'Open Sans') ) );
 
+    $wp_customize->add_setting( 'heading_font', array( 'default' => 'Playfair Display', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'heading_font', array( 'label' => 'Heading Font', 'section' => 'layunin_design_system', 'type' => 'select', 'choices' => array('Playfair Display' => 'Playfair Display', 'Inter' => 'Inter', 'Montserrat' => 'Montserrat') ) );
+
     $wp_customize->add_setting( 'primary_color', array( 'default' => '#050A18', 'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array( 'label' => 'Primary Midnight', 'section' => 'colors' ) ) );
 	$wp_customize->add_setting( 'accent_color', array( 'default' => '#C5A02B', 'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
@@ -519,8 +522,15 @@ function layunin_customize_register( $wp_customize ) {
                 $wp_customize->add_setting( "services_tier_{$i}_btn", array( 'default' => 'Get Started', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "services_tier_{$i}_btn", array( 'label' => "Tier $i Button Text", 'section' => "layunin_page_{$id}" ) );
             }
-        }
 
+        $wp_customize->add_setting( 'services_custom_title', array( 'default' => 'Need a Custom Solution?', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+        $wp_customize->add_control( 'services_custom_title', array( 'label' => 'Custom Solution Title', 'section' => "layunin_page_{$id}" ) );
+        $wp_customize->add_setting( 'services_custom_desc', array( 'default' => 'For large scale operations and international firms, we offer bespoke architectural consulting tailored to your specific mastery goals.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+        $wp_customize->add_control( 'services_custom_desc', array( 'label' => 'Custom Solution Description', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+        $wp_customize->add_setting( 'services_custom_btn', array( 'default' => 'Initiate Consultation', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+        $wp_customize->add_control( 'services_custom_btn', array( 'label' => 'Custom Solution Button', 'section' => "layunin_page_{$id}" ) );
+    }
+        }
         if($id == 'contact') {
             $wp_customize->add_setting( 'contact_badge', array( 'default' => "Initiate Protocol", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'contact_badge', array( 'label' => 'Top Badge Text', 'section' => "layunin_page_{$id}" ) );

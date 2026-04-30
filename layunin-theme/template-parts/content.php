@@ -1,5 +1,5 @@
 <?php $layout = get_theme_mod( 'blog_layout', 'grid' );
-$col_class = ($layout == 'list') ? 'col-12 mb-5' : 'col-lg-4 col-md-6 mb-4';
+$col_class = ($layout == 'list') ? 'col-12 mb-phi' : 'col-lg-4 col-md-6 mb-phi-l';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $col_class . ' animate-up' ); ?>>
 	<div class="card h-100 shadow-sm border-0 overflow-hidden p-0">
@@ -19,9 +19,9 @@ $col_class = ($layout == 'list') ? 'col-12 mb-5' : 'col-lg-4 col-md-6 mb-4';
 				<?php the_category(', '); ?>
 			</div>
 			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title h5 mb-3"><a class="text-navy text-decoration-none" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 class="entry-title h5 mb-phi-s"><a class="text-navy text-decoration-none" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			</header>
-			<div class="entry-excerpt text-muted small mb-4">
+			<div class="entry-excerpt text-muted small mb-phi-l">
 				<?php echo wp_trim_words( get_the_excerpt(), 20 ); ?>
 			</div>
 			<div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">

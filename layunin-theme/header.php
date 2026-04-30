@@ -12,6 +12,7 @@
 			--logo-width: <?php echo get_theme_mod( 'logo_width', '200' ); ?>px;
             --border-radius: <?php echo get_theme_mod( 'border_radius', '16' ); ?>px;
             --body-font: '<?php echo get_theme_mod( 'body_font', 'Inter' ); ?>', sans-serif;
+            --heading-font: '<?php echo get_theme_mod( 'heading_font', 'Playfair Display' ); ?>', serif;
             --phi: 1.618;
 		}
         <?php
@@ -27,6 +28,7 @@
         }
         ?>
         body { font-family: var(--body-font); }
+        h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 { font-family: var(--heading-font); }
         .card, .btn, .form-control, .rounded-4 { border-radius: var(--border-radius) !important; }
         .announcement-bar { background: var(--navy); color: #fff; padding: 10px 0; text-align: center; font-size: 0.875rem; font-weight: 600; position: relative; z-index: 2001; }
         .announcement-bar a { color: var(--gold); text-decoration: none; }
@@ -101,10 +103,10 @@
                     'menu_class'     => 'mobile-nav list-unstyled fs-2'
                 ) );
                 ?>
-                <div class="text-center mt-5">
+                <div class="text-center mt-phi">
                     <a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold btn-lg w-100"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
                 </div>
-                <button class="mobile-close btn text-white fs-1 mt-5"><i class="fas fa-times"></i></button>
+                <button class="mobile-close btn text-white fs-1 mt-phi"><i class="fas fa-times"></i></button>
             </div>
         </div>
 

@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-lg-8 offset-lg-2">
 			<?php if(get_theme_mod('banner_above_content')) : ?>
-				<div class="ad-banner-above mb-5">
+				<div class="ad-banner-above mb-phi">
 					<img src="<?php echo esc_url(get_theme_mod('banner_above_content')); ?>" class="img-fluid rounded-4 shadow-sm w-100" alt="Advertisement">
 				</div>
 			<?php endif; ?>
@@ -22,7 +22,7 @@
 				the_post_navigation( array(
 					'prev_text' => '<span class="text-muted small">' . esc_html($nav_prev) . '</span><br><span class="h6 fw-bold">%title</span>',
 					'next_text' => '<span class="text-muted small">' . esc_html($nav_next) . '</span><br><span class="h6 fw-bold">%title</span>',
-					'class'     => 'post-navigation my-5 d-flex justify-content-between p-4 bg-light rounded-4'
+					'class'     => 'post-navigation my-phi d-flex justify-content-between p-4 bg-light rounded-4'
 				) );
 
 				if ( comments_open() || get_comments_number() ) :
@@ -30,7 +30,7 @@
 				endif;
 
 				if(get_theme_mod('banner_below_content')) : ?>
-					<div class="ad-banner-below mt-5 mb-5">
+					<div class="ad-banner-below mt-phi mb-phi">
 						<img src="<?php echo esc_url(get_theme_mod('banner_below_content')); ?>" class="img-fluid rounded-4 shadow-sm w-100" alt="Advertisement">
 					</div>
 				<?php endif;

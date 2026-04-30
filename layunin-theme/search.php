@@ -2,8 +2,8 @@
 
 <main id="primary" class="site-main py-phi bg-light">
 	<div class="container">
-		<header class="page-header text-center mb-6 animate-up">
-			<h1 class="display-3 fw-black text-navy mb-3 search-results-title">
+		<header class="page-header text-center mb-phi animate-up">
+			<h1 class="display-3 fw-black text-navy mb-phi-s search-results-title">
 				<?php echo esc_html(get_theme_mod('search_results_title', 'Strategic Results for:')); ?>
                 <span class="text-gold">"<?php echo get_search_query(); ?>"</span>
 			</h1>
@@ -23,7 +23,7 @@
 				the_posts_navigation( array(
 					'prev_text' => '<i class="fas fa-arrow-left me-2"></i> <span class="archive-older-label">' . esc_html($older_label) . '</span>',
 					'next_text' => '<span class="archive-newer-label">' . esc_html($newer_label) . '</span> <i class="fas fa-arrow-right ms-2"></i>',
-					'class' => 'posts-navigation d-flex justify-content-center gap-4 mt-5'
+					'class' => 'posts-navigation d-flex justify-content-center gap-4 mt-phi'
 				) );
 
 			else :

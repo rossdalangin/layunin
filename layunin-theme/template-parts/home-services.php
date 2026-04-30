@@ -1,6 +1,6 @@
 <section class="services-section py-phi bg-light">
-	<div class="container text-center mb-6 animate-up">
-		<h2 class="display-4 fw-black text-navy mb-3"><?php echo esc_html( get_theme_mod( 'services_home_title', 'Strategic Implementation Systems' ) ); ?></h2>
+	<div class="container text-center mb-phi animate-up">
+		<h2 class="display-4 fw-black text-navy mb-phi-s"><?php echo esc_html( get_theme_mod( 'services_home_title', 'Strategic Implementation Systems' ) ); ?></h2>
         <div class="accent-line mx-auto" style="width: 80px; height: 4px; background: var(--gold);"></div>
 	</div>
 
@@ -20,9 +20,9 @@
 			?>
 			<div class="col-lg-4 animate-up" style="animation-delay: <?php echo $i * 0.1; ?>s;">
 				<div class="service-card card p-5 border-0 shadow-sm h-100 transition-all hover-lift" style="border-radius: 40px !important;">
-					<div class="service-icon text-gold mb-4 display-4"><i class="<?php echo esc_attr($icon); ?>"></i></div>
-					<h3 class="h4 fw-bold text-navy mb-3"><?php echo esc_html($title); ?></h3>
-					<p class="text-muted mb-5"><?php echo esc_html($desc); ?></p>
+					<div class="service-icon text-gold mb-phi-l display-4"><i class="<?php echo esc_attr($icon); ?>"></i></div>
+					<h3 class="h4 fw-bold text-navy mb-phi-s"><?php echo esc_html($title); ?></h3>
+					<p class="text-muted mb-phi"><?php echo esc_html($desc); ?></p>
 						<a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-link text-navy text-decoration-none fw-bold p-0 services-home-btn-text"><?php echo esc_html(get_theme_mod('services_home_btn_text', 'Explore Service')); ?> <i class="fas fa-arrow-right ms-2"></i></a>
 				</div>
 			</div>

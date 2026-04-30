@@ -41,9 +41,9 @@ function layunin_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'layunin' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'layunin' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s mb-5">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s mb-phi">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title h5 text-uppercase fw-bold mb-4">',
+		'before_title'  => '<h2 class="widget-title h5 text-uppercase fw-bold mb-phi-l">',
 		'after_title'   => '</h2>',
 	) );
 }
@@ -101,8 +101,8 @@ function layunin_generate_toc( $content ) {
     if ( empty( $toc_items ) ) return $content;
 
     $toc_title = get_theme_mod('toc_title', 'Strategic Overview');
-    $toc = '<div class="table-of-contents p-4 bg-light border-0 rounded-4 mb-5 shadow-sm">';
-    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-3 text-navy toc-title"><i class="fas fa-list-ul me-2 text-accent"></i>' . esc_html($toc_title) . '</h4><ul class="list-unstyled mb-0">';
+    $toc = '<div class="table-of-contents p-4 bg-light border-0 rounded-4 mb-phi shadow-sm">';
+    $toc .= '<h4 class="h6 text-uppercase fw-bold mb-phi-s text-navy toc-title"><i class="fas fa-list-ul me-2 text-accent"></i>' . esc_html($toc_title) . '</h4><ul class="list-unstyled mb-0">';
 
     foreach ( $toc_items as $item ) {
         $indent = ($item['level'] == 'h3') ? 'ps-4 small' : 'fw-bold small';

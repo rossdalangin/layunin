@@ -1,8 +1,8 @@
 <?php if ( get_theme_mod( 'show_home_features', true ) ) : ?>
 <section class="features-section py-phi bg-white">
 	<div class="container">
-        <div class="text-center mb-6 animate-up">
-		    <h2 class="display-4 fw-black text-navy mb-3 features-title"><?php echo esc_html( get_theme_mod('features_title', 'Why High-Achievers Choose Us') ); ?></h2>
+        <div class="text-center mb-phi animate-up">
+		    <h2 class="display-4 fw-black text-navy mb-phi-s features-title"><?php echo esc_html( get_theme_mod('features_title', 'Why High-Achievers Choose Us') ); ?></h2>
             <div class="accent-line mx-auto" style="width: 80px; height: 4px; background: var(--gold);"></div>
         </div>
 

@@ -82,7 +82,7 @@ function layunin_breadcrumbs() {
     if ( is_front_page() ) return;
 
     $home_label = get_theme_mod('breadcrumb_home_label', 'Launchpad');
-    echo '<nav class="breadcrumbs container my-3 small text-muted" aria-label="breadcrumb">';
+    echo '<nav class="breadcrumbs container my-phi-s small text-muted" aria-label="breadcrumb">';
     echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="breadcrumb-home-label">' . esc_html($home_label) . '</a>';
 
     if ( is_category() || is_single() ) {
@@ -99,7 +99,7 @@ function layunin_breadcrumbs() {
 
 // Pricing Table Shortcode
 function layunin_pricing_table_shortcode( $atts, $content = null ) {
-    return '<div class="pricing-table-wrapper row justify-content-center mt-5">' . do_shortcode($content) . '</div>';
+    return '<div class="pricing-table-wrapper row justify-content-center mt-phi">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'pricing_table', 'layunin_pricing_table_shortcode' );
 
@@ -121,11 +121,11 @@ function layunin_pricing_item_shortcode( $atts, $content = null ) {
     }
 
     return '
-    <div class="col-lg-4 col-md-6 mb-4">
+    <div class="col-lg-4 col-md-6 mb-phi-l">
         <div class="pricing-card card ' . $featured_class . ' text-center p-5">
-            <h3 class="h5 text-uppercase fw-bold mb-3">' . esc_html($a['title']) . '</h3>
-            <div class="price display-4 fw-bold mb-4 text-navy">' . esc_html($a['price']) . '</div>
-            <ul class="list-unstyled mb-5 text-start">' . $features_html . '</ul>
+            <h3 class="h5 text-uppercase fw-bold mb-phi-s">' . esc_html($a['title']) . '</h3>
+            <div class="price display-4 fw-bold mb-phi-l text-navy">' . esc_html($a['price']) . '</div>
+            <ul class="list-unstyled mb-phi text-start">' . $features_html . '</ul>
             <a href="' . esc_url($a['link']) . '" class="btn ' . (($a['featured'] == 'yes') ? 'btn-gold' : 'btn-outline-primary') . ' w-100">' . esc_html($a['button']) . '</a>
         </div>
     </div>';
@@ -141,8 +141,8 @@ function layunin_cta_shortcode( $atts ) {
     ), $atts );
 
     return '
-    <div class="content-cta cta-box newsletter-box p-5 my-5 text-center shadow-lg animate-up">
-        <h3 class="text-white mb-4 fw-bold">' . esc_html($a['title']) . '</h3>
+    <div class="content-cta cta-box newsletter-box p-5 my-phi text-center shadow-lg animate-up">
+        <h3 class="text-white mb-phi-l fw-bold">' . esc_html($a['title']) . '</h3>
         <a href="' . esc_url($a['button_url']) . '" class="btn btn-gold btn-lg px-5 shadow-lg fw-black">' . esc_html($a['button_text']) . '</a>
     </div>';
 }
@@ -150,7 +150,7 @@ add_shortcode( 'cta_box', 'layunin_cta_shortcode' );
 
 // Benefit List Shortcode
 function layunin_benefit_list_shortcode( $atts, $content = null ) {
-    return '<ul class="benefit-list list-unstyled row my-5">' . do_shortcode($content) . '</ul>';
+    return '<ul class="benefit-list list-unstyled row my-phi">' . do_shortcode($content) . '</ul>';
 }
 add_shortcode( 'benefit_list', 'layunin_benefit_list_shortcode' );
 
@@ -160,7 +160,7 @@ function layunin_benefit_item_shortcode( $atts, $content = null ) {
         'icon' => 'fas fa-check'
     ), $atts );
     return '
-    <div class="col-md-6 mb-4">
+    <div class="col-md-6 mb-phi-l">
         <div class="d-flex align-items-start">
             <div class="benefit-icon me-3 text-accent fs-4"><i class="' . esc_attr($a['icon']) . '"></i></div>
             <div>
@@ -174,7 +174,7 @@ add_shortcode( 'benefit_item', 'layunin_benefit_item_shortcode' );
 
 // Testimonial Grid Shortcode
 function layunin_testimonial_grid_shortcode( $atts, $content = null ) {
-    return '<div class="testimonial-grid row my-5">' . do_shortcode($content) . '</div>';
+    return '<div class="testimonial-grid row my-phi">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'testimonial_grid', 'layunin_testimonial_grid_shortcode' );
 
@@ -185,13 +185,13 @@ function layunin_testimonial_item_shortcode( $atts, $content = null ) {
         'image' => ''
     ), $atts );
 
-    $img_html = $a['image'] ? '<img src="' . esc_url($a['image']) . '" class="rounded-circle mb-3" style="width:60px; height:60px; object-fit:cover;">' : '';
+    $img_html = $a['image'] ? '<img src="' . esc_url($a['image']) . '" class="rounded-circle mb-phi-s" style="width:60px; height:60px; object-fit:cover;">' : '';
 
     return '
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-phi-l">
         <div class="testimonial-card card p-4 shadow-sm border-0 animate-up text-center">
             ' . $img_html . '
-            <blockquote class="small font-italic mb-3">"' . do_shortcode($content) . '"</blockquote>
+            <blockquote class="small font-italic mb-phi-s">"' . do_shortcode($content) . '"</blockquote>
             <div class="fw-bold text-navy">' . esc_html($a['name']) . '</div>
             <div class="small text-muted">' . esc_html($a['role']) . '</div>
         </div>
@@ -221,7 +221,7 @@ function layunin_faq_item_shortcode( $atts, $content = null ) {
     $parent_attr = $layunin_faq_parent_id ? ' data-bs-parent="#' . esc_attr($layunin_faq_parent_id) . '"' : '';
 
     return '
-    <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <div class="accordion-item border-0 mb-phi-s shadow-sm rounded-4 overflow-hidden" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <h2 class="accordion-header" itemprop="name">
             <button class="accordion-button collapsed fw-bold text-navy py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#' . $id . '" aria-expanded="false" aria-controls="' . $id . '">
                 ' . esc_html($a['question']) . '

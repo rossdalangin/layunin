@@ -5,8 +5,8 @@
 	<div class="container position-relative z-index-1">
 		<div class="row align-items-center g-5">
 			<div class="col-lg-5 animate-up">
-				<span class="text-gold text-uppercase fw-bold mb-3 d-block letter-spacing-2"><?php echo esc_html(get_theme_mod('problem_badge', 'The Friction')); ?></span>
-				<h2 class="display-4 fw-black text-navy mb-4"><?php echo esc_html( get_theme_mod( 'problem_title', 'The Ceiling on Filipino Potential' ) ); ?></h2>
+				<span class="text-gold text-uppercase fw-bold mb-phi-s d-block letter-spacing-2"><?php echo esc_html(get_theme_mod('problem_badge', 'The Friction')); ?></span>
+				<h2 class="display-4 fw-black text-navy mb-phi-l"><?php echo esc_html( get_theme_mod( 'problem_title', 'The Ceiling on Filipino Potential' ) ); ?></h2>
 				<p class="lead text-muted mb-0"><?php echo esc_html(get_theme_mod('problem_lead', 'Ambition is plentiful, but world-class execution systems are rare. We identified the primary barriers holding high-achievers back.')); ?></p>
 			</div>
 			<div class="col-lg-7">
@@ -26,7 +26,7 @@
                     ?>
 					<div class="col-md-6 animate-up" style="animation-delay: <?php echo $i * 0.1; ?>s;">
 						<div class="problem-item p-5 bg-light rounded-4 h-100 border shadow-sm hover-lift">
-							<div class="text-gold mb-3"><i class="<?php echo esc_attr($icon); ?> fa-2x"></i></div>
+							<div class="text-gold mb-phi-s"><i class="<?php echo esc_attr($icon); ?> fa-2x"></i></div>
 							<h3 class="h5 fw-bold text-navy mb-2"><?php echo esc_html($title); ?></h3>
 							<p class="small text-muted mb-0"><?php echo esc_html($desc); ?></p>
 						</div>

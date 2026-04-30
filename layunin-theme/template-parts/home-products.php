@@ -1,6 +1,6 @@
 <section class="products-section py-phi bg-white">
-	<div class="container text-center mb-6 animate-up">
-		<h2 class="display-4 fw-bold text-navy mb-3"><?php echo esc_html( get_theme_mod( 'products_title', 'Elite Assets & Accelerators' ) ); ?></h2>
+	<div class="container text-center mb-phi animate-up">
+		<h2 class="display-4 fw-bold text-navy mb-phi-s"><?php echo esc_html( get_theme_mod( 'products_title', 'Elite Assets & Accelerators' ) ); ?></h2>
 		<p class="section-desc lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'products_desc', 'Precision-engineered tools to compress your learning curve and amplify your results.' ) ); ?></p>
 	</div>
 
@@ -26,7 +26,7 @@
 						<div class="price-tag position-absolute top-0 end-0 bg-gold text-white px-4 py-2 m-3 rounded-pill fw-bold shadow-sm"><?php echo esc_html($price); ?></div>
 					</div>
 					<div class="card-body p-5">
-						<h3 class="h5 fw-bold text-navy mb-4"><?php echo esc_html($title); ?></h3>
+						<h3 class="h5 fw-bold text-navy mb-phi-l"><?php echo esc_html($title); ?></h3>
 						<a href="<?php echo esc_url($link); ?>" class="btn btn-outline-navy w-100 py-3 fw-bold products-btn-text"><?php echo esc_html(get_theme_mod('products_btn_text', 'View Asset')); ?></a>
 					</div>
 				</div>

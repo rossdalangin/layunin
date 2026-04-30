@@ -1,5 +1,5 @@
 <section class="no-results not-found text-center py-phi">
-	<header class="page-header mb-4">
+	<header class="page-header mb-phi-l">
 		<h1 class="page-title nothing-found-title"><?php echo esc_html(get_theme_mod('nothing_found_title', 'Strategy Not Found')); ?></h1>
 	</header>
 	<div class="page-content">

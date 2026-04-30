@@ -5,8 +5,8 @@
 get_header(); ?>
 <main id="primary" class="site-main py-phi">
 	<div class="container">
-		<header class="entry-header text-center mb-6 animate-up">
-			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-3 d-block contact-badge"><?php echo esc_html(get_theme_mod('contact_badge', "Initiate Protocol")); ?></span>
+		<header class="entry-header text-center mb-phi animate-up">
+			<span class="text-accent text-uppercase fw-bold letter-spacing-2 mb-phi-s d-block contact-badge"><?php echo esc_html(get_theme_mod('contact_badge', "Initiate Protocol")); ?></span>
 			<h1 class="entry-title display-3 fw-bold text-navy"><?php echo esc_html( get_theme_mod( 'contact_title', 'Contact Page' ) ); ?></h1>
 			<p class="lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'contact_content', 'Ready to architect your high-impact reality? Our team is standing by to assist with your growth journey.' ) ); ?></p>
 		</header>
@@ -14,9 +14,9 @@ get_header(); ?>
 		<div class="row g-5">
 			<div class="col-lg-4 animate-up" style="animation-delay: 0.1s;">
 				<div class="contact-info-wrapper pe-lg-4">
-					<h2 class="h4 fw-bold text-navy mb-4 contact-info-title"><?php echo esc_html(get_theme_mod('contact_info_title', 'Contact Information')); ?></h2>
+					<h2 class="h4 fw-bold text-navy mb-phi-l contact-info-title"><?php echo esc_html(get_theme_mod('contact_info_title', 'Contact Information')); ?></h2>
 
-					<div class="contact-item d-flex mb-4">
+					<div class="contact-item d-flex mb-phi-l">
 						<div class="icon-box bg-gold text-white rounded-circle d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
 							<i class="fas fa-envelope"></i>
 						</div>
@@ -26,7 +26,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="contact-item d-flex mb-4">
+					<div class="contact-item d-flex mb-phi-l">
 						<div class="icon-box bg-gold text-white rounded-circle d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
 							<i class="fas fa-phone"></i>
 						</div>
@@ -36,7 +36,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="contact-item d-flex mb-4">
+					<div class="contact-item d-flex mb-phi-l">
 						<div class="icon-box bg-gold text-white rounded-circle d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
 							<i class="fas fa-map-marker-alt"></i>
 						</div>
@@ -46,8 +46,8 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="social-box mt-5 p-4 bg-light rounded-4">
-						<h3 class="h6 fw-bold mb-3 contact-social-title"><?php echo esc_html(get_theme_mod('contact_social_title', 'Follow Our Journey')); ?></h3>
+					<div class="social-box mt-phi p-4 bg-light rounded-4">
+						<h3 class="h6 fw-bold mb-phi-s contact-social-title"><?php echo esc_html(get_theme_mod('contact_social_title', 'Follow Our Journey')); ?></h3>
 						<div class="d-flex gap-3">
 							<?php
 							$socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
@@ -70,7 +70,7 @@ get_header(); ?>
                         echo do_shortcode( $cf7_shortcode );
                     else :
                     ?>
-					<h2 class="h4 fw-bold text-navy mb-4 contact-form-title"><?php echo esc_html(get_theme_mod('contact_form_title', 'Send a Message')); ?></h2>
+					<h2 class="h4 fw-bold text-navy mb-phi-l contact-form-title"><?php echo esc_html(get_theme_mod('contact_form_title', 'Send a Message')); ?></h2>
 					<form class="row g-4">
 						<div class="col-md-6">
 							<label class="form-label small fw-bold contact-form-name-label"><?php echo esc_html(get_theme_mod('contact_form_name_label', 'Full Name')); ?></label>
@@ -98,7 +98,7 @@ get_header(); ?>
 		</div>
 
 		<?php if(get_theme_mod('contact_map_url')) : ?>
-			<div class="mt-6 animate-up rounded-4 overflow-hidden shadow-sm contact-map">
+			<div class="mt-phi animate-up rounded-4 overflow-hidden shadow-sm contact-map">
 				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen= loading="lazy"></iframe>
 			</div>
 		<?php endif; ?>

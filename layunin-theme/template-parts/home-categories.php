@@ -1,6 +1,6 @@
 <section class="categories-section py-phi bg-light">
-	<div class="container text-center mb-6 animate-up">
-		<h2 class="display-4 fw-black text-navy mb-3"><?php echo esc_html( get_theme_mod( 'categories_title', 'The Pillars of Your Purpose' ) ); ?></h2>
+	<div class="container text-center mb-phi animate-up">
+		<h2 class="display-4 fw-black text-navy mb-phi-s"><?php echo esc_html( get_theme_mod( 'categories_title', 'The Pillars of Your Purpose' ) ); ?></h2>
 		<p class="section-desc lead text-muted mx-auto" style="max-width: 700px;"><?php echo esc_html( get_theme_mod( 'categories_desc', 'Deep-dive into the strategies that move the needle.' ) ); ?></p>
 	</div>
 
@@ -16,7 +16,7 @@
 			?>
 			<div class="col-lg-4 col-md-6 animate-up" style="animation-delay: <?php echo $i * 0.1; ?>s;">
 				<a href="<?php echo esc_url(get_category_link(get_cat_ID($title))); ?>" class="category-card card p-5 border-0 shadow-sm h-100 text-center text-decoration-none transition-all hover-lift" style="border-radius: 30px !important;">
-					<div class="category-icon text-gold mb-4 display-3"><i class="<?php echo esc_attr($icon); ?>"></i></div>
+					<div class="category-icon text-gold mb-phi-l display-3"><i class="<?php echo esc_attr($icon); ?>"></i></div>
 					<h3 class="h4 fw-bold text-navy mb-0"><?php echo esc_html($title); ?></h3>
 				</a>
 			</div>

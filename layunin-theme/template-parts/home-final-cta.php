@@ -4,9 +4,9 @@
 	<div class="container position-relative z-index-1">
 		<div class="row justify-content-center">
 			<div class="col-lg-10 animate-up">
-                <div class="cta-content-wrapper p-5 p-lg-6 rounded-5 glass-morphism shadow-2xl mb-4">
-				<h2 class="display-2 fw-black text-navy mb-4"><?php echo esc_html( get_theme_mod( 'final_cta_title', 'Master Your Path. Claim Your Layunin.' ) ); ?></h2>
-				<p class="lead opacity-75 mb-6 fs-4">
+                <div class="cta-content-wrapper p-5 p-lg-6 rounded-5 glass-morphism shadow-2xl mb-phi-l">
+				<h2 class="display-2 fw-black text-navy mb-phi-l"><?php echo esc_html( get_theme_mod( 'final_cta_title', 'Master Your Path. Claim Your Layunin.' ) ); ?></h2>
+				<p class="lead opacity-75 mb-phi fs-4">
 					<?php echo esc_html( get_theme_mod( 'final_cta_desc', 'The difference between who you are and who you want to be is what you do today. Join the elite network.' ) ); ?>
 				</p>
 				<div class="d-flex flex-wrap justify-content-center gap-4">
@@ -14,7 +14,7 @@
 					<a href="<?php echo esc_url( get_theme_mod('final_cta_2_link', home_url('/free-resources/')) ); ?>" class="btn btn-outline-navy btn-xl px-5 py-3 fs-5 fw-bold border-2 final-cta-2"><?php echo esc_html( get_theme_mod('final_cta_2_text', 'Explore the Knowledge Library') ); ?></a>
 				</div>
                 </div>
-                <div class="mt-5 opacity-50 small text-white">
+                <div class="mt-phi opacity-50 small text-white">
                     <p class="final-cta-trust"><?php echo esc_html(get_theme_mod('final_cta_trust', 'Backed by our commitment to Filipino excellence. No commitment required to start.')); ?></p>
                 </div>
 			</div>

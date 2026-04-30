@@ -3,20 +3,20 @@
  * The template for displaying the footer (v9.4 Masterpiece)
  */
 ?>
-	<footer id="colophon" class="site-footer bg-navy text-white pt-6 pb-4 mt-auto">
+	<footer id="colophon" class="site-footer bg-navy text-white py-phi mt-auto">
 		<div class="container">
 			<div class="row g-5">
 				<div class="col-lg-4">
-					<div class="footer-branding mb-5 pe-lg-5">
+					<div class="footer-branding mb-phi pe-lg-5">
 						<?php if ( has_custom_logo() ) : ?>
-							<div class="footer-logo mb-4 brightness-0 invert"><?php the_custom_logo(); ?></div>
+							<div class="footer-logo mb-phi-l brightness-0 invert"><?php the_custom_logo(); ?></div>
 						<?php else : ?>
-							<h2 class="h3 text-white fw-black mb-4"><?php bloginfo('name'); ?></h2>
+							<h2 class="h3 text-white fw-black mb-phi-l"><?php bloginfo('name'); ?></h2>
 						<?php endif; ?>
 						<p class="text-white-50 lh-lg branding-text">
 							<?php echo esc_html( get_theme_mod( 'footer_branding_text', 'Architecting the next generation of Filipino excellence.' ) ); ?>
 						</p>
-						<div class="social-links d-flex gap-4 mt-5">
+						<div class="social-links d-flex gap-4 mt-phi">
 							<?php
 							$socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 							foreach ( $socials as $social ) :
@@ -30,7 +30,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col2-title"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery Areas')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-phi-l letter-spacing-2 footer-col2-title"><?php echo esc_html(get_theme_mod('footer_col2_title', 'Mastery Areas')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="col-lg-2 col-md-6">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-col3-title"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Elite Vault')); ?></h3>
+					<h3 class="h6 text-uppercase fw-bold text-white mb-phi-l letter-spacing-2 footer-col3-title"><?php echo esc_html(get_theme_mod('footer_col3_title', 'Elite Vault')); ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'footer',
@@ -54,9 +54,9 @@
 				</div>
 
 				<div class="col-lg-4">
-					<h3 class="h6 text-uppercase fw-bold text-white mb-4 letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
-					<p class="text-white-50 small mb-4 footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 25,000+ subscribers for weekly high-output insights.')); ?></p>
-					<form class="newsletter-form mb-4" action="<?php echo esc_url(get_theme_mod('newsletter_form_action')); ?>" method="POST">
+					<h3 class="h6 text-uppercase fw-bold text-white mb-phi-l letter-spacing-2 footer-newsletter-title"><?php echo esc_html(get_theme_mod('footer_newsletter_title', 'The Growth Protocol')); ?></h3>
+					<p class="text-white-50 small mb-phi-l footer-newsletter-desc"><?php echo esc_html(get_theme_mod('footer_newsletter_desc', 'Join 25,000+ subscribers for weekly high-output insights.')); ?></p>
+					<form class="newsletter-form mb-phi-l" action="<?php echo esc_url(get_theme_mod('newsletter_form_action')); ?>" method="POST">
 						<div class="input-group">
 							<input type="email" name="EMAIL" class="form-control bg-navy-light border-0 text-white py-3" placeholder="<?php echo esc_attr(get_theme_mod('footer_newsletter_ph', 'Enter your best email')); ?>" style="border-radius: 12px 0 0 12px !important;">
 							<button class="btn btn-gold px-4 footer-newsletter-btn" type="submit" style="border-radius: 0 12px 12px 0 !important; padding: 0.5rem 1.5rem;"><?php echo esc_html(get_theme_mod('footer_newsletter_btn', 'Join')); ?></button>
@@ -66,13 +66,13 @@
 				</div>
 			</div>
 
-			<hr class="my-5 border-white opacity-10">
+			<hr class="my-phi border-white opacity-10">
 
 			<div class="footer-bottom d-md-flex align-items-center justify-content-between small text-white-50">
 				<div class="copyright">
 					<?php echo esc_html(get_theme_mod('footer_copyright', '© ' . date('Y') . ' Layunin.com. All rights reserved. Architected in the Philippines.')); ?>
 				</div>
-				<div class="footer-meta d-flex gap-4 mt-3 mt-md-0">
+				<div class="footer-meta d-flex gap-4 mt-phi-s mt-md-0">
 					<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>" class="text-white-50 text-decoration-none hover-white footer-privacy-label"><?php echo esc_html(get_theme_mod('footer_privacy_label', 'Privacy')); ?></a>
 					<a href="<?php echo esc_url( home_url('/terms/') ); ?>" class="text-white-50 text-decoration-none hover-white footer-terms-label"><?php echo esc_html(get_theme_mod('footer_terms_label', 'Terms')); ?></a>
 				</div>

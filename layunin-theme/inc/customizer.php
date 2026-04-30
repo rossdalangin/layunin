@@ -530,7 +530,6 @@ function layunin_customize_register( $wp_customize ) {
         $wp_customize->add_setting( 'services_custom_btn', array( 'default' => 'Initiate Consultation', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
         $wp_customize->add_control( 'services_custom_btn', array( 'label' => 'Custom Solution Button', 'section' => "layunin_page_{$id}" ) );
     }
-        }
         if($id == 'contact') {
             $wp_customize->add_setting( 'contact_badge', array( 'default' => "Initiate Protocol", 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'contact_badge', array( 'label' => 'Top Badge Text', 'section' => "layunin_page_{$id}" ) );

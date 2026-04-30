@@ -99,7 +99,7 @@ get_header(); ?>
 
 		<?php if(get_theme_mod('contact_map_url')) : ?>
 			<div class="mt-phi animate-up rounded-4 overflow-hidden shadow-sm contact-map">
-				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen= loading="lazy"></iframe>
+				<iframe src="<?php echo esc_url(get_theme_mod('contact_map_url')); ?>" width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
 			</div>
 		<?php endif; ?>
 	</div>

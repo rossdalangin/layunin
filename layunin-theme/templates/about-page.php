@@ -3,7 +3,7 @@
  * Template Name: About Page (v9.4 Masterpiece)
  */
 get_header(); ?>
-<main id="primary" class="site-main py-xl">
+<main id="primary" class="site-main py-phi">
 	<div class="container">
 		<header class="entry-header text-center mb-phi animate-up pe-lg-5 ps-lg-5">
 			<span class="text-gold text-uppercase fw-bold letter-spacing-2 mb-phi-s d-block about-badge"><?php echo esc_html(get_theme_mod('about_badge', 'The Pursuit of Absolute Mastery')); ?></span>
@@ -11,7 +11,7 @@ get_header(); ?>
             <p class="lead text-muted mx-auto fs-4" style="max-width: 800px;"><?php echo esc_html( get_theme_mod( 'about_lead', 'Layunin was built on a single, uncompromising principle: that every Filipino has the potential to achieve world-class excellence when equipped with the right systems.' ) ); ?></p>
 		</header>
 
-		<div class="row g-5 align-items-center mb-xl">
+		<div class="row g-phi align-items-center mb-phi">
             <div class="col-lg-6 animate-up">
                 <div class="entry-content fs-5 lh-lg">
                     <h2 class="display-6 fw-bold text-navy mb-phi-l about-mission-title"><?php echo esc_html(get_theme_mod('about_mission_title', 'Our Elite Mission')); ?></h2>
@@ -41,7 +41,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="team-section mt-xl">
+        <div class="team-section mt-phi">
             <div class="section-header text-center mb-phi">
                 <h2 class="display-4 fw-black mb-phi-s text-navy about-team-title"><?php echo esc_html(get_theme_mod('about_team_title', 'The Architects of Excellence')); ?></h2>
                 <div class="accent-line mx-auto" style="width: 80px; height: 5px; background: var(--gold); border-radius: 5px;"></div>

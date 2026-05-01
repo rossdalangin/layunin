@@ -1,0 +1,23 @@
+LAYUNIN INFLUENCER OUTREACH PROTOCOLS
+ARCHITECTING STRATEGIC PARTNERSHIPS IN THE PHILIPPINES
+
+1. TARGET SEGMENTS
+- "The Productivity Architect": Content creators who review planners, tech, and AI tools.
+- "The Freelance Mentor": VAs or Freelancers with 20k+ followers who teach others how to scale.
+- "The Elite Nomad": Digital nomads living in BGC/Siargao/Cebu focusing on lifestyle design.
+
+2. THE "VALUE-FIRST" OUTREACH SCRIPT (DM/Email)
+"Hey [Name], I’ve been following your work on [Specific Video/Topic]. Most Filipino creators are just 'hustling,' but you’re actually teaching 'Systems.'
+
+I've architected a new framework called Layunin. It’s a Golden Ratio-based design system for Filipino high-achievers. I’d love to send you the 'AI Prompt Vault' or the 'Master Planner'—no strings attached. I just value your architectural eye.
+
+If you like the protocol, I’d love to talk about getting you 'Architect Status' (Affiliate Protocol) for your community."
+
+3. THE AFFILIATE OFFER (THE "ARCHITECT" TIER)
+- Commission: 30-40% recurring on digital assets.
+- Support: Custom landing page on the Layunin theme for their audience.
+- Bonus: Features on the Layunin "Wall of Impact" (mutual growth).
+
+4. TRACKING & MANAGEMENT
+- Use the Customizer settings to manage Global Affiliate banners.
+- Integrate a simple tracking plugin (like SliceWP or AffiliateWP) into the WordPress backend.

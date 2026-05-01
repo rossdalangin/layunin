@@ -479,6 +479,8 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_setting( 'about_visual', array( 'default' => 'https://images.unsplash.com/photo-1522071823991-b9671f30c46f?auto=format&fit=crop&q=80&w=1200', 'sanitize_callback' => 'esc_url_raw' ) );
             $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'about_visual', array( 'label' => 'Main Visual', 'section' => "layunin_page_{$id}" ) ) );
             $wp_customize->add_setting( 'about_team_title', array( 'default' => 'The Architects of Excellence', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( "sidebar_author_title", array( "default" => "About the Author", "sanitize_callback" => "sanitize_text_field", "transport" => "postMessage" ) );
+    $wp_customize->add_control( "sidebar_author_title", array( "label" => "Sidebar Author Title", "section" => "layunin_sidebar_author" ) );
             $wp_customize->add_control( 'about_team_title', array( 'label' => 'Team Section Title', 'section' => "layunin_page_{$id}" ) );
     $wp_customize->add_setting( 'about_mission_title', array( 'default' => 'Our Elite Mission', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
     $wp_customize->add_control( 'about_mission_title', array( 'label' => 'Mission Section Title', 'section' => "layunin_page_{$id}" ) );
@@ -598,8 +600,6 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_control( 'shop_newsletter_ph', array( 'label' => 'Newsletter Placeholder', 'section' => "layunin_page_{$id}" ) );
             $wp_customize->add_setting( 'shop_newsletter_btn', array( 'default' => 'Join Now', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'shop_newsletter_btn', array( 'label' => 'Newsletter Button Text', 'section' => "layunin_page_{$id}" ) );
-    $wp_customize->add_setting( 'sidebar_author_title', array( 'default' => 'About the Author', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
-	$wp_customize->add_control( 'sidebar_author_title', array( 'label' => 'Sidebar Author Title', 'section' => 'layunin_sidebar_author' ) );
 
             for($i = 1; $i <= 6; $i++) {
                 $wp_customize->add_setting( "shop_item_{$i}_title", array( 'default' => 'Elite Framework ' . $i, 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );

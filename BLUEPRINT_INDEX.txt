@@ -1,7 +1,7 @@
 LAYUNIN ULTIMATE BLUEPRINT INDEX
-THE MASTER ARCHITECT'S STRATEGIC REPOSITORY (V1.2)
+THE MASTER ARCHITECT'S STRATEGIC REPOSITORY (V1.3)
 
-Welcome. You have at your disposal 33 specialized strategic assets designed to transform the Layunin theme into a high-impact, high-revenue business ecosystem.
+Welcome. You have at your disposal 38 specialized strategic assets designed to transform the Layunin theme into a high-impact, high-revenue business ecosystem.
 
 ---
 
@@ -48,9 +48,14 @@ VI. TRAFFIC, PARTNERSHIPS & CREATIVE
 30. AI_PROMPT_LIBRARY_FOR_MARKETING.txt - Optimized prompts for content creation.
 31. SOCIAL_MEDIA_BIO_AND_PROFILE_OPTIMIZATION.txt - Bio templates for authority.
 
-VII. INFRASTRUCTURE & LEGAL
+VII. INFRASTRUCTURE, LEGAL & DOWNLOADABLES
 32. TECH_STACK_AND_PAYMENTS_PH.txt - GCash, Maya, and local PH tech guide.
 33. HIGH_TICKET_SERVICE_AGREEMENT_TEMPLATE.txt - Legal framework for mentorship.
+34. ELITE_7_DAY_GOAL_RESET_PROTOCOL_CONTENT.md - Core lead magnet template.
+35. REVENUE_AND_PROFIT_TRACKER.csv - Financial mastery spreadsheet.
+36. CONTENT_PLANNER_AND_SCHEDULER.csv - Operations management spreadsheet.
+37. AI_PROMPT_WORKFLOW_BUILDER.csv - Modular AI prompt management.
+38. CLIENT_ONBOARDING_CHECKLIST.md - High-ticket operational document.
 
 ---
 INITIATE THE PROTOCOL. ARCHITECT THE FUTURE.

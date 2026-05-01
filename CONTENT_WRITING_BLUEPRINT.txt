@@ -1,0 +1,26 @@
+LAYUNIN CONTENT WRITING BLUEPRINT
+THE ARCHITECTURE OF A VIRAL PILLAR POST
+
+1. THE HOOK (The Display Heading)
+- Must address a specific "Friction" (e.g., "The Secret Friction Point Stopping Filipino VAs from Earning ₱200k").
+
+2. THE "LAYUNIN" ALIGNMENT (First 100 Words)
+- Connect the topic to the user's deep purpose. Use empathetic but authoritative tone.
+- SEO: Include your primary keyword in the first paragraph.
+
+3. THE TABLE OF CONTENTS (Automated)
+- The theme automatically generates this. Use H2 and H3 tags to create an elite "Strategic Overview."
+
+4. THE MODULAR FRAMEWORK (The Body)
+- Every post must offer a "System." Use a [benefit_list] or [cta_box] to break up long text.
+- Use bullet points for readability. Paragraphs should not exceed 3-4 lines.
+
+5. THE LEAD MAGNET INJECTION
+- At the 50% mark, insert an image or CTA for the "Elite 7-Day Goal Reset Protocol."
+
+6. THE "FINAL CALL" (The Conclusion)
+- Summarize the transformation.
+- End with a single, clear CTA (e.g., "Initiate the protocol here: [Link]").
+
+7. METADATA (Customizer Settings)
+- Ensure the "Meta Description" in **SEO & Social Media** is updated for every post to maximize click-through rate.

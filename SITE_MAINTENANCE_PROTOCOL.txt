@@ -1,0 +1,21 @@
+LAYUNIN SITE MAINTENANCE PROTOCOL
+ENSURING PERPETUAL PERFORMANCE & ELITE SECURITY
+
+1. CORE UPDATES (QUARTERLY)
+- WordPress Core: Always keep updated to the latest version.
+- Theme Version: Check your 'style.css'. If a new v9.x is released by Layunin, backup your Customizer settings before updating.
+- Plugins: Minimize plugin count. Every extra plugin adds "noise" and potential latency.
+
+2. DATABASE & PERFORMANCE AUDIT
+- Optimization: Use a plugin like WP-Optimize once a month to clear revisions and overhead.
+- Caching: The theme is optimized for server-side caching (SiteGround/Hostinger). Ensure "Object Caching" is enabled.
+- Images: Never upload images over 500KB. Use WebP format for sub-millisecond load times.
+
+3. SECURITY PROTOCOLS
+- SSL: Ensure your site is running on HTTPS. This is required for GCash/Maya integrations.
+- Backups: Setup daily automated backups (to Google Drive or Dropbox).
+- Login: Use a "Limit Login Attempts" plugin to prevent brute-force attacks on your elite assets.
+
+4. CUSTOMIZER AUDIT
+- Every 90 days, walk through the **Elite Design System** to ensure your branding still reflects your market position.
+- Refresh the "Wall of Impact" with the 3 most recent success stories.

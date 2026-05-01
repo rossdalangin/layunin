@@ -1,0 +1,26 @@
+LANDING PAGE COPY FRAMEWORK
+THE PSYCHOLOGY OF HIGH-CONVERSION ARCHITECTURE
+
+1. THE DISPLAY HEADING (AWARENESS)
+- Formula: [Big Result] + [System Name] - [Major Pain Point]
+- Example: "3X Your High-Ticket Sales using the Layunin Elite Protocol—without the 80-hour hustle."
+
+2. THE "FRICTION" STATEMENT (EMPATHY)
+- Address the " Marco the Modern Architect" profile.
+- "You've reached ₱150k/mo, but you're exhausted. The global gurus tell you to 'hustle harder,' but they don't understand the Filipino technical friction."
+
+3. THE REVEAL: MODULAR SYSTEMS (LOGIC)
+- Introduce the "3 Pillars": Goal Alignment, AI Systems, Asset Scaling.
+- Use the [benefit_list] shortcode here to modularize the value.
+
+4. THE "WALL OF IMPACT" (SOCIAL PROOF)
+- Embed the masonry testimonials grid.
+- Focus on "Before/After" transformations.
+
+5. THE RISK REVERSAL (TRUST)
+- "Backed by our commitment to Filipino Excellence."
+- Mention the "Elite Vault" monthly updates.
+
+6. THE "ELITE" CTA
+- Use the [cta_box] shortcode.
+- Make the button text authoritative: "Initiate Protocol" or "Get Instant Access."

@@ -1,7 +1,7 @@
 LAYUNIN ULTIMATE BLUEPRINT INDEX
-THE MASTER ARCHITECT'S STRATEGIC REPOSITORY
+THE MASTER ARCHITECT'S STRATEGIC REPOSITORY (V1.1)
 
-Welcome. You have at your disposal 23 specialized strategic assets designed to transform the Layunin theme into a high-impact, high-revenue business ecosystem.
+Welcome. You have at your disposal 28 specialized strategic assets designed to transform the Layunin theme into a high-impact, high-revenue business ecosystem.
 
 ---
 
@@ -9,38 +9,43 @@ I. BRAND & CORE STRATEGY
 1. MARKET_ANALYSIS_REPORT.txt - PH Digital Economy research ($36B) and market gaps.
 2. CUSTOMER_AVATAR_DEEP_DIVE.txt - "Marco the Modern Architect" persona.
 3. BRAND_VOICE_STYLE_GUIDE.txt - Lexicon and tone of the Elite Architect.
-4. PRICING_AND_PACKAGING_STRATEGY.txt - Revenue optimization and value ladders.
+4. BRAND_ASSETS_SPECIFICATION.txt - Visual and Typographic specifications.
+5. PRICING_AND_PACKAGING_STRATEGY.txt - Revenue optimization and value ladders.
+6. YEAR_ONE_PRODUCT_ROADMAP.txt - Quarterly milestones for market dominance.
 
 II. LAUNCH & GROWTH ROADMAPS
-5. LAUNCH_PLAN_90_DAYS.txt - Week-by-week roadmap to your first customer.
-6. CONTENT_CALENDAR_30_DAYS.txt - Daily high-leverage post ideas.
-7. SEO_AND_ORGANIC_STRATEGY.txt - Localized traffic generation protocols.
-8. META_ADS_SCALING_STRATEGY.txt - 3-phase paid traffic mastery.
+7. LAUNCH_PLAN_90_DAYS.txt - Week-by-week roadmap to your first customer.
+8. CONTENT_CALENDAR_30_DAYS.txt - Daily high-leverage post ideas.
+9. SEO_AND_ORGANIC_STRATEGY.txt - Localized traffic generation protocols.
+10. META_ADS_SCALING_STRATEGY.txt - 3-phase paid traffic mastery.
 
 III. CONTENT & OPERATIONAL EXCELLENCE
-9. GUTENBERG_BLOCK_MASTERCLASS.txt - Tutorial for consistent "Masterpiece" styling.
-10. SHORTCODE_QUICK_REFERENCE.txt - Guide for all custom conversion components.
-11. CONTENT_WRITING_BLUEPRINT.txt - Architecture of a viral, high-conversion pillar post.
-12. SITE_MAINTENANCE_PROTOCOL.txt - Perpetual performance and security guidelines.
+11. GUTENBERG_BLOCK_MASTERCLASS.txt - Tutorial for consistent "Masterpiece" styling.
+12. SHORTCODE_QUICK_REFERENCE.txt - Guide for all custom conversion components.
+13. CONTENT_WRITING_BLUEPRINT.txt - Architecture of a viral, high-conversion pillar post.
+14. SITE_MAINTENANCE_PROTOCOL.txt - Perpetual performance and security guidelines.
+15. HIRING_AND_DELEGATION_GUIDE.txt - Scaling with elite remote talent.
+16. RISK_MANAGEMENT_PROTOCOL.txt - Security and continuity for digital assets.
 
 IV. SALES & CONVERSION PROTOCOLS
-13. SALES_MARKETING_ASSETS.txt - Email sequences and social ad templates.
-14. SALES_SCRIPTS_AND_TEMPLATES.txt - Discovery call scripts and DM outreach.
-15. WEBINAR_AND_LIVE_EVENT_SCRIPT.txt - High-conversion community workshop outline.
-16. HIGH_TICKET_OBJECTION_HANDLING.txt - Closing ₱50k+ services with precision.
-17. LANDING_PAGE_COPY_FRAMEWORK.txt - Psychological blueprints for conversion.
+17. SALES_MARKETING_ASSETS.txt - Email sequences and social ad templates.
+18. SALES_SCRIPTS_AND_TEMPLATES.txt - Discovery call scripts and DM outreach.
+19. WEBINAR_AND_LIVE_EVENT_SCRIPT.txt - High-conversion community workshop outline.
+20. HIGH_TICKET_OBJECTION_HANDLING.txt - Closing ₱50k+ services with precision.
+21. LANDING_PAGE_COPY_FRAMEWORK.txt - Psychological blueprints for conversion.
 
 V. COMMUNITY & RETENTION
-18. REFERRAL_AND_AFFILIATE_GUIDE.txt - Leveraging community-led growth.
-19. RETENTION_AND_UPSYSTEMS_STRATEGY.txt - Maximizing LTV and engagement.
-20. FACEBOOK_GROUP_GROWTH_STRATEGY.txt - Building the "Mastery Circle" community.
+22. REFERRAL_AND_AFFILIATE_GUIDE.txt - Leveraging community-led growth.
+23. RETENTION_AND_UPSYSTEMS_STRATEGY.txt - Maximizing LTV and engagement.
+24. FACEBOOK_GROUP_GROWTH_STRATEGY.txt - Building the "Mastery Circle" community.
+25. COMMUNITY_GUIDELINES_TEMPLATE.txt - Rules for an elite community environment.
 
 VI. TRAFFIC & PARTNERSHIPS
-21. INFLUENCER_OUTREACH_PROTOCOLS.txt - Scripted approach for local PH partnerships.
-22. YOUTUBE_AND_TIKTOK_CONTENT_HOOKS.txt - Viral short-form video themes.
+26. INFLUENCER_OUTREACH_PROTOCOLS.txt - Scripted approach for local PH partnerships.
+27. YOUTUBE_AND_TIKTOK_CONTENT_HOOKS.txt - Viral short-form video themes.
 
 VII. INFRASTRUCTURE
-23. TECH_STACK_AND_PAYMENTS_PH.txt - GCash, Maya, and local PH tech guide.
+28. TECH_STACK_AND_PAYMENTS_PH.txt - GCash, Maya, and local PH tech guide.
 
 ---
 INITIATE THE PROTOCOL. ARCHITECT THE FUTURE.

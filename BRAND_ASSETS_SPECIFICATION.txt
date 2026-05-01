@@ -1,0 +1,25 @@
+LAYUNIN BRAND ASSETS SPECIFICATION
+MAINTAINING VISUAL EXCELLENCE ACROSS ALL CHANNELS
+
+1. COLOR ARCHITECTURE (HEX)
+- Navy (Main): #050A18 - Use for backgrounds and high-authority headers.
+- Gold (Elite): #C5A02B - Use for CTAs, accents, and icons.
+- Emerald (Success): #00A36C - Use for status indicators and price tags.
+- White (Pure): #FFFFFF - Use for primary text in dark mode.
+
+2. TYPOGRAPHY ARCHITECTURE
+- Headings: Playfair Display (Bold 700 / Black 900). Set tracking to -0.02em.
+- Body: Inter (Regular 400 / Semibold 600). Line height must be 1.8.
+
+3. SPACING & RHYTHM
+- The "Phi" Rule: Always use spacing increments based on 1.618.
+- Utility: Use the .py-phi class (v9.8) for all section paddings to ensure mathematical harmony.
+
+4. IMAGERY PROTOCOL
+- Mood: Modern, Minimalist, High-Tech.
+- Source: Unsplash (Search: "Makati Skyline," "Minimalist Office," "Apple Tech," "Luxury Productivity").
+- Class: Always apply "shadow-premium" and "rounded-4" to all images.
+
+5. LOGO USAGE
+- Max Width: 200px (Customizer mod: logo_width).
+- Placement: Absolute center or far left. Never crowd the logo with text.

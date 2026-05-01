@@ -1,0 +1,23 @@
+LAYUNIN HIRING & DELEGATION GUIDE
+SCALING YOUR ARCHITECTURE WITH A REMOTE TEAM
+
+1. THE "SYSTEMS BEFORE STAFF" PROTOCOL
+Never hire to "fix a mess." Architect the workflow in the Layunin theme/backend first, then hire someone to execute the manual parts of that protocol.
+
+2. KEY ELITE ROLES (PH-MARKET FOCUSED)
+- The Content Concierge: Handles social media scheduling and minor blog edits using our Gutenberg Masterclass.
+- The Technical Architect: Manages WordPress updates and API integrations (PayMongo/ConvertKit).
+- The Success Specialist: Handles customer support and qualifies leads for high-ticket mentorship.
+
+3. DELEGATION FRAMEWORK: THE 61.8/38.2 RULE
+- Delegate 61.8% of repetitive, operational tasks (scheduling, simple design, data entry).
+- Retain 38.2% of high-leverage strategic work (brand vision, high-ticket closing, new protocol design).
+
+4. WHERE TO FIND ELITE FILIPINO TALENT
+- Avoid low-tier bidding sites. Use "OnlineJobs.ph" (Filter for 80+ ID score) or "Premium VA Groups" on Facebook.
+- Hiring Hook: "We don't just work; we architect. Looking for a systems-minded professional to join the Layunin ecosystem."
+
+5. ONBOARDING PROTOCOL
+- Day 1: Access to the Strategic Blueprint.
+- Week 1: Mandatory completion of the "Elite 7-Day Goal Reset Protocol."
+- Month 1: 360-degree review of their first modular workflow.

@@ -1,6 +1,6 @@
 <?php
 /**
- * Layunin Theme Customizer - Absolute Masterpiece (v9.6)
+ * Layunin Theme Customizer - Absolute Masterpiece (v9.8)
  * Total Content Coverage & Section Refinement
  */
 

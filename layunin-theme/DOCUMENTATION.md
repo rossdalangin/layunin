@@ -1,4 +1,4 @@
-# 🏛️ Layunin Premium Theme - The Master Architect's Guide (v9.7)
+# 🏛️ Layunin Premium Theme - The Master Architect's Guide (v9.8)
 
 Welcome to the **Absolute Masterpiece Edition** of the Layunin Premium Theme. This document serves as your strategic blueprint for architecting a world-class digital presence tailored for the Filipino high-achiever market.
 
@@ -73,7 +73,7 @@ Operating the Layunin engine requires a strategic approach. Follow this "Process
 ### 1. The Audit & Alignment Process (The Macro Process)
 Before publishing any content or launching a product, use the **Elite Protocol** methodology to audit your strategic intent:
 - **Phase 1: Audit & Align:** Does this insight or asset align with the core "Layunin" (Purpose) of your brand? Strip away the "noise" and focus only on high-leverage topics.
-- **Phase 2: Systematize Growth:** Every post should offer a framework. Use our built-in **Shortcode Library** (v9.7) to insert checklists, benefit grids, and CTA boxes that turn readers into practitioners.
+- **Phase 2: Systematize Growth:** Every post should offer a framework. Use our built-in **Shortcode Library** (v9.8) to insert checklists, benefit grids, and CTA boxes that turn readers into practitioners.
 - **Phase 3: Scale Impact:** The ultimate goal is digital asset creation. Use the **Shop Page** and **Services Page** to house the systems that allow your audience to scale their own results.
 
 ### 2. The Content Deployment Lifecycle (The Micro Process)
@@ -92,7 +92,7 @@ Before publishing any content or launching a product, use the **Elite Protocol**
 3. **Monetization Rotation:** Swap out the **Global Affiliate Banner** (Customizer > Monetization & Ads) to align with current seasonal promotions or new partnership launches.
 
 ### 3. The Customization Engine (100% Autonomy)
-The Layunin v9.7 engine is **100% dynamic**. Every visible string—including form placeholders, button labels, and aria-labels—can be edited in real-time with Live Preview.
+The Layunin v9.8 engine is **100% dynamic**. Every visible string—including form placeholders, button labels, and aria-labels—can be edited in real-time with Live Preview.
 
 ### 🏠 The Homepage Blueprint (13 Sections)
 Manage these via **Customizer > Homepage Content**:

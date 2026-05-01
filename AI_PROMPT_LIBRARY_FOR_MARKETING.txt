@@ -1,0 +1,19 @@
+LAYUNIN AI PROMPT LIBRARY FOR ELITE MARKETING
+ARCHITECTING CONTENT WITH PRECISION (GPT-4/CLAUDE 3.5 OPTIMIZED)
+
+Use these prompts to maintain the "Layunin Masterpiece" brand voice and aesthetic.
+
+1. PILLAR POST ARCHITECTURE
+"Act as a Senior Systems Architect. Write a 1,500-word Pillar Post on [Topic]. Use the Layunin Content Writing Blueprint: Start with a friction-focused display heading, include a 'Layunin Alignment' intro, and modularize the body with 3-5 'Elite Protocols.' The tone must be professional, authoritative, and Filipino-market centric. Use short paragraphs and high-impact terminology (Modular, Architecture, Protocol)."
+
+2. SHORT-FORM VIRAL HOOKS
+"Generate 10 TikTok/Reels hooks for a video about [Product/Service]. Use the 'Friction-First' formula. Focus on the pain points of the Filipino high-earner (Hustle Trap, Information Overload). The hooks should sound like a calm architect giving a wake-up call to an elite professional. Avoid hype; focus on systems."
+
+3. SALES EMAIL CRAFTING
+"Write a high-conversion sales email for the 'Mastery Tier' mentorship. Follow the 'Architecture of Conversion' framework: 1. The Audit (Problem), 2. The Gap (Cost of Inaction), 3. The Protocol (Solution), 4. The Ascension (CTA). Use the Golden Ratio logic: 61.8% value/insight, 38.2% pitch."
+
+4. CUSTOMER PERSONA SYNTHESIS
+"Based on the 'Marco the Modern Architect' avatar, write a Facebook ad copy that addresses the fear of 'Technical Obsolescence' and the desire for 'Digital Asset Creation.' The copy must feel premium and exclusive. Use GCash/Maya as the implicit payment expectation."
+
+5. MODULAR SYSTEM DESIGN
+"Create a 7-step 'Modular Protocol' for [Specific Task, e.g., Onboarding a VA]. Format it for a [benefit_list] shortcode. Each step must have a bold title and a concise, outcome-focused description."

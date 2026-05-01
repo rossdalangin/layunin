@@ -13,6 +13,7 @@ Version: 9.8
     --emerald: #00A36C;
     --white: #FFFFFF;
     --bg-light: #F8F9FA;
+    --bg-light-gold: rgba(212, 175, 55, 0.05);
     --text-main: #1E293B;
     --text-muted: #475569;
 
@@ -306,6 +307,7 @@ section { padding: var(--space-xl) 0; }
 body.dark-mode {
     --white: #050A18;
     --bg-light: #020612;
+    --bg-light-gold: rgba(212, 175, 55, 0.02);
     --text-main: #E2E8F0;
     --text-muted: #94A3B8;
     --navy: #0A192F;
@@ -319,7 +321,7 @@ body.dark-mode .site-header {
 
 body.dark-mode .nav-link { color: #E2E8F0 !important; }
 body.dark-mode .card { background: var(--navy-light); color: #E2E8F0; }
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #FFFFFF; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode .entry-title { color: #FFFFFF !important; }
 body.dark-mode .text-navy { color: #E2E8F0 !important; }
 
 /* Utility Classes for Navy Backgrounds */
@@ -359,4 +361,290 @@ body.dark-mode .text-navy { color: #E2E8F0 !important; }
 
 .site-footer .footer-meta a:hover {
     color: #FFFFFF !important;
+}
+
+/* Fix contrast for dark mode sections that were bg-light or bg-white */
+body.dark-mode .bg-light,
+body.dark-mode .bg-white {
+    background-color: var(--bg-light) !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .problem-item,
+body.dark-mode .testimonial-card-main,
+body.dark-mode .feature-icon,
+body.dark-mode .table-of-contents {
+    background-color: var(--navy-light) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .small.text-muted,
+body.dark-mode .text-white-50 {
+    color: var(--text-muted) !important;
+}
+
+body.dark-mode .text-gold {
+    color: var(--gold) !important;
+}
+
+body.dark-mode .btn-gold {
+    color: var(--navy-dark) !important;
+}
+
+body.dark-mode .site-footer {
+    background-color: var(--navy-dark) !important;
+}
+
+/* Ensure post content is visible in dark mode */
+body.dark-mode .entry-content,
+body.dark-mode .entry-content p,
+body.dark-mode .entry-content li {
+    color: var(--text-main) !important;
+}
+
+/* Fix for Hero CTA 2 and borders in Dark Mode */
+body.dark-mode .btn-outline-navy {
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+
+body.dark-mode .btn-outline-navy:hover {
+    background-color: var(--gold) !important;
+    color: var(--navy-dark) !important;
+}
+
+body.dark-mode .border-light,
+body.dark-mode .border-top,
+body.dark-mode .border-bottom,
+body.dark-mode .border {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .hero-bg-accent {
+    background: rgba(212, 175, 55, 0.02) !important;
+}
+
+/* Modal and Popup Dark Mode */
+body.dark-mode .modal-content,
+body.dark-mode .offcanvas {
+    background-color: var(--navy-dark) !important;
+    color: var(--text-main) !important;
+}
+
+/* Refined Component Consistency */
+.btn-navy {
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+}
+
+.btn-navy:hover {
+    background-color: var(--navy-light);
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.btn-outline-navy {
+    background-color: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+}
+
+.btn-outline-navy:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.bg-navy-subtle { background-color: rgba(10, 25, 47, 0.05) !important; }
+.bg-white-10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+.bg-light-gold { background-color: rgba(212, 175, 55, 0.1) !important; }
+
+/* Dark Mode Component Overrides */
+body.dark-mode .btn-navy {
+    background-color: var(--gold);
+    color: var(--navy-dark);
+}
+
+body.dark-mode .btn-navy:hover {
+    background-color: var(--gold-hover);
+}
+
+body.dark-mode .bg-navy-subtle { background-color: rgba(255, 255, 255, 0.05) !important; }
+body.dark-mode .bg-light-gold { background-color: rgba(212, 175, 55, 0.2) !important; }
+
+/* Section Specific Overrides */
+.final-cta-section.bg-navy,
+.site-footer.bg-navy {
+    background-color: var(--navy-dark) !important;
+}
+
+/* Ensure images have consistent behavior in dark mode */
+body.dark-mode img {
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+body.dark-mode img:hover {
+    opacity: 1;
+}
+
+/* Ultimate Dark Mode Refinement */
+body.dark-mode .lead,
+body.dark-mode p.lead,
+body.dark-mode .display-1,
+body.dark-mode .display-2,
+body.dark-mode .display-3,
+body.dark-mode .display-4,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .small.text-muted {
+    color: var(--text-muted) !important;
+}
+
+body.dark-mode .bg-light .lead,
+body.dark-mode .bg-white .lead {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .btn-outline-navy {
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+
+/* Fix for possible light-on-light in footer if primary color is changed */
+.site-footer {
+    background-color: #050A18 !important; /* Force Brand Navy for Footer for Absolute Consistency */
+}
+
+body.dark-mode .site-footer {
+    background-color: #020612 !important; /* Even darker in Dark Mode */
+}
+
+.site-footer .text-white,
+.site-footer h3,
+.site-footer .footer-newsletter-title {
+    color: #FFFFFF !important;
+}
+
+.site-footer .text-white-50,
+.site-footer .footer-newsletter-desc,
+.site-footer .copyright {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Glassmorphism & Premium Utilities */
+.glass, .glass-morphism {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body:not(.dark-mode) .glass,
+body:not(.dark-mode) .glass-morphism {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Form Control Dark Mode */
+body.dark-mode .form-control {
+    background-color: var(--navy-light) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Specific component fixes */
+body.dark-mode .hero-status-card {
+    background: rgba(18, 30, 59, 0.8) !important;
+}
+
+body.dark-mode .social-box {
+    background-color: var(--navy-light) !important;
+}
+
+/* Dark mode accessibility for colored badges */
+body.dark-mode .badge.bg-navy-subtle {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--gold) !important;
+}
+
+/* Header Spacer persistence */
+body.dark-mode .header-spacer {
+    background-color: var(--bg-light);
+}
+
+/* Final contrast check for post navigation */
+body.dark-mode .post-navigation a {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .post-navigation .meta-nav {
+    color: var(--text-muted) !important;
+}
+
+/* Global Background Adaptive Color System */
+.bg-white { background-color: var(--white) !important; }
+.bg-light { background-color: var(--bg-light) !important; }
+
+/* Testimonials Page Grid Dark Mode */
+body.dark-mode .testimonial-card {
+    background-color: var(--navy-light) !important;
+    color: var(--text-main) !important;
+}
+
+/* Shop Overlay Fix */
+body.dark-mode .product-overlay {
+    background-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Lead Magnet Landing Page Fixes */
+body.dark-mode .landing-form-card {
+    background-color: var(--navy-light) !important;
+}
+
+body.dark-mode .trust-pill {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Service Tiers in Dark Mode */
+body.dark-mode .pricing-card {
+    background-color: var(--navy-light) !important;
+}
+
+/* Feature Icons and Avatars */
+body.dark-mode .feature-icon,
+body.dark-mode .avatar {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Badge System Resilience */
+body.dark-mode .badge {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .bg-gold .text-white {
+    color: var(--navy-dark) !important;
+}
+
+/* General Layout Resilience */
+.site-main {
+    background-color: var(--bg-light);
+}
+
+body.dark-mode .site-main {
+    background-color: var(--navy-dark);
 }

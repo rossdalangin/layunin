@@ -78,13 +78,13 @@
 					) );
 					?>
 					<div class="header-actions header-cta ms-5 d-flex align-items-center gap-3">
-						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="<?php echo esc_attr(get_theme_mod('header_dark_mode_title', 'Switch Mode')); ?>">🌓</button>
+						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="<?php echo esc_attr(get_theme_mod('header_dark_mode_title', 'Switch Mode')); ?>"><i class="fas fa-moon"></i></button>
 						<a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold px-4 py-2 small fw-bold shadow-sm"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
 					</div>
 				</nav>
 
 				<div class="d-lg-none d-flex align-items-center gap-3">
-					<button id="dark-mode-toggle-mobile" class="btn btn-link text-navy p-0 fs-4">🌓</button>
+					<button id="dark-mode-toggle-mobile" class="btn btn-link text-navy p-0 fs-4"><i class="fas fa-moon"></i></button>
 					<button class="menu-toggle btn p-0 text-navy fs-2" aria-expanded="false">
 						<i class="fas fa-bars"></i>
 					</button>

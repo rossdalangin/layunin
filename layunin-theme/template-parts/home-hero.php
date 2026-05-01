@@ -1,5 +1,5 @@
-<section class="hero-section text-navy d-flex align-items-center position-relative overflow-hidden py-phi" style="min-height: 85vh; background: #fff;">
-	<div class="hero-bg-accent position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block" style="background: rgba(212, 175, 55, 0.05); transform: skewX(-10deg) translateX(15%);"></div>
+<section class="hero-section text-navy d-flex align-items-center position-relative overflow-hidden py-phi" style="min-height: 85vh; background: var(--white);">
+	<div class="hero-bg-accent position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block" style="background: var(--bg-light-gold); transform: skewX(-10deg) translateX(15%);"></div>
 
 	<div class="container position-relative z-index-1">
 		<div class="row align-items-center g-5">

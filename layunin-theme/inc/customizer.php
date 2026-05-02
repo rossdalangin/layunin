@@ -628,14 +628,20 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_setting( 'resources_btn_text', array( 'default' => 'Download Free', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'resources_btn_text', array( 'label' => 'Download Button Text', 'section' => "layunin_page_{$id}" ) );
 
+            $guides = array(
+                1 => array('title' => 'The Ultimate Productivity Vault', 'type' => 'Time Mastery', 'icon' => 'fas fa-clock'),
+                2 => array('title' => 'AI Leverage Framework', 'type' => 'Automation', 'icon' => 'fas fa-robot'),
+                3 => array('title' => 'Digital Economy Mastery', 'type' => 'Income Strategy', 'icon' => 'fas fa-chart-line'),
+                4 => array('title' => 'Elite Mindset Protocol', 'type' => 'Performance', 'icon' => 'fas fa-brain'),
+            );
             for($i = 1; $i <= 4; $i++) {
-                $wp_customize->add_setting( "resource_{$i}_title", array( 'default' => 'Mastery Guide ' . $i, 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_setting( "resource_{$i}_title", array( 'default' => $guides[$i]['title'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "resource_{$i}_title", array( 'label' => "Resource $i Title", 'section' => "layunin_page_{$id}" ) );
-                $wp_customize->add_setting( "resource_{$i}_type", array( 'default' => 'Elite Protocol', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+                $wp_customize->add_setting( "resource_{$i}_type", array( 'default' => $guides[$i]['type'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
                 $wp_customize->add_control( "resource_{$i}_type", array( 'label' => "Resource $i Type", 'section' => "layunin_page_{$id}" ) );
                 $wp_customize->add_setting( "resource_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
                 $wp_customize->add_control( "resource_{$i}_link", array( 'label' => "Resource $i Link", 'section' => "layunin_page_{$id}" ) );
-                $wp_customize->add_setting( "resource_{$i}_icon", array( 'default' => 'fas fa-shield-halved', 'sanitize_callback' => 'sanitize_text_field' ) );
+                $wp_customize->add_setting( "resource_{$i}_icon", array( 'default' => $guides[$i]['icon'], 'sanitize_callback' => 'sanitize_text_field' ) );
                 $wp_customize->add_control( "resource_{$i}_icon", array( 'label' => "Resource $i Icon", 'section' => "layunin_page_{$id}" ) );
             }
         }

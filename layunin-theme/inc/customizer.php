@@ -292,13 +292,13 @@ function layunin_customize_register( $wp_customize ) {
 
     // 12. Final CTA
     $wp_customize->add_section( 'layunin_home_final', array( 'title' => '12. Final CTA Section', 'panel' => 'layunin_homepage_panel' ) );
-    $wp_customize->add_setting( 'final_cta_title', array( 'default' => 'Master Your Path. Claim Your Layunin.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( 'final_cta_title', array( 'default' => 'Master Your Absolute Purpose.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'final_cta_title', array( 'label' => 'Title', 'section' => 'layunin_home_final' ) );
-    $wp_customize->add_setting( 'final_cta_desc', array( 'default' => 'The difference between who you are and who you want to be is what you do today. Join the elite network.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( 'final_cta_desc', array( 'default' => 'Everything you have built so far was just the rehearsal. Now, it is time to architect the legacy. Join the network of Filipino high-achievers who are redefining what is possible with systems and AI.', 'sanitize_callback' => 'sanitize_textarea_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'final_cta_desc', array( 'label' => 'Description', 'section' => 'layunin_home_final', 'type' => 'textarea' ) );
     $wp_customize->add_setting( 'final_cta_trust', array( 'default' => 'Backed by our commitment to Filipino excellence. No commitment required to start.', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'final_cta_trust', array( 'label' => 'Trust Text', 'section' => 'layunin_home_final' ) );
-    $wp_customize->add_setting( 'final_cta_1_text', array( 'default' => 'Access the Elite Network', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
+    $wp_customize->add_setting( 'final_cta_1_text', array( 'default' => 'Initiate the Protocol', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_control( 'final_cta_1_text', array( 'label' => 'Button 1 Text', 'section' => 'layunin_home_final' ) );
     $wp_customize->add_setting( 'final_cta_1_link', array( 'default' => '/lead-magnet/', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'final_cta_1_link', array( 'label' => 'Button 1 Link', 'section' => 'layunin_home_final' ) );

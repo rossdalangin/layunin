@@ -1,6 +1,13 @@
-Month,Source,Revenue (PHP),Cost of Ads (PHP),Operational Costs (PHP),Net Profit (PHP),ROI (%)
-January,Digital Products,50000,10000,5000,35000,233%
-January,Mentorship,150000,5000,10000,135000,900%
-February,Digital Products,75000,15000,5000,55000,275%
-February,Mentorship,200000,10000,10000,180000,900%
-Total,,475000,40000,30000,405000,506%
+Month,Revenue Target,Actual Revenue,Direct Costs,Net Profit,Lead Count,Conversion Rate,Notes
+1,50000,0,5000,0,20,0%,MVP Launch Month
+2,75000,0,5000,0,40,0%,Beta Testing Feedback
+3,120000,0,8000,0,60,0%,Scale Phase Initiation
+4,150000,0,8000,0,80,0%,System Optimization
+5,180000,0,10000,0,100,0%,Affiliate Program Launch
+6,250000,0,10000,0,150,0%,Masterpiece Collection Release
+7,300000,0,15000,0,200,0%,Team Delegation Phase
+8,350000,0,15000,0,250,0%,Regional Expansion
+9,400000,0,20000,0,300,0%,Product Ecosystem Maturity
+10,450000,0,20000,0,350,0%,High-Ticket Mastermind
+11,500000,0,25000,0,400,0%,Quarterly System Audit
+12,600000,0,25000,0,500,0%,Year One Mastery Celebration

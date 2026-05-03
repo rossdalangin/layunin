@@ -1,23 +1,29 @@
-LAYUNIN INFLUENCER OUTREACH PROTOCOLS
-ARCHITECTING STRATEGIC PARTNERSHIPS IN THE PHILIPPINES
+🏛️ INFLUENCER OUTREACH PROTOCOLS (V2.0 PREMIUM)
+SCRIPTED ARCHITECTURE FOR LOCAL PH PARTNERSHIPS
 
-1. TARGET SEGMENTS
-- "The Productivity Architect": Content creators who review planners, tech, and AI tools.
-- "The Freelance Mentor": VAs or Freelancers with 20k+ followers who teach others how to scale.
-- "The Elite Nomad": Digital nomads living in BGC/Siargao/Cebu focusing on lifestyle design.
+### 1. THE "VALUE-DROP" DM (FOR MICRO-INFLUENCERS)
+**Goal:** Getting them to review your Level 2 asset.
+**Script:** "Hey [Name], huge fan of your insights on [Topic]. I’ve architected a specific **7-Day Goal Reset Protocol** for Filipino achievers and would love to give you 'Elite Access' to our full V2.0 Vault—zero strings attached. I just want to get this into the hands of people like you who are actually moving the needle. Want the link?"
 
-2. THE "VALUE-FIRST" OUTREACH SCRIPT (DM/Email)
-"Hey [Name], I’ve been following your work on [Specific Video/Topic]. Most Filipino creators are just 'hustling,' but you’re actually teaching 'Systems.'
+### 2. THE "AFFILIATE INITIATION" EMAIL
+**Goal:** Turning an influencer into a revenue partner.
+**Script:**
+"Hello [Name],
 
-I've architected a new framework called Layunin. It’s a Golden Ratio-based design system for Filipino high-achievers. I’d love to send you the 'AI Prompt Vault' or the 'Master Planner'—no strings attached. I just value your architectural eye.
+Following up on our DM. I’ve seen your audience resonate deeply with [Topic]. We are initiating our 'Mastery Affiliate' program for Layunin.com.
 
-If you like the protocol, I’d love to talk about getting you 'Architect Status' (Affiliate Protocol) for your community."
+Instead of a standard promo, we architected a **revenue split** where you earn 30% for every achiever who initiates the Protocol through you. More importantly, it provides your community with a world-class system to solve [Friction].
 
-3. THE AFFILIATE OFFER (THE "ARCHITECT" TIER)
-- Commission: 30-40% recurring on digital assets.
-- Support: Custom landing page on the Layunin theme for their audience.
-- Bonus: Features on the Layunin "Wall of Impact" (mutual growth).
+Would you be open to a 10-minute sync to audit if this aligns with your mission?"
 
-4. TRACKING & MANAGEMENT
-- Use the Customizer settings to manage Global Affiliate banners.
-- Integrate a simple tracking plugin (like SliceWP or AffiliateWP) into the WordPress backend.
+### 3. THE "GUEST PILLAR" PITCH
+**Goal:** Getting featured on their blog or podcast.
+**Script:** "I have a specific framework called 'The 3X Output Framework for Metro Manila Professionals' that I haven't shared elsewhere. It solves the friction of [Problem] without [Pain]. I’d love to architect a guest post or session for your community if you think they’d value it."
+
+### 🏛️ THE PARTNERSHIP LAWS
+1.  **Empathy First:** Research their last 3 posts before reaching out.
+2.  **Zero Pressure:** Always give them a "Way Out" (e.g., "If this doesn't fit your current sprint, no worries at all").
+3.  **Local Resonance:** Focus on how this helps "Kababayans" level up.
+
+---
+*A partnership is a bridge built of mutual value.*

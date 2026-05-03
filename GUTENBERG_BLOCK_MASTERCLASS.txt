@@ -1,28 +1,26 @@
-LAYUNIN GUTENBERG BLOCK MASTERCLASS
-ARCHITECTING PREMIUM CONTENT WITH CORE BLOCKS
+🏛️ GUTENBERG BLOCK MASTERCLASS (V2.0 PREMIUM)
+CONSISTENT "MASTERPIECE" STYLING FOR EVERY PAGE
 
-The Layunin v9.8 theme is optimized to transform standard Gutenberg blocks into premium, high-contrast components. Follow these protocols for aesthetic consistency.
+### 1. THE LAYUNIN COLOR VARIABLE SYSTEM
+Don't use hardcoded HEX codes in blocks. Use the theme defaults:
+- **Navy:** Main headings and high-authority blocks.
+- **Gold:** Accents, icons, and primary buttons.
+- **Light Gold:** Subtle backgrounds for quote blocks.
 
-1. THE "ELITE" HEADING STRUCTURE
-- Protocol: Always start with an H2. If the section is dense, use H3s for modular sub-topics.
-- Aesthetic Tip: In the block settings, under "Typography," set the line height to 1.1 or 1.2 for that "Playfair Display" architectural look.
+### 2. CORE BLOCK PROTOCOLS
+- **Column Master:** Use the 66/33 split for service descriptions. (Large text left, high-quality image right).
+- **Group Mastery:** Wrap your entire section in a "Group" block with a background color to create the high-contrast sectioning seen on the homepage.
+- **Spacer Standard:** Use precisely 50px of spacing between groups to maintain the Golden Ratio tactile feel.
 
-2. COLUMNS & GRID HARMONY
-- Protocol: Use the 2-Column or 3-Column block for benefit lists or features.
-- Tip: Set the "Vertical Alignment" to "Center" for professional symmetry.
+### 3. SHORTCODE INJECTION (THE ELITE TOOLS)
+- `[cta_box title="..." button_text="..." button_url="..."]` - Best used at the end of every informational page.
+- `[benefit_list]` - Use inside a 2-column layout to show "Why Choose Us."
+- `[faq_item question="..."]` - Essential for the bottom of Sales Pages to handle objections.
 
-3. THE "GOLDEN" SPACER BLOCK
-- Protocol: Use the Spacer block (set to 50px or 80px) between major sections within a post to maintain the Golden Ratio rhythm.
-- Do not crowd your content. White space (or Navy space) is a sign of elite design.
+### 4. THE "WYSIWYG" AUDIT
+- Check your page in **Customizer > Live Preview**.
+- If the text looks too small, use the "Lead" class in the block settings.
+- Ensure all images have a "Rounded" style (16px) to match the global theme DNA.
 
-4. CALL-TO-ACTION (CTA) BUTTONS
-- Protocol: Use the standard Button block.
-- Style: Select "Fill." Under "Colors," use your Elite Gold as the background and Navy as the text.
-- Border Radius: The theme automatically applies your global 16px radius to all buttons.
-
-5. PREMIUM IMAGERY & MEDIA
-- Protocol: Always use high-resolution, wide-aspect images (1200x800px).
-- Block Setting: Add the "shadow-sm" or "shadow-premium" class to the image block (under Advanced > Additional CSS Classes) for a floating depth effect.
-
-6. QUOTES & PULL-QUOTES
-- Protocol: Use the Pull-quote block. The theme injects a watermark icon and Playfair Display italics for maximum impact.
+---
+*Style is a byproduct of perfectly executed systems.*

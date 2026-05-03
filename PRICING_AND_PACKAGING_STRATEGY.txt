@@ -1,27 +1,30 @@
-LAYUNIN PRICING & PACKAGING STRATEGY
-OPTIMIZING THE VALUE ASCENSION LADDER
+🏛️ PRICING & PACKAGING STRATEGY (V2.0 PREMIUM)
+THE ARCHITECTURE OF PROFITABLE VALUE LADDERS
 
-1. THE FREE TIER (LEAD MAGNET)
-- Product: "Elite 7-Day Goal Reset Protocol"
-- Value: High-impact clarity and a taste of the "Systems" logic.
-- Goal: Conversion from "Visitor" to "Subscriber."
+### 1. THE LAYUNIN PRICING FORMULA
+**The Rule:** Price based on **Recovered Time** or **Future Revenue**, never on "Hours Worked."
+- Formula: (Value of 1 Hour saved x Hours saved per month) x 2 = Your Price.
 
-2. THE "ENTRY" TIER (P1,499 - P2,999)
-- Products: "The Master Planner" (Digital), "AI Prompt Vault."
-- Value: Immediate technical relief. Low-friction buy.
-- Goal: Conversion from "Subscriber" to "Customer."
+### 2. THE 3-TIER VALUE LADDER
+**Tier 1: The Accelerator (₱1,499 - ₱4,999)**
+- *Format:* Digital Guide, PDF Vault, or CSV Tracker.
+- *Goal:* Immediate "Micro-Win" (e.g., Solving the "Prompt Engineering" friction).
+- *Positioning:* Low friction, high volume.
 
-3. THE "SYSTEMS" TIER (P4,999 - P9,999)
-- Products: "The Creator System" (Modular Framework), "Business Optimization Vault."
-- Value: Complete life/business architecture.
-- Goal: Increasing Average Order Value (AOV).
+**Tier 2: The Implementation (₱15,000 - ₱25,000)**
+- *Format:* Group Mentorship or 4-week workshop.
+- *Goal:* Guiding the user through the **Elite 7-Day Protocol** personally.
+- *Positioning:* Results-oriented community.
 
-4. THE "MENTORSHIP" TIER (P14,999 - P49,999)
-- Services: "Executive Mentorship" (1-on-1), "Wealth Architecture Consulting."
-- Value: Bespoke strategy, high-touch accountability, legacy building.
-- Goal: High-margin revenue and deep customer transformation.
+**Tier 3: The Architect (₱50,000 - ₱150,000+)**
+- *Format:* 1-on-1 Bespoke Systems Setup (Done-For-You).
+- *Goal:* Total Structural Re-engineering of the client's business/life.
+- *Positioning:* Scarcity and absolute authority.
 
-5. PRICING PSYCHOLOGY
-- The "Golden Ratio" Discount: Offer 38.2% off during launch cycles (a nod to the phi ratio).
-- Standardized Suffix: Use professional endings (.99 or .00) depending on the platform, but prioritize the Peso symbol (₱) to build local trust.
-- Tiered Anchoring: Always show the "Architect" tier ($49k) first on the services page to make the "Mastery" tier ($14k) feel like a high-value steal.
+### 3. THE "ELITE" PACKAGING SECRETS
+- **Don't use "Course":** Use "Protocol," "Framework," or "System."
+- **Focus on Friction:** Packaging should always be sold as the "antidote" to a specific PH-market pain point (e.g., "The Burnout Antidote").
+- **Local Resonance:** Offer GCash/Maya installment plans for Tier 2 to increase accessibility for PH achievers.
+
+---
+*Profit is a byproduct of perfectly architected value.*

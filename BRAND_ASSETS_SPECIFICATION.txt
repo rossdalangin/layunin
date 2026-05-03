@@ -1,25 +1,28 @@
-LAYUNIN BRAND ASSETS SPECIFICATION
-MAINTAINING VISUAL EXCELLENCE ACROSS ALL CHANNELS
+🏛️ BRAND ASSETS SPECIFICATION (V2.0 PREMIUM)
+VISUAL DNA FOR THE LAYUNIN EMPIRE
 
-1. COLOR ARCHITECTURE (HEX)
-- Navy (Main): #050A18 - Use for backgrounds and high-authority headers.
-- Gold (Elite): #C5A02B - Use for CTAs, accents, and icons.
-- Emerald (Success): #00A36C - Use for status indicators and price tags.
-- White (Pure): #FFFFFF - Use for primary text in dark mode.
+### 1. THE COLOR ARCHITECTURE
+- **Primary Midnight:** `#050A18` (The Navy of Trust). Use for backgrounds and major headers.
+- **Elite Royal Gold:** `#C5A02B` (The Gold of Achievement). Use for buttons, icons, and text highlights.
+- **Success Emerald:** `#00A36C` (The Green of Growth). Use for success messages and "Active" status badges.
+- **Protocol Grey:** `#475569` (The Grey of Precision). Use for body text and secondary labels.
 
-2. TYPOGRAPHY ARCHITECTURE
-- Headings: Playfair Display (Bold 700 / Black 900). Set tracking to -0.02em.
-- Body: Inter (Regular 400 / Semibold 600). Line height must be 1.8.
+### 2. TYPOGRAPHY STANDARDS
+- **Display Typeface:** *Playfair Display* (Weight: 900). Use for H1, H2, and Display-1 through 4.
+- **Body Typeface:** *Inter* (Weights: 400, 600, 800). Use for paragraphs and buttons.
+- **Golden Ratio Scaling:** All font sizes follow the `--phi` (1.618) multiplier in the CSS.
 
-3. SPACING & RHYTHM
-- The "Phi" Rule: Always use spacing increments based on 1.618.
-- Utility: Use the .py-phi class (v9.8) for all section paddings to ensure mathematical harmony.
+### 3. IMAGERY PROTOCOL
+- **Style:** "Luxury Productivity." High-contrast, clean desk setups, urban architecture, or professional portraits.
+- **Resolution:**
+  - Featured Images: 1200x800px.
+  - Product Covers: 600x600px.
+  - Team Photos: 400x400px (Rounded 50%).
+- **Treatment:** All images should have a 16px border-radius and a "Premium" shadow (applied automatically by the theme classes).
 
-4. IMAGERY PROTOCOL
-- Mood: Modern, Minimalist, High-Tech.
-- Source: Unsplash (Search: "Makati Skyline," "Minimalist Office," "Apple Tech," "Luxury Productivity").
-- Class: Always apply "shadow-premium" and "rounded-4" to all images.
+### 4. ICONOGRAPHY
+- **Set:** FontAwesome 6 (Pro-grade).
+- **Style:** Use "Solid" icons for navigation and "Light/Thin" icons for benefit lists to maintain an elite aesthetic.
 
-5. LOGO USAGE
-- Max Width: 200px (Customizer mod: logo_width).
-- Placement: Absolute center or far left. Never crowd the logo with text.
+---
+*Visual consistency is the silent architect of brand trust.*

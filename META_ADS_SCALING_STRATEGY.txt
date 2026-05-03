@@ -1,27 +1,29 @@
-LAYUNIN META ADS SCALING STRATEGY
-ARCHITECTING PAID TRAFFIC FOR FILIPINO ACHIEVERS
+🏛️ META ADS SCALING STRATEGY (V2.0 PREMIUM)
+3-PHASE PAID TRAFFIC MASTERY FOR THE FILIPINO MARKET
 
-1. THE "FRICTION-TEST" (PHASE 1: RESEARCH)
-- Budget: ₱500/day.
-- Objective: Traffic to Lead Magnet Landing Page.
-- Creative: Use high-contrast "Problem Section" copy (Information Overload vs. Systems).
-- Metric: Target ₱15 - ₱30 per lead.
+### PHASE 1: THE INITIATION (TESTING) - BUDGET: ₱500/DAY
+**Goal:** Identify the winning "Hook."
+- **Creative:** 3 mobile-recorded videos of you talking about "The Hustle Trap."
+- **Targeting:** Interests: "Freelance," "Remote Work," "Personal Development," "Business Owners."
+- **Geography:** Philippines (Focus on Tier 1 Cities: Metro Manila, Cebu, Davao).
+- **Metric:** Goal is a Cost Per Click (CPC) < ₱10.
 
-2. THE "MASTERY-SCALE" (PHASE 2: CONVERSION)
-- Retargeting: Create a Custom Audience of people who viewed the Lead Magnet but didn't buy a product.
-- Creative: Video showing the "Inside the Elite Vault."
-- Objective: Purchase of "The Master Planner" (₱1,499).
+### PHASE 2: THE ACCELERATION (LEAD GEN) - BUDGET: ₱1,500/DAY
+**Goal:** Fill the email list with the "7-Day Reset Protocol."
+- **Creative:** High-contrast graphic of the "Protocol" (Show the V2.0 cover).
+- **Copy:** "Stop existing. Start executing. The Elite 7-Day Reset used by 25,000+ PH high-achievers is now free. Download the Protocol."
+- **Metric:** Goal is a Cost Per Lead (CPL) < ₱30.
 
-3. THE "ARCHITECT" FUNNEL (PHASE 3: HIGH-TICKET)
-- Retargeting: Existing customers who have bought a digital product.
-- Creative: Personal video from the Founder discussing "1-on-1 Mentorship."
-- Objective: Lead Form (Contact Page) for Mentorship inquiries.
+### PHASE 3: THE ASCENSION (CONVERSION) - BUDGET: ₱3,000+/DAY
+**Goal:** Sales of Level 2 Shop Assets (₱1,499+).
+- **Targeting:** Retargeting (Website Visitors + Email List) and Lookalike Audiences (1% LAL of your leads).
+- **Creative:** "Transformation Stories" (Video testimonials from your Wall of Impact).
+- **Metric:** Goal is a Return on Ad Spend (ROAS) > 3.0X.
 
-4. AUDIENCE TARGETING (LOCALIZED)
-- Location: Philippines (Exclude rural areas for Phase 1).
-- Interests: Harvard Business Review, Tim Ferriss, LinkedIn, Makati/BGC residential areas.
-- Psychographics: "Business Owners," "Freelance Professionals," "AI Enthusiasts."
+### 🏛️ THE ELITE PIXEL PROTOCOL
+1. Install Meta Pixel on your Layunin site.
+2. Track "Lead" (Sign up for protocol) and "Purchase" (Shop checkout).
+3. Use **Custom Conversions** to track visits to the "Thank You" page.
 
-5. CREATIVE PROTOCOL
-- Ad Copy: Use "Elite Lexicon" (Protocol, Architecture, Mastery).
-- Visuals: Stick to the Navy/Gold brand palette. Use the "Dual Mode" UI screenshots for a modern tech feel.
+---
+*Spend with precision. Scale with architecture.*

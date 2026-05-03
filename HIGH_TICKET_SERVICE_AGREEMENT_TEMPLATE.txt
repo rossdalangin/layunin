@@ -1,30 +1,22 @@
-LAYUNIN HIGH-TICKET SERVICE AGREEMENT (TEMPLATE)
-OPERATIONAL FRAMEWORK FOR "ARCHITECT" TIER MENTORSHIP
+🏛️ HIGH-TICKET SERVICE AGREEMENT (V2.0 PREMIUM)
+THE LEGAL FRAMEWORK FOR ELITE MENTORSHIP
 
-1. THE PARTIES
-- The Architect: [Your Name/Business]
-- The Client: [Client Name]
-- Effective Date: [Date]
+### 1. SCOPE OF ARCHITECTURE
+- Contractor will deliver the **[System Name]** including [List Components].
+- Contractor is not a "Freelancer" but a **Systems Architect**.
 
-2. THE "LAYUNIN" SCOPE OF WORK
-This is not a general coaching agreement. It is an implementation protocol.
-- Systems Audit: A full review of current workflows.
-- Protocol Design: Architecting 3-5 custom AI/Productivity workflows.
-- Asset Implementation: Building the digital asset layer for the client's brand.
+### 2. INVESTMENT & INITIATION
+- Total investment: ₱[Amount].
+- **Initiation Fee:** 50% Upfront (Non-refundable) to secure the protocol launch.
+- **Completion Fee:** 50% due upon delivery of the Masterpiece.
 
-3. INVESTMENT & TRANSACTION
-- Mentorship Fee: ₱[Amount]
-- Payment Protocol: Full upfront via GCash/Maya/Bank Transfer OR [Amount] x 3 monthly installments.
-- BNPL Clause: All installment payments must be secured before the final "Architect Status" is granted.
+### 3. THE "KILL CLAUSE"
+- If Client fails to provide necessary audit data within 7 days, Contractor reserves the right to pause the project to protect the empire's velocity.
+- Late payments result in immediate "System Suspension."
 
-4. CLIENT COMMITMENT
-- The "Mastery" Rule: Client must dedicate 5 hours per week to implementing the protocols.
-- Communication: Primary channel is [Discord/Circle/Email]. Response time is 24-48 hours.
+### 4. DATA SECURITY
+- All proprietary frameworks provided by Contractor remain the intellectual property of Layunin.com.
+- Client may use them for their business but may not resell the architecture.
 
-5. INTELLECTUAL PROPERTY
-- All custom protocols architected during the mentorship are for the Client's internal use only.
-- Layunin proprietary frameworks remain the sole IP of [Your Business].
-
-6. TERMINATION & CONTINUITY
-- Refund Policy: Due to the high-impact nature of the architecture, no refunds are granted after the initial "Systems Audit" is delivered.
-- Continuity: Client receives 12 months of access to the "Elite Vault" updates.
+---
+*Sign with intent. Deliver with excellence.*

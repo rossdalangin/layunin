@@ -1,21 +1,21 @@
-LAYUNIN REFERRAL & AFFILIATE GUIDE
+🏛️ REFERRAL & AFFILIATE GUIDE (V2.0 PREMIUM)
 LEVERAGING COMMUNITY-LED GROWTH
 
-1. THE "MASTERY CIRCLE" REFERRAL PROGRAM
-- Concept: Reward existing customers for bringing in fellow high-achievers.
-- Reward: 20% credit toward the next "Elite Vault" product or a 1-month free Mentorship upgrade for 5 successful referrals.
+### 1. THE "MASTERY" AFFILIATE MODEL
+We only partner with those who have initiated the Protocol.
+- **The Filter:** Only users with a "Mastery Status" badge are eligible to promote Layunin Level 2 assets.
 
-2. THE "ELITE AFFILIATE" PROTOCOL
-- Target: Filipino productivity influencers, remote work advocates, and AI educators.
-- Commission: 25-40% on digital products (low overhead).
-- Management: All links and tracking to be integrated into the Customizer/Affiliate management area.
+### 2. THE REVENUE SPLIT (ARCHITECTURE)
+- **Level 2 Assets (Products):** 30% Commission for every successful initiation.
+- **Level 3 Services (Mentorship):** ₱5,000 Flat Referral Reward for a signed contract.
 
-3. AFFILIATE CONTENT ASSETS
-- Provide them with the "Golden Ratio" visual assets.
-- Share the "Elite Welcome" sequence templates for their own lists.
-- Host "Affiliate-Only" strategy sessions to help them sell the "Layunin" vision.
+### 3. THE "FRICTIONLESS" SHARING PROTOCOL
+- Provide your affiliates with 3 pre-written email hooks.
+- Provide a high-contrast "Affiliate Banner" (v9.8 specs).
+- Teach them the **Storytelling Arc** (Hustle Trap -> Discovery -> Result).
 
-4. THE "FOUNDER'S CIRCLE" (UGC)
-- Encourage customers to post a photo of their "Master Planner" in use.
-- Use a dedicated hashtag (e.g., #MyLayunin).
-- Feature the best posts on the "Wall of Impact" (Masonry grid) to drive viral trust.
+### 4. THE ETHICAL GUARDRAIL
+Every affiliate link must be accompanied by the **Affiliate Disclosure** (Use the theme's built-in template). Transparency is the infrastructure of trust.
+
+---
+*True growth is an architected network of value.*

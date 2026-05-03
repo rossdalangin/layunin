@@ -1,26 +1,34 @@
-LAYUNIN CONTENT WRITING BLUEPRINT
+🏛️ CONTENT WRITING BLUEPRINT (V2.0 PREMIUM)
 THE ARCHITECTURE OF A VIRAL PILLAR POST
 
-1. THE HOOK (The Display Heading)
-- Must address a specific "Friction" (e.g., "The Secret Friction Point Stopping Filipino VAs from Earning ₱200k").
+### 1. THE RCT-ENGINE HOOK (DISPLAY HEADING)
+- Must be a "Problem-Antidote" statement.
+- **Example:** *"The Infrastructure Friction keeping Filipino VAs under ₱50k (And the 3-Step Protocol to Double Your Rate)."*
 
-2. THE "LAYUNIN" ALIGNMENT (First 100 Words)
-- Connect the topic to the user's deep purpose. Use empathetic but authoritative tone.
-- SEO: Include your primary keyword in the first paragraph.
+### 2. THE EMPATHY-BRIDGE (INTRO: 150 WORDS)
+- State the "Friction" clearly.
+- "You are working 80 hours a week. You have the skills. But your systems are failing you."
+- SEO: Use your primary keyword once in the first 50 words.
 
-3. THE TABLE OF CONTENTS (Automated)
-- The theme automatically generates this. Use H2 and H3 tags to create an elite "Strategic Overview."
+### 3. THE AUTOMATED OVERVIEW (TOC)
+- The Layunin theme automatically creates this. Use precisely three H2 tags and two H3 tags per H2 to ensure an elite hierarchy.
 
-4. THE MODULAR FRAMEWORK (The Body)
-- Every post must offer a "System." Use a [benefit_list] or [cta_box] to break up long text.
-- Use bullet points for readability. Paragraphs should not exceed 3-4 lines.
+### 4. THE MODULAR CORE (BODY)
+- **Rule of 3-4:** No paragraph should exceed 4 lines.
+- **Visual Breakers:**
+  - Use a `[benefit_list]` for outcomes.
+  - Use a `[cta_box]` at the 50% mark for the Lead Magnet.
+  - Use an AI-generated image (1200x800) with the "Elite" prompt style.
 
-5. THE LEAD MAGNET INJECTION
-- At the 50% mark, insert an image or CTA for the "Elite 7-Day Goal Reset Protocol."
+### 5. THE "LAYUNIN" CALL TO ACTION (CONCLUSION)
+- Don't just summarize. **Initiate.**
+- "Everything you just read is useless without execution. Click below to initiate your 7-Day Reset Protocol."
 
-6. THE "FINAL CALL" (The Conclusion)
-- Summarize the transformation.
-- End with a single, clear CTA (e.g., "Initiate the protocol here: [Link]").
+### 🏛️ THE PREMIUM CHECKLIST
+- [ ] Primary keyword in URL slug.
+- [ ] 3-5 Internal links to other Pillars or Shop items.
+- [ ] "Table of Contents" title set to "Strategic Overview" in Customizer.
+- [ ] High-contrast "Elite" featured image assigned.
 
-7. METADATA (Customizer Settings)
-- Ensure the "Meta Description" in **SEO & Social Media** is updated for every post to maximize click-through rate.
+---
+*Write for Impact. Architect for Search.*

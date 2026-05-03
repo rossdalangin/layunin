@@ -1,19 +1,20 @@
-LAYUNIN AI PROMPT LIBRARY FOR ELITE MARKETING
-ARCHITECTING CONTENT WITH PRECISION (GPT-4/CLAUDE 3.5 OPTIMIZED)
+🏛️ AI PROMPT LIBRARY FOR ELITE MARKETING (V2.0 PREMIUM)
+THE RCT-FORMULA POWER PACK
 
-Use these prompts to maintain the "Layunin Masterpiece" brand voice and aesthetic.
+### 1. PILLAR CONTENT ARCHITECT
+**Prompt:** "Act as a world-class SEO strategist. I am writing a pillar post about [TOPIC] for high-achieving Filipinos. Outline a 2,000-word guide using the 'Layunin Framework' (Audit, Systematize, Scale). Include 5 H2 headers that address specific friction points like internet speed, traffic, or burnout."
 
-1. PILLAR POST ARCHITECTURE
-"Act as a Senior Systems Architect. Write a 1,500-word Pillar Post on [Topic]. Use the Layunin Content Writing Blueprint: Start with a friction-focused display heading, include a 'Layunin Alignment' intro, and modularize the body with 3-5 'Elite Protocols.' The tone must be professional, authoritative, and Filipino-market centric. Use short paragraphs and high-impact terminology (Modular, Architecture, Protocol)."
+### 2. VIRAL SOCIAL HOOK GENERATOR
+**Prompt:** "Act as a viral content architect. Analyze this text: [PASTE YOUR DRAFT]. Generate 10 contrarian hooks for LinkedIn. Focus on why 'standard advice' is failing Filipino professionals. Use a tone that is Elite, Precise, and Empathetic."
 
-2. SHORT-FORM VIRAL HOOKS
-"Generate 10 TikTok/Reels hooks for a video about [Product/Service]. Use the 'Friction-First' formula. Focus on the pain points of the Filipino high-earner (Hustle Trap, Information Overload). The hooks should sound like a calm architect giving a wake-up call to an elite professional. Avoid hype; focus on systems."
+### 3. THE EMAIL MASTER (CONVERSION)
+**Prompt:** "Act as a direct-response copywriter. Write a 3-part email sequence for someone who just downloaded the 'Elite 7-Day Protocol'. Part 1: Empathy for the Hustle Trap. Part 2: Introduce the North Star Mission. Part 3: Soft-pitch the 'Master Productivity Vault'. Keep sentences short and impact-heavy."
 
-3. SALES EMAIL CRAFTING
-"Write a high-conversion sales email for the 'Mastery Tier' mentorship. Follow the 'Architecture of Conversion' framework: 1. The Audit (Problem), 2. The Gap (Cost of Inaction), 3. The Protocol (Solution), 4. The Ascension (CTA). Use the Golden Ratio logic: 61.8% value/insight, 38.2% pitch."
+### 4. AD CREATIVE STRATEGIST
+**Prompt:** "Act as a Meta Ads specialist. I am targeting Filipino Agency Owners with ₱100k+ income. Suggest 3 video ad scripts: 1) The 'Day in the life of friction' script. 2) The 'I automated my ops' script. 3) The 'Why I built Layunin' origin story."
 
-4. CUSTOMER PERSONA SYNTHESIS
-"Based on the 'Marco the Modern Architect' avatar, write a Facebook ad copy that addresses the fear of 'Technical Obsolescence' and the desire for 'Digital Asset Creation.' The copy must feel premium and exclusive. Use GCash/Maya as the implicit payment expectation."
+### 5. THE "HUMAN-POLISH" BOT
+**Prompt:** "Review the following AI-generated text. Strip away fluff words like 'comprehensive', 'tapestry', and 'unleash'. Inject specific PH-market context like GCash, BGC, or Taglish resonance. Ensure it sounds like a human Master Architect, not a machine."
 
-5. MODULAR SYSTEM DESIGN
-"Create a 7-step 'Modular Protocol' for [Specific Task, e.g., Onboarding a VA]. Format it for a [benefit_list] shortcode. Each step must have a bold title and a concise, outcome-focused description."
+---
+*Architecture is the art of prompting with purpose.*

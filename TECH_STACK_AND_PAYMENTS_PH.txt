@@ -1,27 +1,24 @@
-LAYUNIN TECH STACK & PH PAYMENT PROTOCOLS
-ARCHITECTING THE TRANSACTION LAYER FOR THE PHILIPPINE MARKET
+🏛️ TECH STACK & PH PAYMENTS (V2.0 PREMIUM)
+THE PIPES THAT RUN THE EMPIRE
 
-1. THE "ELITE" TECH STACK (MINIMALIST & SCALABLE)
-- Website: WordPress + Layunin v9.8 (Masterpiece Edition).
-- Hosting: SiteGround or Hostinger (Singapore Servers) for <1s local latency.
-- Email Marketing: ConvertKit or MailerLite (High deliverability for PH ISPs).
-- Course/Asset Delivery: Thrivecart or Gumroad (for ease) OR MemberPress (integrated into WordPress).
+### 1. THE PAYMENT INFRASTRUCTURE (PH MANDATORY)
+- **Primary:** GCash and Maya. Always include your QR codes in invoices.
+- **Secondary:** Bank Transfer (BDO/BPI/Unionbank). Unionbank is best for tech-integration.
+- **Global:** Stripe or PayPal (For international achievers).
 
-2. LOCAL PAYMENT GATEWAYS (THE GCASH/MAYA FACTOR)
-90% of your Filipino customers will prefer non-credit card options.
-- Primary Recommendation: PayMongo. Support for GCash, Maya, BillEase (Installments), and local cards via a single API.
-- Alternative: Xendit. Excellent dashboard and local support.
-- Manual Protocol: Bank Transfer (BPI/BDO) + GCash QR. Use the "Contact" page for manual high-ticket onboarding.
+### 2. THE CONTENT ENGINE
+- **Website:** WordPress + Layunin Theme (v9.8+).
+- **Hosting:** Hostinger or SiteGround (SG Servers recommended for PH speed).
+- **Email:** ConvertKit or MailerLite.
 
-3. INSTALLMENT SYSTEMS (BUY NOW, PAY LATER)
-For the ₱15k - ₱49k tiers, installments increase conversion by 40%.
-- Integrated BNPL: BillEase (via PayMongo) or Maya Credit.
-- Internal Protocol: 3-month payment plan for the "Mastery" tier handled via PayPal/Stripe subscriptions.
+### 3. THE OPERATIONS VAULT
+- **Project Mastery:** Notion (For internal blueprints) or Trello (For client velocity).
+- **Meetings:** Zoom or Google Meet.
+- **AI Workforce:** ChatGPT Plus (GPT-4o) + Perplexity AI.
 
-4. AUTOMATION & INTEGRATION
-- Use Zapier or Pabbly Connect to link PayMongo -> ConvertKit -> WordPress.
-- Trigger the "Thank You" protocol immediately upon payment confirmation.
+### 4. THE AUTOMATION GLUE
+- **Zapier:** To connect GCash (via email notifications) to your CRM and Course delivery.
+- **Make.com:** For more complex architectural workflows.
 
-5. TAX & COMPLIANCE (PH CONTEXT)
-- Use JuanaTax or Taxumo for automated BIR filing as a "Self-Employed" professional/freelancer.
-- Ensure the "Terms" and "Privacy" templates (v9.8) are updated with your local business details.
+---
+*The best tech is the one that removes the most friction.*

@@ -1,24 +1,25 @@
-LAYUNIN YOUTUBE & TIKTOK CONTENT HOOKS
-VIRAL ARCHITECTURE FOR SHORT-FORM VIDEO
+🏛️ YOUTUBE & TIKTOK CONTENT HOOKS (V2.0 PREMIUM)
+VIRAL SHORT-FORM VIDEO THEMES FOR THE PH MARKET
 
-1. THE "FRICTION" HOOKS (PAIN)
-- "Why ₱100k/month is the most dangerous income level for Filipinos."
-- "The 1 AI tool that replaced my Virtual Assistant (and saved me ₱20k)."
-- "Stop using a To-Do list. Use a Protocol."
-- "You aren't 'busy.' You're just un-architected."
+### 📂 CATEGORY 1: THE FRICTION (AWARENESS)
+1.  **The Traffic Trap:** "Why Metro Manila traffic is actually killing your business growth (and the one system I used to work from home effectively)."
+2.  **The ISP Rant:** "Stop blaming your slow internet. Here is how I architected a 3-tier backup system so I never miss a high-ticket client call."
+3.  **The Burnout Hook:** "Filipino VAs: Stop working 80 hours a week for ₱40k. Here is the architecture of a ₱150k month."
 
-2. THE "SYSTEMS" HOOKS (SOLUTION)
-- "Watch me audit my life in 10 minutes using the Golden Ratio."
-- "How I 3X-ed my output without working a single extra hour."
-- "The 'Layunin' Framework: 3 Steps to absolute clarity."
-- "Inside my 'Elite Productivity Vault'."
+### 📂 CATEGORY 2: THE TOOL (CONSIDERATION)
+4.  **AI Speed-Run:** "Watch me use AI to do a 4-hour market research report in exactly 45 seconds."
+5.  **The Master Planner:** "The one physical/digital dashboard that replaced 10 different productivity apps for me."
+6.  **GCash Passive Income:** "How I automated my Layunin Shop to send digital assets via GCash while I was sleeping."
 
-3. THE "AESTHETIC" HOOKS (STATUS)
-- "Behind the scenes: Architecting the Ultimate Filipino Success Theme."
-- "Makati/BGC life is expensive. Here’s the system that pays for it."
-- "The Architect's morning protocol (No 5 AM wakeups required)."
+### 📂 CATEGORY 3: THE MINDSET (AUTHORITY)
+7.  **North Star Mission:** "Why you don't need a to-do list; you need a 12-word mission."
+8.  **The Pareto Rule:** "The 20% of tasks that make 80% of my revenue (and why I said 'No' to 5 clients this week)."
+9.  **The Origin Story:** "I was an overwhelmed freelancer until I architected my own Protocol. Here’s what changed."
 
-4. PRODUCTION PROTOCOL
-- Visuals: Use the high-contrast Dark Mode UI from the Layunin theme.
-- Sound: Calm, lo-fi beats or authoritative voice-overs.
-- CTA: "Initiate the protocol in my bio." (Link to Lead Magnet).
+### 🏛️ THE VIRAL EDITING PROTOCOL
+- **First 3 Seconds:** High-contrast text overlay (Midnight Navy/Gold).
+- **The Middle:** Rapid cuts, showing the "Masterpiece" UI of your site.
+- **The CTA:** "Download the free Protocol in my bio."
+
+---
+*Capture the attention. Command the market.*

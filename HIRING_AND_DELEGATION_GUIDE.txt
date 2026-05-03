@@ -1,23 +1,26 @@
-LAYUNIN HIRING & DELEGATION GUIDE
-SCALING YOUR ARCHITECTURE WITH A REMOTE TEAM
+🏛️ HIRING & DELEGATION GUIDE (V2.0 PREMIUM)
+SCALING WITH ELITE REMOTE TALENT
 
-1. THE "SYSTEMS BEFORE STAFF" PROTOCOL
-Never hire to "fix a mess." Architect the workflow in the Layunin theme/backend first, then hire someone to execute the manual parts of that protocol.
+### 1. THE DELEGATION AUDIT
+Before hiring, you must identify your "Friction Zone."
+- **Task Mapping:** Use the Revenue Tracker to identify tasks that earn <₱500/hr. These are your first candidates for delegation.
+- **The Protocol:** Never hire to "Fix a mess." Hire to "Run a system."
+- **Rule:** If you can't write a 1-page protocol for a task, you aren't ready to hire for it.
 
-2. KEY ELITE ROLES (PH-MARKET FOCUSED)
-- The Content Concierge: Handles social media scheduling and minor blog edits using our Gutenberg Masterclass.
-- The Technical Architect: Manages WordPress updates and API integrations (PayMongo/ConvertKit).
-- The Success Specialist: Handles customer support and qualifies leads for high-ticket mentorship.
+### 2. THE "ELITE" CANDIDATE FILTER
+- **Sourcing:** Use OnlineJobs.ph or LinkedIn.
+- **The Filter:** In your job post, include a "Hidden Requirement" (e.g., "Start your application with the word 'Architect'"). This filters out 90% of applicants who don't read the details.
+- **The Test:** Give a 30-minute paid test task. Measure **Accuracy** and **Initiative**, not just speed.
 
-3. DELEGATION FRAMEWORK: THE 61.8/38.2 RULE
-- Delegate 61.8% of repetitive, operational tasks (scheduling, simple design, data entry).
-- Retain 38.2% of high-leverage strategic work (brand vision, high-ticket closing, new protocol design).
+### 3. THE ONBOARDING PIPELINE
+1. **Access:** Add them to your Slack/Discord.
+2. **Architecture:** Grant "View-Only" access to the Blueprint Index.
+3. **Alignment:** Set their first "12-Word Mission" for their specific role.
 
-4. WHERE TO FIND ELITE FILIPINO TALENT
-- Avoid low-tier bidding sites. Use "OnlineJobs.ph" (Filter for 80+ ID score) or "Premium VA Groups" on Facebook.
-- Hiring Hook: "We don't just work; we architect. Looking for a systems-minded professional to join the Layunin ecosystem."
+### 4. MANAGEMENT BY EXCEPTION
+- Stop micromanaging.
+- **Protocol:** "I only need to know if the system fails or if a KPI is missed."
+- **Tool:** Use a shared Trello or Notion board for asynchronous velocity tracking.
 
-5. ONBOARDING PROTOCOL
-- Day 1: Access to the Strategic Blueprint.
-- Week 1: Mandatory completion of the "Elite 7-Day Goal Reset Protocol."
-- Month 1: 360-degree review of their first modular workflow.
+---
+*True scaling is the art of replacing yourself with systems and people.*

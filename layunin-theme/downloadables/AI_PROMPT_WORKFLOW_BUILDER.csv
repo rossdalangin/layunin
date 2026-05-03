@@ -1,5 +1,6 @@
-Module Name,Task Goal,Base Prompt,Variable Inputs,Expected Outcome
-Social Post,Viral Engagement,"Act as an Architect. Write a post about...",Topic | Pain Point,High Shares/Saves
-Email Sequence,Nurture,"Initiate the Protocol for...",Lead Name | PDF Link,High CTR
-Service Agreement,Legal,"Draft a service contract for...",Client Name | Amount,Signed Agreement
-AI Workflow,Automation,"Create a modular workflow for...",Manual Task,Saved Time
+Module Name,Task Goal,Base Prompt,Variable Inputs,Expected Outcome,Implementation Note
+Social Post Architecture,Viral Engagement,"Act as an Architect. Analyze [TOPIC] and write a LinkedIn post that addresses the #1 friction point for [AUDIENCE]. Use a contrarian hook and end with a 'Join the Protocol' CTA.","[TOPIC]: 'Trading time for money', [AUDIENCE]: 'Filipino VAs'",High shares and saves.,Paste into ChatGPT-4o or Claude 3.5.
+Email Nurture Sequence,Trust & Authority,"Act as a direct response copywriter. Write a 3-part 'Initiation' email sequence for a new lead who just downloaded [LEAD_MAGNET]. Focus on empathy for [PAIN_POINT] and introduce the 'Layunin' framework.","[LEAD_MAGNET]: '7-Day Reset', [PAIN_POINT]: 'Burnout'",8%+ Click-through rate.,Set as automated sequence in ConvertKit/Mailchimp.
+High-Ticket Discovery,Sales Conversion,"Act as a world-class sales strategist. Draft a 15-minute discovery call script for a [SERVICE]. Include 3 'Diagnostic Questions' to identify the client's current system failure.","[SERVICE]: 'Executive Mentorship'",Signed Service Agreement.,Use during initial Zoom calls.
+Asset Blueprinting,Digital Product Creation,"Act as a Product Architect. I have a success in [SKILL]. Outline a 5-module digital guide that solves [PROBLEM] for the PH market. Include a pricing strategy using the 'Asset Ladder' framework.","[SKILL]: 'SEO Strategy', [PROBLEM]: 'No organic traffic'",Ready-to-sell Digital Asset.,Use to create your Level 2 Shop products.
+Market Resonance Audit,Cultural Calibration,"Review this marketing copy: [COPY]. Adjust the tone to resonate with high-achieving Filipinos. Ensure it sounds 'Elite' but 'Empathetic'. Highlight local context like GCash payments or local infrastructure friction.","[COPY]: 'Insert your sales page text here'",Increased conversion in PH market.,Perform this audit for every landing page.

@@ -266,7 +266,7 @@
     wp.customize( 'testimonials_fallback_author', function( value ) { value.bind( function( newval ) { $( 'body.page-template-testimonials-page-php .h6.fw-bold' ).text( newval ); } ); } );
 
     // Lead Magnet Landing
-    wp.customize( 'lead_magnet_landing_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-lead-magnet-landing-php h1' ).text( newval ); } ); } );
+    wp.customize( 'lead_magnet_landing_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-lead-magnet-landing-php .entry-title' ).text( newval ); } ); } );
     wp.customize( 'lead_magnet_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-lead-magnet-landing-php p.lead' ).text( newval ); } ); } );
     wp.customize( 'lm_badge_text', function( value ) { value.bind( function( newval ) { $( '.lm-badge-text' ).text( newval ); } ); } );
     wp.customize( 'lm_benefit_title', function( value ) { value.bind( function( newval ) { $( '.lm-benefit-title' ).text( newval ); } ); } );
@@ -288,18 +288,18 @@
     wp.customize( 'lm_quote_role', function( value ) { value.bind( function( newval ) { $( '.lm-quote-role' ).text( newval ); } ); } );
 
     // Thank You Page
-    wp.customize( 'thank_you_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php h1' ).text( newval ); } ); } );
+    wp.customize( 'thank_you_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php .entry-title' ).text( newval ); } ); } );
     wp.customize( 'thank_you_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php p.lead' ).text( newval ); } ); } );
     wp.customize( 'thank_you_next_title', function( value ) { value.bind( function( newval ) { $( '.thank-you-next-title' ).text( newval ); } ); } );
     wp.customize( 'thank_you_next_desc', function( value ) { value.bind( function( newval ) { $( '.thank-you-next-desc' ).text( newval ); } ); } );
     wp.customize( 'thank_you_btn_text', function( value ) { value.bind( function( newval ) { $( 'body.page-template-thank-you-php .btn' ).text( newval ); } ); } );
 
     // Legal Pages
-    wp.customize( 'affiliate_disclosure_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-affiliate-disclosure-php h1' ).text( newval ); } ); } );
+    wp.customize( 'affiliate_disclosure_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-affiliate-disclosure-php .entry-title' ).text( newval ); } ); } );
     wp.customize( 'affiliate_disclosure_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-affiliate-disclosure-php .legal-content' ).html( newval ); } ); } );
-    wp.customize( 'privacy_policy_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php h1' ).text( newval ); } ); } );
+    wp.customize( 'privacy_policy_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php .entry-title' ).text( newval ); } ); } );
     wp.customize( 'privacy_policy_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-privacy-policy-php .legal-content' ).html( newval ); } ); } );
-    wp.customize( 'terms_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php h1' ).text( newval ); } ); } );
+    wp.customize( 'terms_title', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php .entry-title' ).text( newval ); } ); } );
     wp.customize( 'terms_content', function( value ) { value.bind( function( newval ) { $( 'body.page-template-terms-php .legal-content' ).html( newval ); } ); } );
 
     // FAQ Page

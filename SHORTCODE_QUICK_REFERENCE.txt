@@ -1,42 +1,39 @@
-🏛️ SHORTCODE QUICK REFERENCE (V2.0 PREMIUM)
-RAPID COMPONENT DEPLOYMENT FOR PILLAR CONTENT
+LAYUNIN SHORTCODE QUICK REFERENCE (V9.8)
+DYNAMIC COMPONENTS FOR HIGH-CONVERSION PAGES
 
-This guide allows you to architect complex layouts using the v9.8 shortcode library.
+Insert these codes into any Page or Post using the "Shortcode" block to add elite functionality instantly.
 
-### 1. THE CONVERSION BOX `[cta_box]`
-- **Goal:** Driving leads from blog posts to the Lead Magnet.
-- **Usage:** `[cta_box title="Ready to Reclaim Your Time?" button_text="Initiate the 7-Day Protocol" button_url="/lead-magnet/"]`
+1. CTA BOX (Standard)
+Code: [cta_box title="Ready to Scale?" button_text="Get the Vault" button_url="/shop/"]
+Usage: Use at the end of every blog post to drive traffic to your shop.
 
-### 2. THE PRICING ARCHITECTURE `[pricing_table]`
-- **Goal:** Showcasing Level 2 and Level 3 offers.
-- **Usage:**
-```
+2. PRICING TABLE (Service-Focused)
+Code:
 [pricing_table]
-  [pricing_item title="Accelerator" price="₱1,499" features="Audit Template|AI Vault|3X Hook Pack" link="/shop/"]
-  [pricing_item title="Implementation" price="₱15,000" features="4-Week Mentorship|Live Q&A|Wall of Impact Badge" link="/services/" featured="yes"]
-  [pricing_item title="Architect" price="₱50,000" features="Done-For-You Ops|Custom AI Stack|Legacy Strategy" link="/contact/"]
+  [pricing_item title="Starter" price="P1,499" features="Audit|Map|Access" link="/contact/"]
+  [pricing_item title="Mastery" price="P4,999" features="AI|Systems|Community" link="/contact/" featured="yes"]
 [/pricing_table]
-```
+Usage: Pipe-separate (|) your features. Use featured="yes" for your most popular tier.
 
-### 3. THE OBJECTION KILLER `[faq_page]`
-- **Goal:** Handling "Information Overload" and "Price" concerns.
-- **Usage:**
-```
+3. FAQ ACCORDION (With Schema.org)
+Code:
 [faq_page]
-  [faq_item question="Do I need to be a tech expert?"]No. The V2.0 Protocol is architected for layman-friendly execution using modular AI prompts.[/faq_item]
-  [faq_item question="How soon will I see results?"]The 3X Output Framework yields measurable time-recovery within the first 48 hours of Initiation.[/faq_item]
+  [faq_item question="Is this only for Filipinos?"]Yes, the frameworks are built for our unique economic landscape.[/faq_item]
+  [faq_item question="How long does it take?"]The Reset Protocol takes exactly 7 days.[/faq_item]
 [/faq_page]
-```
+Usage: Crucial for SEO. Use at the bottom of sales pages.
 
-### 4. THE OUTCOME GRID `[benefit_list]`
-- **Goal:** Translating "Features" into "Victories."
-- **Usage:**
-```
+4. BENEFIT GRID
+Code:
 [benefit_list]
-  [benefit_item title="Absolute Clarity" icon="fas fa-eye"]Define your North Star and eliminate 90% of noise.[/benefit_item]
-  [benefit_item title="Force Multiplication" icon="fas fa-robot"]Use AI to do 8 hours of cognitive work in 15 minutes.[/benefit_item]
+  [benefit_item title="Efficiency" icon="fas fa-bolt"]3X your output with AI.[/benefit_item]
+  [benefit_item title="Clarity" icon="fas fa-bullseye"]Know exactly what to do daily.[/benefit_item]
 [/benefit_list]
-```
+Usage: Perfect for the middle of a Lead Magnet landing page.
 
----
-*Components are the bricks of your digital empire.*
+5. TESTIMONIAL GRID (Manual Entry)
+Code:
+[testimonial_grid]
+  [testimonial_item name="Jose Rizal" role="Founder" image="url-to-photo"]Layunin changed my life.[/testimonial_item]
+[/testimonial_grid]
+Usage: Use if you want to feature specific quotes manually rather than using the CPT.

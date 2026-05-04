@@ -60,7 +60,7 @@
                 <span class="text-gold fw-bold letter-spacing-1 small">LAYUNIN ELITE</span>
                 <button class="mobile-close btn text-white fs-3 p-0"><i class="fas fa-times"></i></button>
             </div>
-            <div class="mobile-menu-inner container text-center d-flex flex-column justify-content-center">
+            <div class="mobile-menu-inner container text-center d-flex flex-column py-5">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',

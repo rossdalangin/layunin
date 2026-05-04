@@ -118,6 +118,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu-inner {
     flex-grow: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav {

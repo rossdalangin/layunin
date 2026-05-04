@@ -469,10 +469,6 @@ function layunin_customize_register( $wp_customize ) {
             $wp_customize->add_control( "{$id}_title", array( 'label' => 'Headline', 'section' => "layunin_page_{$id}" ) );
         }
 
-        if ( in_array($id, array('lead_magnet_landing', 'thank_you', 'affiliate_disclosure', 'privacy_policy', 'terms')) ) {
-             // Already has title setting above
-        }
-
         if($id == 'about') {
             $wp_customize->add_setting( 'about_badge', array( 'default' => 'The Pursuit of Absolute Mastery', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
             $wp_customize->add_control( 'about_badge', array( 'label' => 'Top Badge Text', 'section' => "layunin_page_{$id}" ) );

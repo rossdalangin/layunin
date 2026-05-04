@@ -9,7 +9,7 @@ get_header(); ?>
 			<div class="col-lg-6 animate-up">
 				<div class="lm-content-box pe-lg-4">
 					<span class="badge bg-gold px-3 py-2 mb-phi-s shadow-sm lm-badge-text"><?php echo esc_html(get_theme_mod('lm_badge_text', 'Free Digital Resource')); ?></span>
-					<h1 class="display-3 fw-bold text-navy mb-phi-l entry-title"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Elite 7-Day Goal Reset Protocol' ) ); ?></h1>
+					<h1 class="display-3 fw-bold text-navy mb-phi-l"><?php echo esc_html( get_theme_mod( 'lead_magnet_landing_title', 'Elite 7-Day Goal Reset Protocol' ) ); ?></h1>
 					<p class="lead text-muted mb-phi fs-4">
 						<?php echo esc_html( get_theme_mod( 'lead_magnet_content', 'Stop existing on autopilot. This is the exact audit used by high-output leaders to reclaim their time and refocus their absolute purpose.' ) ); ?>
 					</p>

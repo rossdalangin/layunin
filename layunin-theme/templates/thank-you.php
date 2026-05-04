@@ -7,7 +7,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="py-phi">
 			<i class="fas fa-circle-check display-1 text-success mb-phi-l"></i>
-			<h1 class="display-3 entry-title"><?php echo esc_html( get_theme_mod( 'thank_you_title', "Thank You Page" ) ); ?></h1>
+			<h1 class="display-3"><?php echo esc_html( get_theme_mod( 'thank_you_title', "Thank You Page" ) ); ?></h1>
 			<p class="lead mb-phi"><?php echo esc_html( get_theme_mod( 'thank_you_content', 'Your protocol is being delivered. Stand by for transformation.' ) ); ?></p>
 			<div class="next-steps py-4 border-top border-bottom">
 				<h3 class="thank-you-next-title"><?php echo esc_html(get_theme_mod('thank_you_next_title', "The Next Phase")); ?></h3>

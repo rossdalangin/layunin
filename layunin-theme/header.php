@@ -95,18 +95,44 @@
 
         <!-- Mobile Overlay Menu -->
         <div id="mobile-overlay" class="mobile-overlay">
-            <div class="mobile-menu-inner container text-center pt-5">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'menu-1',
-                    'container'      => false,
-                    'menu_class'     => 'mobile-nav list-unstyled fs-2'
-                ) );
-                ?>
-                <div class="text-center mt-phi">
-                    <a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold btn-lg w-100"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
+            <div class="mobile-overlay-bg"></div>
+            <div class="mobile-menu-inner container pt-5 pb-5">
+                <div class="d-flex justify-content-between align-items-center mb-phi-l">
+                    <div class="mobile-logo">
+                        <?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
+                            <span class="h3 fw-bold text-white mb-0"><?php bloginfo( 'name' ); ?></span>
+                        <?php endif; ?>
+                    </div>
+                    <button class="mobile-close btn text-white p-0 fs-1"><i class="fas fa-times"></i></button>
                 </div>
-                <button class="mobile-close btn text-white fs-1 mt-phi"><i class="fas fa-times"></i></button>
+
+                <div class="mobile-nav-wrapper mb-phi-l">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'menu-1',
+                        'container'      => false,
+                        'menu_class'     => 'mobile-nav list-unstyled'
+                    ) );
+                    ?>
+                </div>
+
+                <div class="mobile-actions mt-auto">
+                    <a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold w-100 mb-phi-s"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
+
+                    <div class="mobile-contact text-center text-white-50 mt-phi">
+                        <p class="small mb-1"><?php echo esc_html(get_theme_mod('contact_email', 'elite@layunin.com')); ?></p>
+                        <div class="d-flex justify-content-center gap-3 mt-3">
+                            <?php
+                            $socials = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
+                            foreach ( $socials as $social ) :
+                                $link = get_theme_mod( "social_{$social}", '#' );
+                                if ( $link && $link !== '#' ) : ?>
+                                    <a href="<?php echo esc_url( $link ); ?>" class="text-white-50 fs-4"><i class="fab fa-<?php echo $social; ?>"></i></a>
+                                <?php endif;
+                            endforeach; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

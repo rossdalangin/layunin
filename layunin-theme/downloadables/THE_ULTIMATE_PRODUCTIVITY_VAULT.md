@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: THE ULTIMATE PRODUCTIVITY VAULT
+================================================================================
+
 # 🛡️ THE ULTIMATE PRODUCTIVITY VAULT
 ## THE SCIENCE OF ELITE PERFORMANCE & TIME MASTERY (V2.0 PREMIUM)
 

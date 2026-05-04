@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: ELITE MINDSET PROTOCOL
+================================================================================
+
 # 🧠 ELITE MINDSET PROTOCOL
 ## THE PSYCHOLOGY OF THE MASTER ARCHITECT (V2.0 PREMIUM)
 

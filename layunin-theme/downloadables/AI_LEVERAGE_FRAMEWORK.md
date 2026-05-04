@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: AI LEVERAGE FRAMEWORK
+================================================================================
+
 # 🤖 AI LEVERAGE FRAMEWORK
 ## FROM AMBITION TO AUTOMATION: THE 10X PROTOCOL (V2.0 PREMIUM)
 

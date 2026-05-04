@@ -693,3 +693,92 @@ body.dark-mode .text-accent {
     opacity: 0.7;
     padding: 0.5rem 0 !important;
 }
+
+/* Full-screen Search Overlay */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--navy-dark);
+    z-index: 2200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--navy-dark) 0%, #000 100%);
+    opacity: 0.98;
+}
+
+.search-form-overlay .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.placeholder-white::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Scroll progress bar for single posts */
+.reading-progress-container {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .reading-progress-container {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Micro-interactions: Resource & Shop Cards */
+.resource-card, .product-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.resource-card:hover, .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px -12px rgba(10, 25, 47, 0.15) !important;
+}
+
+.resource-card .icon-box {
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Smoother AOS Transitions */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Elite Glassmorphism Utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .glass {
+    background: rgba(10, 25, 47, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}

@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: DIGITAL ECONOMY MASTERY
+================================================================================
+
 # 📈 DIGITAL ECONOMY MASTERY
 ## ARCHITECTING SCALABLE ONLINE INCOME STREAMS (V2.0 PREMIUM)
 

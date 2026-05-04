@@ -78,12 +78,14 @@
 					) );
 					?>
 					<div class="header-actions header-cta ms-5 d-flex align-items-center gap-3">
+                        <button id="search-open" class="btn btn-link text-navy p-0 fs-5" title="Search Strategy"><i class="fas fa-search"></i></button>
 						<button id="dark-mode-toggle" class="btn btn-link text-navy p-0 fs-5" title="<?php echo esc_attr(get_theme_mod('header_dark_mode_title', 'Switch Mode')); ?>"><i class="fas fa-moon"></i></button>
 						<a href="<?php echo esc_url( get_theme_mod('header_cta_link', home_url('/contact/')) ); ?>" class="btn btn-gold px-4 py-2 small fw-bold shadow-sm"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite Community')); ?></a>
 					</div>
 				</nav>
 
 				<div class="d-lg-none d-flex align-items-center gap-3">
+                    <button id="search-open-mobile" class="btn btn-link text-navy p-0 fs-4"><i class="fas fa-search"></i></button>
 					<button id="dark-mode-toggle-mobile" class="btn btn-link text-navy p-0 fs-4"><i class="fas fa-moon"></i></button>
 					<button class="menu-toggle btn p-0 text-navy fs-2" aria-expanded="false">
 						<i class="fas fa-bars"></i>
@@ -136,5 +138,38 @@
             </div>
         </div>
 
+        <!-- Full-screen Search Overlay -->
+        <div id="search-overlay" class="search-overlay">
+            <div class="search-overlay-bg"></div>
+            <button id="search-close" class="btn text-white fs-1 position-absolute top-0 end-0 m-4"><i class="fas fa-times"></i></button>
+            <div class="search-container container h-100 d-flex flex-column align-items-center justify-content-center">
+                <div class="search-box-wrapper w-100" style="max-width: 800px;">
+                    <h2 class="text-white display-4 fw-bold mb-phi-l text-center">Audit Our Strategy Library</h2>
+                    <form role="search" method="get" class="search-form-overlay" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <div class="input-group input-group-lg border-bottom border-white border-opacity-25 pb-3">
+                            <input type="search" class="form-control bg-transparent border-0 text-white placeholder-white opacity-75 fs-2" placeholder="What are you pursuing?" value="<?php echo get_search_query(); ?>" name="s" id="search-input-overlay" autocomplete="off">
+                            <button class="btn btn-link text-white fs-2 p-0" type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+                    <div class="popular-searches mt-phi text-center">
+                        <span class="text-white-50 small text-uppercase fw-bold letter-spacing-1 d-block mb-3">Priority Audit Areas:</span>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="/?s=AI" class="badge rounded-pill bg-white bg-opacity-10 text-white px-3 py-2 text-decoration-none hover-lift">AI Tools</a>
+                            <a href="/?s=Income" class="badge rounded-pill bg-white bg-opacity-10 text-white px-3 py-2 text-decoration-none hover-lift">Online Income</a>
+                            <a href="/?s=Productivity" class="badge rounded-pill bg-white bg-opacity-10 text-white px-3 py-2 text-decoration-none hover-lift">Productivity</a>
+                            <a href="/?s=Mindset" class="badge rounded-pill bg-white bg-opacity-10 text-white px-3 py-2 text-decoration-none hover-lift">Elite Mindset</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 	</header>
+
+    <?php if( is_single() ) : ?>
+        <div class="reading-progress-container fixed-top" style="z-index: 2002; height: 4px; top: 0;">
+            <div id="reading-progress-bar" class="bg-gold h-100" style="width: 0%; transition: width 0.1s ease;"></div>
+        </div>
+    <?php endif; ?>
+
     <div class="header-spacer" style="height: <?php echo (get_theme_mod('show_announcement', true)) ? '140px' : '100px'; ?>;"></div>

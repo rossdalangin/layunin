@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: CLIENT ONBOARDING CHECKLIST
+================================================================================
+
 # 🤝 ELITE CLIENT ONBOARDING CHECKLIST
 ## ARCHITECTING A WORLD-CLASS CLIENT EXPERIENCE (V2.0 PREMIUM)
 

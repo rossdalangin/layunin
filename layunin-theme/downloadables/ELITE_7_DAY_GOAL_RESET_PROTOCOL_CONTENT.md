@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: ELITE 7 DAY GOAL RESET PROTOCOL CONTENT
+================================================================================
+
 # 🏛️ ELITE 7-DAY GOAL RESET PROTOCOL
 ## ARCHITECTING YOUR "LAYUNIN" FOR ABSOLUTE MASTERY (V2.0 PREMIUM)
 

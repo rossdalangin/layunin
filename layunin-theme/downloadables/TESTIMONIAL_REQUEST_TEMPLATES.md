@@ -1,3 +1,8 @@
+================================================================================
+LAYUNIN ELITE STRATEGY SYSTEM - CONFIDENTIAL & PROPRIETARY
+ASSET: TESTIMONIAL REQUEST TEMPLATES
+================================================================================
+
 # 💎 ELITE TESTIMONIAL REQUEST PROTOCOL
 ## ARCHITECTING THE "WALL OF IMPACT" (V2.0 PREMIUM)
 

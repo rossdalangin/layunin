@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileClose = document.querySelector('.mobile-close');
     const mobileOverlay = document.getElementById('mobile-overlay');
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input-overlay');
     const siteHeader = document.querySelector('.site-header');
 
     const toggleOverlay = () => {
@@ -57,7 +59,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Sticky Scroll
+    // Search Overlay Logic
+    const openSearch = (e) => {
+        if(e) e.preventDefault();
+        if(searchOverlay) {
+            searchOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                if(searchInput) searchInput.focus();
+            }, 300);
+        }
+    };
+
+    const closeSearch = () => {
+        if(searchOverlay) {
+            searchOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    const searchOpenBtns = document.querySelectorAll('#search-open, #search-open-mobile');
+    const searchCloseBtn = document.getElementById('search-close');
+
+    searchOpenBtns.forEach(btn => btn.addEventListener('click', openSearch));
+    if(searchCloseBtn) searchCloseBtn.addEventListener('click', closeSearch);
+
+    // Close search on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeSearch();
+            if (mobileOverlay && mobileOverlay.classList.contains('active')) {
+                toggleOverlay();
+            }
+        }
+    });
+
+    // Sticky Scroll & Reading Progress
+    const progressBar = document.getElementById('reading-progress-bar');
+
     window.addEventListener('scroll', function() {
         if (siteHeader) {
             if (window.scrollY > 40) {
@@ -65,6 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 siteHeader.classList.remove('scrolled');
             }
+        }
+
+        if (progressBar) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
         }
     });
 

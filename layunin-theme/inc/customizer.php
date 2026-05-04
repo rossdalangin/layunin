@@ -160,6 +160,20 @@ function layunin_customize_register( $wp_customize ) {
 		$wp_customize->add_control( "{$id}_title", array( 'label' => 'Headline', 'section' => "layunin_page_{$id}" ) );
         $wp_customize->add_setting( "{$id}_content", array( 'default' => '', 'sanitize_callback' => 'sanitize_textarea_field' ) );
 		$wp_customize->add_control( "{$id}_content", array( 'label' => 'Main Content', 'section' => "layunin_page_{$id}", 'type' => 'textarea' ) );
+
+        if($id == 'shop') {
+            for($i = 1; $i <= 6; $i++) {
+                $wp_customize->add_setting( "shop_item_{$i}_title", array( 'default' => "Premium Product $i", 'sanitize_callback' => 'sanitize_text_field' ) );
+                $wp_customize->add_control( "shop_item_{$i}_title", array( 'label' => "Product $i Title", 'section' => "layunin_page_{$id}" ) );
+                $wp_customize->add_setting( "shop_item_{$i}_price", array( 'default' => '₱999', 'sanitize_callback' => 'sanitize_text_field' ) );
+                $wp_customize->add_control( "shop_item_{$i}_price", array( 'label' => "Product $i Price", 'section' => "layunin_page_{$id}" ) );
+                $wp_customize->add_setting( "shop_item_{$i}_image", array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
+                $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "shop_item_{$i}_image", array( 'label' => "Product $i Image", 'section' => "layunin_page_{$id}" ) ) );
+                $wp_customize->add_setting( "shop_item_{$i}_link", array( 'default' => '#', 'sanitize_callback' => 'esc_url_raw' ) );
+                $wp_customize->add_control( "shop_item_{$i}_link", array( 'label' => "Product $i Link", 'section' => "layunin_page_{$id}" ) );
+            }
+        }
+
         if($id == 'about') {
             for($i=1; $i<=3; $i++) {
                 $wp_customize->add_setting( "team_member_{$i}_name", array( 'default' => "Expert $i", 'sanitize_callback' => 'sanitize_text_field' ) );

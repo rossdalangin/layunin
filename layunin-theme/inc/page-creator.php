@@ -45,8 +45,50 @@ function layunin_create_recommended_pages() {
     }
 
     layunin_seed_sample_cpts();
+    layunin_seed_shop_products();
 
     if ( $trigger ) set_theme_mod( 'recreate_pages_trigger', false );
+}
+
+function layunin_seed_shop_products() {
+    $products = array(
+        array(
+            'title' => 'The Layunin Blueprint: Elite Execution System',
+            'price' => '₱2,499',
+            'desc'  => 'The ultimate framework for turning ambitious goals into daily measurable wins. Includes the modular action planner.'
+        ),
+        array(
+            'title' => 'Digital Real Estate: Filipino Growth Guide',
+            'price' => '₱1,850',
+            'desc'  => 'Master the art of building high-value digital assets that generate passive income while you sleep.'
+        ),
+        array(
+            'title' => 'High-Performance Freelance Vault',
+            'price' => '₱1,499',
+            'desc'  => 'Everything you need to scale your freelance business: client scripts, premium pricing models, and contract templates.'
+        ),
+        array(
+            'title' => 'Productivity OS: The Mastery Operating System',
+            'price' => '₱999',
+            'desc'  => 'A complete digital system for Notion designed to manage your life, projects, and knowledge in one unified space.'
+        ),
+        array(
+            'title' => 'The Passive Income Playbook',
+            'price' => '₱1,250',
+            'desc'  => 'Discover 12 proven ways for Filipinos to earn online using global platforms and local expertise.'
+        ),
+        array(
+            'title' => 'Elite Mindset: The Psychology of Success',
+            'price' => '₱750',
+            'desc'  => 'Rewire your brain for abundance. A comprehensive guide to overcoming limiting beliefs and building peak discipline.'
+        ),
+    );
+
+    for ($i = 0; $i < count($products); $i++) {
+        $num = $i + 1;
+        set_theme_mod("shop_item_{$num}_title", $products[$i]['title']);
+        set_theme_mod("shop_item_{$num}_price", $products[$i]['price']);
+    }
 }
 
 function layunin_seed_sample_cpts() {

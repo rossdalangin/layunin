@@ -56,18 +56,26 @@
 
         <!-- Mobile Overlay Menu -->
         <div id="mobile-overlay" class="mobile-overlay">
-            <div class="mobile-menu-inner container text-center pt-5">
+            <div class="mobile-overlay-header d-flex justify-content-between align-items-center px-4 py-3">
+                <span class="text-gold fw-bold letter-spacing-1 small">LAYUNIN ELITE</span>
+                <button class="mobile-close btn text-white fs-3 p-0"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="mobile-menu-inner container text-center d-flex flex-column py-5">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',
                     'container'      => false,
-                    'menu_class'     => 'mobile-nav list-unstyled fs-2'
+                    'menu_class'     => 'mobile-nav list-unstyled'
                 ) );
                 ?>
-                <div class="text-center mt-5">
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold btn-lg w-100"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite')); ?></a>
+                <div class="mobile-menu-footer mt-5 px-4 animate-up">
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-gold w-100 mb-4"><?php echo esc_html(get_theme_mod('header_cta_text', 'Join the Elite')); ?></a>
+                    <div class="social-links d-flex justify-content-center gap-4 fs-4 text-white opacity-75">
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <button class="mobile-close btn text-white fs-1 mt-5"><i class="fas fa-times"></i></button>
             </div>
         </div>
 

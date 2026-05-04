@@ -8,8 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const siteHeader = document.querySelector('.site-header');
 
     const toggleOverlay = () => {
-        mobileOverlay.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
+        const isActive = mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = isActive ? 'hidden' : '';
+
+        if (isActive) {
+            const links = mobileOverlay.querySelectorAll('.mobile-nav .nav-link');
+            links.forEach((link, index) => {
+                link.style.transitionDelay = `${0.1 + (index * 0.1)}s`;
+            });
+        }
     };
 
     if (menuToggle) menuToggle.onclick = toggleOverlay;
